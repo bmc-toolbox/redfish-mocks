@@ -1,0 +1,124 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Manager.Manager",
+    "@odata.type": "#Manager.Manager",
+    "@odata.id": "/redfish/v1/Managers/1",
+    "Id": "1",
+    "Name": "Manager",
+    "Description": "BMC",
+    "ManagerType": "BMC",
+    "UUID": "00000000-0000-0000-0000-0CC47AB98300",
+    "Model": "ASPEED",
+    "FirmwareVersion": "3.80",
+    "DateTime": "2019-09-05T14:59:24+02:00",
+    "DateTimeLocalOffset": "+02:00",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "GraphicalConsole": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 4,
+        "ConnectTypesSupported": [
+            "KVMIP"
+        ]
+    },
+    "SerialConsole": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 1,
+        "ConnectTypesSupported": [
+            "SSH",
+            "IPMI"
+        ]
+    },
+    "CommandShell": {
+        "ServiceEnabled": true,
+        "MaxConcurrentSessions": 0,
+        "ConnectTypesSupported": [
+            "SSH"
+        ]
+    },
+    "EthernetInterfaces": {
+        "@odata.id": "/redfish/v1/Managers/1/EthernetInterfaces"
+    },
+    "SerialInterfaces": {
+        "@odata.id": "/redfish/v1/Managers/1/SerialInterfaces"
+    },
+    "NetworkProtocol": {
+        "@odata.id": "/redfish/v1/Managers/1/NetworkProtocol"
+    },
+    "LogServices": {
+        "@odata.id": "/redfish/v1/Managers/1/LogServices"
+    },
+    "VirtualMedia": {
+        "@odata.id": "/redfish/v1/Managers/1/VM1"
+    },
+    "Links": {
+        "ManagerForServers": [
+            {
+                "@odata.id": "/redfish/v1/Systems/1"
+            }
+        ],
+        "ManagerForChassis": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/1"
+            }
+        ],
+        "Oem": {}
+    },
+    "Actions": {
+        "Oem": {
+            "#ManagerConfig.Reset": {
+                "target": "/redfish/v1/Managers/1/Actions/Oem/ManagerConfig.Reset"
+            }
+        },
+        "#Manager.Reset": {
+            "target": "/redfish/v1/Managers/1/Actions/Manager.Reset"
+        }
+    },
+    "Oem": {
+        "Supermicro": {
+            "ActiveDirectory": {
+                "@odata.id": "/redfish/v1/Managers/1/ActiveDirectory"
+            },
+            "SMTP": {
+                "@odata.id": "/redfish/v1/Managers/1/SMTP"
+            },
+            "RADIUS": {
+                "@odata.id": "/redfish/v1/Managers/1/RADIUS"
+            },
+            "MouseMode": {
+                "@odata.id": "/redfish/v1/Managers/1/MouseMode"
+            },
+            "NTP": {
+                "@odata.id": "/redfish/v1/Managers/1/NTP"
+            },
+            "LDAP": {
+                "@odata.id": "/redfish/v1/Managers/1/LDAP"
+            },
+            "IPAccessControl": {
+                "@odata.id": "/redfish/v1/Managers/1/IPAccessControl"
+            },
+            "SMCRAKP": {
+                "@odata.id": "/redfish/v1/Managers/1/SMCRAKP"
+            },
+            "SNMP": {
+                "@odata.id": "/redfish/v1/Managers/1/SNMP"
+            },
+            "Syslog": {
+                "@odata.id": "/redfish/v1/Managers/1/Syslog"
+            },
+            "Snooping": {
+                "@odata.id": "/redfish/v1/Managers/1/Snooping"
+            },
+            "FanMode": {
+                "@odata.id": "/redfish/v1/Managers/1/FanMode"
+            },
+            "IKVM": {
+                "@odata.id": "/redfish/v1/Managers/1/IKVM"
+            },
+            "ClearConfig": {
+                "@odata.id": "/redfish/v1/Managers/1/ClearConfig"
+            }
+        }
+    }
+}

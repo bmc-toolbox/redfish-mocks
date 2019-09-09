@@ -1,0 +1,13 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SMTP.SMTP",
+    "@odata.type": "#SMTP.SMTP",
+    "@odata.id": "/redfish/v1/Managers/1/SMTP",
+    "Id": "SMTP",
+    "Name": "SMTP",
+    "SmtpSSLEnabled": false,
+    "SmtpServer": "",
+    "SmtpPortNumber": 587,
+    "SmtpUserName": "",
+    "SmtpPassword": "null",
+    "SmtpSenderAddress": ""
+}

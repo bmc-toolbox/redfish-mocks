@@ -1,0 +1,57 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Power.Power",
+    "@odata.etag": "W/\"E57976E9\"",
+    "@odata.id": "/redfish/v1/Chassis/1/Power/",
+    "@odata.type": "#Power.v1_3_0.Power",
+    "Id": "Power",
+    "Name": "PowerMetrics",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpePowerMetricsExt.HpePowerMetricsExt",
+            "@odata.type": "#HpePowerMetricsExt.v2_2_0.HpePowerMetricsExt",
+            "BrownoutRecoveryEnabled": true,
+            "HasCpuPowerMetering": true,
+            "HasDimmPowerMetering": true,
+            "HasGpuPowerMetering": false,
+            "HasPowerMetering": true,
+            "Links": {
+                "PowerMeter": {
+                    "@odata.id": "/redfish/v1/Chassis/1/Power/PowerMeter/"
+                },
+                "FastPowerMeter": {
+                    "@odata.id": "/redfish/v1/Chassis/1/Power/FastPowerMeter/"
+                },
+                "FederatedGroupCapping": {
+                    "@odata.id": "/redfish/v1/Chassis/1/Power/FederatedGroupCapping/"
+                }
+            },
+            "MinimumSafelyAchievableCap": 121,
+            "MinimumSafelyAchievableCapValid": true,
+            "SNMPPowerThresholdAlert": {
+                "DurationInMin": 0,
+                "ThresholdWatts": 0,
+                "Trigger": "Disabled"
+            }
+        }
+    },
+    "PowerControl": [
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power/#PowerControl/0",
+            "MemberId": "0",
+            "PowerAllocatedWatts": 226,
+            "PowerAvailableWatts": 274,
+            "PowerCapacityWatts": 500,
+            "PowerConsumedWatts": 130,
+            "PowerLimit": {
+                "LimitInWatts": null
+            },
+            "PowerMetrics": {
+                "AverageConsumedWatts": 130,
+                "IntervalInMin": 20,
+                "MaxConsumedWatts": 134,
+                "MinConsumedWatts": 78
+            },
+            "PowerRequestedWatts": 226
+        }
+    ]
+}

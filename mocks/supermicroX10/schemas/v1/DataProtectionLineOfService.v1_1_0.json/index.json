@@ -1,0 +1,39 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataProtectionLineOfService.v1_1_0",
+    "definitions": {
+        "ReplicaRequest": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "ReplicaName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "The name of the new replica",
+                    "longDescription": "The value shall be the names of the replica."
+                },
+                "ReplicaSource": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "description": "A resource to be replicated.",
+                    "longDescription": "The value shall reference a resource to be replicated."
+                }
+            }
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

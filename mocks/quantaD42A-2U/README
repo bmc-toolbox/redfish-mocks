@@ -1,0 +1,6 @@
+Redfish Service state stored in Redfish Mockup Format
+Program: redfishMockupCreate,  ver: 1.0.5
+Created: 2019-09-05 15:59:23
+rhost:  10.213.71.159
+Description: 
+Commandline: python3.4 ./redfishMockupCreate.py -u psm -p psmr0ck5 -r 10.213.71.159 -D mocks/quantaD42A-2U -vvvv -S --Auth Basic

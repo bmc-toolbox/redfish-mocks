@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "OverallSecurityStatus": {
+            "Description": "This represents the overall security status of the system.",
+            "additionalProperties": false,
+            "readonly": true,
+            "enum": [
+                "Ok",
+                "Risk",
+                "Ignored"
+            ],
+            "enumDescriptions": {
+                "Ok": "The Overall security state of the system is OK.",
+                "Risk": "The Overall security state of the system is Risk.",
+                "Ignored": "The user has ignored (or suppressed) the risk on all the security parameters (whose Status value is Risk)."
+            },
+            "type": "string"
+        },
+        "ServerConfigurationLockStatus": {
+            "Description": "This represents the Server Configuration Lock status.",
+            "additionalProperties": false,
+            "readonly": true,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "Server Configuration Lock is Enabled.",
+                "Disabled": "Server Configuration Lock is Disabled."
+            },
+            "type": "string"
+        },
+        "SecurityParameters": {
+            "description": "This property references a resource of type Collection with a MemberType of HpeiLOSecurityParam.",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        }
+    },
+    "readonly": false,
+    "title": "#HpeiLOSecurityDashboard.v1_0_0.HpeiLOSecurityDashboard",
+    "type": "object"
+}

@@ -1,0 +1,543 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "actions": {
+        "actions": {
+            "HpeRemoteSupport.TriggerDataCollection": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This Action initiates Active Health System or L2 Collection data submission to the Remote Support Server.",
+                        "enum": [
+                            "HpeRemoteSupport.TriggerDataCollection"
+                        ],
+                        "type": "string"
+                    },
+                    "DataType": {
+                        "description": "The type of data that has to be submitted to the Remote Support.",
+                        "readonly": true,
+                        "type": "string",
+                        "enum": [
+                            "ActiveHealthSystemData",
+                            "L2CollectionData"
+                        ]
+                    },
+                    "MessageId": {
+                        "description": "A unique message identifier in UUID format used to match the test Service Event with this request. It is returned in the submission package SOAP envelope header.",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "Days": {
+                        "description": "The number of days to include in the transmission, up to a maximum of the last seven days not including the present day. Possible values are 1 to 7.",
+                        "readonly": true,
+                        "type": "integer",
+                        "maximum": 7,
+                        "minimum": 1
+                    }
+                },
+                "required": [
+                    "Action",
+                    "DataType"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.RegisterDeviceToRemoteSupport": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This Action is used to begin the registration of your device to Remote Support.",
+                        "enum": [
+                            "HpeRemoteSupport.RegisterDeviceToRemoteSupport"
+                        ],
+                        "type": "string"
+                    },
+                    "ConnectionType": {
+                        "description": "This indicates whether the device will be registered using Direct Connect or Central Connect.",
+                        "readonly": true,
+                        "type": "string",
+                        "enum": [
+                            "DirectConnect",
+                            "CentralConnect"
+                        ]
+                    },
+                    "DestinationUrl": {
+                        "description": "The host name or IP address of the Remote Support server. This is applicable for Central Connect only.",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "DestinationPort": {
+                        "description": "The port number of the Remote Support server. This is applicable for Central Connect only.",
+                        "readonly": true,
+                        "type": "integer",
+                        "default": 7906
+                    },
+                    "HpePassportUserId": {
+                        "description": "HPE Passport Account User Id. It is required when connecting using Direct Connect.",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "HpePassportPassword": {
+                        "description": "HPE Passport Account password. It is required when connecting using Direct Connect.",
+                        "readonly": true,
+                        "type": [
+                            "string",
+                            null
+                        ]
+                    },
+                    "WebProxyUrl": {
+                        "description": "Web proxy server host name or IP address when connecting using Direct Connect. ",
+                        "etag": true,
+                        "readonly": false,
+                        "type": "string",
+                        "format": "url"
+                    },
+                    "WebProxyPort": {
+                        "description": "Port number on which to communicate with the web proxy server when connecting using Direct Connect. ",
+                        "etag": true,
+                        "readonly": false,
+                        "type": "integer"
+                    },
+                    "WebProxyUsername": {
+                        "description": "Username for web proxy server authentication when connecting using Direct Connect.",
+                        "etag": true,
+                        "readonly": false,
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "WebProxyPassword": {
+                        "description": "Password for web proxy server authentication when connecting using Direct Connect.",
+                        "etag": false,
+                        "readonly": false,
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "Action",
+                    "ConnectionType"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.CompleteDirectConnectRegistration": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "To fully register your device, first RegisterDevice with DirectConnect and then complete the registration to Insight Remote Support using this Action.",
+                        "enum": [
+                            "HpeRemoteSupport.CompleteDirectConnectRegistration"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.DisableRemoteSupport": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This Action un-registers the device from Insight Remote Support or from Insight Online.",
+                        "enum": [
+                            "HpeRemoteSupport.DisableRemoteSupport"
+                        ],
+                        "type": "string"
+                    },
+                    "MessageId": {
+                        "description": "A unique message identifier in UUID format used to match the test Service Event with this request. It is returned in the submission package SOAP envelope header.",
+                        "readonly": true,
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.TriggerTestEvent": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This action initiates a test service event submission to the Remote Support Server.",
+                        "enum": [
+                            "HpeRemoteSupport.TriggerTestEvent"
+                        ],
+                        "type": "string"
+                    },
+                    "MessageId": {
+                        "description": "A unique message identifier in UUID format used to match the test Service Event with this request. It is returned in the submission package SOAP envelope header.",
+                        "readonly": true,
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.ClearServiceEventLog": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This action clears the service event logs.",
+                        "enum": [
+                            "HpeRemoteSupport.ClearServiceEventLog"
+                        ],
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "Action"
+                ],
+                "type": "object"
+            },
+            "HpeRemoteSupport.ServerMaintenance": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "description": "This action sets or clears the service maintenance mode.",
+                        "enum": [
+                            "HpeRemoteSupport.ServerMaintenance"
+                        ],
+                        "type": "string"
+                    },
+                    "MaintenanceMode": {
+                        "description": "Indicates whether to set or clear server maintenance mode.",
+                        "readonly": true,
+                        "type": "string",
+                        "enum": [
+                            "Set",
+                            "Clear"
+                        ]
+                    },
+                    "MessageId": {
+                        "description": "A unique message identifier in UUID format used to match the test Service Event with this request. It is returned in the submission package SOAP envelope header.",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "DurationInMinutes": {
+                        "description": "The number of minutes the Server will remain in server maintenance mode. The maximum duration can be 1 week",
+                        "readonly": true,
+                        "type": "integer",
+                        "maximum": "20160",
+                        "default": "60"
+                    }
+                },
+                "required": [
+                    "Action",
+                    "MaintenanceMode"
+                ],
+                "type": "object"
+            }
+        },
+        "description": "The allowed custom actions."
+    },
+    "additionalProperties": false,
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "properties": {
+                "#HpeRemoteSupport.TriggerDataCollection": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "DataType@Redfish.AllowableValues": {
+                            "description": "The supported values for the DataType parameter.",
+                            "items": {
+                                "enum": [
+                                    "ActiveHealthSystemData",
+                                    "L2CollectionData"
+                                ],
+                                "type": "string"
+                            },
+                            "longDescription": "The supported values for the DataType parameter.",
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.RegisterDeviceToRemoteSupport": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "ConnectionType@Redfish.AllowableValues": {
+                            "description": "The supported values for the ConnectionType parameter.",
+                            "items": {
+                                "enum": [
+                                    "DirectConnect",
+                                    "CentralConnect"
+                                ],
+                                "type": "string"
+                            },
+                            "longDescription": "The supported values for the ConnectionType parameter.",
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.CompleteDirectConnectRegistration": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.DisableRemoteSupport": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.TriggerTestEvent": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.ClearServiceEventLog": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "#HpeRemoteSupport.ServerMaintenance": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "MaintenanceMode@Redfish.AllowableValues": {
+                            "description": "The supported values for the MaintenanceMode parameter.",
+                            "items": {
+                                "enum": [
+                                    "Set",
+                                    "Clear"
+                                ],
+                                "type": "string"
+                            },
+                            "longDescription": "The supported values for the MaintenanceMode parameter.",
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "ProxySettings": {
+            "additionalProperties": false,
+            "description": "Web proxy settings.",
+            "properties": {
+                "Url": {
+                    "description": "Web proxy server host name or IP address.",
+                    "etag": true,
+                    "readonly": false,
+                    "type": "string",
+                    "format": "url"
+                },
+                "Port": {
+                    "description": "Port number on which to communicate with the web proxy server. ",
+                    "etag": true,
+                    "readonly": false,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "Username": {
+                    "description": "Username for web proxy server authentication. ",
+                    "etag": true,
+                    "readonly": false,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Password": {
+                    "description": "Password for web proxy server authentication. ",
+                    "etag": true,
+                    "readonly": false,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "readonly": false,
+            "type": "object"
+        },
+        "DestinationURL": {
+            "description": "The host name or IP address of the Remote Support server. This is applicable for Central Connect only.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "DestinationPort": {
+            "description": "The port number of the Insight Remote Support server. This is applicable for Central Connect only. ",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "HpePassportUserId": {
+            "description": "HPE Passport Account Id.",
+            "readonly": true,
+            "etag": true,
+            "type": "string"
+        },
+        "HpePassportPassword": {
+            "description": "HPE Passport Account Password.",
+            "readonly": true,
+            "etag": true,
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "LastTransmissionType": {
+            "description": "The last transmission type. ",
+            "etag": true,
+            "readonly": true,
+            "type": [
+                "string",
+                "null"
+            ],
+            "enum": [
+                "ActiveHealthSystemData",
+                "L2DataCollection",
+                "Registration",
+                "Deregistration",
+                "ServiceEvent",
+                "NoTransmission",
+                null
+            ]
+        },
+        "LastTransmissionDate": {
+            "description": "The last transmission date.",
+            "etag": true,
+            "readonly": true,
+            "type": "string",
+            "format": "date-time"
+        },
+        "LastTransmissionError": {
+            "description": "The last transmission error.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "ConnectModel": {
+            "description": "The Remote Support connect model type.",
+            "etag": true,
+            "readonly": true,
+            "type": "string",
+            "enum": [
+                "DirectConnect",
+                "CentralConnect"
+            ]
+        },
+        "RemoteSupportEnabled": {
+            "description": "This indicates if the Remote Support Service is available or not. ",
+            "etag": true,
+            "readonly": true,
+            "type": "boolean"
+        },
+        "DataCollectionFrequencyInDays": {
+            "description": "The frequency of data collection in days. This is applicable only when the server is registered using Direct Connect.",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "ServiceEventLogs": {
+            "description": "A reference to the collection of service event logs.",
+            "etag": false,
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "MaintenanceModeEnabled": {
+            "description": "This indicates if the server is in Maintenance Mode or not.",
+            "etag": true,
+            "readonly": true,
+            "type": "boolean"
+        }
+    },
+    "readonly": false,
+    "title": "#HpeRemoteSupport.v2_3_0.HpeRemoteSupport",
+    "type": "object"
+}

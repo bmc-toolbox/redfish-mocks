@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IKVM",
+    "Id": "IKVM",
+    "Name": "IKVM Schema File",
+    "Description": "IKVM Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IKVM",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IKVM.json"
+        }
+    ],
+    "Oem": {}
+}

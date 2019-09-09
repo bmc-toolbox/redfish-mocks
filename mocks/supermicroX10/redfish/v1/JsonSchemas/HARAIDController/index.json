@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/HARAIDController",
+    "Id": "HARAIDController",
+    "Name": "HARAIDController Schema File",
+    "Description": "HARAIDController Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "HARAIDController",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/HARAIDController.json"
+        }
+    ],
+    "Oem": {}
+}

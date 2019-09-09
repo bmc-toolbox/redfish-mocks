@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ManagerAccountCollection",
+    "Id": "ManagerAccountCollection",
+    "Name": "ManagerAccountCollection Schema File",
+    "Description": "ManagerAccountCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ManagerAccountCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ManagerAccountCollection.json"
+        }
+    ],
+    "Oem": {}
+}

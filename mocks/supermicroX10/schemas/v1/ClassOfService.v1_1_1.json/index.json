@@ -1,0 +1,153 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#ClassOfService.v1_1_1",
+    "definitions": {
+        "ClassOfService": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Identifier": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": false,
+                    "description": "The value identifies this resource.",
+                    "longDescription": "The value shall be unique within the managed ecosystem."
+                },
+                "ClassOfServiceVersion": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The value identifies the current version of this class of service definition.",
+                    "longDescription": "The version describing the creation or last modification of this service option specification. The string representing the version shall be in the form: M + '.' + N + '.' + U  Where: M - The major version (in numeric form). N - The minor version (in numeric form). U - The update (e.g. errata or patch in numeric form)."
+                },
+                "DataProtectionLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "DataProtectionLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "DataProtectionLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "A collection of DataProtection line of service elements.",
+                    "longDescription": "The value shall be a set of data protection service options.  Within a class of service, one data protection service option shall be present for each replication session."
+                },
+                "DataSecurityLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "DataSecurityLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "DataSecurityLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "A collection of DataSecurity line of service elements.",
+                    "longDescription": "The value shall be a set of data security service options."
+                },
+                "DataStorageLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "DataStorageLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "DataStorageLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "A collection of DataStorage line of service elements.",
+                    "longDescription": "The value shall be a set of data protection service options."
+                },
+                "IOConnectivityLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "IOConnectivityLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "IOConnectivityLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "A collection of IOConnectivity line of service elements.",
+                    "longDescription": "The value shall be a set of IO connectivity service options.  Within a class of service, at most one IO connectivity service option may be present for a value of AccessProtocol."
+                },
+                "IOPerformanceLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "IOPerformanceLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "IOPerformanceLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "A collection of IOPerformance line of service elements.",
+                    "longDescription": "The value shall be a set of IO performance service options."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "A service option composed of one or more service options.",
+            "longDescription": "This resource shall define a service option composed of one or more line of service entities.  ITIL defines a service option as a choice of utility or warranty for a service."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

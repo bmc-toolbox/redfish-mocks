@@ -1,0 +1,18 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ActiveDirectory.ActiveDirectory",
+    "@odata.type": "#ActiveDirectory.ActiveDirectory",
+    "@odata.id": "/redfish/v1/Managers/1/ActiveDirectory",
+    "Id": "Active Directory",
+    "Name": "Active Directory",
+    "AuthenticationEnabled": false,
+    "AuthenticationOverSSLEnabled": false,
+    "PortNumber": 389,
+    "UserDomainName": "",
+    "Timeout": 0,
+    "DCSAddress1": "0.0.0.0",
+    "DCSAddress2": "0.0.0.0",
+    "DCSAddress3": "0.0.0.0",
+    "RoleGroups": {
+        "@odata.id": "/redfish/v1/Managers/1/ActiveDirectory/RoleGroups"
+    }
+}

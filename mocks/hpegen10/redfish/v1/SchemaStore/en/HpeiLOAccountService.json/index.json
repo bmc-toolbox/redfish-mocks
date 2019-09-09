@@ -1,0 +1,246 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "AuthFailureDelayTimeSeconds": {
+            "description": "The time in seconds to delay for each failure after AuthFailuresBeforeDelay authentication attempts have failed.  Values of 2, 5, 10, and 30 seconds are valid.",
+            "enum": [
+                2,
+                5,
+                10,
+                30
+            ],
+            "etag": true,
+            "readonly": false,
+            "type": "integer"
+        },
+        "AuthFailureLoggingThreshold": {
+            "description": "This property enables you to view and configure logging criteria for failed authentications. A failed login log entry is recorded after the configured number of attempts. 0 = feature disabled; 1-3 and 5 are allowable values.",
+            "enum": [
+                0,
+                1,
+                2,
+                3,
+                5
+            ],
+            "etag": true,
+            "readonly": false,
+            "type": "integer"
+        },
+        "AuthFailuresBeforeDelay": {
+            "description": "The number of failed authentication attempts allowed before authentication is delayed by AuthFailureDelayTimeSeconds. Values of  0, 1, 3, and 5 are valid, with 0 indicating delay after every authentication failure.",
+            "enum": [
+                0,
+                1,
+                3,
+                5
+            ],
+            "etag": true,
+            "readonly": false,
+            "type": "integer"
+        },
+        "DefaultPassword": {
+            "description": "The default password used to log in to the management processor when factory reset is performed.",
+            "etag": false,
+            "readonly": false,
+            "maxLength": 16,
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "DefaultUserName": {
+            "description": "The default name used to log in to the management processor when factory reset is performed.",
+            "etag": true,
+            "readonly": false,
+            "maxLength": 16,
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "MinPasswordLength": {
+            "description": "This property specifies the minimum number of characters allowed when a user password is set or changed. It must be a value from 0 to 39.",
+            "etag": true,
+            "maximum": 39,
+            "minimum": 0,
+            "readonly": false,
+            "type": "integer"
+        },
+        "EnforcePasswordComplexity": {
+            "description": "Enforce complexity rules when a user password is set or changed. Three of four character classes must be present; ASCII UPPERCASE, LOWERCASE, DIGITS, and Other",
+            "etag": true,
+            "readonly": false,
+            "type": "boolean"
+        },
+        "DirectorySettings": {
+            "type": "object",
+            "readonly": false,
+            "description": "Describes the directory settings.",
+            "etag": true,
+            "properties": {
+                "LdapAuthenticationMode": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "Represents the LDAP authentication mode.",
+                    "etag": true,
+                    "enum": [
+                        "Disabled",
+                        "DefaultSchema",
+                        "ExtendedSchema"
+                    ],
+                    "enumDescriptions": {
+                        "Disabled": "Directory authentication is disabled.",
+                        "DefaultSchema": "Directory Default schema or Schema-free option is selected.",
+                        "ExtendedSchema": "HPE Extended schema is selected."
+                    }
+                },
+                "LdapCaCertificateLoaded": {
+                    "type": "boolean",
+                    "readonly": true,
+                    "description": "Represents if the directory server CA certificate is loaded or not.",
+                    "etag": true
+                },
+                "LdapCaCertificates": {
+                    "description": "A link to a collection of Certificates.",
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                },
+                "LdapServerPort": {
+                    "type": "integer",
+                    "default": 636,
+                    "maximum": 65535,
+                    "minimum": 1,
+                    "readonly": true,
+                    "description": "Represents the port number of the directory server.",
+                    "etag": true
+                }
+            }
+        },
+        "KerberosSettings": {
+            "type": "object",
+            "readonly": false,
+            "description": "Describes the kerberos settings.",
+            "etag": true,
+            "properties": {
+                "KerberosRealm": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Represents the Realm of the KDC server.",
+                    "etag": true
+                },
+                "KDCServerPort": {
+                    "type": "integer",
+                    "default": 88,
+                    "maximum": 65535,
+                    "minimum": 1,
+                    "readonly": true,
+                    "description": "Represents the port number of the KDC server.",
+                    "etag": true
+                }
+            }
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeiLOAccountService.ImportKerberosKeytab": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "ImportUri@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "readonly": "false",
+                                "format": "uri",
+                                "description": "URI of the kerberos keytab file.",
+                                "etag": true
+                            },
+                            "etag": true,
+                            "type": "string",
+                            "description": "The supported values for the ImportUri parameter.",
+                            "longDescription": "The supported values for the ImportUri parameter."
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        },
+        "DirectoryTest": {
+            "description": "The value of this property shall be a reference to a resource of type HpeDirectoryTest.",
+            "readonly": true,
+            "etag": false,
+            "type": "object",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            }
+        }
+    },
+    "actions": {
+        "description": "Importing kerberos keytab file.",
+        "actions": {
+            "HpeiLOAccountService.ImportKerberosKeytab": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "HpeiLOAccountService.ImportKerberosKeytab"
+                        ],
+                        "enumDescriptions": {
+                            "ImportKerberosKeytab": "Import the Kerberos keytab file."
+                        }
+                    },
+                    "ImportUri": {
+                        "type": "string",
+                        "format": "uri",
+                        "readonly": "false",
+                        "description": "URI of the kerberos keytab file."
+                    }
+                },
+                "required": [
+                    "Action",
+                    "ImportUri"
+                ]
+            }
+        }
+    },
+    "readonly": false,
+    "title": "#HpeiLOAccountService.v2_3_0.HpeiLOAccountService",
+    "type": "object"
+}

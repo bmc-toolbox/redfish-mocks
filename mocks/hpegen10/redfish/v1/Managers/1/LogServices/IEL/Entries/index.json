@@ -1,0 +1,146 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntryCollection.LogEntryCollection",
+    "@odata.etag": "W/\"32EF1A31\"",
+    "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/",
+    "@odata.type": "#LogEntryCollection.LogEntryCollection",
+    "Description": "iLO Event Logs view",
+    "Name": "iLO Event Logs",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+            "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/1/",
+            "@odata.type": "#LogEntry.v1_0_0.LogEntry",
+            "Id": "1",
+            "Created": "2019-09-05T13:09:16Z",
+            "EntryType": "Oem",
+            "Message": "Event log cleared by: psm.",
+            "Name": "iLO Event Log",
+            "Oem": {
+                "Hpe": {
+                    "@odata.context": "/redfish/v1/$metadata#HpeLogEntry.HpeLogEntry",
+                    "@odata.type": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+                    "Categories": [
+                        "Maintenance",
+                        "Administration"
+                    ],
+                    "Class": 35,
+                    "Code": 135,
+                    "Count": 1,
+                    "EventNumber": 113748,
+                    "Updated": "2019-09-05T13:09:16Z"
+                }
+            },
+            "OemRecordFormat": "Hpe-iLOEventLog",
+            "Severity": "OK"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+            "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/2/",
+            "@odata.type": "#LogEntry.v1_0_0.LogEntry",
+            "Id": "2",
+            "Created": "2019-09-05T13:09:50Z",
+            "EntryType": "Oem",
+            "Message": "Browser login: psm - 10.156.63.11(DNS name not found).",
+            "Name": "iLO Event Log",
+            "Oem": {
+                "Hpe": {
+                    "@odata.context": "/redfish/v1/$metadata#HpeLogEntry.HpeLogEntry",
+                    "@odata.type": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+                    "Categories": [
+                        "Security",
+                        "Administration"
+                    ],
+                    "Class": 35,
+                    "Code": 1017,
+                    "Count": 31,
+                    "EventNumber": 113749,
+                    "Updated": "2019-09-05T13:09:59Z"
+                }
+            },
+            "OemRecordFormat": "Hpe-iLOEventLog",
+            "Severity": "OK"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+            "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/3/",
+            "@odata.type": "#LogEntry.v1_0_0.LogEntry",
+            "Id": "3",
+            "Created": "2019-09-05T13:09:51Z",
+            "EntryType": "Oem",
+            "Message": "Browser logout: psm - 10.156.63.11(DNS name not found).",
+            "Name": "iLO Event Log",
+            "Oem": {
+                "Hpe": {
+                    "@odata.context": "/redfish/v1/$metadata#HpeLogEntry.HpeLogEntry",
+                    "@odata.type": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+                    "Categories": [
+                        "Security",
+                        "Administration"
+                    ],
+                    "Class": 35,
+                    "Code": 1018,
+                    "Count": 30,
+                    "EventNumber": 113750,
+                    "Updated": "2019-09-05T13:09:59Z"
+                }
+            },
+            "OemRecordFormat": "Hpe-iLOEventLog",
+            "Severity": "OK"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+            "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/4/",
+            "@odata.type": "#LogEntry.v1_0_0.LogEntry",
+            "Id": "4",
+            "Created": "2019-09-05T13:10:00Z",
+            "EntryType": "Oem",
+            "Message": "Browser logout: psm - 10.156.63.11(DNS name not found).",
+            "Name": "iLO Event Log",
+            "Oem": {
+                "Hpe": {
+                    "@odata.context": "/redfish/v1/$metadata#HpeLogEntry.HpeLogEntry",
+                    "@odata.type": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+                    "Categories": [
+                        "Security",
+                        "Administration"
+                    ],
+                    "Class": 35,
+                    "Code": 1018,
+                    "Count": 92,
+                    "EventNumber": 113751,
+                    "Updated": "2019-09-05T13:10:31Z"
+                }
+            },
+            "OemRecordFormat": "Hpe-iLOEventLog",
+            "Severity": "OK"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+            "@odata.id": "/redfish/v1/Managers/1/LogServices/IEL/Entries/5/",
+            "@odata.type": "#LogEntry.v1_0_0.LogEntry",
+            "Id": "5",
+            "Created": "2019-09-05T13:10:00Z",
+            "EntryType": "Oem",
+            "Message": "Browser login: psm - 10.156.63.11(DNS name not found).",
+            "Name": "iLO Event Log",
+            "Oem": {
+                "Hpe": {
+                    "@odata.context": "/redfish/v1/$metadata#HpeLogEntry.HpeLogEntry",
+                    "@odata.type": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+                    "Categories": [
+                        "Security",
+                        "Administration"
+                    ],
+                    "Class": 35,
+                    "Code": 1017,
+                    "Count": 92,
+                    "EventNumber": 113752,
+                    "Updated": "2019-09-05T13:10:31Z"
+                }
+            },
+            "OemRecordFormat": "Hpe-iLOEventLog",
+            "Severity": "OK"
+        }
+    ],
+    "Members@odata.count": 5
+}

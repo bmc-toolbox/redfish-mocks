@@ -1,0 +1,100 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#IOPerformanceLineOfService.v1_0_1",
+    "definitions": {
+        "IOPerformanceLineOfService": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "IOOperationsPerSecondIsLimited": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Limit the IOPS.",
+                    "longDescription": "If true, the system should not allow IOPS to exceed MaxIoOperationsPerSecondPerTerabyte * VolumeSize. Otherwise, the system shall not enforce a limit.  The default value for this property is false."
+                },
+                "SamplePeriod": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Sampling period over which average values are calculated.",
+                    "longDescription": "The value shall be an ISO 8601 duration specifying the sampling period over which average values are calculated."
+                },
+                "MaxIOOperationsPerSecondPerTerabyte": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The amount of IOPS a volume of a given committed size can support.",
+                    "longDescription": "The value shall be the amount of IOPS a volume of a given committed size in Terabytes can support. This IOPS density value is useful as a metric that is independent of capacity. Cost is a function of this value and the AverageIOOperationLatencyMicroseconds."
+                },
+                "AverageIOOperationLatencyMicroseconds": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Expected average IO latency.",
+                    "longDescription": "The value shall be the expected average IO latency in microseconds calculated over sample periods (see SamplePeriodSeconds)."
+                },
+                "IOWorkload": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": false,
+                    "description": "A description of the expected workload.",
+                    "longDescription": "The value shall be a description of the expected workload. The workload provides the context in which the values of  MaxIOOperationsPerSecondPerTerabyte and AverageIOOperationLatencyMicroseconds are expected to be achieveable."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Describe service option within the IO performance line of service.",
+            "longDescription": "This structure may be used to define a service option related to IO performance."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

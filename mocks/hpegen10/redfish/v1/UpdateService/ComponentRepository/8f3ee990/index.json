@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeComponent.HpeComponent",
+    "@odata.etag": "W/\"CD21D410\"",
+    "@odata.id": "/redfish/v1/UpdateService/ComponentRepository/8f3ee990/",
+    "@odata.type": "#HpeComponent.v1_0_1.HpeComponent",
+    "Id": "8f3ee990",
+    "Activates": "Immediately",
+    "ComponentUri": "/fwrepo/IEGen10_0.1.0.28.signed.bin",
+    "Configuration": "",
+    "Created": "2017-11-21T01:01:59Z",
+    "Criticality": "Optional",
+    "DeviceClass": "c734e171-8721-48c9-9ed6-d5bc7da5ef8d",
+    "ExecutionParameters": "",
+    "Filename": "IEGen10_0.1.0.28.signed.bin",
+    "Filepath": "IEGen10_0.1.0.28.signed.bin",
+    "Locked": true,
+    "Name": "Innovation Engine (IE) Universal Image for HPE GEN 10 Platforms",
+    "SizeBytes": 8391066,
+    "Targets": [
+        "a6b1a447-382a-5a4f-3c10-3c100a000303"
+    ],
+    "UpdatableBy": [
+        "Bmc"
+    ],
+    "Version": "0.1.0.28"
+}

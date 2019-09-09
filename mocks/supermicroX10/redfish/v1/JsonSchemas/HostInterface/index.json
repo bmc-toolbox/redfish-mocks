@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/HostInterface",
+    "Id": "HostInterface",
+    "Name": "HostInterface Schema File",
+    "Description": "HostInterface Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "HostInterface",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/HostInterface.json"
+        }
+    ],
+    "Oem": {}
+}

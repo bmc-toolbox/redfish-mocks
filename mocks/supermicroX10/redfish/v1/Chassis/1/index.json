@@ -1,0 +1,46 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+    "@odata.type": "#Chassis.Chassis",
+    "@odata.id": "/redfish/v1/Chassis/1",
+    "Id": "1",
+    "Name": "Computer System Chassis",
+    "ChassisType": "RackMount",
+    "Manufacturer": "Supermicro",
+    "Model": "X10DRFF-CTG",
+    "SKU": "",
+    "SerialNumber": "CF414AG44N30034",
+    "PartNumber": "CSE-F414IS3-R2K04BP",
+    "AssetTag": "NONE",
+    "IndicatorLED": "Off",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "PhysicalSecurity": {
+        "IntrusionSensorNumber": 170,
+        "IntrusionSensor": "Normal",
+        "IntrusionSensorReArm": "Manual"
+    },
+    "Power": {
+        "@odata.id": "/redfish/v1/Chassis/1/Power"
+    },
+    "Thermal": {
+        "@odata.id": "/redfish/v1/Chassis/1/Thermal"
+    },
+    "Links": {
+        "ComputerSystems": [
+            {
+                "@odata.id": "/redfish/v1/Systems/1"
+            }
+        ],
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/1"
+            }
+        ],
+        "ContainedBy": {
+            "@odata.id": "/redfish/v1/Chassis/Rack1"
+        }
+    },
+    "Oem": {}
+}

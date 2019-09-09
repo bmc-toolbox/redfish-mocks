@@ -1,0 +1,38 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#EventService.EventService",
+    "@odata.type": "#EventService.EventService",
+    "@odata.id": "/redfish/v1/EventService",
+    "Id": "EventService",
+    "Name": "Event Service",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "ServiceEnabled": true,
+    "DeliveryRetryAttempts": 3,
+    "DeliveryRetryIntervalSeconds": 60,
+    "EventTypesForSubscription": [
+        "StatusChange",
+        "ResourceUpdated",
+        "ResourceAdded",
+        "ResourceRemoved",
+        "Alert"
+    ],
+    "Subscriptions": {
+        "@odata.id": "/redfish/v1/EventService/Subscriptions"
+    },
+    "Actions": {
+        "Oem": {},
+        "#EventService.SendTestEvent": {
+            "target": "/redfish/v1/EventService/Actions/EventService.SendTestEvent",
+            "EventType@Redfish.AllowableValues": [
+                "StatusChange",
+                "ResourceUpdated",
+                "ResourceAdded",
+                "ResourceRemoved",
+                "Alert"
+            ]
+        }
+    },
+    "Oem": {}
+}

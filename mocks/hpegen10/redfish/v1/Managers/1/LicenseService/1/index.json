@@ -1,0 +1,60 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeiLOLicense.HpeiLOLicense",
+    "@odata.etag": "W/\"91C90FC4\"",
+    "@odata.id": "/redfish/v1/Managers/1/LicenseService/1/",
+    "@odata.type": "#HpeiLOLicense.v2_1_1.HpeiLOLicense",
+    "Id": "1",
+    "Confirmation": {
+        "Code": "",
+        "Message": "",
+        "Service": "reserved for liconf URI",
+        "Status": false
+    },
+    "ConfirmationRequest": {
+        "EON": {
+            "License": "iLO Advanced",
+            "LicenseKey": "3353M-XKMML-D7H3P-XV794-3DXMM",
+            "Quantity": 1,
+            "State": "unconfirmed"
+        },
+        "Signer": "iLO 5",
+        "System": {
+            "ChipId": "202A6EC80120A5FA",
+            "Product": "ProLiant BL460c Gen10",
+            "SerialNumber": "CZ37464KL6"
+        }
+    },
+    "Description": "iLO License View",
+    "License": "iLO Advanced",
+    "LicenseClass": "FQL",
+    "LicenseErr": "LIC09: License key already installed.",
+    "LicenseExpire": "",
+    "LicenseFeatures": {
+        "DirectoryAuth": true,
+        "DowngradePolicy": true,
+        "EmailAlert": true,
+        "FWScan": true,
+        "Federation": true,
+        "Jitter": true,
+        "KD": true,
+        "KeyMgr": true,
+        "MURC": true,
+        "PowerReg": true,
+        "RC": true,
+        "Recovery": true,
+        "RemoteSyslog": true,
+        "Scrncap": true,
+        "SecureErase": true,
+        "SmartCard": true,
+        "SuiteB": true,
+        "TextCons": true,
+        "VM": true,
+        "VMScript": true,
+        "VSPLogging": true
+    },
+    "LicenseInstallDate": "8 Jun 2017",
+    "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX-3DXMM",
+    "LicenseTier": "ADV",
+    "LicenseType": "Perpetual",
+    "Name": "iLO License"
+}

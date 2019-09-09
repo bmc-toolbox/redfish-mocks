@@ -1,0 +1,317 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "actions": {
+        "description": "POST custom actions defined for this type. (The implemented actions may be a subset of these.)",
+        "actions": {
+            "HpeServerAccPowerCalibration.Calibrate": {
+                "additionalProperties": false,
+                "description": "Execute the Apollo Chassis Controller power calibration configuration.",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "readonly": true,
+                        "enum": [
+                            "HpeServerAccPowerCalibration.Calibrate"
+                        ]
+                    },
+                    "ActionType": {
+                        "type": "string",
+                        "enum": [
+                            "Start",
+                            "Stop"
+                        ]
+                    },
+                    "EEPROMSaveEnabled": {
+                        "type": "boolean",
+                        "readonly": true
+                    },
+                    "Seconds": {
+                        "type": "integer",
+                        "readonly": true
+                    },
+                    "ZoneNumber": {
+                        "type": "integer",
+                        "readonly": true
+                    },
+                    "AllZone": {
+                        "type": "boolean",
+                        "readonly": true
+                    }
+                },
+                "required": [
+                    "Action",
+                    "ActionType",
+                    "AllZone"
+                ],
+                "type": "object"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2017 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "CalibrationInProgress": {
+            "type": "boolean",
+            "additionalProperties": false,
+            "description": "The current state of the chassis power zone calibration task.",
+            "readonly": true,
+            "etag": true
+        },
+        "CalibrationData": {
+            "type": "object",
+            "additionalProperties": false,
+            "readonly": false,
+            "properties": {
+                "ZoneNumber": {
+                    "type": "integer",
+                    "description": "The zone number either on the entire chassis or specific zone. 0 for entire chassis, other number is for specific zone.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "State": {
+                    "type": "boolean",
+                    "description": "Specifies whether the calibration is valid or not.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "StartTime": {
+                    "type": "string",
+                    "description": "The calibration start time stamp.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "EndTime": {
+                    "type": "string",
+                    "description": "The calibration end time stamp.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "ThrottlePeakPower": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "readonly": false,
+                    "properties": {
+                        "Percent_000": {
+                            "type": "integer",
+                            "description": "The peak power of 0 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_005": {
+                            "type": "integer",
+                            "description": "The peak power of 5 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_010": {
+                            "type": "integer",
+                            "description": "The peak power of 10 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_015": {
+                            "type": "integer",
+                            "description": "The peak power of 15 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_020": {
+                            "type": "integer",
+                            "description": "The peak power of 20 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_025": {
+                            "type": "integer",
+                            "description": "The peak power of 25 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_030": {
+                            "type": "integer",
+                            "description": "The peak power of 30 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_035": {
+                            "type": "integer",
+                            "description": "The peak power of 35 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_040": {
+                            "type": "integer",
+                            "description": "The peak power of 40 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_045": {
+                            "type": "integer",
+                            "description": "The peak power of 45 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_050": {
+                            "type": "integer",
+                            "description": "The peak power of 50 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_055": {
+                            "type": "integer",
+                            "description": "The peak power of 55 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_060": {
+                            "type": "integer",
+                            "description": "The peak power of 60 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_065": {
+                            "type": "integer",
+                            "description": "The peak power of 65 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_070": {
+                            "type": "integer",
+                            "description": "The peak power of 70 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_075": {
+                            "type": "integer",
+                            "description": "The peak power of 75 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_080": {
+                            "type": "integer",
+                            "description": "The peak power of 80 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_085": {
+                            "type": "integer",
+                            "description": "The peak power of 85 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_090": {
+                            "type": "integer",
+                            "description": "The peak power of 90 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_095": {
+                            "type": "integer",
+                            "description": "The peak power of 95 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        },
+                        "Percent_100": {
+                            "type": "integer",
+                            "description": "The peak power of 100 Percent throttling.",
+                            "readonly": true,
+                            "etag": true
+                        }
+                    },
+                    "deprecated": "The peak power in watts for chassis or specific zone."
+                }
+            },
+            "deprecated": "The calibration data for entire chassis or specific zone. The scope is determine by ZoneNumber"
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeServerAccPowerCalibration.Calibrate": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "ActionType@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "Start",
+                                    "Stop"
+                                ]
+                            },
+                            "type": "array",
+                            "description": "The supported values for the ActionType parameter.",
+                            "longDescription": "The supported values for the ActionType parameter."
+                        },
+                        "EEPROMSaveEnabled@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "boolean",
+                                "readonly": true
+                            },
+                            "type": "array",
+                            "description": "To save the calibration data to EEPROM or not."
+                        },
+                        "Seconds@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "integer",
+                                "readonly": true
+                            },
+                            "type": "array",
+                            "description": "The calibration time."
+                        },
+                        "ZoneNumber@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "integer",
+                                "readonly": true
+                            },
+                            "type": "array",
+                            "description": "The zone number either on the entire chassis or specific zone. 0 for entire chassis, other number is for specific zone."
+                        },
+                        "AllZone@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "boolean",
+                                "readonly": true
+                            },
+                            "type": "array",
+                            "description": "If All Zones is set to 'true', the ZoneNumber will be discarded. Chassis manager will calibrate for all zones and derive the minimum and maximum power limit setpoints which is available in PowerLimit URI. If All Zones is set to 'false', the ZoneNumber will be take effect. Chassis manager will calibrate for specific zone and derive the throttle peak power data from 0% - 100% which is available in Calibration URI."
+                        },
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "readonly": true,
+    "title": "#HpeServerAccPowerCalibration.v1_0_0.HpeServerAccPowerCalibration",
+    "type": "object"
+}

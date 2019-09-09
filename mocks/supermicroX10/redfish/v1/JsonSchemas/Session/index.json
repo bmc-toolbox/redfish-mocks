@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Session",
+    "Id": "Session",
+    "Name": "Session Schema File",
+    "Description": "Session Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Session",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Session.json"
+        }
+    ],
+    "Oem": {}
+}

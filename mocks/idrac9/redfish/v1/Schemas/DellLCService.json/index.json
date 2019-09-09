@@ -1,0 +1,181 @@
+{
+    "$ref": "#/definitions/DellLCService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "CheckBackupDestinationAvailability": {
+            "enum": [
+                "Check",
+                "DoNotCheck"
+            ],
+            "enumDescriptions": {
+                "Check": "Check",
+                "DoNotCheck": "Do Not Check"
+            },
+            "type": "string"
+        },
+        "DataSelectorArrayIn": {
+            "enum": [
+                "HWData",
+                "OSAppData",
+                "OSAppDataWithoutPII",
+                "TTYLogs"
+            ],
+            "enumDescriptions": {
+                "HWData": "HW Data",
+                "OSAppData": "OSApp Data",
+                "OSAppDataWithoutPII": "OSApp Data Without PII",
+                "TTYLogs": "TTY Logs"
+            },
+            "type": "string"
+        },
+        "DellLCService": {
+            "additionalProperties": false,
+            "description": "The DellLCService resource provides some actions to support Lifecycle Controller functionality.",
+            "longDescription": "The DellLCService resource provides some actions to support Lifecycle Controller functionality.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "IgnoreCertWarning": {
+            "enum": [
+                "Off",
+                "On"
+            ],
+            "enumDescriptions": {
+                "Off": "Off",
+                "On": "On"
+            },
+            "type": "string"
+        },
+        "PerformAutoDiscovery": {
+            "enum": [
+                "NextBoot",
+                "Now",
+                "Off"
+            ],
+            "enumDescriptions": {
+                "NextBoot": "NextBoot",
+                "Now": "Now",
+                "Off": "Off"
+            },
+            "type": "string"
+        },
+        "PreserveVDConfig": {
+            "enum": [
+                "False",
+                "True"
+            ],
+            "enumDescriptions": {
+                "False": "False",
+                "True": "True"
+            },
+            "type": "string"
+        },
+        "ProxySupport": {
+            "enum": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "enumDescriptions": {
+                "DefaultProxy": "On-use user default proxy settings",
+                "Off": "Off",
+                "ParametersProxy": "On-use passed in parameters for proxy"
+            },
+            "type": "string"
+        },
+        "ProxyType": {
+            "enum": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "enumDescriptions": {
+                "HTTP": "HTTP",
+                "SOCKS": "SOCKS"
+            },
+            "type": "string"
+        },
+        "ShareType": {
+            "enum": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "Local",
+                "NFS",
+                "VFLASH"
+            ],
+            "enumDescriptions": {
+                "CIFS": "CIFS",
+                "HTTP": "HTTP",
+                "HTTPS": "HTTPS",
+                "Local": "Local",
+                "NFS": "NFS",
+                "VFLASH": "VFLASH"
+            },
+            "type": "string"
+        },
+        "XMLSchema": {
+            "enum": [
+                "CIM-XML",
+                "Simple"
+            ],
+            "enumDescriptions": {
+                "CIM-XML": "CIM-XML",
+                "Simple": "Simple"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellLCService.DellLCService"
+}

@@ -1,0 +1,53 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ServiceRoot",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/",
+    "@odata.type": "#ServiceRoot.v1_1_1.ServiceRoot",
+    "AccountService": {
+        "@odata.id": "/redfish/v1/AccountService"
+    },
+    "Chassis": {
+        "@odata.id": "/redfish/v1/Chassis"
+    },
+    "EventService": {
+        "@odata.id": "/redfish/v1/EventService"
+    },
+    "Id": "RootService",
+    "JsonSchemas": {
+        "@odata.id": "/redfish/v1/JsonSchemas"
+    },
+    "Links": {
+        "Sessions": {
+            "@odata.id": "/redfish/v1/SessionService/Sessions"
+        }
+    },
+    "Managers": {
+        "@odata.id": "/redfish/v1/Managers"
+    },
+    "Name": "Root Service",
+    "Oem": {
+        "Ami": {
+            "Configurations": {
+                "@odata.id": "/redfish/v1/configurations"
+            }
+        },
+        "Intel_RackScale": {
+            "@odata.type": "#Intel.Oem.ServiceRoot",
+            "ApiVersion": "2.1.0"
+        }
+    },
+    "RedfishVersion": "1.1.0",
+    "Registries": {
+        "@odata.id": "/redfish/v1/Registries"
+    },
+    "SessionService": {
+        "@odata.id": "/redfish/v1/SessionService"
+    },
+    "Systems": {
+        "@odata.id": "/redfish/v1/Systems"
+    },
+    "Tasks": {
+        "@odata.id": "/redfish/v1/TaskService"
+    },
+    "UUID": "beb2a994-feee-e811-9fc6-d8c497d07433"
+}

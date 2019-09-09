@@ -1,0 +1,20 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/79",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:24:31+02:00",
+    "Description": " Log Entry 79",
+    "EntryType": "Oem",
+    "Id": "79",
+    "Links": {},
+    "Message": "The iDRAC IP Address changed from 0.0.0.0 to 10.193.251.137.",
+    "MessageArgs": [
+        "0.0.0.0",
+        "10.193.251.137"
+    ],
+    "MessageArgs@odata.count": 2,
+    "MessageId": "IPA0100",
+    "Name": " Log Entry 79",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

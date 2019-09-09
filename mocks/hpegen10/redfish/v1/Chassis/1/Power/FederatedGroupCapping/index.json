@@ -1,0 +1,17 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeiLOFederatedGroupCapping.HpeiLOFederatedGroupCapping",
+    "@odata.id": "/redfish/v1/Chassis/1/Power/FederatedGroupCapping/",
+    "@odata.type": "#HpeiLOFederatedGroupCapping.v2_0_0.HpeiLOFederatedGroupCapping",
+    "CapWatts": 0,
+    "CapacityWatts": 500,
+    "Groups": {
+        "DEFAULT": {
+            "AllocatedPowerWatts": 0,
+            "CapLimitPctTenths": null,
+            "CapLimitWatts": 0
+        }
+    },
+    "Id": "FederatedGroupCapping",
+    "Name": "iLO Federated Group Power Capping",
+    "Throttle": "Low"
+}

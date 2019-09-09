@@ -1,0 +1,23 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Memory.Memory",
+    "@odata.type": "#Memory.Memory",
+    "@odata.id": "/redfish/v1/Systems/1/Memory/5",
+    "Id": "5",
+    "Name": "Memory",
+    "Description": "Memory",
+    "CapacityMiB": 16384,
+    "OperatingSpeedMhz": 2133,
+    "DataWidthBits": 64,
+    "BusWidthBits": 72,
+    "SerialNumber": "42230A05",
+    "PartNumber": "HMA82GR7AFR8N-UH",
+    "Manufacturer": "SK Hynix",
+    "DeviceLocator": "P1-DIMMD1",
+    "AllowedSpeedsMHz": [
+        2400
+    ],
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    }
+}

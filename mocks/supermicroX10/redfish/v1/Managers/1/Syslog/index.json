@@ -1,0 +1,10 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Syslog.Syslog",
+    "@odata.type": "#Syslog.Syslog",
+    "@odata.id": "/redfish/v1/Managers/1/Syslog",
+    "Id": "Syslog",
+    "Name": "Syslog",
+    "EnableSyslog": true,
+    "Syslog ServerIP": "10.252.13.4",
+    "Syslog PortNumber": 514
+}

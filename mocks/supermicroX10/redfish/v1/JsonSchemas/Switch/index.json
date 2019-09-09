@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Switch",
+    "Id": "Switch",
+    "Name": "Switch Schema File",
+    "Description": "Switch Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Switch",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Switch.json"
+        }
+    ],
+    "Oem": {}
+}

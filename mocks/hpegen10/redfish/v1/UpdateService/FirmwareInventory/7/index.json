@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.etag": "W/\"918DA6A4\"",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/7/",
+    "@odata.type": "#SoftwareInventory.v1_0_0.SoftwareInventory",
+    "Id": "7",
+    "Description": "SPSFirmwareVersionData",
+    "Name": "Server Platform Services (SPS) Firmware",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOSoftwareInventory.HpeiLOSoftwareInventory",
+            "@odata.type": "#HpeiLOSoftwareInventory.v2_0_0.HpeiLOSoftwareInventory",
+            "DeviceClass": "b34e5677-21dc-45d3-872b-42f76fee9053",
+            "DeviceContext": "System Board",
+            "Targets": [
+                "00000000-0000-0000-0000-000000000206",
+                "a6b1a447-382a-5a4f-3c10-86800a000101"
+            ]
+        }
+    },
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Version": "4.0.3.211"
+}

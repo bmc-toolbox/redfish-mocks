@@ -1,0 +1,197 @@
+{
+    "$ref": "#/definitions/DellRaidService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "BlockSizeInBytes": {
+            "enum": [
+                "4096",
+                "512",
+                "All"
+            ],
+            "enumDescriptions": {
+                "4096": "Include 4096 bytes block size disks",
+                "512": "Include 512 bytes block size disks only",
+                "All": "Include all block size disks"
+            },
+            "type": "string"
+        },
+        "DellRaidService": {
+            "additionalProperties": false,
+            "description": "The DellRaidService resource provides some actions to support RAID functionality.",
+            "longDescription": "The DellRaidService resource provides some actions to support RAID functionality.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "DiskEncrypt": {
+            "enum": [
+                "All",
+                "FDE",
+                "NonFDE"
+            ],
+            "enumDescriptions": {
+                "All": "Include FDE capable and non encryption capable disks",
+                "FDE": "Include FDE disks only",
+                "NonFDE": "Include only non FDE disks"
+            },
+            "type": "string"
+        },
+        "DiskType": {
+            "enum": [
+                "All",
+                "HDD",
+                "SSD"
+            ],
+            "enumDescriptions": {
+                "All": "Include all Types",
+                "HDD": "Include Hard Disk only",
+                "SSD": "Include Solid State Only"
+            },
+            "type": "string"
+        },
+        "Diskprotocol": {
+            "enum": [
+                "AllProtocols",
+                "NVMe",
+                "SAS",
+                "SATA"
+            ],
+            "enumDescriptions": {
+                "AllProtocols": "All Protocols",
+                "NVMe": "NVMe",
+                "SAS": "SAS",
+                "SATA": "SATA"
+            },
+            "type": "string"
+        },
+        "FormFactor": {
+            "enum": [
+                "All",
+                "M.2"
+            ],
+            "enumDescriptions": {
+                "All": "Include all",
+                "M.2": "Include only M.2"
+            },
+            "type": "string"
+        },
+        "Mode": {
+            "enum": [
+                "DKM",
+                "LKM"
+            ],
+            "enumDescriptions": {
+                "DKM": "DKM",
+                "LKM": "LKM"
+            },
+            "type": "string"
+        },
+        "RaidLevel": {
+            "enum": [
+                "NoRAID",
+                "RAID0",
+                "RAID1",
+                "RAID10",
+                "RAID5",
+                "RAID50",
+                "RAID6",
+                "RAID60"
+            ],
+            "enumDescriptions": {
+                "NoRAID": "No RAID",
+                "RAID0": "RAID0",
+                "RAID1": "RAID1",
+                "RAID10": "RAID10",
+                "RAID5": "RAID5",
+                "RAID50": "RAID50",
+                "RAID6": "RAID6",
+                "RAID60": "RAID60"
+            },
+            "type": "string"
+        },
+        "T10PIStatus": {
+            "enum": [
+                "All",
+                "T10PICapable",
+                "T10PIIncapable"
+            ],
+            "enumDescriptions": {
+                "All": "All disks",
+                "T10PICapable": "T10PI capable disks",
+                "T10PIIncapable": "Non T10PI capable disks"
+            },
+            "type": "string"
+        },
+        "VDPropNameArrayIn": {
+            "enum": [
+                "RAIDLevel",
+                "Size",
+                "SpanDepth",
+                "SpanLength",
+                "StartingLBA",
+                "T10PIStatus"
+            ],
+            "enumDescriptions": {
+                "RAIDLevel": "RAIDLevel, mandatory value",
+                "Size": "Size of the VD in MB",
+                "SpanDepth": "Number of Spans in the VD",
+                "SpanLength": "Number of Physical Disks per span",
+                "StartingLBA": "Starting Logical Block Address",
+                "T10PIStatus": "T10PIStatus 0=Disabled, 1=Enabled"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellRaidService.DellRaidService"
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Chassis.v1_7_0",
+    "Id": "Chassis.v1_7_0",
+    "Name": "Chassis Schema File",
+    "Description": "Chassis Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Chassis.v1_7_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Chassis.v1_7_0.json"
+        }
+    ],
+    "Oem": {}
+}

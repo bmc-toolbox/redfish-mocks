@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ResourceBlock",
+    "Id": "ResourceBlock",
+    "Name": "ResourceBlock Schema File",
+    "Description": "ResourceBlock Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ResourceBlock",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ResourceBlock.json"
+        }
+    ],
+    "Oem": {}
+}

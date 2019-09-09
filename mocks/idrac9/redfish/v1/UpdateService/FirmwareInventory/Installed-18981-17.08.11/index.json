@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-18981-17.08.11",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-18981-17.08.11",
+    "Name": "Dell OS Driver Pack, 17.08.11, A00",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23802__DriverPack.Embedded.1:LC.Embedded.1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "18981",
+                "ComponentType": "APAC",
+                "DeviceID": null,
+                "ElementName": "Dell OS Driver Pack, 17.08.11, A00",
+                "HashValue": null,
+                "InstallationDate": "2017-10-30T22:21:01Z",
+                "IsEntity": true,
+                "RevisionNumber": 11,
+                "Status": "Installed",
+                "SubDeviceID": null,
+                "SubVendorID": null,
+                "VendorID": null
+            }
+        }
+    },
+    "SoftwareId": "18981",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "17.08.11"
+}

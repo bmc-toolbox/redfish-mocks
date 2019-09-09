@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/GPUDevice",
+    "Id": "GPUDevice",
+    "Name": "GPUDevice Schema File",
+    "Description": "GPUDevice Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "GPUDevice",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/GPUDevice.json"
+        }
+    ],
+    "Oem": {}
+}

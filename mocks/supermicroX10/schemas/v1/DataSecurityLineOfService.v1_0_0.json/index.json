@@ -1,0 +1,112 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataSecurityLineOfService.v1_0_0",
+    "definitions": {
+        "DataSecurityLineOfService": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "MediaEncryptionStrength": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/KeySize",
+                    "readonly": false,
+                    "description": "Key size for media encryption.",
+                    "longDescription": "The enumeration literal shall specify a key size in a symmetric encryption algorithm for media encryption."
+                },
+                "ChannelEncryptionStrength": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/KeySize",
+                    "readonly": false,
+                    "description": "Key size for transport channel encryption.",
+                    "longDescription": "The enumeration literal shall specify a key size in a symmetric encryption algorithm for transport channel encryption."
+                },
+                "HostAuthenticationType": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AuthenticationType",
+                    "readonly": false,
+                    "description": "Authentication type for hosts (servers) or initiator endpoints.",
+                    "longDescription": "The enumeration literal shall specify the authentication type for hosts (servers) or initiator endpoints."
+                },
+                "UserAuthenticationType": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AuthenticationType",
+                    "readonly": false,
+                    "description": "Authentication type for users (or programs).",
+                    "longDescription": "The enumeration literal shall specify the authentication type for users (or programs)."
+                },
+                "SecureChannelProtocol": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/SecureChannelProtocol",
+                    "readonly": false,
+                    "description": "Protocol that provide encrypted communication.",
+                    "longDescription": "The enumeration literal shall specify the protocol that provide encrypted communication."
+                },
+                "AntivirusScanPolicies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AntiVirusScanTrigger"
+                    },
+                    "readonly": false,
+                    "description": "Policy for triggering an AntiVirus scan.",
+                    "longDescription": "The enumeration literal shall specify the policy for triggering an AntiVirus scan."
+                },
+                "AntivirusEngineProvider": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "AntiVirus provider.",
+                    "longDescription": "The value shall specify an AntiVirus provider."
+                },
+                "DataSanitizationPolicy": {
+                    "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/DataSanitizationPolicy",
+                    "readonly": false,
+                    "description": "Data sanitization policy.",
+                    "longDescription": "The enumeration literal shall specify the data sanitization policy."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Describe data security service level requirements.",
+            "longDescription": "This structure shall be used to describe data security service level requirements. "
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/MemoryCollection",
+    "Id": "MemoryCollection",
+    "Name": "MemoryCollection Schema File",
+    "Description": "MemoryCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "MemoryCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/MemoryCollection.json"
+        }
+    ],
+    "Oem": {}
+}

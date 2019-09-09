@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/LDAP.v1_0_0",
+    "Id": "LDAP.v1_0_0",
+    "Name": "LDAP Schema File",
+    "Description": "LDAP Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "LDAP.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/LDAP.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,7 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Snooping.Snooping",
+    "@odata.type": "#Snooping.Snooping",
+    "@odata.id": "/redfish/v1/Managers/1/Snooping",
+    "Name": "Snooping",
+    "PostCode": "00"
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/MemoryChunksCollection",
+    "Id": "MemoryChunksCollection",
+    "Name": "MemoryChunksCollection Schema File",
+    "Description": "MemoryChunksCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "MemoryChunksCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/MemoryChunksCollection.json"
+        }
+    ],
+    "Oem": {}
+}

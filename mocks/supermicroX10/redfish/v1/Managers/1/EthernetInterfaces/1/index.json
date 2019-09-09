@@ -1,0 +1,62 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#EthernetInterface.EthernetInterface",
+    "@odata.type": "#EthernetInterface.EthernetInterface",
+    "@odata.id": "/redfish/v1/Managers/1/EthernetInterfaces/1",
+    "Id": "1",
+    "Name": "EthernetInterface",
+    "Description": "Management Network Interface",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "InterfaceEnabled": true,
+    "MACAddress": "0C:C4:7A:B9:83:00",
+    "SpeedMbps": 1000,
+    "AutoNeg": true,
+    "FullDuplex": true,
+    "MTUSize": 1500,
+    "HostName": "",
+    "VLAN": {
+        "VLANEnable": false,
+        "VLANId": 0
+    },
+    "IPv4Addresses": [
+        {
+            "Address": "10.193.251.59",
+            "SubnetMask": "255.255.255.0",
+            "AddressOrigin": "DHCP",
+            "Gateway": "10.193.251.254"
+        }
+    ],
+    "IPv6AddressPolicyTable": [
+        {
+            "Prefix": "::1/128",
+            "Precedence": 50,
+            "Label": 0
+        }
+    ],
+    "IPv6Addresses": [
+        {
+            "Address": "2a01:5041:2000:49:ec4:7aff:feb9:8300",
+            "PrefixLength": 64,
+            "AddressOrigin": "",
+            "AddressState": "Preferred"
+        },
+        {
+            "Address": "fe80::ec4:7aff:feb9:8300",
+            "PrefixLength": 64,
+            "AddressOrigin": "SLAAC",
+            "AddressState": "Preferred"
+        }
+    ],
+    "IPv6StaticAddresses": [
+        {
+            "Address": "fe80::ec4:7aff:feb9:8300",
+            "PrefixLength": 64
+        }
+    ],
+    "IPv6DefaultGateway": "fe80::ec4:7aff:feb9:8300",
+    "NameServers": [
+        "10.252.13.240"
+    ]
+}

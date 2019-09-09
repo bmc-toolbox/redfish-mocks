@@ -1,0 +1,9 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#NetworkInterfaceCollection.NetworkInterfaceCollection",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/NetworkInterfaces",
+    "@odata.type": "#NetworkInterfaceCollection.NetworkInterfaceCollection",
+    "Description": "Collection Of Network Interface entities",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "Network Interface Collection"
+}

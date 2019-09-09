@@ -1,0 +1,23 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellPresenceAndStatusSensorCollection.DellPresenceAndStatusSensorCollection",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellPresenceAndStatusSensorCollection/",
+    "@odata.type": "#DellPresenceAndStatusSensorCollection.DellPresenceAndStatusSensorCollection",
+    "Description": "A collection of DellPresenceAndStatusSensor resource",
+    "Id": "DellPresenceAndStatusSensorCollection",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellPresenceAndStatusSensor.DellPresenceAndStatusSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellPresenceAndStatusSensor/iDRAC.Embedded.1%23vFlash",
+            "@odata.type": "#DellPresenceAndStatusSensor.v1_0_0.DellPresenceAndStatusSensor",
+            "CurrentState": "Not Present",
+            "Description": "An instance of DellPresenceAndStatusSensor will have presence and status sensor specific data.",
+            "DeviceID": "iDRAC.Embedded.1#vFlash",
+            "ElementName": "vFlash",
+            "Id": "iDRAC.Embedded.1#vFlash",
+            "Name": "DellPresenceAndStatusSensor",
+            "SensorType": "Other"
+        }
+    ],
+    "Members@odata.count": 1,
+    "Name": "DellPresenceAndStatusSensorCollection"
+}

@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#RoleCollection.RoleCollection",
+    "@odata.etag": "W/\"08A22FCA\"",
+    "@odata.id": "/redfish/v1/AccountService/Roles/",
+    "@odata.type": "#RoleCollection.RoleCollection",
+    "Description": "iLO Roles Collection",
+    "Name": "Roles",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/AccountService/Roles/Administrator/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/Roles/Operator/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/Roles/ReadOnly/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/Roles/dirgroup4b8b8bab176d6c86e8c9e21b/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/Roles/dirgroup6024327d335e22c2f1206450/"
+        }
+    ],
+    "Members@odata.count": 5
+}

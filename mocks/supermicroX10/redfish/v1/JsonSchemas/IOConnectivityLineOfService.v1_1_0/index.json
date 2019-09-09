@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IOConnectivityLineOfService.v1_1_0",
+    "Id": "IOConnectivityLineOfService.v1_1_0",
+    "Name": "IOConnectivityLineOfService Schema File",
+    "Description": "IOConnectivityLineOfService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IOConnectivityLineOfService.v1_1_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IOConnectivityLineOfService.v1_1_0.json"
+        }
+    ],
+    "Oem": {}
+}

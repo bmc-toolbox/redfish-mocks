@@ -1,0 +1,47 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DelliDRACCardService.DelliDRACCardService",
+    "@odata.id": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DelliDRACCardService",
+    "@odata.type": "#DelliDRACCardService.v1_0_0.DelliDRACCardService",
+    "Actions": {
+        "#DelliDRACCardService.ExportSSLCertificate": {
+            "SSLCertType@Redfish.AllowableValues": [
+                "CA",
+                "CSC",
+                "ClientTrustCertificate",
+                "Server"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DelliDRACCardService/Actions/DelliDRACCardService.ExportSSLCertificate"
+        },
+        "#DelliDRACCardService.ImportSSLCertificate": {
+            "CertificateType@Redfish.AllowableValues": [
+                "CA",
+                "CSC",
+                "ClientTrustCertificate",
+                "Server"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DelliDRACCardService/Actions/DelliDRACCardService.ImportSSLCertificate"
+        },
+        "#DelliDRACCardService.iDRACReset": {
+            "Force@Redfish.AllowableValues": [
+                "Force",
+                "Graceful"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DelliDRACCardService/Actions/DelliDRACCardService.iDRACReset"
+        },
+        "#DelliDRACCardService.iDRACResetCfg": {
+            "Force@Redfish.AllowableValues": [
+                "Force",
+                "Graceful"
+            ],
+            "Preserve@Redfish.AllowableValues": [
+                "All",
+                "Default",
+                "ResetAllWithRootDefaults"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DelliDRACCardService/Actions/DelliDRACCardService.iDRACResetCfg"
+        }
+    },
+    "Description": "The DelliDRACCardService resource provides some actions to support iDRAC configurations.",
+    "Id": "DelliDRACCardService",
+    "Name": "DelliDRACCardService"
+}

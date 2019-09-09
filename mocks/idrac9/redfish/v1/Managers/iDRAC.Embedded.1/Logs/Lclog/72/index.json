@@ -1,0 +1,15 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/72",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:20:32+02:00",
+    "Description": " Log Entry 72",
+    "EntryType": "Oem",
+    "Id": "72",
+    "Links": {},
+    "Message": "The iDRAC is restarting to complete the System Erase operation. Do not restart server until the iDRAC restarts.",
+    "MessageId": "SYS163",
+    "Name": " Log Entry 72",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/MemoryMetrics",
+    "Id": "MemoryMetrics",
+    "Name": "MemoryMetrics Schema File",
+    "Description": "MemoryMetrics Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "MemoryMetrics",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/MemoryMetrics.json"
+        }
+    ],
+    "Oem": {}
+}

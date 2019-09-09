@@ -1,0 +1,6 @@
+Redfish Service state stored in Redfish Mockup Format
+Program: redfishMockupCreate,  ver: 1.0.5
+Created: 2019-09-05 14:59:06
+rhost:  10.193.251.59
+Description: 
+Commandline: python3.4 ./redfishMockupCreate.py -u psm -p psmr0ck5 -r 10.193.251.59 -D mocks/supermicroX10 -vvvv -S --Auth Basic

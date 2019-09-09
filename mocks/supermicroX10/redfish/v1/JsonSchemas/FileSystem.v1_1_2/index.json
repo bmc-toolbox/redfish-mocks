@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/FileSystem.v1_1_2",
+    "Id": "FileSystem.v1_1_2",
+    "Name": "FileSystem Schema File",
+    "Description": "FileSystem Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "FileSystem.v1_1_2",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/FileSystem.v1_1_2.json"
+        }
+    ],
+    "Oem": {}
+}

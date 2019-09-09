@@ -1,0 +1,13 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry(MessageId,Name,Id,EntryType,Severity,Message,Created)",
+    "@odata.etag": "W/\"1563800718\"",
+    "@odata.id": "/redfish/v1/Managers/Self/LogServices/AuditLog/Entries/4",
+    "@odata.type": "#LogEntry.v1_1_1.LogEntry",
+    "Created": "2019-07-22T13:05:18Z",
+    "EntryType": "Event",
+    "Id": "4",
+    "Message": "User: in-band-user, IP: ::ffff:10.156.63.33, Protocol: http - Login for user Administrator using session authentication was a success.",
+    "MessageId": "Security.1.0.LoginSuccess",
+    "Name": "Audit Log Entry 4",
+    "Severity": "OK"
+}

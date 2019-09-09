@@ -1,0 +1,43 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeSmartStorageDiskDrive.HpeSmartStorageDiskDrive",
+    "@odata.etag": "W/\"FDBAB383\"",
+    "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/DiskDrives/0/",
+    "@odata.type": "#HpeSmartStorageDiskDrive.v2_1_0.HpeSmartStorageDiskDrive",
+    "Id": "0",
+    "BlockSizeBytes": 512,
+    "CapacityGB": 1920,
+    "CapacityLogicalBlocks": 3750748848,
+    "CapacityMiB": 1831420,
+    "CarrierApplicationVersion": "11",
+    "CarrierAuthenticationStatus": "OK",
+    "CurrentTemperatureCelsius": 10,
+    "Description": "HPE Smart Storage Disk Drive View",
+    "DiskDriveStatusReasons": [
+        "None"
+    ],
+    "DiskDriveUse": "Raw",
+    "EncryptedDrive": false,
+    "FirmwareVersion": {
+        "Current": {
+            "VersionString": "4IYVHPG5"
+        }
+    },
+    "InterfaceSpeedMbps": 6000,
+    "InterfaceType": "SATA",
+    "LegacyBootPriority": "Primary",
+    "Location": "1I:1:1",
+    "LocationFormat": "ControllerPort:Box:Bay",
+    "MaximumTemperatureCelsius": 31,
+    "MediaType": "SSD",
+    "Model": "VK001920GWJPH",
+    "Name": "HpeSmartStorageDiskDrive",
+    "PowerOnHours": 14736,
+    "SSDEnduranceUtilizationPercentage": 0,
+    "SerialNumber": "PHYS736000PV1P9DGN",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "UncorrectedReadErrors": 0,
+    "UncorrectedWriteErrors": 0
+}

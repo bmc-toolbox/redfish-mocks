@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ManagerConfig",
+    "Id": "ManagerConfig",
+    "Name": "ManagerConfig Schema File",
+    "Description": "ManagerConfig Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ManagerConfig",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ManagerConfig.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/VLanNetworkInterface.v1_1_1",
+    "Id": "VLanNetworkInterface.v1_1_1",
+    "Name": "VLanNetworkInterface Schema File",
+    "Description": "VLanNetworkInterface Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "VLanNetworkInterface.v1_1_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/VLanNetworkInterface.v1_1_1.json"
+        }
+    ],
+    "Oem": {}
+}

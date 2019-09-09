@@ -1,0 +1,15 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#EthernetInterface.EthernetInterface(Id,Status,MACAddress,Name,InterfaceEnabled,PermanentMACAddress)",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/Systems/Self/EthernetInterfaces/eth0",
+    "@odata.type": "#EthernetInterface.v1_2_0.EthernetInterface",
+    "Id": "eth0",
+    "InterfaceEnabled": false,
+    "MACAddress": "50:6B:4B:C3:FA:A8",
+    "Name": "eth0",
+    "PermanentMACAddress": "50:6B:4B:C3:FA:A8",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    }
+}

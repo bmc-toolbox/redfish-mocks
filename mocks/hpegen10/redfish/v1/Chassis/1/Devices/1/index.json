@@ -1,0 +1,32 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerDevice.HpeServerDevice",
+    "@odata.etag": "W/\"9CB67548\"",
+    "@odata.id": "/redfish/v1/Chassis/1/Devices/1/",
+    "@odata.type": "#HpeServerDevice.v2_0_0.HpeServerDevice",
+    "Id": "1",
+    "DeviceInstances": [
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCIDevices/1/"
+        },
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCIDevices/2/"
+        }
+    ],
+    "DeviceType": "LOM/NIC",
+    "FirmwareVersion": {
+        "Current": {
+            "VersionString": "7.17.71"
+        }
+    },
+    "Location": "Embedded ALOM",
+    "Manufacturer": "HP",
+    "Name": "HP FlexFabric 10Gb 2-port 536FLB Adapter",
+    "PartNumber": "768080-001",
+    "ProductPartNumber": "766490-B21",
+    "ProductVersion": "00",
+    "SerialNumber": "8C9726264R",
+    "Status": {
+        "Health": null,
+        "State": null
+    }
+}

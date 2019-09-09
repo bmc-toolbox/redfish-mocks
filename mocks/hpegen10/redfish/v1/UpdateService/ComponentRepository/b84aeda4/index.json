@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeComponent.HpeComponent",
+    "@odata.etag": "W/\"CD21D410\"",
+    "@odata.id": "/redfish/v1/UpdateService/ComponentRepository/b84aeda4/",
+    "@odata.type": "#HpeComponent.v1_0_1.HpeComponent",
+    "Id": "b84aeda4",
+    "Activates": "AfterReboot",
+    "ComponentUri": "/fwrepo/SPSGen10_04.00.03.211.signed.bin",
+    "Configuration": "",
+    "Created": "2017-11-21T01:01:45Z",
+    "Criticality": "Optional",
+    "DeviceClass": "b34e5677-21dc-45d3-872b-42f76fee9053",
+    "ExecutionParameters": "",
+    "Filename": "SPSGen10_04.00.03.211.signed.bin",
+    "Filepath": "SPSGen10_04.00.03.211.signed.bin",
+    "Locked": true,
+    "Name": "Server Platform Services (SPS) Firmware for HPE Gen10 Servers",
+    "SizeBytes": 8391066,
+    "Targets": [
+        "a6b1a447-382a-5a4f-3c10-86800a000101"
+    ],
+    "UpdatableBy": [
+        "Bmc"
+    ],
+    "Version": "4.0.3.211"
+}

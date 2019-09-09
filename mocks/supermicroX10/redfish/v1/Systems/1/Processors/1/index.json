@@ -1,0 +1,28 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Processor.Processor",
+    "@odata.type": "#Processor.Processor",
+    "@odata.id": "/redfish/v1/Systems/1/Processors/1",
+    "Id": "1",
+    "Name": "Processor",
+    "Description": "Processor",
+    "Socket": "CPU1",
+    "Manufacturer": "Intel",
+    "Model": "Intel(R) Xeon(R) CPU E5-2630 v4 @ 2.20GHz",
+    "MaxSpeedMHz": 4000,
+    "TotalCores": 10,
+    "TotalThreads": 20,
+    "ProcessorType": "CPU",
+    "ProcessorArchitecture": "x86",
+    "InstructionSet": "x86-64",
+    "ProcessorId": {
+        "VendorId": "GenuineIntel",
+        "IdentificationRegisters": "0xBFEBFBFF000406F1",
+        "EffectiveFamily": "0x6",
+        "EffectiveModel": "0x4F",
+        "Step": "0x1"
+    },
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    }
+}

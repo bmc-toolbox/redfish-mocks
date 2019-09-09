@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Redundancy.v1_3_0",
+    "Id": "Redundancy.v1_3_0",
+    "Name": "Redundancy Schema File",
+    "Description": "Redundancy Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Redundancy.v1_3_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Redundancy.v1_3_0.json"
+        }
+    ],
+    "Oem": {}
+}

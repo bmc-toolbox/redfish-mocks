@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Org.OData.Validation.V1",
+    "Id": "Org.OData.Validation.V1",
+    "Name": "Org Schema File",
+    "Description": "Org Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Org.OData.Validation.V1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Org.OData.Validation.V1.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/PCIeDevice.v1_2_0",
+    "Id": "PCIeDevice.v1_2_0",
+    "Name": "PCIeDevice Schema File",
+    "Description": "PCIeDevice Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "PCIeDevice.v1_2_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/PCIeDevice.v1_2_0.json"
+        }
+    ],
+    "Oem": {}
+}

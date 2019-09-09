@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/RedfishExtensions.v1_0_0",
+    "Id": "RedfishExtensions.v1_0_0",
+    "Name": "RedfishExtensions Schema File",
+    "Description": "RedfishExtensions Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "RedfishExtensions.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/RedfishExtensions.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

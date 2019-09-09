@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#FirmwareInventory.FirmwareInventory",
+    "@odata.type": "#FirmwareInventory.FirmwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/BMC",
+    "Id": "FirmwareInventory",
+    "Name": "SUPERMICRO BMC Firmware",
+    "Description": "SUPERMICRO BMC Firmware",
+    "Updatable": true,
+    "Version": "3.80",
+    "VersionSequence": "<major>.<minor>[misc]",
+    "Actions": {
+        "Oem": {
+            "#FirmwareInventory.EnterUpdateMode": {
+                "target": "/redfish/v1/UpdateService/FirmwareInventory/BMC/Actions/Oem/FirmwareInventory.EnterUpdateMode"
+            }
+        }
+    },
+    "Oem": {}
+}

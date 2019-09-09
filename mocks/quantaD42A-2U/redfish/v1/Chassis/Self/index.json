@@ -1,0 +1,111 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis(SerialNumber,IndicatorLED@Redfish.AllowableValues,IndicatorLED,PowerState,ChassisType,PartNumber,Description,Thermal,Status,Name,Oem,Power,SKU,NetworkAdapters,Links,Manufacturer,AssetTag,Model,Id)",
+    "@odata.etag": "W/\"1563800602\"",
+    "@odata.id": "/redfish/v1/Chassis/Self",
+    "@odata.type": "#Chassis.v1_4_1.Chassis",
+    "Actions": {
+        "#Chassis.Reset": {
+            "ResetType@Redfish.AllowableValues": [
+                "On",
+                "ForceOff",
+                "GracefulShutdown",
+                "ForceRestart"
+            ],
+            "target": "/redfish/v1/Chassis/Self/Actions/Chassis.Reset"
+        }
+    },
+    "AssetTag": "---",
+    "ChassisType": "RackMount",
+    "Description": "Chassis Self",
+    "Id": "Self",
+    "IndicatorLED": "Off",
+    "IndicatorLED@Redfish.AllowableValues": [
+        "Lit",
+        "Blinking",
+        "Off"
+    ],
+    "Links": {
+        "@odata.type": "#Chassis.v1_4_0.Links",
+        "ComputerSystems": [
+            {
+                "@odata.id": "/redfish/v1/Systems/Self"
+            }
+        ],
+        "Drives": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/1"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/2"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/3"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/4"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/5"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/6"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/7"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/8"
+            },
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/Drives/9"
+            }
+        ],
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/Self"
+            }
+        ],
+        "PCIeDevices": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self/PCIeDevices/13"
+            }
+        ]
+    },
+    "Manufacturer": "Quanta Cloud Technology Inc.",
+    "Model": "QuantaGrid D42A-2U",
+    "Name": "Computer System Chassis",
+    "NetworkAdapters": {
+        "@odata.id": "/redfish/v1/Chassis/Self/NetworkAdapters"
+    },
+    "Oem": {
+        "Intel_RackScale": {
+            "@odata.type": "#Intel.Oem.Chassis",
+            "Location": {
+                "Id": "",
+                "ParentId": ""
+            }
+        },
+        "Quanta_RackScale": {
+            "Location": {
+                "BoardId": "1",
+                "ChassisId": "QTFCVU912000A",
+                "Dimension": "could not detect"
+            }
+        }
+    },
+    "PartNumber": "31MF5MB0030",
+    "Power": {
+        "@odata.id": "/redfish/v1/Chassis/Self/Power"
+    },
+    "PowerState": "On",
+    "SKU": "QuantaGrid D42A-2U (SKU2)_MF5A-BD-MB",
+    "SerialNumber": "QTFCVU912000A",
+    "Status": {
+        "Health": "OK",
+        "HealthRollup": "OK",
+        "State": "Enabled"
+    },
+    "Thermal": {
+        "@odata.id": "/redfish/v1/Chassis/Self/Thermal"
+    }
+}

@@ -1,0 +1,188 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#HostInterface.v1_1_2",
+    "definitions": {
+        "HostInterface": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "HostInterfaceType": {
+                    "$ref": "http://10.193.251.59/schemas/HostInterface.v1_0_0.json#/definitions/HostInterfaceType",
+                    "readonly": true,
+                    "description": "Indicates the Host Interface type for this interface.",
+                    "longDescription": "The value of this property shall be an enumeration describing type of the interface."
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "InterfaceEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Indicates whether this interface is enabled.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether this interface is enabled."
+                },
+                "ExternallyAccessible": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Indicates whether this interface is accessible by external entities.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether this interface is accessible by external (non-host) entities.  For example, if the host and manager are connected via a switch, and the switch also exposes an external port on the system, then the interface could also be used by external clients, and this property will have the value set to true."
+                },
+                "AuthenticationModes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/HostInterface.v1_0_0.json#/definitions/AuthenticationMode"
+                    },
+                    "readonly": false,
+                    "description": "Indicates the authentication modes available on this interface.",
+                    "longDescription": "The value of this property shall be an array consisting of the authentication modes allowed on this interface."
+                },
+                "KernelAuthRoleId": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "The Role used for kernel authentication on this interface.",
+                    "longDescription": "The value of this property shall be the ID of the Role resource that is configured for kernel authentication on this interface."
+                },
+                "KernelAuthEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Indicates whether this kernel authentication is enabled for this interface.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether kernel authentication for this interface is enabled."
+                },
+                "FirmwareAuthRoleId": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "The Role used for firmware authentication on this interface.",
+                    "longDescription": "The value of this property shall be the ID of the Role resource that is configured for firmware authentication on this interface."
+                },
+                "FirmwareAuthEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Indicates whether this firmware authentication is enabled for this interface.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether firmware authentication for this interface is enabled."
+                },
+                "Links": {
+                    "$ref": "http://10.193.251.59/schemas/HostInterface.v1_0_0.json#/definitions/Links",
+                    "description": "Contains references to other resources that are related to this resource.",
+                    "longDescription": "The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource."
+                },
+                "HostEthernetInterfaces": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterfaceCollection.json#/definitions/EthernetInterfaceCollection",
+                    "readonly": true,
+                    "description": "The Redfish link to the collection of network interface controllers or cards (NICs) that a Computer System uses to communicate with this Host Interface.",
+                    "longDescription": "The value of this property shall be a link to a collection of type EthernetInterfaceCollection that Computer Systems use as the Host Interface to this Manager."
+                },
+                "ManagerEthernetInterface": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": true,
+                    "description": "The Redfish link to a single network interface controllers or cards (NIC) that this Manager uses for network communication with this Host Interface.",
+                    "longDescription": "The value of this property shall be a link to a resource of type EthernetInterface which represents the network interface used by this Manager as the HostInterface."
+                },
+                "NetworkProtocol": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": true,
+                    "description": "The Redfish link to the network services and their settings that the Manager controls.  It is here that clients will find network configuration options as well as network services.",
+                    "longDescription": "The value of this property shall contain a reference to a resource of type ManagerNetworkProtocol which represents the network services for this Manager."
+                },
+                "Actions": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                            "type": [
+                                "array",
+                                "boolean",
+                                "number",
+                                "null",
+                                "object",
+                                "string"
+                            ],
+                            "description": "This property shall specify a valid odata or Redfish property."
+                        }
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "Oem": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                                    "type": [
+                                        "array",
+                                        "boolean",
+                                        "number",
+                                        "null",
+                                        "object",
+                                        "string"
+                                    ],
+                                    "description": "This property shall specify a valid odata or Redfish property."
+                                }
+                            },
+                            "additionalProperties": true,
+                            "properties": {},
+                            "description": "The available OEM specific actions for this resource.",
+                            "longDescription": "This type shall contain any additional OEM actions for this resource."
+                        }
+                    },
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This schema defines a single Host Interface resource.",
+            "longDescription": "This resource shall be used to represent Host Interface resources as part of the Redfish specification."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

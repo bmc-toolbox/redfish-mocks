@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Schedule",
+    "Id": "Schedule",
+    "Name": "Schedule Schema File",
+    "Description": "Schedule Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Schedule",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Schedule.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/FileShare",
+    "Id": "FileShare",
+    "Name": "FileShare Schema File",
+    "Description": "FileShare Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "FileShare",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/FileShare.json"
+        }
+    ],
+    "Oem": {}
+}

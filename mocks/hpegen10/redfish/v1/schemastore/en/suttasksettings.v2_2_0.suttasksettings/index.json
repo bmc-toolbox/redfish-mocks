@@ -1,0 +1,141 @@
+{
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "desciption": "",
+    "properties": {
+        "@odata.type": {
+            "readonly": true,
+            "type": "string",
+            "longDescription": "#SUTTaskSettings.v2_2_0.SUTTaskSettings"
+        },
+        "TaskSettings": {
+            "items": {
+                "type": "object",
+                "properties": {
+                    "properties": {
+                        "required": [
+                            "BaselineSettings",
+                            "TaskResults"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "TaskResults": {
+                                "required": [
+                                    "TaskState",
+                                    "MessageID"
+                                ],
+                                "type": "object",
+                                "properties": {
+                                    "TaskState": {
+                                        "readonly": false,
+                                        "enum": [
+                                            "Activated",
+                                            "Running",
+                                            "Failed",
+                                            "Pending"
+                                        ],
+                                        "type": "string",
+                                        "description": "Specifies end state of operation"
+                                    },
+                                    "MessageID": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Specifies success or failure of operation with message code"
+                                    }
+                                }
+                            },
+                            "BaselineSettings": {
+                                "required": [
+                                    "Type",
+                                    "description",
+                                    "ProgramName",
+                                    "Checksum",
+                                    "ChecksumProgramFile",
+                                    "Order"
+                                ],
+                                "type": "object",
+                                "properties": {
+                                    "Description": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Description of the task that client is requesting HPE SUT to perform"
+                                    },
+                                    "SourceUri": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Location where configuration data is present"
+                                    },
+                                    "Checksum": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Hash sum data to validate the integrity of zipped file"
+                                    },
+                                    "ChecksumProgramFile": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Hash sum data to validate the integrity of unzipped file"
+                                    },
+                                    "TargetUri": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "URI to be specified if HPE SUT to update the values"
+                                    },
+                                    "Arguments": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Argument values to be passed to the program"
+                                    },
+                                    "ProgramName": {
+                                        "readonly": false,
+                                        "type": "string",
+                                        "description": "Full path to the script that needs to be launched to perform the task"
+                                    },
+                                    "Type": {
+                                        "readonly": false,
+                                        "enum": [
+                                            "BIOS",
+                                            "STORAGE"
+                                        ],
+                                        "type": "string",
+                                        "enumDescriptions": {
+                                            "BIOS": "Setting Bios configuration is requsted",
+                                            "STORAGE": "Setting local storage configuration is requsted"
+                                        },
+                                        "description": "Type of operation requested by the client for HPE SUT to perform"
+                                    },
+                                    "Order": {
+                                        "readonly": false,
+                                        "type": "number",
+                                        "description": "Order in which task needs to be performed."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "type": "array"
+        },
+        "Name": {
+            "$ref": "Name.json#"
+        },
+        "title": "#SUTTaskSettings.v2_2_0.SUTTaskSettings",
+        "@odata.id": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/Systems/1/hpsut/tasksettings",
+            "type": "string",
+            "format": "uri"
+        },
+        "@odata.context": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/$metadata#Systems/Members/1/hpsut/Members/$entity.",
+            "type": "string",
+            "format": "uri"
+        },
+        "Modified": {
+            "$ref": "Modified.json#"
+        },
+        "type": "object"
+    },
+    "copyright": "(C)Copyright 2017 Hewlett Packard Enterprise Development LP"
+}

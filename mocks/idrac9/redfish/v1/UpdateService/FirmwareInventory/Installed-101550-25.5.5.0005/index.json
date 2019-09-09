@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-101550-25.5.5.0005",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-101550-25.5.5.0005",
+    "Name": "PERC H330 Mini",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23301_C_RAID.Integrated.1-1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "101550",
+                "ComponentType": "FRMW",
+                "DeviceID": "005F",
+                "ElementName": "PERC H330 Mini",
+                "HashValue": "a116cf43a1517466f982909cccf78d7347ef3f24448ead8e0af9bb8045e718e0",
+                "InstallationDate": "2019-03-01T07:03:02Z",
+                "IsEntity": true,
+                "RevisionNumber": 5,
+                "Status": "Installed",
+                "SubDeviceID": "1F4C",
+                "SubVendorID": "1028",
+                "VendorID": "1000"
+            }
+        }
+    },
+    "SoftwareId": "101550",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "25.5.5.0005"
+}

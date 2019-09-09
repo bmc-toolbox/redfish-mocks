@@ -1,0 +1,461 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#EthernetInterface.v1_4_0",
+    "definitions": {
+        "DHCPv4Configuration": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "DHCPEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether DHCPv4 is enabled on this interface.",
+                    "longDescription": "This property shall indicate whether DHCP v4 is enabled for this EthernetInterface."
+                },
+                "UseDNSServers": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use DHCPv4-supplied DNS servers.",
+                    "longDescription": "This property shall indicate whether the interface will use DHCPv4-supplied DNS servers."
+                },
+                "UseDomainName": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use a DHCPv4-supplied domain name.",
+                    "longDescription": "This property shall indicate whether the interface will use a DHCPv4-supplied domain name."
+                },
+                "UseGateway": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use a DHCPv4-supplied gateway.",
+                    "longDescription": "This property shall indicate whether the interface will use a DHCPv4-supplied gateway."
+                },
+                "UseNTPServers": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use DHCPv4-supplied NTP servers.",
+                    "longDescription": "This property shall indicate whether the interface will use DHCPv4-supplied NTP servers."
+                },
+                "UseStaticRoutes": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use DHCPv4-supplied static routes.",
+                    "longDescription": "This property shall indicate whether the interface will use a DHCPv4-supplied static routes."
+                }
+            },
+            "description": "DHCPv4 configuration for this interface.",
+            "longDescription": "This type shall describe the configuration of DHCP v4."
+        },
+        "DHCPv6Configuration": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "OperatingMode": {
+                    "$ref": "#/definitions/DHCPv6OperatingMode",
+                    "readonly": false,
+                    "description": "Determines the DHCPv6 operating mode for this interface.",
+                    "longDescription": "This property shall control the operating mode of DHCPv6 on this interface. DHCPv6 stateful mode is used to configure addresses, and when it is enabled, stateless mode is also implicitly enabled."
+                },
+                "UseDNSServers": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "When enabled, DNS server addresses supplied through DHCPv6 stateless mode will be used.",
+                    "longDescription": "This property shall indicate whether the interface will use DHCPv6-supplied DNS servers."
+                },
+                "UseDomainName": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "When enabled, the domain name supplied through DHCPv6 stateless mode will be used.",
+                    "longDescription": "This property shall indicate whether the interface will use a domain name supplied through  DHCPv6 stateless mode."
+                },
+                "UseNTPServers": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "When enabled, NTP server addresses supplied through DHCPv6 stateless mode will be used.",
+                    "longDescription": "This property shall indicate whether the interface will use DHCPv6-supplied NTP servers."
+                },
+                "UseRapidCommit": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Determines whether to use DHCPv6 rapid commit mode for stateful mode address assignments. Do not enable in networks where more than one DHCPv6 server is configured to provide address assignments.",
+                    "longDescription": "This property shall indicate whether the interface will use DHCPv6 rapid commit mode for stateful mode address assignments."
+                }
+            },
+            "description": "DHCPv6 configuration for this interface.",
+            "longDescription": "This type shall describe the configuration of DHCP v6."
+        },
+        "DHCPv6OperatingMode": {
+            "type": "string",
+            "enum": [
+                "Stateful",
+                "Stateless",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Stateful": "DHCPv6 stateful mode.",
+                "Stateless": "DHCPv6 stateless mode.",
+                "Disabled": "DHCPv6 is disabled."
+            }
+        },
+        "EthernetInterface": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "UefiDevicePath": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The UEFI device path for this interface.",
+                    "longDescription": "The value of this property shall be the UEFI device path to the device which implements this interface (port)."
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "InterfaceEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This indicates whether this interface is enabled.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether this interface is enabled."
+                },
+                "PermanentMACAddress": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_0_0.json#/definitions/MACAddress",
+                    "readonly": true,
+                    "description": "This is the permanent MAC address assigned to this interface (port).",
+                    "longDescription": "The value of this property shall be the Permanent MAC Address of this interface (port). This value is typically programmed during the manufacturing time. This address is not assignable."
+                },
+                "MACAddress": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_0_0.json#/definitions/MACAddress",
+                    "readonly": false,
+                    "description": "This is the currently configured MAC address of the (logical port) interface.",
+                    "longDescription": "The value of this property shall be the effective current MAC Address of this interface. If an assignable MAC address is not supported, this is a read only alias of the PermanentMACAddress."
+                },
+                "SpeedMbps": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This is the current speed in Mbps of this interface.",
+                    "longDescription": "The value of this property shall be the link speed of the interface in Mbps."
+                },
+                "AutoNeg": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This indicates if the speed and duplex are automatically negotiated and configured on this interface.",
+                    "longDescription": "The value of this property shall be true if auto negotiation of speed and duplex is enabled on this interface and false if it is disabled."
+                },
+                "FullDuplex": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This indicates if the interface is in Full Duplex mode or not.",
+                    "longDescription": "The value of this property shall represent the duplex status of the Ethernet connection on this interface."
+                },
+                "MTUSize": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This is the currently configured Maximum Transmission Unit (MTU) in bytes on this interface.",
+                    "longDescription": "The value of this property shall be the size in bytes of largest Protocol Data Unit (PDU) that can be passed in an Ethernet (MAC) frame on this interface."
+                },
+                "HostName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The DNS Host Name, without any domain information.",
+                    "longDescription": "The value of this property shall be host name for this interface."
+                },
+                "FQDN": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This is the complete, fully qualified domain name obtained by DNS for this interface.",
+                    "longDescription": "The value of this property shall be the fully qualified domain name for this interface."
+                },
+                "MaxIPv6StaticAddresses": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "This indicates the maximum number of Static IPv6 addresses that can be configured on this interface.",
+                    "longDescription": "The value of this property shall indicate the number of array items supported by IPv6StaticAddresses."
+                },
+                "VLAN": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "description": "If this Network Interface supports more than one VLAN, this property is not present. VLANs collections appear in the Link section of this resource.",
+                    "longDescription": "The value of this property shall be the VLAN for this interface.  If this interface supports more than one VLAN, the VLAN property shall not be present and the VLANS collection link shall be present instead."
+                },
+                "IPv4Addresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "The IPv4 addresses currently assigned to this interface.",
+                    "longDescription": "The value of this property shall be an array of objects used to represent the IPv4 connection characteristics for this interface. It is recommended that this propety be regarded as read-only, with configuration of static addresses performed by updating the values within IPv4StaticAddessses. Services may reject updates to this array for this reason."
+                },
+                "IPv6AddressPolicyTable": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_0_0.json#/definitions/IPv6AddressPolicyEntry"
+                    },
+                    "description": "An array representing the RFC 6724 Address Selection Policy Table.",
+                    "longDescription": "The value of this property shall be an array of objects used to represent the Address Selection Policy Table as defined in RFC 6724."
+                },
+                "IPv6Addresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "Enumerates in an array all of the currently assigned IPv6 addresses on this interface.",
+                    "longDescription": "The value of this property shall be an array of objects used to represent the IPv6 connection characteristics for this interface."
+                },
+                "IPv6StaticAddresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "Represents in an array all of the IPv6 static addresses to be assigned on this interface.",
+                    "longDescription": "The value of this property shall be an array of objects used to represent the IPv6 static connection characteristics for this interface."
+                },
+                "IPv6DefaultGateway": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "This is the IPv6 default gateway address that is currently in use on this interface.",
+                    "longDescription": "The value of this property shall be the current IPv6 default gateway address that is in use on this interface."
+                },
+                "NameServers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readonly": true,
+                    "description": "This represents DNS name servers that are currently in use on this interface.",
+                    "longDescription": "The value of this property shall be the DNS name servers used on this interface."
+                },
+                "VLANs": {
+                    "$ref": "http://10.193.251.59/schemas/VLanNetworkInterfaceCollection.json#/definitions/VLanNetworkInterfaceCollection",
+                    "readonly": true,
+                    "description": "This is a reference to a collection of VLANs and is only used if the interface supports more than one VLANs.",
+                    "longDescription": "The value of this property shall reference a collection of VLAN resources. If this property is used, the VLANEnabled and VLANId property shall not be used."
+                },
+                "LinkStatus": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_1_0.json#/definitions/LinkStatus",
+                    "readonly": true,
+                    "description": "The link status of this interface (port).",
+                    "longDescription": "The value of this property shall be the link status of this interface (port)."
+                },
+                "Links": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_1_0.json#/definitions/Links",
+                    "description": "Contains references to other resources that are related to this resource.",
+                    "longDescription": "The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/EthernetInterface.v1_3_0.json#/definitions/Actions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "DHCPv4": {
+                    "$ref": "#/definitions/DHCPv4Configuration",
+                    "description": "DHCPv4 configuration for this interface.",
+                    "longDescription": "This property shall contain the configuration of DHCP v4."
+                },
+                "DHCPv6": {
+                    "$ref": "#/definitions/DHCPv6Configuration",
+                    "description": "DHCPv6 configuration for this interface.",
+                    "longDescription": "This property shall contain the configuration of DHCP v6."
+                },
+                "StatelessAddressAutoConfig": {
+                    "$ref": "#/definitions/StatelessAddressAutoConfiguration",
+                    "description": "Stateless Address Automatic Configuration (SLAAC) parameters for this interface.",
+                    "longDescription": "This object shall contain the IPv4 and IPv6 Stateless Address Automatic Configuration (SLAAC) properties for this interface."
+                },
+                "IPv6StaticDefaultGateways": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "The IPv6 static default gateways for this interface.",
+                    "longDescription": "The values in this array shall represent the IPv6 static default gateway addresses for this interface."
+                },
+                "StaticNameServers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "readonly": false,
+                    "description": "A statically defined set of DNS server IP addresses (both IPv4 and IPv6).",
+                    "longDescription": "A statically defined set of DNS server IP addresses to be used when DHCP provisioning is not in enabled for name server configuration. As an implementation option they may also be used in addition to DHCP provided addresses, or in cases where the DHCP server provides no DNS assigments."
+                },
+                "IPv4StaticAddresses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "The IPv4 static addresses assigned to this interface.",
+                    "longDescription": "The value of this property shall be an array of objects used to represent all IPv4 static addresses assigned (but not necessarily in use) to this interface. Addresses in use by this interface shall also appear in the IPv4Addresses property."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "The EthernetInterface schema represents a single, logical ethernet interface or network interface controller (NIC).",
+            "longDescription": "This resource shall be used to represent NIC resources as part of the Redfish specification."
+        },
+        "StatelessAddressAutoConfiguration": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "IPv4AutoConfigEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Indicates whether IPv4 SLAAC is enabled for this interface.",
+                    "longDescription": "This property shall indicate whether IPv4 Stateless Address Auto-Configuration (SLAAC) is enabled for this interface."
+                },
+                "IPv6AutoConfigEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Indicates whether IPv6 SLAAC is enabled for this interface.",
+                    "longDescription": "This property shall indicate whether IPv6 Stateless Address Auto-Configuration (SLAAC) is enabled for this interface."
+                }
+            },
+            "description": "Stateless Address Automatic Configuration (SLAAC) parameters for this interface.",
+            "longDescription": "This type shall describe the IPv4 and IPv6 Stateless Address Automatic Configuration (SLAAC) for this interface."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

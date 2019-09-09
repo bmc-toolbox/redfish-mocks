@@ -1,0 +1,1048 @@
+{
+    "$ref": "#/definitions/DellLCService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "Actions": {
+            "additionalProperties": false,
+            "description": "The available actions for this resource.",
+            "longDescription": "This type shall contain the available actions for this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "#DellLCService.BackupImage": {
+                    "$ref": "#/definitions/BackupImage"
+                },
+                "#DellLCService.ClearProvisioningServer": {
+                    "$ref": "#/definitions/ClearProvisioningServer"
+                },
+                "#DellLCService.ExportFactoryConfiguration": {
+                    "$ref": "#/definitions/ExportFactoryConfiguration"
+                },
+                "#DellLCService.ExportHWInventory": {
+                    "$ref": "#/definitions/ExportHWInventory"
+                },
+                "#DellLCService.ExportLCLog": {
+                    "$ref": "#/definitions/ExportLCLog"
+                },
+                "#DellLCService.ExportTechSupportReport": {
+                    "$ref": "#/definitions/ExportTechSupportReport"
+                },
+                "#DellLCService.GetRSStatus": {
+                    "$ref": "#/definitions/GetRSStatus"
+                },
+                "#DellLCService.GetRemoteServicesAPIStatus": {
+                    "$ref": "#/definitions/GetRemoteServicesAPIStatus"
+                },
+                "#DellLCService.LCWipe": {
+                    "$ref": "#/definitions/LCWipe"
+                },
+                "#DellLCService.ReInitiateDHS": {
+                    "$ref": "#/definitions/ReInitiateDHS"
+                },
+                "#DellLCService.RestoreImage": {
+                    "$ref": "#/definitions/RestoreImage"
+                }
+            },
+            "type": "object"
+        },
+        "BackupImage": {
+            "additionalProperties": false,
+            "description": "The BackupImage() method is used for backing-up the firmware and configurations for Lifecycle Controller.",
+            "longDescription": "The BackupImage() method is used for backing-up the firmware and configurations for Lifecycle Controller.",
+            "parameters": {
+                "CheckBackupDestinationAvailability": {
+                    "$ref": "#/definitions/CheckBackupDestinationAvailability",
+                    "description": "Check backup destination availability for CIFS/NFS share. Default is 0 - Check.",
+                    "longDescription": "Check backup destination availability for CIFS/NFS share. Default is 0 - Check."
+                },
+                "IPAddress": {
+                    "description": "The IP address for the network share for the backup image. This is a required parameter when ShareType is specified as NFS or CIFS.",
+                    "longDescription": "The IP address for the network share for the backup image. This is a required parameter when ShareType is specified as NFS or CIFS.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning should be ignored when HTTPS is specified. Default is 2 (On).",
+                    "longDescription": "Specifies if certificate warning should be ignored when HTTPS is specified. Default is 2 (On)."
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "JobName": {
+                    "description": "A name for the job. Default is 'Backup:Image'.",
+                    "longDescription": "A name for the job. Default is 'Backup:Image'.",
+                    "type": "string"
+                },
+                "Passphrase": {
+                    "description": "The passphrase for the backup image. This parameter is required if ShareType is NFS or CIFS.",
+                    "longDescription": "The passphrase for the backup image. This parameter is required if ShareType is NFS or CIFS.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "The password to access the network share.",
+                    "longDescription": "The password to access the network share.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password for the proxy server.",
+                    "longDescription": "The password for the proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP address of the proxy server.",
+                    "longDescription": "The IP address of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy should be used. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy should be used. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The user name for the proxy server.",
+                    "longDescription": "The user name for the proxy server.",
+                    "type": "string"
+                },
+                "ScheduledStartTime": {
+                    "description": "Schedules the job at the time specified. The format is yyyymmddhhmmss. Default value is TIME_NOW, which will start the job immediately.",
+                    "longDescription": "Schedules the job at the time specified. The format is yyyymmddhhmmss. Default value is TIME_NOW, which will start the job immediately.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share.Default is NFS, when this parameter is not passed.",
+                    "longDescription": "Type of the network share.Default is NFS, when this parameter is not passed."
+                },
+                "UntilTime": {
+                    "description": "Scheduled end time for job execution in datetime format:yyyymmddhhmmss. If not specified, there is no end time.",
+                    "longDescription": "Scheduled end time for job execution in datetime format:yyyymmddhhmmss. If not specified, there is no end time.",
+                    "type": "string"
+                },
+                "UserName": {
+                    "description": "The UserName to access the network share.",
+                    "longDescription": "The UserName to access the network share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share - optional.",
+                    "longDescription": "Workgroup for the CIFS share - optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "CheckBackupDestinationAvailability": {
+            "enum": [
+                "Check",
+                "DoNotCheck"
+            ],
+            "enumDescriptions": {
+                "Check": "Check",
+                "DoNotCheck": "Do Not Check"
+            },
+            "type": "string"
+        },
+        "ClearProvisioningServer": {
+            "additionalProperties": false,
+            "description": "The ClearProvisioningServer() method is used for clearing the provisioning server values.",
+            "longDescription": "The ClearProvisioningServer() method is used for clearing the provisioning server values.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DataSelectorArrayIn": {
+            "enum": [
+                "HWData",
+                "OSAppData",
+                "OSAppDataWithoutPII",
+                "TTYLogs"
+            ],
+            "enumDescriptions": {
+                "HWData": "HW Data",
+                "OSAppData": "OSApp Data",
+                "OSAppDataWithoutPII": "OSApp Data Without PII",
+                "TTYLogs": "TTY Logs"
+            },
+            "type": "string"
+        },
+        "DellLCService": {
+            "additionalProperties": false,
+            "description": "The DellLCService resource provides some actions to support Lifecycle Controller functionality.",
+            "longDescription": "The DellLCService resource provides some actions to support Lifecycle Controller functionality.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Actions": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Actions"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "ExportFactoryConfiguration": {
+            "additionalProperties": false,
+            "description": "The ExportFactoryConfiguration() method is used for exporting the factory configuration from Lifecycle Controller to a remote share.",
+            "longDescription": "The ExportFactoryConfiguration() method is used for exporting the factory configuration from Lifecycle Controller to a remote share.",
+            "parameters": {
+                "FileName": {
+                    "description": "The target output file name. FileName is not required if share type is Local.",
+                    "longDescription": "The target output file name. FileName is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the network share. IP address is not required if share type is Local.",
+                    "longDescription": "IP address of the network share. IP address is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On).",
+                    "longDescription": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On)."
+                },
+                "Password": {
+                    "description": "Password of the account to access the share.",
+                    "longDescription": "Password of the account to access the share.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password for the proxy server.",
+                    "longDescription": "The password for the proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP address of the proxy server.",
+                    "longDescription": "The IP address of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy should be used. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy should be used. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The user name for the proxy server.",
+                    "longDescription": "The user name for the proxy server.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share.",
+                    "longDescription": "Type of the network share."
+                },
+                "UserName": {
+                    "description": "UserName of the account to access the share.",
+                    "longDescription": "UserName of the account to access the share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share - optional.",
+                    "longDescription": "Workgroup for the CIFS share - optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExportHWInventory": {
+            "additionalProperties": false,
+            "description": "The ExportHWInventory() method is used for exporting the hardware inventory from the Lifecycle Controller to a remote share.",
+            "longDescription": "The ExportHWInventory() method is used for exporting the hardware inventory from the Lifecycle Controller to a remote share.",
+            "parameters": {
+                "FileName": {
+                    "description": "The target output file name. FileName is not required if share type is Local.",
+                    "longDescription": "The target output file name. FileName is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the network share. IPAddress is not required if share type is Local.",
+                    "longDescription": "IP address of the network share. IPAddress is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On).",
+                    "longDescription": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On)."
+                },
+                "Password": {
+                    "description": "Password of the account to access the share.",
+                    "longDescription": "Password of the account to access the share.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password for the proxy server.",
+                    "longDescription": "The password for the proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP address of the proxy server.",
+                    "longDescription": "The IP address of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy should be used. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy should be used. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The user name for the proxy server.",
+                    "longDescription": "The user name for the proxy server.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file. ShareName is not required if share type is Local.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file. ShareName is not required if share type is Local.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share.",
+                    "longDescription": "Type of the network share."
+                },
+                "UserName": {
+                    "description": "UserName of the account to access the share.",
+                    "longDescription": "UserName of the account to access the share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share - optional.",
+                    "longDescription": "Workgroup for the CIFS share - optional.",
+                    "type": "string"
+                },
+                "XMLSchema": {
+                    "$ref": "#/definitions/XMLSchema",
+                    "description": "Type of XML output format. Default is CIM-XML.",
+                    "longDescription": "Type of XML output format. Default is CIM-XML."
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExportLCLog": {
+            "additionalProperties": false,
+            "description": "The ExportLCLog() method is used for exporting the log from the Lifecycle Controller to a remote share.",
+            "longDescription": "The ExportLCLog() method is used for exporting the log from the Lifecycle Controller to a remote share.",
+            "parameters": {
+                "FileName": {
+                    "description": "The target output file name. FileName is not required if share type is Local.",
+                    "longDescription": "The target output file name. FileName is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the network share. IP address is not required if share type is Local.",
+                    "longDescription": "IP address of the network share. IP address is not required if share type is Local.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On).",
+                    "longDescription": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On)."
+                },
+                "Password": {
+                    "description": "Password of the account to access the share.",
+                    "longDescription": "Password of the account to access the share.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password for the proxy server.",
+                    "longDescription": "The password for the proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP address of the proxy server.",
+                    "longDescription": "The IP address of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy should be used. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy should be used. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The user name for the proxy server.",
+                    "longDescription": "The user name for the proxy server.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS shares (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS shares (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share.",
+                    "longDescription": "Type of the network share."
+                },
+                "UserName": {
+                    "description": "UserName of the account to access the share.",
+                    "longDescription": "UserName of the account to access the share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share - optional.",
+                    "longDescription": "Workgroup for the CIFS share - optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExportTechSupportReport": {
+            "additionalProperties": false,
+            "description": "This method is used to collect the TSR that incudes hardware, OS, and application data. The data is compressed into a zip file and saved on the remote share (CIFS/NFS ).",
+            "longDescription": "This method is used to collect the TSR that incudes hardware, OS, and application data. The data is compressed into a zip file and saved on the remote share (CIFS/NFS ).",
+            "parameters": {
+                "DataSelectorArrayIn": {
+                    "description": "DataSelectorArrayIn to select the data.",
+                    "items": {
+                        "$ref": "#/definitions/DataSelectorArrayIn"
+                    },
+                    "longDescription": "DataSelectorArrayIn to select the data.",
+                    "type": "array"
+                },
+                "FileName": {
+                    "description": "FileName of the export tech support report.",
+                    "longDescription": "FileName of the export tech support report.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the network share.",
+                    "longDescription": "IP address of the network share.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password of the account to access the share.",
+                    "longDescription": "Password of the account to access the share.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share.",
+                    "longDescription": "Type of the network share."
+                },
+                "UserName": {
+                    "description": "UserName of the account to access the share.",
+                    "longDescription": "UserName of the account to access the share.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "GetRSStatus": {
+            "additionalProperties": false,
+            "description": "The GetRSStatus() method is used for obtaining the Data Manager (Remote Services) status. Note: The GetRemoteServicesAPIStatus() method execution reports more granular and detailed status of the Remote Services API.",
+            "longDescription": "The GetRSStatus() method is used for obtaining the Data Manager (Remote Services) status. Note: The GetRemoteServicesAPIStatus() method execution reports more granular and detailed status of the Remote Services API.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "GetRemoteServicesAPIStatus": {
+            "additionalProperties": false,
+            "description": "The GetRemoteServicesAPIStatus() method is used for obtaining the overall remote services API status that includes host system status, the remote services (Data Manager) status, and real-time status. The overall rolled up status is reflected in the Status output parameter. Note: The LCStatus output parameter value includes the status reported by the DMStatus output parameter in the GetRSStatus() method and the Lifecycle Controller status. Thus, GetRSStatus() method invocation is redundant.",
+            "longDescription": "The GetRemoteServicesAPIStatus() method is used for obtaining the overall remote services API status that includes host system status, the remote services (Data Manager) status, and real-time status. The overall rolled up status is reflected in the Status output parameter. Note: The LCStatus output parameter value includes the status reported by the DMStatus output parameter in the GetRSStatus() method and the Lifecycle Controller status. Thus, GetRSStatus() method invocation is redundant.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "IgnoreCertWarning": {
+            "enum": [
+                "Off",
+                "On"
+            ],
+            "enumDescriptions": {
+                "Off": "Off",
+                "On": "On"
+            },
+            "type": "string"
+        },
+        "LCWipe": {
+            "additionalProperties": false,
+            "description": "The LCWipe() method is used for deleting all configurations from Lifecycle Controller before the system is retired. Host must be manually rebooted for the changes to take effect.",
+            "longDescription": "The LCWipe() method is used for deleting all configurations from Lifecycle Controller before the system is retired. Host must be manually rebooted for the changes to take effect.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "PerformAutoDiscovery": {
+            "enum": [
+                "NextBoot",
+                "Now",
+                "Off"
+            ],
+            "enumDescriptions": {
+                "NextBoot": "NextBoot",
+                "Now": "Now",
+                "Off": "Off"
+            },
+            "type": "string"
+        },
+        "PreserveVDConfig": {
+            "enum": [
+                "False",
+                "True"
+            ],
+            "enumDescriptions": {
+                "False": "False",
+                "True": "True"
+            },
+            "type": "string"
+        },
+        "ProxySupport": {
+            "enum": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "enumDescriptions": {
+                "DefaultProxy": "On-use user default proxy settings",
+                "Off": "Off",
+                "ParametersProxy": "On-use passed in parameters for proxy"
+            },
+            "type": "string"
+        },
+        "ProxyType": {
+            "enum": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "enumDescriptions": {
+                "HTTP": "HTTP",
+                "SOCKS": "SOCKS"
+            },
+            "type": "string"
+        },
+        "ReInitiateDHS": {
+            "additionalProperties": false,
+            "description": "The ReInitiateDHS() method is used for reinitiating the provisioning server discovery and handshake.",
+            "longDescription": "The ReInitiateDHS() method is used for reinitiating the provisioning server discovery and handshake.",
+            "parameters": {
+                "PerformAutoDiscovery": {
+                    "$ref": "#/definitions/PerformAutoDiscovery",
+                    "description": "A value of \"Off = 1\" disables auto discovery. A value of \"Now = 2\" enables and initiates auto discovery immediately. A value of  \"NextBoot = 3\" delays reconfiguration and auto discovery until next AC power cycle. Note: If NextBoot has a value of 3, then upon successful execution, the Discovery Factory Defaults attribute is set to \"On\".",
+                    "longDescription": "A value of \"Off = 1\" disables auto discovery. A value of \"Now = 2\" enables and initiates auto discovery immediately. A value of  \"NextBoot = 3\" delays reconfiguration and auto discovery until next AC power cycle. Note: If NextBoot has a value of 3, then upon successful execution, the Discovery Factory Defaults attribute is set to \"On\"."
+                },
+                "ProvisioningServer": {
+                    "description": "This property specifies the provisioning server addresses and ports used for auto discovery. If omitted, Lifecycle Controller gets the value from DHCP or DNS.",
+                    "longDescription": "This property specifies the provisioning server addresses and ports used for auto discovery. If omitted, Lifecycle Controller gets the value from DHCP or DNS.",
+                    "type": "string"
+                },
+                "ResetToFactoryDefaults": {
+                    "description": "If ResetToFactoryDefaults is True, all configuration information is replaced with auto-discovery factory defaults. If False, an error is returned.",
+                    "longDescription": "If ResetToFactoryDefaults is True, all configuration information is replaced with auto-discovery factory defaults. If False, an error is returned.",
+                    "type": "boolean"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "RestoreImage": {
+            "additionalProperties": false,
+            "description": "This RestoreImage() method is used to restore firmware and configurations.",
+            "longDescription": "This RestoreImage() method is used to restore firmware and configurations.",
+            "parameters": {
+                "IPAddress": {
+                    "description": "IP address of the NFS or CIFS share. The parameter is required if the ShareType parameter has value 0 (NFS), 2 (CIFS), or is not specified.",
+                    "longDescription": "IP address of the NFS or CIFS share. The parameter is required if the ShareType parameter has value 0 (NFS), 2 (CIFS), or is not specified.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On).",
+                    "longDescription": "Specifies if certificate warning should be ignored when HTTPS is specified. If IgnoreCertWarning is On, warnings are ignored. Default is 2 (On)."
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "Passphrase": {
+                    "description": "The passphrase for the restore image.",
+                    "longDescription": "The passphrase for the restore image.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password for the remote share.",
+                    "longDescription": "Password for the remote share.",
+                    "type": "string"
+                },
+                "PreserveVDConfig": {
+                    "$ref": "#/definitions/PreserveVDConfig",
+                    "description": "Specifies whether to preserve the VD configuration.",
+                    "longDescription": "Specifies whether to preserve the VD configuration."
+                },
+                "ProxyPasswd": {
+                    "description": "The password for the proxy server.",
+                    "longDescription": "The password for the proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP address of the proxy server.",
+                    "longDescription": "The IP address of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy should be used. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy should be used. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The user name for the proxy server.",
+                    "longDescription": "The user name for the proxy server.",
+                    "type": "string"
+                },
+                "ScheduledStartTime": {
+                    "description": "Schedules the job at the time specified. The format is yyyymmddhhmmss. Default value is TIME_NOW, which will start the job immediately.",
+                    "longDescription": "Schedules the job at the time specified. The format is yyyymmddhhmmss. Default value is TIME_NOW, which will start the job immediately.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the network share. Default is NFS, when this parameter is not passed.",
+                    "longDescription": "Type of the network share. Default is NFS, when this parameter is not passed."
+                },
+                "UntilTime": {
+                    "description": "End time for the job execution in format: yyyymmddhhmmss. If not specified, there is no end time.",
+                    "longDescription": "End time for the job execution in format: yyyymmddhhmmss. If not specified, there is no end time.",
+                    "type": "string"
+                },
+                "UserName": {
+                    "description": "The UserName to access the network share.",
+                    "longDescription": "The UserName to access the network share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share - optional.",
+                    "longDescription": "Workgroup for the CIFS share - optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ShareType": {
+            "enum": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "Local",
+                "NFS",
+                "VFLASH"
+            ],
+            "enumDescriptions": {
+                "CIFS": "CIFS",
+                "HTTP": "HTTP",
+                "HTTPS": "HTTPS",
+                "Local": "Local",
+                "NFS": "NFS",
+                "VFLASH": "VFLASH"
+            },
+            "type": "string"
+        },
+        "XMLSchema": {
+            "enum": [
+                "CIM-XML",
+                "Simple"
+            ],
+            "enumDescriptions": {
+                "CIM-XML": "CIM-XML",
+                "Simple": "Simple"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellLCService.v1_0_0.DellLCService"
+}

@@ -1,0 +1,96 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataProtectionLoSCapabilities",
+    "definitions": {
+        "DataProtectionLoSCapabilities": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Describe data protection capabilities",
+            "longDescription": "The capabilities to protect data from loss by the use of a replica. The requirements must be met collectively by the communication path and the replica. There will be one instance associated to a class of service for each replica. Each replica has its own class of service that describes its characteristics."
+        },
+        "FailureDomainScope": {
+            "type": "string",
+            "enum": [
+                "Server",
+                "Rack",
+                "RackGroup",
+                "Row",
+                "Datacenter",
+                "Region"
+            ],
+            "enumDescriptions": {
+                "Server": "A CPU/memory complex.",
+                "Rack": "A container for Servers, Networking, and Storage.",
+                "RackGroup": "A set of Racks that share common infrastructure.",
+                "Row": "An adjacent set of racks.",
+                "Datacenter": "A co-located set of servers, including network and storage that share communication, power, or cooling infrastructure.",
+                "Region": "A geographical or politically isolated set of resources."
+            },
+            "description": "Values of this enumeration represent a geographic scope of a failure domain.",
+            "longDescription": "The enumeration literals of this enumeration shall represent a geographic scope in which all components within that scope have similar vulnerabilities."
+        },
+        "RecoveryAccessScope": {
+            "type": "string",
+            "enum": [
+                "OnlineActive",
+                "OnlinePassive",
+                "Nearline",
+                "Offline"
+            ],
+            "enumDescriptions": {
+                "OnlineActive": "Active access to synchronous replicas.",
+                "OnlinePassive": "Passive access to replicas via the same front-end interconnect.",
+                "Nearline": "Access to replica via a different front-end interconnect. A restore step is required before recovery can commence.",
+                "Offline": "No direct connection to the replica. (i.e. To a bunker containing backup media.)"
+            },
+            "description": "An enumeration that represents the relative time required to make a replica available as a source.",
+            "longDescription": "The enumeration literals shall represent the relative time required to make a replica available as a source. "
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

@@ -1,0 +1,772 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Systems/Members(*)/$entity",
+    "@odata.etag": "W/\"1562836234\"",
+    "@odata.id": "/redfish/v1/Systems/Self",
+    "@odata.type": "#ComputerSystem.v1_3_0.ComputerSystem",
+    "Actions": {
+        "#ComputerSystem.Reset": {
+            "ResetType@Redfish.AllowableValues": [
+                "On",
+                "ForceOff",
+                "GracefulShutdown",
+                "ForceRestart"
+            ],
+            "target": "/redfish/v1/Systems/Self/Actions/ComputerSystem.Reset"
+        }
+    },
+    "AssetTag": "---",
+    "Bios": {
+        "@odata.id": "/redfish/v1/Systems/Self/Bios"
+    },
+    "BiosVersion": "3A08.01",
+    "Boot": {
+        "@odata.type": "#ComputerSystem.v1_1_0.Boot",
+        "BootSourceOverrideEnabled": "Disabled",
+        "BootSourceOverrideEnabled@Redfish.AllowableValues": [
+            "Disabled",
+            "Once",
+            "Continuous"
+        ],
+        "BootSourceOverrideMode": "Legacy",
+        "BootSourceOverrideMode@Redfish.AllowableValues": [
+            "Legacy",
+            "UEFI"
+        ],
+        "BootSourceOverrideTarget": "None",
+        "BootSourceOverrideTarget@Redfish.AllowableValues": [
+            "None",
+            "Pxe",
+            "Hdd",
+            "Usb",
+            "Cd",
+            "UefiTarget"
+        ]
+    },
+    "Description": "System Self",
+    "EthernetInterfaces": {
+        "@odata.id": "/redfish/v1/Systems/Self/EthernetInterfaces"
+    },
+    "Id": "Self",
+    "IndicatorLED": "Off",
+    "IndicatorLED@Redfish.AllowableValues": [
+        "Lit",
+        "Blinking",
+        "Off"
+    ],
+    "Links": {
+        "@odata.type": "#ComputerSystem.v1_2_0.Links",
+        "Chassis": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self"
+            }
+        ],
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/Self"
+            }
+        ]
+    },
+    "Manufacturer": "Quanta Cloud Technology Inc.",
+    "Memory": {
+        "@odata.id": "/redfish/v1/Systems/Self/Memory"
+    },
+    "MemorySummary": {
+        "Status": {
+            "Health": "OK",
+            "HealthRollup": "OK",
+            "State": "Enabled"
+        },
+        "TotalSystemMemoryGiB": 1024
+    },
+    "Model": "QuantaGrid D42A-2U",
+    "Name": "System Self",
+    "Oem": {
+        "Intel_RackScale": {
+            "DiscoveryState": "Basic",
+            "MemorySockets": 16,
+            "PCIeConnectionId": [],
+            "PciDevices": [
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1150",
+                    "VendorId": "0x1a03"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145f",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x7901",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1017",
+                    "VendorId": "0x15b3"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145f",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "VendorId": "0x1022"
+                }
+            ],
+            "ProcessorSockets": 1
+        },
+        "Quanta_RackScale": {
+            "ConfigurableBootSourceOverrideTargets": "None",
+            "FirmwareVersion": "3.14.19",
+            "PCIeConnectionInfo": [],
+            "PciDevices": [
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1150",
+                    "SubsystemId": "0x1150",
+                    "SubsystemVendorId": "0x1a03",
+                    "VendorId": "0x1a03"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "SubsystemId": "0x145a",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "SubsystemId": "0x1456",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145f",
+                    "SubsystemId": "0x145c",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "SubsystemId": "0x1455",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "SubsystemId": "0x1468",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x7901",
+                    "SubsystemId": "0x7901",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1017",
+                    "SubsystemId": "0x6",
+                    "SubsystemVendorId": "0x15b3",
+                    "VendorId": "0x15b3"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x5190",
+                    "SubsystemId": "0x5d00",
+                    "SubsystemVendorId": "0x1344",
+                    "VendorId": "0x1344"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "SubsystemId": "0x145a",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "SubsystemId": "0x1456",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145f",
+                    "SubsystemId": "0x145c",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "SubsystemId": "0x1455",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "SubsystemId": "0x1468",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "SubsystemId": "0x145a",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "SubsystemId": "0x1456",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "SubsystemId": "0x1455",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "SubsystemId": "0x1468",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1453",
+                    "SubsystemId": "0x1453",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x145a",
+                    "SubsystemId": "0x145a",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1456",
+                    "SubsystemId": "0x1456",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1454",
+                    "SubsystemId": "0x1454",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1455",
+                    "SubsystemId": "0x1455",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                },
+                {
+                    "DeviceId": "0x1468",
+                    "SubsystemId": "0x1468",
+                    "SubsystemVendorId": "0x1022",
+                    "VendorId": "0x1022"
+                }
+            ],
+            "SASConnectionId": [],
+            "SASConnectionIdTimeStamp": [],
+            "TotalSystemCoreCount": 32
+        }
+    },
+    "PartNumber": "31MF5MB0030",
+    "PowerState": "On",
+    "ProcessorSummary": {
+        "Count": 1,
+        "Model": "Available for assignment",
+        "Status": {
+            "Health": "OK",
+            "HealthRollup": "OK",
+            "State": "Enabled"
+        }
+    },
+    "Processors": {
+        "@odata.id": "/redfish/v1/Systems/Self/Processors"
+    },
+    "SKU": "QuantaGrid D42A-2U (SKU2)_MF5A-BD-MB",
+    "SerialNumber": "QTFCVU912000A",
+    "SimpleStorage": {
+        "@odata.id": "/redfish/v1/Systems/Self/SimpleStorage"
+    },
+    "Status": {
+        "Health": "OK",
+        "HealthRollup": "OK",
+        "State": "Enabled"
+    },
+    "Storage": {
+        "@odata.id": "/redfish/v1/Systems/Self/Storage"
+    },
+    "SystemType": "Physical",
+    "TrustedModules": [
+        {
+            "@odata.type": "#ComputerSystem.v1_3_0.TrustedModules",
+            "Status": {
+                "Health": "OK",
+                "HealthRollup": "OK",
+                "Status": "Enabled"
+            }
+        }
+    ],
+    "UUID": "94af296a-eefe-11e8-9fc7-d8c497d07433"
+}

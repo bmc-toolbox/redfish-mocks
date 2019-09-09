@@ -1,0 +1,35 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+    "@odata.etag": "W/\"2D16F029\"",
+    "@odata.id": "/redfish/v1/Chassis/enclosurechassis/",
+    "@odata.type": "#Chassis.v1_6_0.Chassis",
+    "Id": "enclosurechassis",
+    "ChassisType": "Enclosure",
+    "IndicatorLED": "On",
+    "Manufacturer": "HPE",
+    "Name": "CZ372137H3",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeServerChassis.HpeServerChassis",
+            "@odata.type": "#HpeServerChassis.v2_2_1.HpeServerChassis",
+            "EnclosureIndicatorLED": "Lit",
+            "EnclosureModel": "BladeSystem c7000 Enclosure G3",
+            "EnclosureUUID": "09CZ372137H3",
+            "OnboardAdministrator": {
+                "IPv4Address": "10.193.251.161",
+                "IPv6": {
+                    "SLAACAddress": [
+                        "FE80::1260:4BFF:FEA2:51",
+                        "2A01:5041:2000:49:1260:4BFF:FEA2:51"
+                    ]
+                },
+                "MacAddress": "10:60:4b:a2:00:51"
+            },
+            "RackName": "UnnamedRack"
+        }
+    },
+    "SerialNumber": "CZ372137H3",
+    "Status": {
+        "Health": "OK"
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellNumericSensorCollection.DellNumericSensorCollection",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensorCollection/",
+    "@odata.type": "#DellNumericSensorCollection.DellNumericSensorCollection",
+    "Description": "A collection of DellNumericSensor resource",
+    "Id": "DellNumericSensorCollection",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23SystemBoardInletTemp",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": 150,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#SystemBoardInletTemp",
+            "ElementName": "System Board Inlet Temp",
+            "EnabledState": "Enabled",
+            "HealthState": "OK",
+            "Id": "iDRAC.Embedded.1#SystemBoardInletTemp",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Temperature"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23CPU1Temp",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#CPU1Temp",
+            "ElementName": "CPU1 Temp",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1Temp",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Temperature"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23CPU2Temp",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#CPU2Temp",
+            "ElementName": "CPU2 Temp",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2Temp",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Temperature"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23SystemBoardIOUsage",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#SystemBoardIOUsage",
+            "ElementName": "System Board IO Usage",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardIOUsage",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23SystemBoardMEMUsage",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#SystemBoardMEMUsage",
+            "ElementName": "System Board MEM Usage",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardMEMUsage",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23SystemBoardSYSUsage",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#SystemBoardSYSUsage",
+            "ElementName": "System Board SYS Usage",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardSYSUsage",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellNumericSensor.DellNumericSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensor/iDRAC.Embedded.1%23SystemBoardCPUUsage",
+            "@odata.type": "#DellNumericSensor.v1_0_0.DellNumericSensor",
+            "CurrentReading": -2147483648,
+            "Description": "An instance of DellNumericSensor will have data specific to sensor devices that returns only numeric readings and optionally supports thresholds settings.",
+            "DeviceID": "iDRAC.Embedded.1#SystemBoardCPUUsage",
+            "ElementName": "System Board CPU Usage",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardCPUUsage",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellNumericSensor",
+            "SensorType": "Other"
+        }
+    ],
+    "Members@odata.count": 7,
+    "Name": "DellNumericSensorCollection"
+}

@@ -1,0 +1,102 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#SMTP.v1_0_0",
+    "definitions": {
+        "SMTP": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "SmtpSSLEnabled": {
+                    "type": "boolean",
+                    "readonly": false,
+                    "description": "SMTP SSL Authentication is enabled or not",
+                    "longDescription": "If SMTP SSL Authentication is enabled, mail will be sent in a secured way to prevent being peeked mail content."
+                },
+                "SmtpServer": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The address for the SMTP (Simple Mail Transfer Protocol) Mail server.",
+                    "longDescription": "The value of this property shall be match the format of IP address or domain name."
+                },
+                "SmtpPortNumber": {
+                    "type": "number",
+                    "readonly": false,
+                    "description": "The port number for your SMTP Mail server.",
+                    "longDescription": "The value of this property shall be in the range between 1~65535."
+                },
+                "SmtpUserName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The user name for your SMTP Mail server.",
+                    "longDescription": "The value of this property shall not contain special characteristics and its max length is 64."
+                },
+                "SmtpPassword": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The user password for your SMTP Mail server.",
+                    "longDescription": "The value of this property shall not contain special characteristics and its max length is 64."
+                },
+                "SmtpSenderAddress": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "The sender mail server.",
+                    "longDescription": "The value of this property shall be match the format of email."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the base type for resources and referenceable members."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

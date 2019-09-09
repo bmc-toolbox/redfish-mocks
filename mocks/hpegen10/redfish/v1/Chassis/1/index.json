@@ -1,0 +1,127 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+    "@odata.etag": "W/\"12EFFE76\"",
+    "@odata.id": "/redfish/v1/Chassis/1/",
+    "@odata.type": "#Chassis.v1_6_0.Chassis",
+    "Id": "1",
+    "ChassisType": "Blade",
+    "Links": {
+        "ContainedBy": {
+            "@odata.id": "/redfish/v1/Chassis/EnclosureChassis/"
+        },
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/1/"
+            }
+        ],
+        "ComputerSystems": [
+            {
+                "@odata.id": "/redfish/v1/Systems/1/"
+            }
+        ]
+    },
+    "Manufacturer": "HPE",
+    "Model": "ProLiant BL460c Gen10",
+    "Name": "Computer System Chassis",
+    "NetworkAdapters": {
+        "@odata.id": "/redfish/v1/Chassis/1/NetworkAdapters/"
+    },
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeServerChassis.HpeServerChassis",
+            "@odata.type": "#HpeServerChassis.v2_2_1.HpeServerChassis",
+            "Actions": {
+                "#HpeServerChassis.DisableMCTPOnServer": {
+                    "target": "/redfish/v1/Chassis/1/Actions/Oem/Hpe/HpeServerChassis.DisableMCTPOnServer/"
+                },
+                "#HpeServerChassis.FactoryResetMCTP": {
+                    "target": "/redfish/v1/Chassis/1/Actions/Oem/Hpe/HpeServerChassis.FactoryResetMCTP/"
+                }
+            },
+            "BayNumber": 10,
+            "BaysConsumedHeight": 1,
+            "BaysConsumedWidth": 1,
+            "Firmware": {
+                "PlatformDefinitionTable": {
+                    "Current": {
+                        "VersionString": "9.4.0 Build 18"
+                    }
+                },
+                "PowerManagementController": {
+                    "Current": {
+                        "VersionString": "1.0.4"
+                    }
+                },
+                "PowerManagementControllerBootloader": {
+                    "Current": {
+                        "Family": "25",
+                        "VersionString": "1.1"
+                    }
+                },
+                "SPSFirmwareVersionData": {
+                    "Current": {
+                        "VersionString": "4.0.3.211"
+                    }
+                },
+                "SystemProgrammableLogicDevice": {
+                    "Current": {
+                        "VersionString": "0x1E"
+                    }
+                }
+            },
+            "Links": {
+                "Devices": {
+                    "@odata.id": "/redfish/v1/Chassis/1/Devices/"
+                }
+            },
+            "MCTPEnabledOnServer": true,
+            "PowerAlertMode": {
+                "Activated": false,
+                "AlertPowerWatts": 7
+            },
+            "SmartStorageBattery": [
+                {
+                    "ChargeLevelPercent": 95,
+                    "FirmwareVersion": "2.1",
+                    "Index": 1,
+                    "MaximumCapWatts": 12,
+                    "Model": "727261-B21",
+                    "ProductName": "HPE Smart Storage Battery ",
+                    "RemainingChargeTimeSeconds": 0,
+                    "SerialNumber": "6WEJE0HB2971J1",
+                    "SparePartNumber": "871265-001",
+                    "Status": {
+                        "Health": "OK",
+                        "State": "Enabled"
+                    }
+                }
+            ],
+            "SystemMaintenanceSwitches": {
+                "Sw1": "Off",
+                "Sw10": "Off",
+                "Sw11": "Off",
+                "Sw12": "Off",
+                "Sw2": "Off",
+                "Sw3": "Off",
+                "Sw4": "Off",
+                "Sw5": "Off",
+                "Sw6": "Off",
+                "Sw7": "Off",
+                "Sw8": "Off",
+                "Sw9": "Off"
+            }
+        }
+    },
+    "Power": {
+        "@odata.id": "/redfish/v1/Chassis/1/Power/"
+    },
+    "SKU": "863442-B21",
+    "SerialNumber": "CZ37464KL6",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Thermal": {
+        "@odata.id": "/redfish/v1/Chassis/1/Thermal/"
+    }
+}

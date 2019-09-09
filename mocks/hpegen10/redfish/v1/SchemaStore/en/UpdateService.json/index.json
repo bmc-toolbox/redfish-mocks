@@ -1,0 +1,190 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "actions": {
+        "actions": {
+            "UpdateService.SimpleUpdate": {
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "enum": [
+                            "UpdateService.SimpleUpdate"
+                        ],
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "ImageURI": {
+                        "format": "uri",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "TransferProtocol": {
+                        "enum": [
+                            "CIFS",
+                            "FTP",
+                            "HTTP",
+                            "HTTPS",
+                            "NSF",
+                            "SCP",
+                            "TFTP",
+                            "OEM"
+                        ],
+                        "enumDescriptions": {
+                            "CIFS": "Common Internet File System protocol",
+                            "FTP": "File Transfer Protocol",
+                            "HTTP": "Hypertext Transfer Protocol",
+                            "HTTPS": "HTTP Secure protocol",
+                            "NSF": "Network File System protocol",
+                            "SCP": "Secure File Copy protocol",
+                            "TFTP": "Trivial File Transfer Protocol",
+                            "OEM": "A protocol defined by the manufacturer."
+                        },
+                        "readonly": true,
+                        "type": "string"
+                    }
+                },
+                "readonly": true,
+                "required": [
+                    "Action",
+                    "ImageURI"
+                ],
+                "type": "object"
+            }
+        },
+        "description": "POST custom actions defined for this type. (The implemented actions may be a subset of these.)"
+    },
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "properties": {
+                "#UpdateService.SimpleUpdate": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "ImageURI@Redfish.AllowableValues": {
+                            "description": "The URI of the software image to be installed.",
+                            "items": {
+                                "format": "uri",
+                                "readonly": true,
+                                "type": "string"
+                            },
+                            "longDescription": "This parameter shall contain a URI referencing a software image to be retreived by the UpdateService for the purpose of installing software contained within the image.",
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "TransferProtocol@Redfish.AllowableValues": {
+                            "description": "The network protocol used by the Update Service to retrieve the software image file located at the URI provided in ImageURI, if the URI does not contain a scheme.",
+                            "items": {
+                                "enum": [
+                                    "CIFS",
+                                    "FTP",
+                                    "HTTP",
+                                    "HTTPS",
+                                    "NSF",
+                                    "SCP",
+                                    "TFTP",
+                                    "OEM"
+                                ],
+                                "enumDescriptions": {
+                                    "CIFS": "Common Internet File System protocol",
+                                    "FTP": "File Transfer Protocol",
+                                    "HTTP": "Hypertext Transfer Protocol",
+                                    "HTTPS": "HTTP Secure protocol",
+                                    "NSF": "Network File System protocol",
+                                    "SCP": "Secure File Copy protocol",
+                                    "TFTP": "Trivial File Transfer Protocol",
+                                    "OEM": "A protocol defined by the manufacturer."
+                                },
+                                "readonly": true,
+                                "type": "string"
+                            },
+                            "longDescription": "This parameter shall contain the network protocol that the Update Service shall use to retreive the software image located at the ImageURI.  If this parameter is not provided (or supported), and a transfer protocol is not specified by a scheme contained within ImageURI, the Update Service shall use HTTP to retrieve the image.",
+                            "type": "array",
+                            "uniqueItems": true
+                        },
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "FirmwareInventory": {
+            "additionalProperties": false,
+            "description": "Link to Firmware Inventory.",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Oem": {
+            "additionalProperties": true,
+            "properties": {
+                "Hpe": {
+                    "$ref": "HpeiLOUpdateServiceExt.json#",
+                    "readonly": false
+                }
+            },
+            "readonly": false,
+            "type": "object"
+        },
+        "HttpPushUri": {
+            "description": "The URI to which a client may POST an update image.",
+            "format": "uri",
+            "readonly": true,
+            "type": "string"
+        },
+        "ServiceEnabled": {
+            "description": "Indicates if the Update Service is enabled.",
+            "readonly": true,
+            "type": [
+                "boolean",
+                "null"
+            ]
+        },
+        "SoftwareInventory": {
+            "additionalProperties": false,
+            "description": "Link to Software Inventory.  This is only available when the Agentless Management Service is running.",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        }
+    },
+    "title": "#UpdateService.v1_1_0.UpdateService",
+    "type": "object"
+}

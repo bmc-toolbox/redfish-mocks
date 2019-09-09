@@ -1,0 +1,187 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataProtectionLoSCapabilities.v1_1_1",
+    "definitions": {
+        "DataProtectionLoSCapabilities": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Identifier": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": false,
+                    "description": "The value identifies this resource.",
+                    "longDescription": "The value shall be unique within the managed ecosystem."
+                },
+                "SupportedRecoveryGeographicObjectives": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataProtectionLoSCapabilities.json#/definitions/FailureDomainScope"
+                    },
+                    "readonly": false,
+                    "description": "Supported types of failure domains.",
+                    "longDescription": "The value of each entry shall specify a supported failure domain."
+                },
+                "SupportedRecoveryPointObjectiveTimes": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "readonly": false,
+                    "description": "Supported time intervals defining how much source information can be lost on failure.",
+                    "longDescription": "The value of each entry shall specify a supported ISO 8601 time interval defining the maximum source information that may be lost on failure. In the case that IsIsolated = false, failure of the domain is not a consideration."
+                },
+                "SupportedRecoveryTimeObjectives": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataProtectionLoSCapabilities.json#/definitions/RecoveryAccessScope"
+                    },
+                    "readonly": false,
+                    "description": "Supported expectations for time to access an alternate replica.",
+                    "longDescription": "The value of each entry shall specify an enumerated value that indicates a supported expectation for the time required to access an alternate replica. In the case that IsIsolated = false, failure of the domain is not a consideration."
+                },
+                "SupportedReplicaTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/StorageReplicaInfo.json#/definitions/ReplicaType"
+                    },
+                    "readonly": false,
+                    "description": "Supported replica types.",
+                    "longDescription": "The value of each entry shall specify a supported replica type"
+                },
+                "SupportedMinLifetimes": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "readonly": false,
+                    "description": "Supported minimum lifetime that replica must be maintained.",
+                    "longDescription": "The value of each entry shall be an ISO 8601 duration that specifies the minimum lifetime required for the replica."
+                },
+                "SupportsIsolated": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Allocating a replica in a separate fault domain is supported.",
+                    "longDescription": "A value of true shall indicate that allocating a replica in a separate fault domain is supported. The default value for this property is false."
+                },
+                "Links": {
+                    "$ref": "http://10.193.251.59/schemas/DataProtectionLoSCapabilities.v1_0_0.json#/definitions/Links",
+                    "readonly": true,
+                    "description": "Contains links to other resources that are related to this resource.",
+                    "longDescription": "The value of this property shall contains links to other resources that are not contained in this resource."
+                },
+                "SupportedLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "SupportedLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "SupportedLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "Collection of known and supported DataProtectionLinesOfService.",
+                    "longDescription": "The collection shall contain known and supported DataProtectionLinesOfService."
+                },
+                "Actions": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                            "type": [
+                                "array",
+                                "boolean",
+                                "number",
+                                "null",
+                                "object",
+                                "string"
+                            ],
+                            "description": "This property shall specify a valid odata or Redfish property."
+                        }
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "Oem": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                                    "type": [
+                                        "array",
+                                        "boolean",
+                                        "number",
+                                        "null",
+                                        "object",
+                                        "string"
+                                    ],
+                                    "description": "This property shall specify a valid odata or Redfish property."
+                                }
+                            },
+                            "additionalProperties": true,
+                            "properties": {},
+                            "description": "The available OEM specific actions for this resource.",
+                            "longDescription": "This type shall contain any additional OEM actions for this resource."
+                        }
+                    },
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Use Redfish Location type, and change DataProtectionLineOfService to EntityType.  Move enums to unversioned namespace. Change references to unversioned.",
+            "longDescription": "The capabilities to protect data from loss by the use of a replica. The requirements shall be met collectively by the communication path and the replica. There should be one instance associated to a class of service for each replica. Each replica independently should have a class of service that describes its characteristics."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

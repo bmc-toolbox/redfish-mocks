@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SimpleStorage",
+    "Id": "SimpleStorage",
+    "Name": "SimpleStorage Schema File",
+    "Description": "SimpleStorage Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SimpleStorage",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SimpleStorage.json"
+        }
+    ],
+    "Oem": {}
+}

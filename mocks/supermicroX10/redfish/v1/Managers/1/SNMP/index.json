@@ -1,0 +1,8 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SNMP.SNMP",
+    "@odata.type": "#SNMP.SNMP",
+    "@odata.id": "/redfish/v1/Managers/1/SNMP",
+    "Id": "1",
+    "Name": "SNMP",
+    "SnmpEnabled": false
+}

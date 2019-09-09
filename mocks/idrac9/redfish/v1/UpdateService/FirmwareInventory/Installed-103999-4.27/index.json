@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-103999-4.27",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-103999-4.27",
+    "Name": "BP14G+ 0:1",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23308_C_Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "103999",
+                "ComponentType": "FRMW",
+                "DeviceID": null,
+                "ElementName": "BP14G+ 0:1",
+                "HashValue": "4349d2fdc760b4afda4a25903d2f2e9caeb395f6ac7cef1e6832399880fef039",
+                "InstallationDate": "2019-04-18T07:52:00Z",
+                "IsEntity": true,
+                "RevisionNumber": 0,
+                "Status": "Installed",
+                "SubDeviceID": null,
+                "SubVendorID": null,
+                "VendorID": null
+            }
+        }
+    },
+    "SoftwareId": "103999",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "4.27"
+}

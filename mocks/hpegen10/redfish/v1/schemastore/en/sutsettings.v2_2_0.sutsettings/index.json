@@ -1,0 +1,302 @@
+{
+    "copyright": "(C)Copyright 2017 Hewlett Packard Enterprise Development LP",
+    "title": "#SUTSettings.v2_2_0.SUTSettings",
+    "desciption": "",
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "AdditionalBaseline": {
+            "readonly": false,
+            "type": "string",
+            "description": "This indicates the location of the additional baseline"
+        },
+        "WaitTimeInSeconds": {
+            "readonly": false,
+            "type": "number",
+            "description": "This indicates the waittime that SUT should wait in offline before exiting"
+        },
+        "TpmByPassFlag": {
+            "readonly": false,
+            "type": "Boolean",
+            "description": "True if the client wants SUT to bypass TPM and go ahead with install.The onDemand command can set or reset the flag"
+        },
+        "@odata.context": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/$metadata#Systems/Members/1/hpsut/Members/$entity.",
+            "type": "string",
+            "format": "uri"
+        },
+        "@odata.type": {
+            "readonly": true,
+            "type": "string",
+            "longDescription": "#SUTSettings.v2_2_0.SUTSettings"
+        },
+        "InstallationOptions": {
+            "additionalProperties": false,
+            "readonly": false,
+            "type": "object",
+            "properties": {
+                "Downgrade": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to downgrade the software/firmware"
+                },
+                "SoftwareOnly": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to deploy only software"
+                },
+                "FirmwareOnly": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to deploy only firmware"
+                },
+                "Rewrite": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to rewrite the software/firmware"
+                }
+            },
+            "description": "This describes the capabilities of the provider to handle deploy options"
+        },
+        "StageRetryCount": {
+            "readonly": false,
+            "type": "number",
+            "description": "This indicates the number of times mount and copy operation are retried during staging operation"
+        },
+        "Schedule": {
+            "additionalProperties": false,
+            "readonly": false,
+            "type": "object",
+            "properties": {
+                "Recurrence": {
+                    "readonly": false,
+                    "type": "number",
+                    "description": "This indicates the number of recurrences"
+                },
+                "ScheduleType": {
+                    "readonly": false,
+                    "enum": [
+                        "Weekly",
+                        "Monthly",
+                        "onetime",
+                        "none"
+                    ],
+                    "type": "enum",
+                    "enumDescriptions": {
+                        "Monthly": "This value indicates operation is performed once in a month",
+                        "onetime": "This value indicates operation is performed only once",
+                        "none": "This value indicates operation is never performed",
+                        "Weekly": "This value indicates operation is performed once in a week"
+                    },
+                    "description": "This describes how often the requested operation needs to be performed"
+                },
+                "DateTime": {
+                    "readonly": false,
+                    "type": "string",
+                    "description": "This indicates the schedule Date/Time for the requested operation",
+                    "format": "date/time"
+                }
+            },
+            "description": "This describes when SUT needs to schedule the deployment"
+        },
+        "StageRetryDelay": {
+            "readonly": false,
+            "type": "number",
+            "description": "This indicates time delay specified in seconds between mount retries"
+        },
+        "AdditionalMessageIDs": {
+            "items": {
+                "additionalProperties": false,
+                "readonly": false,
+                "type": "object",
+                "properties": {
+                    "MessageID": {
+                        "readonly": false,
+                        "type": "string",
+                        "description": "Optional additional message id referring to why schedule could not be honored or missed."
+                    }
+                },
+                "description": "The list of additional MessageIDs."
+            },
+            "readonly": false,
+            "type": "array"
+        },
+        "InstallOrStageOccurredViaMode": {
+            "readonly": false,
+            "enum": [
+                "StagedInOnDemandMode",
+                "StagedInAutoMode",
+                "DeployedInOnDemandMode",
+                "DeployedInAutoMode"
+            ],
+            "type": "string",
+            "enumDescriptions": {
+                "DeployedInOnDemandMode": "Deploy operation is performed in on demand mode",
+                "StagedInAutoMode": "Stage operation is performed in auto mode",
+                "StagedInOnDemandMode": "Stage operation is performed in on demand mode",
+                "DeployedInAutoMode": "Deploy operation is performed in auto mode"
+            },
+            "description": "This indicates the stage/deploy operation performed on OnDemand or Auto mode."
+        },
+        "DirectDeploy": {
+            "readonly": false,
+            "type": "Boolean",
+            "description": "True if the client wants HPSUT to avoid running SUM for inventory and directly perform deployment of components in InstallSet. In this case systeminventory namespace will be updated after the deployment."
+        },
+        "IgnoreWarnings": {
+            "readonly": false,
+            "type": "Boolean",
+            "description": "True if the client wants SUT to send ignore_warnings flag to SUM"
+        },
+        "Name": {
+            "$ref": "Name.json#"
+        },
+        "UriBaseline": {
+            "readonly": false,
+            "type": "string",
+            "description": "This indicates the URI where SPP ISO is hosted",
+            "format": "uri"
+        },
+        "MessageID": {
+            "readonly": true,
+            "etag": true,
+            "type": "string",
+            "description": "This indicates the success/error message id from previous operation"
+        },
+        "@odata.id": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/Systems/1/hpsut/settings",
+            "type": "string",
+            "format": "uri"
+        },
+        "Modified": {
+            "$ref": "Modified.json#"
+        },
+        "EnableiLOQueuedUpdates": {
+            "readonly": false,
+            "type": "Boolean",
+            "description": "This indicates whether client wants to enable or disable Absaroka mode of update. The default is set to TRUE on Gen 10 servers. On Pre Gen 10 servers this value is not used and is set to FALSE by default. Note that legacy mode of update is always enabled irrespective of this flag"
+        },
+        "RebootOptions": {
+            "additionalProperties": false,
+            "readonly": false,
+            "type": "object",
+            "properties": {
+                "Action": {
+                    "readonly": false,
+                    "enum": [
+                        "IfNeeded",
+                        "Always",
+                        "Never",
+                        "No"
+                    ],
+                    "type": "enum",
+                    "description": "This indicates when reboot action is needed"
+                },
+                "DelaySeconds": {
+                    "readonly": false,
+                    "type": "number",
+                    "description": "This indicates the seconds to wait before the reboot"
+                },
+                "RebootMessage": {
+                    "readonly": false,
+                    "type": "string",
+                    "description": "This is the message to show to the user when rebooting"
+                }
+            },
+            "description": "This describes the capabilities of SUT to handle reboot options"
+        },
+        "UriBaselineVersion": {
+            "readonly": false,
+            "type": "string",
+            "description": "This indicates the version of the SPP"
+        },
+        "SaveLogs": {
+            "readonly": false,
+            "type": "Boolean",
+            "description": "True if the client wants SUT to save SUM logs.The onDemand command clearstaging will clear the logs"
+        },
+        "required": [
+            "RequestStatus",
+            "UriBaseline"
+        ],
+        "InstallSet": {
+            "items": {
+                "additionalProperties": false,
+                "readonly": false,
+                "type": "object",
+                "properties": {
+                    "InstallComponent": {
+                        "readonly": false,
+                        "type": "string",
+                        "description": "Component to stage. It should be set to the component file name mentioned in the bundle file or baseline directory (Ex: cp*.exe, CP.scexe, hp*.rpm, etc)."
+                    }
+                },
+                "description": "List of specific components to stage. This list should be an ordered install set. SUT will install in the order that is specified here."
+            },
+            "readonly": false,
+            "type": "array"
+        },
+        "OptionalComponents": {
+            "additionalProperties": false,
+            "readonly": false,
+            "type": "object",
+            "properties": {
+                "WBEM": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to deploy WBEM components"
+                },
+                "AMS": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to deploy AMS components"
+                },
+                "SNMP": {
+                    "readonly": false,
+                    "type": "boolean",
+                    "description": "True if the client wants SUT to deploy SNMP components"
+                }
+            },
+            "description": "This describes the capabilities of SUT to handle optional components"
+        },
+        "RequestStatus": {
+            "description": "This indicates the SUT request status.",
+            "enum": [
+                "Idle",
+                "Activated",
+                "Activating",
+                "ActivateFailed",
+                "Installing",
+                "InstallFailed",
+                "InstalledPendingReboot",
+                "Staging",
+                "Staged",
+                "StageFailed",
+                "Scheduled",
+                "ScheduleFailed",
+                "Pending"
+            ],
+            "enumDescriptions": {
+                "Scheduled": "Node deployment operation is scheduled at a time specified as per the InstallSchedule.",
+                "Staged": "Completed staging of Smart components from the SPP.",
+                "Staging": "Staging the firmware Smart components from the SPP.",
+                "Installed Pending Reboot": "Installed the Smart components but reboot is required to activate the one or some of the components.",
+                "InstallFailed": "Smart components installation failed.",
+                "Activated": "Smart components activated.",
+                "ScheduleFailed": "Node deployment operation failed or is going to fail to perform at a time specified as per InstallSchedule.",
+                "Staging Failed": "Staging of  Smart components from the SPP failed.",
+                "Installing": "Installing Smart components from the staged location.",
+                "Idle": "Initial value of the state after SUT is installed",
+                "ActivateFailed": "Activation of Smart components failed.",
+                "Activating": "Activating Smart components.",
+                "Pending": "OneView sets the install state to pending if new firmware baseline is selected by the user during profile create/edit."
+            },
+            "readonly": false,
+            "etag": true,
+            "type": "string"
+        }
+    }
+}

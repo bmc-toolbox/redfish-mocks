@@ -1,0 +1,335 @@
+{
+    "$ref": "#/definitions/DellController",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "CachecadeCapability": {
+            "enum": [
+                "NotSupported",
+                "Supported"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Cachecade Virtual Disk not supported",
+                "Supported": "Cachecade Virtual Disk supported"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Cachecade Virtual Disk not supported",
+                "Supported": "Cachecade Virtual Disk supported"
+            },
+            "type": "string"
+        },
+        "DellController": {
+            "additionalProperties": false,
+            "description": "An instance of DellController will have RAID Controller specific data.",
+            "longDescription": "An instance of DellController will have RAID Controller specific data.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "CacheSizeInMB": {
+                    "description": "This property shall represent the controller cache size in MB.",
+                    "longDescription": "This property shall represent the controller cache size in MB.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "units": "MB"
+                },
+                "CachecadeCapability": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/CachecadeCapability"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the controllers support of cachecade virtual disk creation.",
+                    "longDescription": "The property shall represent the controllers support of cachecade virtual disk creation.",
+                    "readonly": true
+                },
+                "ControllerFirmwareVersion": {
+                    "description": "This property gives information about the Firmware Version installed on the Controller.",
+                    "longDescription": "This property gives information about the Firmware Version installed on the Controller.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "DeviceCardSlotType": {
+                    "description": "The property shall represent the the controller slot type. Example the string value will be Unknown, PCI Express x8, PCI Express Gen 3, PCI Express Gen 3x1,  PCI Express Gen 3x2, PCI Express Gen 3x4, PCI Express Gen 3x8, PCI Express Gen 3x16.",
+                    "longDescription": "The property shall represent the the controller slot type. Example the string value will be Unknown, PCI Express x8, PCI Express Gen 3, PCI Express Gen 3x1,  PCI Express Gen 3x2, PCI Express Gen 3x4, PCI Express Gen 3x8, PCI Express Gen 3x16.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "DriverVersion": {
+                    "description": "This property shall represent the controller driver version.",
+                    "longDescription": "This property shall represent the controller driver version.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "EncryptionCapability": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/EncryptionCapability"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the possible encryption states on the controller.",
+                    "longDescription": "The property shall represent the possible encryption states on the controller.",
+                    "readonly": true
+                },
+                "EncryptionMode": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/EncryptionMode"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the current encryption state on the controller.",
+                    "longDescription": "The property shall represent the current encryption state on the controller.",
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "PCISlot": {
+                    "description": "The property shall represent the associated PCI slot.",
+                    "longDescription": "The property shall represent the associated PCI slot.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "PatrolReadState": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/PatrolReadState"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "This property shall represent the current state of the patrol read operation.",
+                    "longDescription": "This property shall represent the current state of the patrol read operation.",
+                    "readonly": true
+                },
+                "RollupStatus": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/RollupStatus"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "RollupStatus provides overall health status of the system by considering their sub-component health statuses, e.g RollupStatus will be degraded if any one of the sub-component is degraded.",
+                    "longDescription": "RollupStatus provides overall health status of the system by considering their sub-component health statuses, e.g RollupStatus will be degraded if any one of the sub-component is degraded.",
+                    "readonly": true
+                },
+                "SecurityStatus": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/SecurityStatus"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the controller security configuration information.",
+                    "longDescription": "The property shall represent the controller security configuration information.",
+                    "readonly": true
+                },
+                "SlicedVDCapability": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/SlicedVDCapability"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the controllers support of sliced virtual disk creation and shall have one of the following values:0 - Sliced Virtual Disk not supported, 1-Sliced Virtual Disk supported.",
+                    "longDescription": "The property shall represent the controllers support of sliced virtual disk creation and shall have one of the following values:0 - Sliced Virtual Disk not supported, 1-Sliced Virtual Disk supported.",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "EncryptionCapability": {
+            "enum": [
+                "DellKeyManagementCapable",
+                "LocalKeyManagementAndDellKeyManagementCapable",
+                "LocalKeyManagementCapable",
+                "None"
+            ],
+            "enumDescriptions": {
+                "DellKeyManagementCapable": "Dell Key Management Capable",
+                "LocalKeyManagementAndDellKeyManagementCapable": "Local Key Management and Dell Key Management Capable",
+                "LocalKeyManagementCapable": "Local Key Management Capable",
+                "None": "None"
+            },
+            "enumLongDescriptions": {
+                "DellKeyManagementCapable": "Dell Key Management Capable",
+                "LocalKeyManagementAndDellKeyManagementCapable": "Local Key Management and Dell Key Management Capable",
+                "LocalKeyManagementCapable": "Local Key Management Capable",
+                "None": "None"
+            },
+            "type": "string"
+        },
+        "EncryptionMode": {
+            "enum": [
+                "DellKeyManagement",
+                "LocalKeyManagement",
+                "None",
+                "PendingDellKeyManagementCapable",
+                "Unsupported"
+            ],
+            "enumDescriptions": {
+                "DellKeyManagement": "Dell Key Management",
+                "LocalKeyManagement": "Local Key Management",
+                "None": "None",
+                "PendingDellKeyManagementCapable": "Pending Dell Key Management Capable",
+                "Unsupported": "Unsupported"
+            },
+            "enumLongDescriptions": {
+                "DellKeyManagement": "Dell Key Management",
+                "LocalKeyManagement": "Local Key Management",
+                "None": "None",
+                "PendingDellKeyManagementCapable": "Pending Dell Key Management Capable",
+                "Unsupported": "Unsupported"
+            },
+            "type": "string"
+        },
+        "PatrolReadState": {
+            "enum": [
+                "Running",
+                "Stopped",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Running": "Running",
+                "Stopped": "Stopped",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "Running": "Running",
+                "Stopped": "Stopped",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "RollupStatus": {
+            "enum": [
+                "Degraded",
+                "Error",
+                "OK",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Degraded": "Degraded",
+                "Error": "Error",
+                "OK": "OK",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "Degraded": "Degraded",
+                "Error": "Error",
+                "OK": "OK",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "SecurityStatus": {
+            "enum": [
+                "EncryptionCapable",
+                "EncryptionNotCapable",
+                "SecurityKeyAssigned"
+            ],
+            "enumDescriptions": {
+                "EncryptionCapable": "Encryption Capable",
+                "EncryptionNotCapable": "Encryption Not Capable",
+                "SecurityKeyAssigned": "Security Key Assigned"
+            },
+            "enumLongDescriptions": {
+                "EncryptionCapable": "Encryption Capable",
+                "EncryptionNotCapable": "Encryption Not Capable",
+                "SecurityKeyAssigned": "Security Key Assigned"
+            },
+            "type": "string"
+        },
+        "SlicedVDCapability": {
+            "enum": [
+                "NotSupported",
+                "Supported"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Sliced Virtual Disk creation not supported",
+                "Supported": "Sliced Virtual Disk creation supported"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Sliced Virtual Disk creation not supported",
+                "Supported": "Sliced Virtual Disk creation supported"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellController.v1_0_0.DellController"
+}

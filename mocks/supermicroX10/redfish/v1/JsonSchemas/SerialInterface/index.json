@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SerialInterface",
+    "Id": "SerialInterface",
+    "Name": "SerialInterface Schema File",
+    "Description": "SerialInterface Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SerialInterface",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SerialInterface.json"
+        }
+    ],
+    "Oem": {}
+}

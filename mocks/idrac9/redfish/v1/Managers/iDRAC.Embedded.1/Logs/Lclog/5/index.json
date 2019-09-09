@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/5",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:18:22+02:00",
+    "Description": " Log Entry 5",
+    "EntryType": "Oem",
+    "Id": "5",
+    "Links": {
+        "OriginOfCondition": {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+        }
+    },
+    "Message": "Requested system powerup.",
+    "MessageId": "RAC0701",
+    "Name": " Log Entry 5",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

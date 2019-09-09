@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/RoleGroup",
+    "Id": "RoleGroup",
+    "Name": "RoleGroup Schema File",
+    "Description": "RoleGroup Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "RoleGroup",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/RoleGroup.json"
+        }
+    ],
+    "Oem": {}
+}

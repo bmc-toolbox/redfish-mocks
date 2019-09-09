@@ -1,0 +1,25 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogService.LogService",
+    "@odata.type": "#LogService.LogService",
+    "@odata.id": "/redfish/v1/Systems/1/LogServices/Log1",
+    "Id": "Log1",
+    "Name": "Maintenance Event Log Service",
+    "MaxNumberOfRecords": 512,
+    "DateTime": "2019-09-05T14:59:11+02:00",
+    "DateTimeLocalOffset": "+02:00",
+    "ServiceEnabled": true,
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "Oem": {},
+    "Entries": {
+        "@odata.id": "/redfish/v1/Systems/1/LogServices/Log1/Entries"
+    },
+    "Actions": {
+        "Oem": {},
+        "#LogService.ClearLog": {
+            "target": "/redfish/v1/Systems/1/LogServices/Log1/Actions/LogService.ClearLog"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerDevice.HpeServerDevice",
+    "@odata.etag": "W/\"67E19BDD\"",
+    "@odata.id": "/redfish/v1/Chassis/1/Devices/5/",
+    "@odata.type": "#HpeServerDevice.v2_0_0.HpeServerDevice",
+    "Id": "5",
+    "DeviceType": "Smart Storage Battery",
+    "FirmwareVersion": {
+        "Current": {
+            "VersionString": "2.1"
+        }
+    },
+    "Location": "Embedded Device",
+    "Manufacturer": "STL",
+    "Name": "HPE Smart Storage Battery",
+    "PartNumber": "871265-001",
+    "ProductPartNumber": "727261-B21",
+    "ProductVersion": "01",
+    "SerialNumber": "6WEJE0HB2971J1",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    }
+}

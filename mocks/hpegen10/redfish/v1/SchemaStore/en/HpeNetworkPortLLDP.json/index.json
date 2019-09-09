@@ -1,0 +1,601 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#HpeNetworkPortLLDP.v1_1_1.HpeNetworkPortLLDP",
+    "type": "object",
+    "etag": true,
+    "definitions": {
+        "IEEE802IDSubtype": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "chassisComp",
+                "ifAlias",
+                "portComp",
+                "mac-Addr",
+                "networkAddr",
+                "ifName",
+                "agent-ID",
+                "local-Assign"
+            ],
+            "enumDescriptions": {
+                "chassisComp": "Chassis component, based in the value of entPhysicalAlias in IETF RFC 4133.",
+                "ifAlias": "Interface alias, based on the ifAlias MIB object.",
+                "portComp": "Port component, based in the value of entPhysicalAlias in IETF RFC 4133.",
+                "mac-Addr": "MAC address, based on an agent detected unicast source address as defined in IEEE Std. 802.",
+                "networkAddr": "Network address, based on an agent detected network address.",
+                "ifName": "Interface name, based on the ifName MIB object.",
+                "agent-ID": "Agent circuit ID, based on the agent-local identifier of the circuit as defined in RFC 3046.",
+                "local-Assign": "Locally assigned, based on a alpha-numeric value locally assigned."
+            }
+        },
+        "IANAMgmtAddrType": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "IPv4",
+                "IPv6",
+                "all802"
+            ],
+            "enumDescriptions": {
+                "IPv4": "Type 1 (IP version 4).",
+                "IPv6": "Type 2 (IP version 6).",
+                "all802": "Type 6 (All 802 media plus Ethernet 'canonical format')."
+            }
+        }
+    },
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Transmitting": {
+            "type": "object",
+            "readonly": true,
+            "etag": true,
+            "properties": {
+                "ChassisIDSubtype": {
+                    "$ref": "#/definitions/IEEE802IDSubtype",
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The IEEE 802.1AB-2009 chassis ID subtype being transmitted on this link."
+                },
+                "ChassisID": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The Link Layer Data Protocol (LLDP) chassis ID being transmitted on this link."
+                },
+                "ManagementCvlanID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 4095,
+                    "description": "The management CVLAN ID being transmitted on this link."
+                },
+                "ManagementCvlanIDTransmitted": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "When true, indicates that a management CVLAN ID is being transmitted on this link."
+                },
+                "ManagementAddresses": {
+                    "type": "array",
+                    "readonly": true,
+                    "etag": true,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "readonly": true,
+                        "etag": true,
+                        "properties": {
+                            "ManagementIPAddressType": {
+                                "$ref": "#/definitions/IANAMgmtAddrType",
+                                "readonly": true,
+                                "etag": true,
+                                "description": "The IANA type of this management address."
+                            },
+                            "ManagementIPAddress": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "A management address."
+                            }
+                        },
+                        "description": "A management address for this server."
+                    },
+                    "description": "The set of all management addresses being transmitted in LLDP on this link."
+                },
+                "SystemDescription": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "A textual description of this system."
+                },
+                "PortID": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "pattern": "^([0-9A-F]{2})([:]([0-9A-F]){2}){0,63}$",
+                    "description": "A colon delimited string of hexadecimal octets identifying this port."
+                },
+                "PortIDSubtype": {
+                    "$ref": "#/definitions/IEEE802IDSubtype",
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The port ID subtype from IEEE 802.1AB-2009 Table 8-3."
+                },
+                "PortDescription": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "An alphanumeric string describing this link."
+                }
+            },
+            "description": "LLDP data being transmitted on this link."
+        },
+        "Receiving": {
+            "type": "object",
+            "readonly": true,
+            "etag": true,
+            "properties": {
+                "ManagementIFNumSubtype": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "enum": [
+                        null,
+                        "unknown",
+                        "ifIndex",
+                        "sysPortNum"
+                    ],
+                    "enumDescriptions": {
+                        "unknown": "Interface number is not known.",
+                        "ifIndex": "Interface number is based on the ifIndex MIB object.",
+                        "sysPortNum": "Interface number is based on the system port numbering convention."
+                    },
+                    "description": "Management interface number subtype."
+                },
+                "ManagementIFNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "pattern": "^([0-9A-F]{2})([:]([0-9A-F]){2}){0,3}$",
+                    "description": "Management interface number received from the link partner represented as a colon delimited string of hexadecimal octets."
+                },
+                "ManagementAddressType": {
+                    "$ref": "#/definitions/IANAMgmtAddrType",
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The type of management address received from the link partner."
+                },
+                "ManagementAddress": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The management address received from the link partner."
+                },
+                "ManagementAddressOID": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "An object identifier for the hardware or protocol entity associated with the management address."
+                },
+                "ManagementCvlanID": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 4095,
+                    "description": "The management CVLAN ID received from the link partner."
+                },
+                "ManagementAddressReceived": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "True when a currently unexpired management address TLV has been received from the link partner."
+                },
+                "ManagementVlanReceived": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "True when a currently unexpired management address VID TLV has been received from the link partner."
+                },
+                "NearestBridgeTtlExpired": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "True when the LLDP PDU most recently received from the link partner has expired."
+                },
+                "ChassisIDSubtype": {
+                    "$ref": "#/definitions/IEEE802IDSubtype",
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The IEEE 802.1AB-2009 chassis ID subtype received from the link partner."
+                },
+                "ChassisID": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The LLDP chassis ID received from the link partner."
+                },
+                "PortIDSubtype": {
+                    "$ref": "#/definitions/IEEE802IDSubtype",
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The port ID subtype enumeration from IEEE 802.1AB-2009 Table 8-3, which indicates the format for the PortID property."
+                },
+                "PortID": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "pattern": "^([0-9A-F]{2})([:]([0-9A-F]){2}){0,63}$",
+                    "description": "A colon delimited string of hexadecimal octets received from the link partner identifying its port."
+                },
+                "SystemDescription": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The system description received from the link partner."
+                },
+                "PortDescription": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The remote link partner's port description."
+                },
+                "Dcb": {
+                    "type": "object",
+                    "readonly": true,
+                    "etag": true,
+                    "properties": {
+                        "ApplicationPriorityReceived": {
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "readonly": true,
+                            "etag": true,
+                            "description": "True when an unexpired Data Center Bridging (DCB) Application Priority Table TLV has been received."
+                        },
+                        "LocalEqualRemote": {
+                            "type": [
+                                "boolean",
+                                "null"
+                            ],
+                            "readonly": true,
+                            "etag": true,
+                            "description": "True when the transmitted and received contents match for both DCB ETS and PFC TLVs."
+                        },
+                        "Version": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "readonly": true,
+                            "etag": true,
+                            "enum": [
+                                null,
+                                "unknown",
+                                "CEE",
+                                "IEEE"
+                            ],
+                            "enumDescriptions": {
+                                "unknown": "Unknown",
+                                "CEE": "Converged Enhanced Ethernet",
+                                "IEEE": "IEEE 802.1Q"
+                            },
+                            "description": "The DCB version supported by the link partner."
+                        },
+                        "ApplicationPriorityTable": {
+                            "type": "array",
+                            "readonly": true,
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "object",
+                                "readonly": true,
+                                "etag": true,
+                                "properties": {
+                                    "ApplicationSelect": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "enum": [
+                                            null,
+                                            "reserved",
+                                            "default-Ethertype",
+                                            "TCP-SCTP",
+                                            "UDP-DCCP",
+                                            "TCP-SCTP-UDP-DCCP"
+                                        ],
+                                        "enumDescriptions": {
+                                            "reserved": "Reserved select value.",
+                                            "default-Ethertype": "Default priority. Use when priority not otherwise specified.",
+                                            "TCP-SCTP": "DCBApplicationProtocol value is a well known port over TCP or SCTP.",
+                                            "UDP-DCCP": "DCBApplicationProtocol value is a well known port over UDP or DCCP.",
+                                            "TCP-SCTP-UDP-DCCP": "DCBApplicationProtocol is a well known port over TCP, SCTP, SCTP, or DCCP."
+                                        },
+                                        "description": "Indentifies the type of the DCBApplicationProtocol property."
+                                    },
+                                    "ApplicationPriority": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "minimum": 0,
+                                        "maximum": 7,
+                                        "description": "Indicates which priority level is assigned for this application protocol."
+                                    },
+                                    "ApplicationProtocol": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "minimum": 0,
+                                        "maximum": 65535,
+                                        "description": "An integer value indicating application protocol identity, of the type described by DCBApplicationSelect."
+                                    }
+                                },
+                                "description": "One entry in the DCB Application Priority Table, as received in the LLDP Application Priority TLV."
+                            },
+                            "description": "The set of all entries in the DCB Application Priority Table, as received in the LLDP Application Priority TLV."
+                        },
+                        "Pfc": {
+                            "type": "object",
+                            "readonly": true,
+                            "etag": true,
+                            "properties": {
+                                "TlvReceived": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True when an unexpired DCB Priority Flow Control (PFC) TLV has been received."
+                                },
+                                "Willing": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True if the LLDP link partner is willing to accept PFC configurations."
+                                },
+                                "MacSecurityBypassCapability": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True when the link partner has the ability to bypass MAC security in order to improve PFC responsiveness."
+                                },
+                                "MaximumTrafficClassCount": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "Indicates the maximum number of traffic classes that the link partner can simultaneously support."
+                                },
+                                "EnabledTrafficClasses": {
+                                    "type": [
+                                        "string",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "pattern": "^([0-1]){8}$",
+                                    "description": "A bit string indicating which priority levels have PFC enabled, 1=enabled. PFC levels are bit ordered from 7 (first) to 0 (last)."
+                                }
+                            },
+                            "description": "Priority flow control data being received on this link."
+                        },
+                        "Ets": {
+                            "type": "object",
+                            "readonly": true,
+                            "etag": true,
+                            "properties": {
+                                "TlvReceived": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True when an unexpired DCB Enhanced Transmission Selection (ETS) TLV has been received."
+                                },
+                                "Willing": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True if the link partner is willing to accept ETS configurations."
+                                },
+                                "CreditBasedShaper": {
+                                    "type": [
+                                        "boolean",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "description": "True if the link partner supports the Credit-based Shaper (CBS) transmmission selection algortithm."
+                                },
+                                "MaximumTrafficClassCount": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "readonly": true,
+                                    "etag": true,
+                                    "minimum": 1,
+                                    "maximum": 8,
+                                    "description": "The maximum number of traffic classes supported by the link partner."
+                                },
+                                "PriorityAssignmentTable": {
+                                    "type": "array",
+                                    "readonly": true,
+                                    "etag": true,
+                                    "items": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "description": "One entry in the DCB ETS Priority Assignment Table indicating this priority's Traffic Class assignment."
+                                    },
+                                    "description": "The DCB ETS Priority Assignment Table from the received DCB ETS Configuration TLV.  Priority values are listed in order from 0 (first) to 7 (last)."
+                                },
+                                "BandwidthAssignmentTable": {
+                                    "type": "array",
+                                    "readonly": true,
+                                    "etag": true,
+                                    "items": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "minimum": 0,
+                                        "maximum": 100,
+                                        "description": "One entry in the DCB ETS Traffic Class (TC) Bandwidth Assignment Table."
+                                    },
+                                    "description": "The DCB ETS Traffic Class Assignment table received from the link partner. The sum of all bandwidth assignments in this table must be 100 or less"
+                                },
+                                "TrafficSelectionAlgorithmTable": {
+                                    "type": "array",
+                                    "readonly": true,
+                                    "etag": true,
+                                    "items": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "readonly": true,
+                                        "etag": true,
+                                        "enum": [
+                                            null,
+                                            "strict",
+                                            "CBS",
+                                            "ETS",
+                                            "vendor"
+                                        ],
+                                        "enumDescriptions": {
+                                            "strict": "Strict priority algorithm.",
+                                            "CBS": "Credit-Based Shaper algorithm.",
+                                            "ETS": "Enhanced Traffic Selection algorithm.",
+                                            "vendor": "Vendor specific algorithm for use with DCB."
+                                        },
+                                        "description": "An assignment of a Traffic Selection Algorithm (TSA) to a traffic class."
+                                    },
+                                    "description": "The DCB ETS TSA assignment table received from the link partner.  Traffic classes are listed from 0 (first) to 7 (last)."
+                                }
+                            },
+                            "description": "ETS data being received on this link."
+                        }
+                    },
+                    "description": "DCB data being received on thhis link."
+                }
+            },
+            "description": "LLDP data being received on this link."
+        }
+    },
+    "description": "Hewlett Packard Enterprise property extensions for Network Ports Link Layer Discovery Protocol",
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2018 Distributed Management Task Force. All rights reserved."
+}

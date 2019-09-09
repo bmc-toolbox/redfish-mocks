@@ -1,0 +1,15 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/69",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:20:28+02:00",
+    "Description": " Log Entry 69",
+    "EntryType": "Oem",
+    "Id": "69",
+    "Links": {},
+    "Message": "Erase operations for System Erase tasks successfully completed.",
+    "MessageId": "SYS156",
+    "Name": " Log Entry 69",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

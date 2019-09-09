@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/NetworkAdapter",
+    "Id": "NetworkAdapter",
+    "Name": "NetworkAdapter Schema File",
+    "Description": "NetworkAdapter Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "NetworkAdapter",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/NetworkAdapter.json"
+        }
+    ],
+    "Oem": {}
+}

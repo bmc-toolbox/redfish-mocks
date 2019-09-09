@@ -1,0 +1,14 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#EthernetInterfaceCollection.EthernetInterfaceCollection",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/Systems/Self/EthernetInterfaces",
+    "@odata.type": "#EthernetInterfaceCollection.EthernetInterfaceCollection",
+    "Description": "Collection of ethernet interfaces for this system",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/Systems/Self/EthernetInterfaces/eth0"
+        }
+    ],
+    "Members@odata.count": 1,
+    "Name": "Ethernet Interface Collection"
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/MessageRegistryFileCollection",
+    "Id": "MessageRegistryFileCollection",
+    "Name": "MessageRegistryFileCollection Schema File",
+    "Description": "MessageRegistryFileCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "MessageRegistryFileCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/MessageRegistryFileCollection.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,9 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#RoleGroupCollection.RoleGroupCollection",
+    "@odata.type": "#RoleGroupCollection.RoleGroupCollection",
+    "@odata.id": "/redfish/v1/Managers/1/ActiveDirectory/RoleGroups",
+    "Id": "1",
+    "Name": "Role Group Collection",
+    "Members@odata.count": 0,
+    "Members": []
+}

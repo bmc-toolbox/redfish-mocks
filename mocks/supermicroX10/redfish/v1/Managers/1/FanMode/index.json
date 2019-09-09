@@ -1,0 +1,13 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#FanMode.FanMode",
+    "@odata.type": "#FanMode.FanMode",
+    "@odata.id": "/redfish/v1/Managers/1/FanMode",
+    "Name": "FanMode",
+    "Mode": "PUE2",
+    "Mode@Redfish.AllowableValues": [
+        "Standard",
+        "FullSpeed",
+        "PUE2",
+        "HeavyIO"
+    ]
+}

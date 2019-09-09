@@ -1,0 +1,947 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#SmartStorageConfig.v2_0_1.SmartStorageConfig",
+    "description": "Smart Storage Configuration Schema",
+    "type": "object",
+    "additionalProperties": false,
+    "patternProperties": {
+        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+            "type": [
+                "array",
+                "boolean",
+                "number",
+                "null",
+                "object",
+                "string"
+            ],
+            "description": "This property shall specify a valid odata or Redfish property."
+        }
+    },
+    "definitions": {
+        "PhysicalDriveLocation": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9]+:[0-9]+:[0-9]+(\\|[A-Za-z0-9]+:[0-9]+:[0-9]+)?$"
+        },
+        "DriveLocationFormat": {
+            "type": "string",
+            "description": "The format of the physical drive locations on this controller",
+            "readonly": true,
+            "enum": [
+                "ControllerPort:Box:Bay",
+                "ControllerPort:Box:Bay[|ControllerPort:Box:Bay]"
+            ],
+            "enumDescriptions": {
+                "ControllerPort:Box:Bay": "The drives are specified in the <controller port: box: bay> format",
+                "ControllerPort:Box:Bay[|ControllerPort:Box:Bay]": "The drives are specified in the <controller port: box: bay> format, with an optional alternate location delineated by a pipe"
+            }
+        }
+    },
+    "properties": {
+        "@odata.context": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.2.json#/definitions/context"
+        },
+        "@odata.id": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.2.json#/definitions/id"
+        },
+        "@odata.type": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.2.json#/definitions/type"
+        },
+        "@odata.etag": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.2.json#/definitions/etag"
+        },
+        "Oem": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Oem",
+            "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections",
+            "longDescription": "The value of this string shall be of the format for the reserved word *Oem*"
+        },
+        "Id": {
+            "$ref": "http://redfish.dmtf.org/schemas/v1/Resource.json#/definitions/Id",
+            "readonly": true
+        },
+        "DataGuard": {
+            "type": "string",
+            "description": "The value of the field indicates whether or not data destructive actions are allowed on the controller",
+            "readonly": false,
+            "enum": [
+                "Strict",
+                "Permissive",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Strict": "Data destructive actions are not allowed",
+                "Permissive": "Logical drive delete actions will be ignored",
+                "Disabled": "Data destructive actions are allowed"
+            },
+            "default": "Strict"
+        },
+        "Actions": {
+            "type": "array",
+            "description": "An array of actions to perform on the controller",
+            "readonly": false,
+            "items": {
+                "oneOf": [
+                    {
+                        "title": "Other operations (no parameters)",
+                        "type": "object",
+                        "maxProperties": 1,
+                        "properties": {
+                            "Action": {
+                                "enum": [
+                                    "ClearConfigurationMetadata",
+                                    "FactoryReset"
+                                ],
+                                "enumDescriptions": {
+                                    "ClearConfigurationMetadata": "Clear the configuration metadata from physical drives that are masked from the OS",
+                                    "FactoryReset": "Reset the controller to factory settings by performing the following: delete all logical drives, remove all license keys, clear the encryption configuration, clear the controller NVRAM, and clear configuration metadata from all physical drives that are masked from the OS"
+                                }
+                            }
+                        },
+                        "required": [
+                            "Action"
+                        ]
+                    },
+                    {
+                        "title": "Physical drive erase operation",
+                        "type": "object",
+                        "maxProperties": 4,
+                        "properties": {
+                            "Action": {
+                                "enum": [
+                                    "PhysicalDriveErase"
+                                ],
+                                "enumDescriptions": {
+                                    "PhysicalDriveErase": "Erase the physical drives specified in the PhysicalDriveList"
+                                }
+                            }
+                        },
+                        "required": [
+                            "Action",
+                            "ErasePattern",
+                            "PhysicalDriveList"
+                        ]
+                    },
+                    {
+                        "title": "Physical drive enable operation",
+                        "type": "object",
+                        "maxProperties": 2,
+                        "properties": {
+                            "Action": {
+                                "enum": [
+                                    "PhysicalDriveEnable"
+                                ],
+                                "enumDescriptions": {
+                                    "PhysicalDriveEnable": "Enables the physical drives specified in the PhysicalDriveList"
+                                }
+                            }
+                        },
+                        "required": [
+                            "Action",
+                            "PhysicalDriveList"
+                        ]
+                    }
+                ],
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "description": "The action to perform",
+                        "readonly": false
+                    },
+                    "ErasePattern": {
+                        "type": "string",
+                        "description": "The erase pattern used to erase the drive",
+                        "readonly": false,
+                        "enum": [
+                            "SanitizeRestrictedBlockErase",
+                            "SanitizeUnrestrictedBlockErase",
+                            "SanitizeRestrictedOverwrite",
+                            "SanitizeUnrestrictedOverwrite",
+                            "SanitizeRestrictedCryptoScramble",
+                            "SanitizeUnrestrictedCryptoScramble",
+                            "OnePass",
+                            "TwoPass",
+                            "ThreePass"
+                        ],
+                        "enumDescriptions": {
+                            "SanitizeRestrictedBlockErase": "Use the restricted block erase sanitize block erase method to erase a drive",
+                            "SanitizeUnrestrictedBlockErase": "Use the unrestricted block erase sanitize method to erase a drive",
+                            "SanitizeRestrictedOverwrite": "Use the restricted overwrite sanitize method to erase a drive",
+                            "SanitizeUnrestrictedOverwrite": "Use the unrestricted overwrite sanitize method to erase a drive",
+                            "SanitizeRestrictedCryptoScramble": "Use the unrestricted cryptographic scramble sanitize method to erase a drive",
+                            "SanitizeUnrestrictedCryptoScramble": "Use the unrestricted cryptographic scramble sanitize method to erase a drive",
+                            "OnePass": "Use the controller-based one pass erase method that writes zeroes to every sector of the drive",
+                            "TwoPass": "Use the controller-based two pass erase method that writes random data to every sector of the drive on the first pass, and zeroes on the second pass",
+                            "ThreePass": "Use the controller-based three pass erase method that writes random data to every sector of the drive on the first two passes, and zeroes on the third pass"
+                        }
+                    },
+                    "PhysicalDriveList": {
+                        "type": "array",
+                        "description": "A list of the physical drives to be erased",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "readonly": false,
+                        "items": {
+                            "$ref": "#/definitions/PhysicalDriveLocation",
+                            "description": "Physical drive in the format specified in DriveLocationFormat"
+                        }
+                    }
+                },
+                "required": [
+                    "Action"
+                ]
+            }
+        },
+        "Location": {
+            "type": "string",
+            "description": "The location of the controller",
+            "readonly": true
+        },
+        "LocationFormat": {
+            "type": "string",
+            "description": "The format of the Location property on this controller",
+            "enum": [
+                "PCISlot"
+            ],
+            "enumDescriptions": {
+                "PCISlot": "The location of the controller is given as a PCI slot number"
+            },
+            "readonly": true
+        },
+        "PowerModeAfterReboot": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "The power mode of the controller after a reboot",
+            "readonly": false,
+            "enum": [
+                "Invalid",
+                "MinPower",
+                "Balanced",
+                "MaxPerformance"
+            ],
+            "enumDescriptions": {
+                "Invalid": "The controller will be operating in an unknown power mode after a reboot",
+                "MinPower": "The controller will be operating in minimum power mode after a reboot",
+                "Balanced": "The controller will be operating in a balanced mode after a reboot",
+                "MaxPerformance": "The controller will be operating in maximum performance power mode after a reboot"
+            }
+        },
+        "SurvivalPowerMode": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables or Disables survival mode",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The controller will throttle dynamic power settings to their minimum when temperatures exceed the warning threshold",
+                "Disabled": "The controller will not throttle dynamic power settings"
+            },
+            "default": "Enabled"
+        },
+        "ExpandPriority": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "The level of priority that transformations have over handling current operating system requests",
+            "readonly": false,
+            "enum": [
+                "High",
+                "Medium",
+                "Low"
+            ],
+            "enumDescriptions": {
+                "High": "Transformations will complete as fast as possible at the expense of normal I/O",
+                "Medium": "Transformations will perform with some impact on normal I/O",
+                "Low": "Transformations will perform only when normal I/O is not occurring and may take longer to complete"
+            },
+            "default": "Medium"
+        },
+        "RebuildPriority": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "The level of priority that rebuilds have over handling current operating system requests",
+            "readonly": false,
+            "enum": [
+                "High",
+                "MediumHigh",
+                "Medium",
+                "Low"
+            ],
+            "enumDescriptions": {
+                "High": "Rebuilds will complete as fast as possible at the expense of normal I/O",
+                "MediumHigh": "Rebuilds will perform with an impact on normal I/O (only allowed if RapidRebuild is supported)",
+                "Medium": "Rebuilds will perform with some impact on normal I/O",
+                "Low": "Rebuilds will perform only when normal I/O is not occurring and may take longer to complete"
+            },
+            "default": "High"
+        },
+        "SurfaceScanAnalysisPriority": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Priority that the controller takes to find and correct disk surface errors",
+            "readonly": false,
+            "enum": [
+                "Disabled",
+                "High",
+                "Idle"
+            ],
+            "enumDescriptions": {
+                "Disabled": "Surface scan is disabled and may lead to data loss",
+                "High": "Surface scan commands will be sent with the host I/O, resulting in faster scanning, but may inpact host I/O performance",
+                "Idle": "Surface scan commands will ony be issued when no host I/O is present after a delay"
+            }
+        },
+        "SurfaceScanAnalysisDelaySeconds": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "Sets the delay of the controller before beginning surface scan analysis. Only valid if SurfaceScanAnalysisPriority is Idle",
+            "readonly": false,
+            "minimum": 1,
+            "maximum": 30,
+            "default": 3
+        },
+        "CurrentParallelSurfaceScanCount": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "This indicates the number of parallel surface scans the controller allows",
+            "readonly": false,
+            "minimum": 1,
+            "maximum": 16,
+            "default": 1
+        },
+        "DriveWriteCache": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables or disables the write cache of the configured physical drives attached to the controller",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled",
+                "Default"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The write cache of the configured physical drives attached to the controller is enabled",
+                "Disabled": "The write cache of the configured physical drives attached to the controller is disabled",
+                "Default": "The write cache of the configured physical drives attached to the controller is set by the controller (this feature may not be supported on all controllers)"
+            },
+            "default": "Disabled"
+        },
+        "DriveWriteCacheUnconfigured": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables or disables the write cache of the unconfigured physical drives attached to the controller",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled",
+                "Default"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The write cache of the unconfigured physical drives attached to the controller is enabled",
+                "Disabled": "The write cache of the unconfigured physical drives attached to the controller is disabled",
+                "Default": "The write cache of the unconfigured physical drives attached to the controller is set by the controller (this feature may not be supported on all controllers)"
+            },
+            "default": "Disabled"
+        },
+        "PredictiveSpareRebuild": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables or disables predictive spare rebuild mode",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "Spare drives will replace physical drives that are predicted to fail preemptively",
+                "Disabled": "Spare drives will replace physical drives only when they fail"
+            },
+            "default": "Disabled"
+        },
+        "MonitorAndPerformanceAnalysisDelaySeconds": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "This sets the monitor and performance delay on the controller. Valid values range from 0 to 1440 seconds. Set to 60 seconds for default settings and 0 seconds for video-on-demand optimized setting",
+            "readonly": false,
+            "minimum": 0,
+            "maximum": 1440,
+            "default": 60,
+            "videoOnDemand": 0
+        },
+        "NoBatteryWriteCache": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "This indicates if the controller will continue to use write cache even if the backup power source is not available",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The controller will continue to use write cache even if the backup power source is not available",
+                "Disabled": "The controller will not continue to use write cache even if the backup power source is not available"
+            },
+            "default": "Disabled"
+        },
+        "ReadCachePercent": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "This indicates the percentage of cache used for read cache on the controller, with the rest of the cache being used for write cache",
+            "readonly": false,
+            "minimum": 0,
+            "maximum": 100,
+            "default": 10
+        },
+        "DegradedPerformanceOptimization": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables the controller to attempt to improve performance on RAID 5/50/6(ADG)/60 logical drives when one or more physical drives in the logical drive are failed",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The controller will attempt to improve performance by buffering physical drive requests",
+                "Disabled": "The controller will not buffer, which may result in reading from the same drive multiple times"
+            },
+            "default": "Disabled",
+            "videoOnDemand": "Enabled"
+        },
+        "ElevatorSort": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables the controller to sort requests to a physical drive",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The controller will sort the requests to minimize the amount of seeking the drive must perform in order to reduce seek times",
+                "Disabled": "The controller will perform the requests as they are recieved in order to improve request throughput"
+            },
+            "default": "Enabled",
+            "videoOnDemand": "Disabled"
+        },
+        "InconsistencyRepairPolicy": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Enables the controller to update data on RAID 6(ADG) and 60 volumes based on parity information when an inconsistency is discovered during surface scan",
+            "readonly": false,
+            "enum": [
+                "Enabled",
+                "Disabled"
+            ],
+            "enumDescriptions": {
+                "Enabled": "The controller will update the data on the drives based on the parity information",
+                "Disabled": "The controller will only update the parity information and leave the data untouched"
+            },
+            "default": "Disabled",
+            "videoOnDemand": "Enabled"
+        },
+        "QueueDepth": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "This sets the maximum number of requests the controller will submit to a drive at any given time",
+            "readonly": false,
+            "enum": [
+                "Queue2",
+                "Queue4",
+                "Queue8",
+                "Queue16",
+                "Queue32",
+                "Automatic"
+            ],
+            "enumDescriptions": {
+                "Queue2": "2 requests",
+                "Queue4": "4 requests",
+                "Queue8": "8 requests",
+                "Queue16": "16 requests",
+                "Queue32": "32 requests",
+                "Automatic": "Automatically determine the best queue depth for the controller"
+            },
+            "default": "Automatic",
+            "videoOnDemand": "Queue16"
+        },
+        "FlexibleLatencySchedulerSetting": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "This allows the controller to process certain high-latency requests after a delay that may time out when elevator sorting",
+            "readonly": false,
+            "enum": [
+                "Default",
+                "Low250",
+                "Middle100",
+                "Middle50",
+                "Aggressive30",
+                "Aggressive10"
+            ],
+            "enumDescriptions": {
+                "Default": "The controller will rely only on elevator sorting",
+                "Low250": "The controller will apply a cutoff value of 250ms when suspending elevator sorting",
+                "Middle100": "The controller will apply a cutoff value of 100ms when suspending elevator sorting",
+                "Middle50": "The controller will apply a cutoff value of 50ms when suspending elevator sorting",
+                "Aggressive30": "The controller will apply a cutoff value of 30ms when suspending elevator sorting",
+                "Aggressive10": "The controller will apply a cutoff value of 10ms when suspending elevator sorting"
+            },
+            "default": "Default",
+            "videoOnDemand": "Middle50"
+        },
+        "WriteCacheBypassThresholdKiB": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "description": "This value sets the write cache bypass threshold, ranging from 16 KiB to 1040 KiB in multiples of 16 KiB, where all writes larger than the specified value in KiB units will bypass the write cache and be written directly to the disk for non-parity RAID volumes",
+            "readonly": false,
+            "minimum": 16,
+            "maximum": 1040,
+            "default": 1040,
+            "multipleOf": 16
+        },
+        "EncryptionConfiguration": {
+            "type": "string",
+            "description": "This indicates the type of encryption configured on the controller",
+            "readonly": false,
+            "enum": [
+                "ExpressLocal",
+                "None"
+            ],
+            "enumDescriptions": {
+                "ExpressLocal": "Express local encryption is configured and the controller is being encrypted with internally generated keys",
+                "None": "Encryption is not configured on the controller"
+            },
+            "default": "None"
+        },
+        "EncryptionEULA": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "The value of this field indicates whether or not the user has accepted the encryption EULA",
+            "readonly": false,
+            "enum": [
+                "Accept",
+                "Decline"
+            ],
+            "enumDescriptions": {
+                "Accept": "The user has read and accepted the encryption EULA",
+                "Decline": "The user has not read and accepted the encryption EULA"
+            }
+        },
+        "LogicalDrives": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "LogicalDriveNumber": {
+                        "type": "integer",
+                        "description": "Logical drive number",
+                        "readonly": true
+                    },
+                    "VolumeUniqueIdentifier": {
+                        "type": "string",
+                        "description": "Logical drive volume unique identifier",
+                        "readonly": true
+                    },
+                    "LegacyBootPriority": {
+                        "type": "string",
+                        "description": "The boot priority of this logical drive",
+                        "readonly": false,
+                        "enum": [
+                            "Primary",
+                            "Secondary",
+                            "All",
+                            "None"
+                        ],
+                        "enumDescriptions": {
+                            "Primary": "This logical drive is the primary boot volume",
+                            "Secondary": "This logical drive is the secondary boot volume",
+                            "All": "This logical drive is both the primary and secondary boot volume",
+                            "None": "This logical drive has no legacy boot priority"
+                        },
+                        "default": "None"
+                    },
+                    "CapacityGiB": {
+                        "type": "integer",
+                        "description": "Total usable capacity available on this logical drive in GiB units. Set to -1 to use all remaining space for maximum size",
+                        "readonly": false
+                    },
+                    "CapacityBlocks": {
+                        "type": "integer",
+                        "description": "Total usable capacity available on this logical drive in block units. Set to -1 to use all remaining space for maximum size",
+                        "readonly": false
+                    },
+                    "SpareRebuildMode": {
+                        "type": "string",
+                        "description": "Type of spare drive used with this logical drive",
+                        "readonly": false,
+                        "enum": [
+                            "Dedicated",
+                            "Roaming"
+                        ],
+                        "enumDescriptions": {
+                            "Dedicated": "The spare drive temporarily takes over a failed data drive; when the failed data drive is replaced, the spare drive becomes idle again",
+                            "Roaming": "The spare drive replaces the failed data drive"
+                        },
+                        "default": "Dedicated"
+                    },
+                    "ParityGroupCount": {
+                        "type": "integer",
+                        "description": "The number of parity groups to use in the logical drive; only valid for certain RAID levels",
+                        "readonly": false
+                    },
+                    "ParityInitializationType": {
+                        "type": "string",
+                        "description": "When creating a logical drive with a RAID level that requires parity, parity blocks can be initialized with two different methods",
+                        "readonly": false,
+                        "enum": [
+                            "Default",
+                            "Rapid"
+                        ],
+                        "enumDescriptions": {
+                            "Default": "Parity blocks are initialized in the background and the logical drive is available during this time",
+                            "Rapid": "Both data and parity blocks are initialized in the foreground and the logical drive will not be available to the operating system until initialization completes"
+                        },
+                        "default": "Default"
+                    },
+                    "BlockSizeBytes": {
+                        "type": "integer",
+                        "description": "The block size of the disk drive in bytes",
+                        "readonly": false
+                    },
+                    "Raid": {
+                        "type": "string",
+                        "description": "The current RAID level configured on the logical drive",
+                        "readonly": false,
+                        "enum": [
+                            "Raid0",
+                            "Raid1",
+                            "Raid1ADM",
+                            "Raid10",
+                            "Raid10ADM",
+                            "Raid5",
+                            "Raid50",
+                            "Raid6",
+                            "Raid60"
+                        ],
+                        "enumDescriptions": {
+                            "Raid0": "There is no fault tolerance used on this logical drive",
+                            "Raid1": "Two sets of duplicate data is being stored on a pair of drives",
+                            "Raid1ADM": "Three sets of duplicate data is being stored on a trio of drives",
+                            "Raid10": "Data is duplicated and striped across pairs of disk drives",
+                            "Raid10ADM": "Data is duplicated and striped across trios of disk drives",
+                            "Raid5": "Fault tolerance is achieved by storing parity data across 3 or more disk drives",
+                            "Raid50": "Fault tolerance is achieved by storing parity data and striping the data across 6 or more disk drives",
+                            "Raid6": "Fault tolerance is achieved by storing multiple sets parity data across 4 or more disk drives",
+                            "Raid60": "Fault tolerance is achieved by storing multiple sets parity data and striping the data across 8 or more disk drives"
+                        }
+                    },
+                    "StripSizeBytes": {
+                        "type": "integer",
+                        "description": "The strip size of the logical drive in bytes",
+                        "readonly": false
+                    },
+                    "StripeSizeBytes": {
+                        "type": "integer",
+                        "description": "The stripe size of the logical drive in bytes",
+                        "readonly": false
+                    },
+                    "Accelerator": {
+                        "type": "string",
+                        "description": "The acceleration method of the logical drive",
+                        "readonly": false,
+                        "enum": [
+                            "None",
+                            "ControllerCache",
+                            "IOBypass"
+                        ],
+                        "enumDescriptions": {
+                            "None": "Logical drive acceleration is disabled",
+                            "ControllerCache": "Read and writes to the logical drive are being cached by the controller",
+                            "IOBypass": "For logical drives on SSDs, read and write information directly from the drive"
+                        }
+                    },
+                    "LogicalDriveName": {
+                        "type": "string",
+                        "description": "Label given to the logical drive",
+                        "readonly": false
+                    },
+                    "DriveLocationFormat": {
+                        "$ref": "#/definitions/DriveLocationFormat",
+                        "readonly": true
+                    },
+                    "DataDrives": {
+                        "oneOf": [
+                            {
+                                "type": "array",
+                                "description": "A list of the physical drives to be used in the logical drive",
+                                "minItems": 1,
+                                "uniqueItems": true,
+                                "readonly": false,
+                                "items": {
+                                    "$ref": "#/definitions/PhysicalDriveLocation",
+                                    "description": "Physical drive in the format specified in DriveLocationFormat"
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "description": "A list of properties defining a drive set",
+                                "properties": {
+                                    "DataDriveCount": {
+                                        "type": "integer",
+                                        "minimum": 1,
+                                        "description": "Specify the number of data drives for this logical drive",
+                                        "readonly": false
+                                    },
+                                    "DataDriveMediaType": {
+                                        "type": "string",
+                                        "description": "Specify the media type for the data drives for this logical drive",
+                                        "readonly": false,
+                                        "enum": [
+                                            "HDD",
+                                            "SSD"
+                                        ],
+                                        "enumDescriptions": {
+                                            "HDD": "Use spindle drives when creating the logical drive",
+                                            "SSD": "Use solid state drives when creating the logical drive"
+                                        }
+                                    },
+                                    "DataDriveInterfaceType": {
+                                        "type": "string",
+                                        "description": "Specify the interface type for the data drives for this logical drive",
+                                        "readonly": false,
+                                        "enum": [
+                                            "SAS",
+                                            "SATA",
+                                            "NVMe"
+                                        ],
+                                        "enumDescriptions": {
+                                            "SAS": "Use SAS drives when creating the logical drive",
+                                            "SATA": "Use SATA drives when creating the logical drive",
+                                            "NVMe": "Use NVMe drives when creating the logical drive"
+                                        }
+                                    },
+                                    "DataDriveMinimumSizeGiB": {
+                                        "type": "integer",
+                                        "description": "Specify the minimum size for the data drive(s) used to create the logical drive",
+                                        "readonly": false
+                                    },
+                                    "DataDriveBlockSize": {
+                                        "type": "integer",
+                                        "description": "Specify the block size of the data drives for this logical drive",
+                                        "readonly": false,
+                                        "enum": [
+                                            512,
+                                            4096
+                                        ],
+                                        "enumDescriptions": {
+                                            "512": "Use drives with a logical block size of 512 bytes per block",
+                                            "4096": "Use drives with a logical block size of 4096 bytes per block"
+                                        }
+                                    },
+                                    "DataDriveLocation": {
+                                        "type": "string",
+                                        "description": "Specify the location of the data drives for this logical drive",
+                                        "readonly": false,
+                                        "enum": [
+                                            "Internal",
+                                            "External"
+                                        ],
+                                        "enumDescriptions": {
+                                            "Internal": "Drives that are attached to an internal port of the controller (front drives)",
+                                            "External": "Drives that are attached to an external port of the controller (JBOD drives)"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "DataDriveCount"
+                                ]
+                            }
+                        ]
+                    },
+                    "SpareDrives": {
+                        "oneOf": [
+                            {
+                                "type": "array",
+                                "description": "A list of the physical drives to be used as spares for the logical drive",
+                                "uniqueItems": true,
+                                "readonly": false,
+                                "items": {
+                                    "$ref": "#/definitions/PhysicalDriveLocation",
+                                    "description": "Physical drive in the format specified in DriveLocationFormat"
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "description": "A list of properties defining a spare drive set",
+                                "properties": {
+                                    "SpareDriveCount": {
+                                        "type": "integer",
+                                        "description": "Specify the number of spare drives for this logical drive",
+                                        "readonly": false
+                                    }
+                                },
+                                "required": [
+                                    "SpareDriveCount"
+                                ]
+                            }
+                        ]
+                    },
+                    "Actions": {
+                        "type": "array",
+                        "description": "An array of actions to perform on the logical drive",
+                        "readonly": false,
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "title": "Other operations (no parameters)",
+                                    "type": "object",
+                                    "maxProperties": 1,
+                                    "properties": {
+                                        "Action": {
+                                            "enum": [
+                                                "LogicalDriveDelete"
+                                            ],
+                                            "enumDescriptions": {
+                                                "LogicalDriveDelete": "Delete the logical drive even if DataGuard is Permissive"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "Action"
+                                    ]
+                                }
+                            ],
+                            "properties": {
+                                "Action": {
+                                    "type": "string",
+                                    "description": "The action to perform",
+                                    "readonly": false
+                                }
+                            },
+                            "required": [
+                                "Action"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "Raid",
+                    "DataDrives"
+                ]
+            }
+        },
+        "PhysicalDrives": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Location": {
+                        "$ref": "#/definitions/PhysicalDriveLocation",
+                        "readonly": true
+                    },
+                    "LocationFormat": {
+                        "$ref": "#/definitions/DriveLocationFormat",
+                        "readonly": true
+                    },
+                    "LegacyBootPriority": {
+                        "type": "string",
+                        "description": "The boot priority of this physical drive",
+                        "readonly": false,
+                        "enum": [
+                            "Primary",
+                            "Secondary",
+                            "All",
+                            "None"
+                        ],
+                        "enumDescriptions": {
+                            "Primary": "This physical drive is the primary boot volume",
+                            "Secondary": "This physical drive is the secondary boot volume",
+                            "All": "This physical drive is both the primary and secondary boot volume",
+                            "None": "This physical drive has no legacy boot priority"
+                        },
+                        "default": "None"
+                    }
+                },
+                "required": [
+                    "Location"
+                ]
+            }
+        },
+        "Ports": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "PortIndex": {
+                        "type": "integer",
+                        "description": "The port index",
+                        "readonly": true
+                    },
+                    "OperatingModeAfterReboot": {
+                        "type": "string",
+                        "description": "The operating mode of this port after a reboot",
+                        "readonly": false,
+                        "enum": [
+                            "Mixed"
+                        ],
+                        "enumDescriptions": {
+                            "Mixed": "The port will be functioning in mixed mode after rebooting. Unassigned drives will be exposed to the OS"
+                        }
+                    }
+                },
+                "required": [
+                    "PortIndex"
+                ]
+            }
+        }
+    },
+    "required": [
+        "@odata.context",
+        "@odata.id",
+        "@odata.type",
+        "DataGuard",
+        "LogicalDrives"
+    ]
+}

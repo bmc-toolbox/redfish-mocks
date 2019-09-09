@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Previous-25227-3.30.30.30",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Previous-25227-3.30.30.30",
+    "Name": "Integrated Dell Remote Access Controller",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:PREVIOUS%23iDRAC.Embedded.1-1%23IDRACinfo",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "25227",
+                "ComponentType": "FRMW",
+                "DeviceID": null,
+                "ElementName": "Integrated Dell Remote Access Controller",
+                "HashValue": null,
+                "InstallationDate": "NA",
+                "IsEntity": true,
+                "RevisionNumber": 30,
+                "Status": "AvailableForInstallation",
+                "SubDeviceID": null,
+                "SubVendorID": null,
+                "VendorID": null
+            }
+        }
+    },
+    "SoftwareId": "25227",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "3.30.30.30"
+}

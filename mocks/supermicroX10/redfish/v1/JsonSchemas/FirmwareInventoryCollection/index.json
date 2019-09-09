@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/FirmwareInventoryCollection",
+    "Id": "FirmwareInventoryCollection",
+    "Name": "FirmwareInventoryCollection Schema File",
+    "Description": "FirmwareInventoryCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "FirmwareInventoryCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/FirmwareInventoryCollection.json"
+        }
+    ],
+    "Oem": {}
+}

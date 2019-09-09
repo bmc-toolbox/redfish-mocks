@@ -1,0 +1,22 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#IPMIConfig.IPMIConfig",
+    "@odata.type": "#IPMIConfig.IPMIConfig",
+    "@odata.id": "/redfish/v1/UpdateService/IPMIConfig",
+    "Id": "IPMIConfig",
+    "Name": "SUPERMICRO IPMI Configuration File",
+    "Description": "Description of SUPERMICRO IPMI Configuration File",
+    "Actions": {
+        "Oem": {
+            "#IPMIConfig.IPMIConfigUpload": {
+                "target": "/redfish/v1/UpdateService/IPMIConfig/Actions/IPMIConfig.Upload",
+                "UploadKeyWords@Redfish.AllowableValues": [
+                    "ipmi_config_file"
+                ]
+            },
+            "#IPMIConfig.IPMIConfigDownload": {
+                "target": "/redfish/v1/UpdateService/IPMIConfig/Actions/IPMIConfig.Download"
+            }
+        }
+    },
+    "Oem": {}
+}

@@ -1,0 +1,145 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataSecurityLoSCapabilities",
+    "definitions": {
+        "AntiVirusScanTrigger": {
+            "type": "string",
+            "enum": [
+                "None",
+                "OnFirstRead",
+                "OnPatternUpdate",
+                "OnUpdate",
+                "OnRename"
+            ],
+            "enumDescriptions": {
+                "None": "No trigger.",
+                "OnFirstRead": "Trigger on first read.",
+                "OnPatternUpdate": "Trigger on antivirus pattern file update.",
+                "OnUpdate": "Trigger on object update.",
+                "OnRename": "Trigger on object rename."
+            },
+            "description": "Types of antivirus scan triggers",
+            "longDescription": "The enumberation literals shall specify types of antivirus scan triggers."
+        },
+        "AuthenticationType": {
+            "type": "string",
+            "enum": [
+                "None",
+                "PKI",
+                "Ticket",
+                "Password"
+            ],
+            "enumDescriptions": {
+                "None": "No authentication.",
+                "PKI": "Public Key Infrastructure.",
+                "Ticket": "Ticket-based (e.g., Kerberos)",
+                "Password": "Password/shared-secret"
+            },
+            "description": "Enumeration of authentication algorithms.)",
+            "longDescription": "The enumeration literals shall specify authentication algorithms."
+        },
+        "DataSanitizationPolicy": {
+            "type": "string",
+            "enum": [
+                "None",
+                "Clear",
+                "CryptographicErase"
+            ],
+            "enumDescriptions": {
+                "None": "No sanitization.",
+                "Clear": "Sanitize data in all user-addressable storage locations for protection against simple non-invasive data recovery techniques.",
+                "CryptographicErase": "Leverages the encryption of target data by enabling sanitization of the target data's encryption key. This leaves only the ciphertext remaining on the media, effectively sanitizing the data by preventing read-access. For more information, see NIST800-88 and ISO/IEC 27040."
+            },
+            "description": "Types of data sanitization policies",
+            "longDescription": "The enumberation literals shall specify types of data sanitization policies."
+        },
+        "DataSecurityLoSCapabilities": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Describe data protection capabilities",
+            "longDescription": "The capabilities to protect data from loss by the use of a replica. The requirements must be met collectively by the communication path and the replica. There will be one instance associated to a class of service for each replica. Each replica has its own class of service that describes its characteristics."
+        },
+        "KeySize": {
+            "type": "string",
+            "enum": [
+                "Bits_0",
+                "Bits_112",
+                "Bits_128",
+                "Bits_192",
+                "Bits_256"
+            ],
+            "enumDescriptions": {
+                "Bits_0": "No key.",
+                "Bits_112": "3DES 112 bit key.",
+                "Bits_128": "AES 128 bit key.",
+                "Bits_192": "AES 192 bit key.",
+                "Bits_256": "AES 256 bit key."
+            },
+            "description": "Enumeration of Key sizes in a symmetric encryption algorithm, (see NIST SP 800-57 part 1 (http:/csrc.nist.gov/publications/nistpubs/800-57/sp800-57_part1_rev3_general.pdf)",
+            "longDescription": "The enumeration literals shall specify Key sizes in a symmetric encryption algorithm, (see NIST SP 800-57 part 1 (http:/csrc.nist.gov/publications/nistpubs/800-57/sp800-57_part1_rev3_general.pdf)"
+        },
+        "SecureChannelProtocol": {
+            "type": "string",
+            "enum": [
+                "None",
+                "TLS",
+                "IPsec",
+                "RPCSEC_GSS"
+            ],
+            "enumDescriptions": {
+                "None": "No encryption.",
+                "TLS": "Transport Layer Security (TLS), as defined by IETF RFC 5246.",
+                "IPsec": "Internet Protocol Security (IPsec), as defined by IETF RFC 2401.",
+                "RPCSEC_GSS": "RPC access to the Generic Security Services Application Programming Interface (GSS-API), as defined by IETF RPC 2203."
+            },
+            "description": "Types of Secure channel protocols",
+            "longDescription": "The enumeration literals shall specify types of Secure channel protocols."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

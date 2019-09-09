@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SMTP.v1_0_0",
+    "Id": "SMTP.v1_0_0",
+    "Name": "SMTP Schema File",
+    "Description": "SMTP Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SMTP.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SMTP.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

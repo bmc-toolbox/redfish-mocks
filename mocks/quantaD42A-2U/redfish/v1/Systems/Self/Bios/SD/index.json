@@ -1,0 +1,10 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Bios.Bios",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/Systems/Self/Bios/SD",
+    "@odata.type": "#Bios.v1_0_1.Bios",
+    "AttributeRegistry": "BiosAttributeRegistry0.0.0.0",
+    "Description": "Future BIOS Settings",
+    "Id": "SD",
+    "Name": "Future BIOS Settings"
+}

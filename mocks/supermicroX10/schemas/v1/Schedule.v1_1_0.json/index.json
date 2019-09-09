@@ -1,0 +1,117 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Schedule.v1_1_0",
+    "definitions": {
+        "Schedule": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "Name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The Schedule name.",
+                    "longDescription": "The name of the Schedule. It should be constructed as OrgID:ScheduleName. Examples: ACME:Daily, ACME:Weekly, ACME:FirstTuesday,"
+                },
+                "Lifetime": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The time after provisioning when the schedule as a whole expires.",
+                    "longDescription": "The value shall be an ISO 8601 conformant duration describing the time after provisioning when the schedule expires."
+                },
+                "MaxOccurrences": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Maximum number of scheduled occurrences.",
+                    "longDescription": "Maximum number of scheduled occurrences."
+                },
+                "InitialStartTime": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Time for initial occurrence.",
+                    "longDescription": "The value shall be an ISO 8601 conformant time of day on which the initial occurrence is scheduled to occur."
+                },
+                "RecurrenceInterval": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "Distance until the next occurrences.",
+                    "longDescription": "The value shall be an ISO 8601 conformant duration describing the time until the next occurrence."
+                },
+                "EnabledDaysOfWeek": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/Schedule.v1_0_0.json#/definitions/DayOfWeek"
+                    },
+                    "readonly": false,
+                    "description": "Days of the week when scheduled occurrences are enabled, for enabled days of month and months of year.",
+                    "longDescription": "Days of the week when scheduled occurrences are enabled. If not present, all days of the week shall be enabled."
+                },
+                "EnabledDaysOfMonth": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "number",
+                            "null"
+                        ]
+                    },
+                    "readonly": false,
+                    "description": "Days of month when scheduled occurrences are enabled.",
+                    "longDescription": "Days of month when scheduled occurrences are enabled, for enabled days of week and months of year. If not present, all days of the month shall be enabled.",
+                    "minimum": 1,
+                    "maximum": 31
+                },
+                "EnabledMonthsOfYear": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/Schedule.v1_0_0.json#/definitions/MonthOfYear"
+                    },
+                    "readonly": false,
+                    "description": "Months of year when scheduled occurrences are enabled.",
+                    "longDescription": "Months of year when scheduled occurrences are enabled, for enabled days of week and days of month. If not present, all months of the year shall be enabled."
+                },
+                "EnabledIntervals": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "readonly": false,
+                    "description": "Intervals when scheduled occurrences are enabled.",
+                    "longDescription": "Each value shall be an ISO 8601 conformant interval specifying when occurences are enabled."
+                }
+            },
+            "description": "Schedule a series of occurrences.",
+            "longDescription": "The properties of this type shall be used to Schedule a series of occurrences."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

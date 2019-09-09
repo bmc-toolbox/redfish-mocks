@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "description": "The schema definition for the HPE extended properties of a memory module.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "MemoryChunkSizePercentage": {
+            "type": [
+                "integer",
+                "null"
+            ],
+            "readonly": false,
+            "description": "Size of chunk in percent of total capacity.",
+            "longDescription": "Property used during creation of this chunk to indicate the requested size as a percent of total capacity."
+        }
+    },
+    "readonly": true,
+    "title": "#HpeMemoryChunksExt.v2_1_0.HpeMemoryChunksExt",
+    "type": "object"
+}

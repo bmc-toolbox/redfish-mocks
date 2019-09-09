@@ -1,0 +1,118 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Managers/Members(DateTimeLocalOffset,Id,NetworkProtocol,ManagerType,Redundancy,Description,Oem,CommandShell,UUID,Status,Links,Name,LogServices,ServiceEntryPointUUID,DateTime,SerialInterfaces,GraphicalConsole,FirmwareVersion,SerialConsole,Model,EthernetInterfaces)/$entity",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/Managers/Self",
+    "@odata.type": "#Manager.v1_3_0.Manager",
+    "Actions": {
+        "#Manager.Reset": {
+            "ResetType@Redfish.AllowableValues": [
+                "IPMIColdReset"
+            ],
+            "target": "/redfish/v1/Managers/Self/Actions/Manager.Reset"
+        }
+    },
+    "CommandShell": {
+        "ConnectTypesSupported": [
+            "IPMI",
+            "SSH"
+        ],
+        "MaxConcurrentSessions": 256,
+        "ServiceEnabled": true
+    },
+    "DateTime": "2019-09-05T14:00:29+00:00",
+    "DateTimeLocalOffset": "+00:00",
+    "Description": "BMC",
+    "EthernetInterfaces": {
+        "@odata.id": "/redfish/v1/Managers/Self/EthernetInterfaces"
+    },
+    "FirmwareVersion": "3.14.19",
+    "GraphicalConsole": {
+        "ConnectTypesSupported": [
+            "KVMIP"
+        ],
+        "MaxConcurrentSessions": 2,
+        "ServiceEnabled": true
+    },
+    "Id": "Self",
+    "Links": {
+        "@odata.type": "Manager.v1_1_0.Links",
+        "ManagerForChassis": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/Self"
+            }
+        ],
+        "ManagerForServers": [
+            {
+                "@odata.id": "/redfish/v1/Systems/Self"
+            }
+        ],
+        "ManagerInChassis": {
+            "@odata.id": "/redfish/v1/Chassis/Self"
+        },
+        "Oem": {
+            "Sensors": {
+                "@odata.id": "/redfish/v1/Managers/Self/OemSensors"
+            }
+        }
+    },
+    "LogServices": {
+        "@odata.id": "/redfish/v1/Managers/Self/LogServices"
+    },
+    "ManagerType": "BMC",
+    "Model": "AST2500",
+    "Name": "Manager",
+    "NetworkProtocol": {
+        "@odata.id": "/redfish/v1/Managers/Self/NetworkProtocol"
+    },
+    "Oem": {
+        "Quanta_RackScale": {
+            "AMIKeyProvision": false,
+            "AuthCap": "Cert_And_Basic",
+            "CertAuth": false,
+            "CertSetDefault": false,
+            "LLDP": false,
+            "Model": "AST2500",
+            "Provision": {
+                "EraseSystemDisks": false,
+                "EraseSystemDisksDone": false,
+                "HashKey": "",
+                "HostActionAfterSent": "Off",
+                "HostActionAfterSent@Redfish.AllowableValues": [
+                    "Off",
+                    "Hold"
+                ],
+                "Location": {
+                    "Id": "",
+                    "ParentId": ""
+                },
+                "NumLldpduToSent": 0,
+                "Pre-Location": {
+                    "Id": "",
+                    "ParentId": ""
+                },
+                "ProvisioningDone": false,
+                "ProvisioningEnabled": false,
+                "SendLldpDone": false,
+                "State": "Unknown",
+                "UpdateMdr": false,
+                "UpdateMdrDone": false
+            }
+        }
+    },
+    "SerialConsole": {
+        "ConnectTypesSupported": [
+            "IPMI",
+            "SSH"
+        ],
+        "ServiceEnabled": false
+    },
+    "SerialInterfaces": {
+        "@odata.id": "/redfish/v1/Managers/Self/SerialInterfaces"
+    },
+    "ServiceEntryPointUUID": "beb2a994-feee-e811-9fc6-d8c497d07433",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "UUID": "beb2a994-feee-e811-9fc6-d8c497d07433"
+}

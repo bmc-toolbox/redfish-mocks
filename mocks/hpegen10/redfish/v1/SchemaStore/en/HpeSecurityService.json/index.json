@@ -1,0 +1,163 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "CurrentCipher": {
+            "description": "Current cipher in use.",
+            "etag": true,
+            "type": "string",
+            "readonly": true
+        },
+        "SSHHostKey": {
+            "description": "SSH Host Key identifying the service.",
+            "etag": true,
+            "type": "string",
+            "readonly": true
+        },
+        "Links": {
+            "additionalProperties": false,
+            "description": "The links array contains the links to other resources that are related to this resource.",
+            "properties": {
+                "ESKM": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeESKM.",
+                    "etag": false,
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                },
+                "HttpsCert": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeHttpsCert.",
+                    "etag": false,
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                },
+                "SSO": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeiLOSSO.",
+                    "etag": false,
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                },
+                "CertAuth": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeCertAuth.",
+                    "readonly": true,
+                    "etag": false,
+                    "type": "object",
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    }
+                },
+                "SecurityDashboard": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeiLOSecurityDashboard.",
+                    "etag": false,
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "LoginSecurityBanner": {
+            "additionalProperties": false,
+            "description": "This object describes the security banner displayed on the iLO login page.",
+            "etag": true,
+            "properties": {
+                "IsEnabled": {
+                    "description": "Login security banner is enabled or not.",
+                    "etag": true,
+                    "readonly": false,
+                    "type": "boolean"
+                },
+                "SecurityMessage": {
+                    "description": "Text message to appear on the iLO login page when login security banner is enabled.",
+                    "etag": true,
+                    "maxLength": 1500,
+                    "readonly": false,
+                    "type": "string"
+                }
+            },
+            "readonly": false,
+            "type": "object"
+        },
+        "SecurityState@Redfish.AllowableValues": {
+            "description": "The supported values for the SecurityState parameter.",
+            "items": {
+                "enum": [
+                    "Wipe",
+                    "Production",
+                    "HighSecurity",
+                    "FIPS",
+                    "CNSA",
+                    "SuiteB"
+                ],
+                "type": "string"
+            },
+            "longDescription": "The supported values for the SecurityState parameter.",
+            "type": "array",
+            "uniqueItems": true
+        },
+        "SecurityState": {
+            "description": "The operational security level of this Manager.",
+            "longDescription": "The operational security level of this Manager. The valid values for this property are specified through the Redfish.AllowableValues annotation.",
+            "enum": [
+                "Wipe",
+                "Production",
+                "HighSecurity",
+                "FIPS",
+                "CNSA",
+                "SuiteB",
+                "SynergySecurityMode"
+            ],
+            "enumDescriptions": {
+                "FIPS": "Similar to High Security. This mode is intended to meet the FIPS 140-2 level 1 and Common Criteria security requirements. A reset to defaults is required to exit this mode.",
+                "HighSecurity": "Manager is operating in high security mode, requiring extra authentication on host interface(s), and stronger encryption on network interfaces.",
+                "Production": "Manager is operating in a normal security mode.  Default state for new systems.",
+                "CNSA": "Same as FIPS. Additionally meets the criteria for NSA Commercial National Security Algorithm suite.  Must be in FIPS mode to transition to CNSA.",
+                "SuiteB": "Same as FIPS. Additionally meets the criteria for NSA SuiteB Top Secret installations.  Must be in FIPS mode to transition to SuiteB.",
+                "SynergySecurityMode": "Synergy Security Mode is the mode supported by the Synergy Composer.",
+                "Wipe": "Manager is currently wiping security related content and returning to a lower security mode.  This state will transition automatically when finished."
+            },
+            "etag": true,
+            "readonly": false,
+            "type": "string"
+        }
+    },
+    "readonly": false,
+    "title": "#HpeSecurityService.v2_2_0.HpeSecurityService",
+    "type": "object"
+}

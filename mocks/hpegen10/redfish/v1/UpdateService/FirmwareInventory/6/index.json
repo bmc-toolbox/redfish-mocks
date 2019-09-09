@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.etag": "W/\"918DA6A4\"",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/6/",
+    "@odata.type": "#SoftwareInventory.v1_0_0.SoftwareInventory",
+    "Id": "6",
+    "Description": "InnovationEngineFirmware",
+    "Name": "Innovation Engine (IE) Firmware",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOSoftwareInventory.HpeiLOSoftwareInventory",
+            "@odata.type": "#HpeiLOSoftwareInventory.v2_0_0.HpeiLOSoftwareInventory",
+            "DeviceClass": "c734e171-8721-48c9-9ed6-d5bc7da5ef8d",
+            "DeviceContext": "System Board",
+            "Targets": [
+                "00000000-0000-0000-0000-000000000206",
+                "a6b1a447-382a-5a4f-3c10-3c100a000303"
+            ]
+        }
+    },
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Version": "0.1.0.28 "
+}

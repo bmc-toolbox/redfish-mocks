@@ -1,0 +1,45 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+    "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1",
+    "@odata.type": "#Chassis.v1_6_0.Chassis",
+    "Assembly": {
+        "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1/Assembly"
+    },
+    "AssetTag": null,
+    "ChassisType": "Enclosure",
+    "Description": "It represents the properties for physical components for any system.It represent racks, rackmount servers, blades, standalone, modular systems,enclosures, and all other containers.The non-cpu/device centric parts of the schema are all accessed either directly or indirectly through this resource.",
+    "Id": "Chassis.Embedded.1",
+    "IndicatorLED": null,
+    "Links": {
+        "ComputerSystems": [],
+        "ComputerSystems@odata.count": 0,
+        "Contains": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/System.Embedded.1"
+            }
+        ],
+        "Contains@odata.count": 1,
+        "CooledBy": [],
+        "CooledBy@odata.count": 0,
+        "ManagedBy": [],
+        "ManagedBy@odata.count": 0,
+        "PoweredBy": [],
+        "PoweredBy@odata.count": 0
+    },
+    "Manufacturer": null,
+    "Model": "PowerEdge M1000e",
+    "Name": "CMC-51F3DK2",
+    "PartNumber": null,
+    "Power": {
+        "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1/Power"
+    },
+    "PowerState": "On",
+    "SKU": null,
+    "SerialNumber": null,
+    "Status": {
+        "State": "Enabled"
+    },
+    "Thermal": {
+        "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1/Thermal"
+    }
+}

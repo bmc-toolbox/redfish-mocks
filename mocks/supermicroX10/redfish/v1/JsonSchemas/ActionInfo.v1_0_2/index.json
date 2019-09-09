@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ActionInfo.v1_0_2",
+    "Id": "ActionInfo.v1_0_2",
+    "Name": "ActionInfo Schema File",
+    "Description": "ActionInfo Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ActionInfo.v1_0_2",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ActionInfo.v1_0_2.json"
+        }
+    ],
+    "Oem": {}
+}

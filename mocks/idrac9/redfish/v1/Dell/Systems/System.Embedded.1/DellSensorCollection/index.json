@@ -1,0 +1,1056 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellSensorCollection.DellSensorCollection",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensorCollection/",
+    "@odata.type": "#DellSensorCollection.DellSensorCollection",
+    "Description": "A collection of DellSensor resource",
+    "Id": "DellSensorCollection",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard5VSWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 5V SW PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard5VSWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardVSBMSWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board VSBM SW PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardVSBMSWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardDIMMPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Good",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board DIMM PG",
+            "EnabledState": "Enabled",
+            "HealthState": "OK",
+            "Id": "iDRAC.Embedded.1#SystemBoardDIMMPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23NDCPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "NDC PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#NDCPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard1.8VSWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 1.8V SW PG ",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard1.8VSWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard2.5VSWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 2.5V SW PG ",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard2.5VSWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardPVNNSWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board PVNN SW PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardPVNNSWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardVSB11SWPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board VSB11 SW PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardVSB11SWPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard3.3VB",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 3.3V B ",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard3.3VB",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM012VDDQPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM012 VDDQ PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM012VDDQPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM012VDDQPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM012 VDDQ PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM012VDDQPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM012VPPPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM012 VPP PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM012VPPPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM012VPPPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM012 VPP PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM012VPPPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM012VTTPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM012 VTT PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM012VTTPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM345VDDQPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM345 VDDQ PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM345VDDQPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM345VPPPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM345 VPP PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM345VPPPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1MEM345VTTPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 MEM345 VTT PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1MEM345VTTPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1VCCIOPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 VCCIO PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1VCCIOPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1VCOREPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 VCORE PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1VCOREPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1FIVRPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 FIVR PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1FIVRPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM012VTTPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM012 VTT PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM012VTTPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM345VDDQPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM345 VDDQ PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM345VDDQPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM345VPPPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM345 VPP PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM345VPPPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2MEM345VTTPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 MEM345 VTT PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2MEM345VTTPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2VCCIOPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 VCCIO PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2VCCIOPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2VCOREPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 VCORE PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2VCOREPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2FIVRPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 FIVR PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2FIVRPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard5VPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 5V PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard5VPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1VSAPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 VSA PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1VSAPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2VSAPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 VSA PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2VSAPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23MEZZB1PG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "MEZZB1 PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#MEZZB1PG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23MEZZC1PG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "MEZZC1 PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#MEZZC1PG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard12VPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 12V PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard12VPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard5VHDDPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 5V HDD PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard5VHDDPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoard3.3VPG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board 3.3V PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoard3.3VPG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23PERC1PG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "PERC1 PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#PERC1PG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardBP1PG",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board BP1 PG",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardBP1PG",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardp12vCurrOvrLimit",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board p12vCurrOvrLimit",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#SystemBoardp12vCurrOvrLimit",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Voltage"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU1Status",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU1 Status",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU1Status",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23CPU2Status",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "CPU2 Status",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#CPU2Status",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23SystemBoardCMOSBattery",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Good",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "System Board CMOS Battery",
+            "EnabledState": "Enabled",
+            "HealthState": "OK",
+            "Id": "iDRAC.Embedded.1#SystemBoardCMOSBattery",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23PERC1ROMBBattery",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "PERC1 ROMB Battery",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#PERC1ROMBBattery",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA1",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A1",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA1",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA2",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A2",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA2",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA3",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A3",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA3",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA4",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A4",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA4",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA5",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A5",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA5",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA6",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A6",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA6",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA7",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A7",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA7",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotA8",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot A8",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotA8",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB1",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B1",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB1",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB2",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B2",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB2",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB3",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B3",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB3",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB4",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B4",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB4",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB5",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B5",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB5",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB6",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B6",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB6",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB7",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B7",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB7",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSensor.DellSensor",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensor/iDRAC.Embedded.1%23DIMMSlotB8",
+            "@odata.type": "#DellSensor.v1_0_0.DellSensor",
+            "CurrentState": "Unknown",
+            "Description": "An instance of DellSensor will represent a sensor, a hardware device that is capable of measuring the characteristics of a physical property.",
+            "ElementName": "DIMM Slot B8",
+            "EnabledState": "Enabled",
+            "HealthState": "Unknown",
+            "Id": "iDRAC.Embedded.1#DIMMSlotB8",
+            "Links": {
+                "ComputerSystem": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+                }
+            },
+            "Name": "DellSensor",
+            "SensorType": "Other"
+        }
+    ],
+    "Members@odata.count": 58,
+    "Members@odata.nextLink": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensorCollection?$skip=50",
+    "Name": "DellSensorCollection"
+}

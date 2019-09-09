@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IPMIConfig.v1_0_0",
+    "Id": "IPMIConfig.v1_0_0",
+    "Name": "IPMIConfig Schema File",
+    "Description": "IPMIConfig Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IPMIConfig.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IPMIConfig.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

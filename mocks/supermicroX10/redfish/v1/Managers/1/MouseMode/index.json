@@ -1,0 +1,12 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#MouseMode.MouseMode",
+    "@odata.type": "#MouseMode.MouseMode",
+    "@odata.id": "/redfish/v1/Managers/1/MouseMode",
+    "Name": "MouseMode",
+    "Mode": "Absolute",
+    "Mode@Redfish.AllowableValues": [
+        "Absolute",
+        "Relative",
+        "Single"
+    ]
+}

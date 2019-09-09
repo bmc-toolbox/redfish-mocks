@@ -1,0 +1,23 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellSwitchConnectionCollection.DellSwitchConnectionCollection",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/NetworkPorts/DellSwitchConnectionCollection/",
+    "@odata.type": "#DellSwitchConnectionCollection.DellSwitchConnectionCollection",
+    "Description": "A collection of DellSwitchConnection resource",
+    "Id": "DellSwitchConnectionCollection",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellSwitchConnection.DellSwitchConnection",
+            "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/NetworkPorts/DellSwitchConnection/iDRAC.Embedded.1",
+            "@odata.type": "#DellSwitchConnection.v1_0_0.DellSwitchConnection",
+            "Description": "An instance of DellSwitchConnection will have the switch connection view information of all the ports.",
+            "FQDD": "iDRAC.Embedded.1",
+            "Id": "iDRAC.Embedded.1",
+            "InstanceID": "iDRAC.Embedded.1",
+            "Name": "DellSwitchConnection",
+            "SwitchConnectionID": "b0:a8:6e:0a:9b:40",
+            "SwitchPortConnectionID": "507"
+        }
+    ],
+    "Members@odata.count": 1,
+    "Name": "DellSwitchConnectionCollection"
+}

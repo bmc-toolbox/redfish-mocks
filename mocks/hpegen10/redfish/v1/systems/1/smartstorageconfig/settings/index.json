@@ -1,0 +1,45 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SmartStorageConfig.SmartStorageConfig",
+    "@odata.etag": "W/\"13A1717756B87A7A7AB6591B515CA1C1\"",
+    "@odata.id": "/redfish/v1/systems/1/smartstorageconfig/settings/",
+    "@odata.type": "#SmartStorageConfig.v2_0_1.SmartStorageConfig",
+    "CurrentParallelSurfaceScanCount": null,
+    "DataGuard": "Strict",
+    "DegradedPerformanceOptimization": null,
+    "DriveWriteCache": "Disabled",
+    "DriveWriteCacheUnconfigured": "Default",
+    "ElevatorSort": null,
+    "EncryptionConfiguration": "None",
+    "EncryptionEULA": null,
+    "ExpandPriority": null,
+    "FlexibleLatencySchedulerSetting": null,
+    "Id": "settings",
+    "InconsistencyRepairPolicy": null,
+    "Location": "Slot 0",
+    "LocationFormat": "PCISlot",
+    "LogicalDrives": [],
+    "MonitorAndPerformanceAnalysisDelaySeconds": null,
+    "NoBatteryWriteCache": null,
+    "PhysicalDrives": [
+        {
+            "LegacyBootPriority": "None",
+            "Location": "1I:1:1",
+            "LocationFormat": "ControllerPort:Box:Bay"
+        }
+    ],
+    "Ports": [
+        {
+            "OperatingModeAfterReboot": "Mixed",
+            "PortIndex": 0
+        }
+    ],
+    "PowerModeAfterReboot": "MaxPerformance",
+    "PredictiveSpareRebuild": null,
+    "QueueDepth": null,
+    "ReadCachePercent": null,
+    "RebuildPriority": null,
+    "SurfaceScanAnalysisDelaySeconds": null,
+    "SurfaceScanAnalysisPriority": null,
+    "SurvivalPowerMode": "Enabled",
+    "WriteCacheBypassThresholdKiB": null
+}

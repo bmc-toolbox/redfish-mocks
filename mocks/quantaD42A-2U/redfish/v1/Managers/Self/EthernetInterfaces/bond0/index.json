@@ -1,0 +1,56 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Managers/Members/Self/EthernetInterfaces/Members(FQDN,IPv6DefaultGateway,Id,NameServers,AutoNeg,SpeedMbps,HostName,IPv6Addresses,FullDuplex,IPv4Addresses,VLAN,InterfaceEnabled,MACAddress,Name,Links,MaxIPv6StaticAddresses,Description,MTUSize,PermanentMACAddress,Status)/$entity",
+    "@odata.etag": "W/\"1567691841\"",
+    "@odata.id": "/redfish/v1/Managers/Self/EthernetInterfaces/bond0",
+    "@odata.type": "#EthernetInterface.v1_2_0.EthernetInterface",
+    "AutoNeg": true,
+    "Description": "Ethernet Interface bond0",
+    "FQDN": "QCTD8C497D07433.fra4.lom.example.com",
+    "FullDuplex": true,
+    "HostName": "QCTD8C497D07433",
+    "IPv4Addresses": [
+        {
+            "Address": "10.213.71.159",
+            "AddressOrigin": "DHCP",
+            "Gateway": "10.213.71.254",
+            "SubnetMask": "255.255.255.0"
+        }
+    ],
+    "IPv6Addresses": [
+        {
+            "Address": "fe80::dac4:97ff:fed0:7433",
+            "AddressOrigin": "LinkLocal",
+            "PrefixLength": 64
+        }
+    ],
+    "IPv6DefaultGateway": "",
+    "Id": "bond0",
+    "InterfaceEnabled": true,
+    "Links": {
+        "Oem": {
+            "Intel_RackScale": {
+                "@odata.type": "#Intel.Oem.EthernetInterface",
+                "NeighborPort": []
+            }
+        }
+    },
+    "MACAddress": "D8:C4:97:D0:74:33",
+    "MTUSize": 1500,
+    "MaxIPv6StaticAddresses": 16,
+    "Name": "bond0",
+    "NameServers": [
+        "::",
+        "10.252.13.240",
+        "10.252.13.241"
+    ],
+    "PermanentMACAddress": "D8:C4:97:D0:74:33",
+    "SpeedMbps": 1000,
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "VLAN": {
+        "VLANEnable": false,
+        "VLANId": 0
+    }
+}

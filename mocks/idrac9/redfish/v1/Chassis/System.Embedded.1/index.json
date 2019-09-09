@@ -1,0 +1,95 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Chassis.Chassis",
+    "@odata.id": "/redfish/v1/Chassis/System.Embedded.1",
+    "@odata.type": "#Chassis.v1_6_0.Chassis",
+    "Actions": {
+        "#Chassis.Reset": {
+            "ResetType@Redfish.AllowableValues": [
+                "On",
+                "ForceOff"
+            ],
+            "target": "/redfish/v1/Chassis/System.Embedded.1/Actions/Chassis.Reset"
+        }
+    },
+    "Assembly": {
+        "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1/Assembly"
+    },
+    "AssetTag": null,
+    "ChassisType": "Blade",
+    "Description": "It represents the properties for physical components for any system.It represent racks, rackmount servers, blades, standalone, modular systems,enclosures, and all other containers.The non-cpu/device centric parts of the schema are all accessed either directly or indirectly through this resource.",
+    "Id": "System.Embedded.1",
+    "IndicatorLED": "Off",
+    "Links": {
+        "ComputerSystems": [
+            {
+                "@odata.id": "/redfish/v1/Systems/System.Embedded.1"
+            }
+        ],
+        "ComputerSystems@odata.count": 1,
+        "ContainedBy": {
+            "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1"
+        },
+        "Contains": [],
+        "Contains@odata.count": 0,
+        "CooledBy": [],
+        "CooledBy@odata.count": 0,
+        "Drives": [],
+        "Drives@odata.count": 0,
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+            }
+        ],
+        "ManagedBy@odata.count": 1,
+        "ManagersInChassis": [
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+            }
+        ],
+        "ManagersInChassis@odata.count": 1,
+        "PCIeDevices": [],
+        "PCIeDevices@odata.count": 0,
+        "PoweredBy": [],
+        "PoweredBy@odata.count": 0,
+        "Storage": [],
+        "Storage@odata.count": 0
+    },
+    "Location": {
+        "Info": ";;;;1",
+        "InfoFormat": "DataCenter;RoomName;Aisle;RackName;RackSlot",
+        "Placement": {
+            "Rack": "",
+            "Row": ""
+        },
+        "PostalAddress": {
+            "Building": "",
+            "Room": ""
+        }
+    },
+    "Manufacturer": null,
+    "Model": "PowerEdge M640",
+    "Name": "Computer System Chassis",
+    "NetworkAdapters": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/NetworkAdapters"
+    },
+    "PartNumber": "05YC4PA01",
+    "PhysicalSecurity": {
+        "IntrusionSensor": null,
+        "IntrusionSensorNumber": null,
+        "IntrusionSensorReArm": null
+    },
+    "Power": {
+        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Power"
+    },
+    "PowerState": "Off",
+    "SKU": "FOOBAZ",
+    "SerialNumber": "CNWS30079D00BW",
+    "Status": {
+        "Health": "OK",
+        "HealthRollup": "OK",
+        "State": "Enabled"
+    },
+    "Thermal": {
+        "@odata.id": "/redfish/v1/Chassis/System.Embedded.1/Thermal"
+    }
+}

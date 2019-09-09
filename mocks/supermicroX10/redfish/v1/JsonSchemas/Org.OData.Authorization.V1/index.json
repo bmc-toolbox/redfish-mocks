@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Org.OData.Authorization.V1",
+    "Id": "Org.OData.Authorization.V1",
+    "Name": "Org Schema File",
+    "Description": "Org Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Org.OData.Authorization.V1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Org.OData.Authorization.V1.json"
+        }
+    ],
+    "Oem": {}
+}

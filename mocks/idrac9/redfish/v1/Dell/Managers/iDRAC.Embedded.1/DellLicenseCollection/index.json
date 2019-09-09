@@ -1,0 +1,63 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellLicenseCollection.DellLicenseCollection",
+    "@odata.id": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLicenseCollection/",
+    "@odata.type": "#DellLicenseCollection.DellLicenseCollection",
+    "Description": "A collection of DellLicense resource",
+    "Id": "DellLicenseCollection",
+    "Members": [
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellLicense.DellLicense",
+            "@odata.id": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLicense/FD00000009585626",
+            "@odata.type": "#DellLicense.v1_0_0.DellLicense",
+            "AssignedDevices": [
+                "iDRAC.Embedded.1"
+            ],
+            "AssignedDevices@odata.count": 1,
+            "Description": "An instance of DellLicense represents a feature license installed on a system.",
+            "EntitlementID": "FD00000009585626",
+            "EvalLicenseTimeRemainingDays": 0,
+            "Id": "FD00000009585626",
+            "InstanceID": "FD00000009585626",
+            "LicenseDescription": [
+                "OpenManage Essentials Server Configuration Management"
+            ],
+            "LicenseDescription@odata.count": 1,
+            "LicenseDurationDays": 0,
+            "LicenseEndDate": null,
+            "LicenseInstallDate": "2017-10-30T17:15:20+0100",
+            "LicensePrimaryStatus": "OK",
+            "LicenseSoldDate": "2017-10-24T17:25:26+0200",
+            "LicenseStartDate": null,
+            "LicenseType": "Perpetual",
+            "Name": "DellLicense"
+        },
+        {
+            "@odata.context": "/redfish/v1/$metadata#DellLicense.DellLicense",
+            "@odata.id": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLicense/FD00000009585628",
+            "@odata.type": "#DellLicense.v1_0_0.DellLicense",
+            "AssignedDevices": [
+                "iDRAC.Embedded.1"
+            ],
+            "AssignedDevices@odata.count": 1,
+            "Description": "An instance of DellLicense represents a feature license installed on a system.",
+            "EntitlementID": "FD00000009585628",
+            "EvalLicenseTimeRemainingDays": 0,
+            "Id": "FD00000009585628",
+            "InstanceID": "FD00000009585628",
+            "LicenseDescription": [
+                "iDRAC9 Enterprise License"
+            ],
+            "LicenseDescription@odata.count": 1,
+            "LicenseDurationDays": 0,
+            "LicenseEndDate": null,
+            "LicenseInstallDate": "2017-10-30T17:15:25+0100",
+            "LicensePrimaryStatus": "OK",
+            "LicenseSoldDate": "2017-10-24T17:25:26+0200",
+            "LicenseStartDate": null,
+            "LicenseType": "Perpetual",
+            "Name": "DellLicense"
+        }
+    ],
+    "Members@odata.count": 2,
+    "Name": "DellLicenseCollection"
+}

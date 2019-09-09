@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IOConnectivityLoSCapabilities",
+    "Id": "IOConnectivityLoSCapabilities",
+    "Name": "IOConnectivityLoSCapabilities Schema File",
+    "Description": "IOConnectivityLoSCapabilities Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IOConnectivityLoSCapabilities",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IOConnectivityLoSCapabilities.json"
+        }
+    ],
+    "Oem": {}
+}

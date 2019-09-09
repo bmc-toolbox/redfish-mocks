@@ -1,0 +1,88 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ManagerNetworkProtocol.ManagerNetworkProtocol",
+    "@odata.etag": "W/\"BECE14D7\"",
+    "@odata.id": "/redfish/v1/Managers/1/NetworkProtocol/",
+    "@odata.type": "#ManagerNetworkProtocol.v1_0_0.ManagerNetworkProtocol",
+    "Id": "NetworkProtocol",
+    "FQDN": "netanchor-1010.ams4.lom.example.com",
+    "HTTP": {
+        "Port": 80,
+        "ProtocolEnabled": true
+    },
+    "HTTPS": {
+        "Port": 443,
+        "ProtocolEnabled": true
+    },
+    "HostName": "netanchor-1010",
+    "IPMI": {
+        "Port": 623,
+        "ProtocolEnabled": true
+    },
+    "KVMIP": {
+        "Port": 17990,
+        "ProtocolEnabled": true
+    },
+    "Name": "Manager Network Services",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOManagerNetworkService.HpeiLOManagerNetworkService",
+            "@odata.type": "#HpeiLOManagerNetworkService.v2_1_0.HpeiLOManagerNetworkService",
+            "Actions": {
+                "#HpeiLOManagerNetworkService.SendTestAlertMail": {
+                    "target": "/redfish/v1/Managers/1/NetworkProtocol/Actions/Oem/Hpe/HpeiLOManagerNetworkService.SendTestAlertMail/"
+                },
+                "#HpeiLOManagerNetworkService.SendTestSyslog": {
+                    "target": "/redfish/v1/Managers/1/NetworkProtocol/Actions/Oem/Hpe/HpeiLOManagerNetworkService.SendTestSyslog/"
+                }
+            },
+            "AlertMailEmail": "",
+            "AlertMailEnabled": false,
+            "AlertMailSMTPAuthEnabled": false,
+            "AlertMailSMTPAuthPw": null,
+            "AlertMailSMTPAuthUser": "",
+            "AlertMailSMTPPort": 25,
+            "AlertMailSMTPSecureEnabled": true,
+            "AlertMailSMTPServer": "",
+            "AlertMailSenderDomain": "",
+            "ConfigurationSettings": "Current",
+            "FederationEnabled": true,
+            "FederationSupported": true,
+            "Links": {
+                "EthernetInterfaces": {
+                    "@odata.id": "/redfish/v1/Managers/1/EthernetInterfaces/"
+                },
+                "SNMPService": {
+                    "@odata.id": "/redfish/v1/Managers/1/SnmpService/"
+                }
+            },
+            "RemoteSyslogEnabled": true,
+            "RemoteSyslogPort": 514,
+            "RemoteSyslogServer": "provision.anycast.prod.example.com",
+            "SNMPTrapPort": 162,
+            "SerialOverLanLogging": false,
+            "XMLResponseEnabled": true
+        }
+    },
+    "SNMP": {
+        "Port": 161,
+        "ProtocolEnabled": true
+    },
+    "SSDP": {
+        "NotifyIPv6Scope": "Site",
+        "NotifyMulticastIntervalSeconds": 600,
+        "NotifyTTL": 5,
+        "Port": 1900,
+        "ProtocolEnabled": true
+    },
+    "SSH": {
+        "Port": 22,
+        "ProtocolEnabled": true
+    },
+    "Status": {
+        "State": "Enabled"
+    },
+    "VirtualMedia": {
+        "Port": 17988,
+        "ProtocolEnabled": true
+    }
+}

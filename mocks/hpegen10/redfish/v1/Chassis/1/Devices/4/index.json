@@ -1,0 +1,29 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerDevice.HpeServerDevice",
+    "@odata.etag": "W/\"55F4CD09\"",
+    "@odata.id": "/redfish/v1/Chassis/1/Devices/4/",
+    "@odata.type": "#HpeServerDevice.v2_0_0.HpeServerDevice",
+    "Id": "4",
+    "DeviceInstances": [
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCIDevices/9/"
+        }
+    ],
+    "DeviceType": "Smart Storage",
+    "FirmwareVersion": {
+        "Current": {
+            "VersionString": "1.99"
+        }
+    },
+    "Location": "Embedded RAID",
+    "Manufacturer": "",
+    "Name": "HPE Smart Array P204i-b SR Gen10",
+    "PartNumber": "836263-001",
+    "ProductPartNumber": "",
+    "ProductVersion": "B",
+    "SerialNumber": "PEYHF0HLMAI0U7",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    }
+}

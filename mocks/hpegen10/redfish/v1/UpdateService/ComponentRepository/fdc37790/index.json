@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeComponent.HpeComponent",
+    "@odata.etag": "W/\"CD21D410\"",
+    "@odata.id": "/redfish/v1/UpdateService/ComponentRepository/fdc37790/",
+    "@odata.type": "#HpeComponent.v1_0_1.HpeComponent",
+    "Id": "fdc37790",
+    "Activates": "AfterReboot",
+    "ComponentUri": "/fwrepo/I41_1.00_06_01_2017.signed.flash",
+    "Configuration": "",
+    "Created": "2017-11-21T01:02:55Z",
+    "Criticality": "Optional",
+    "DeviceClass": "aa148d2e-6e09-453e-bc6f-63baa5f5ccc4",
+    "ExecutionParameters": "",
+    "Filename": "I41_1.00_06_01_2017.signed.flash",
+    "Filepath": "I41_1.00_06_01_2017.signed.flash",
+    "Locked": true,
+    "Name": "System BIOS - I41",
+    "SizeBytes": 33563252,
+    "Targets": [
+        "00000000-0000-0000-0000-000000000206"
+    ],
+    "UpdatableBy": [
+        "Bmc"
+    ],
+    "Version": "v1.00 (06/01/2017)"
+}

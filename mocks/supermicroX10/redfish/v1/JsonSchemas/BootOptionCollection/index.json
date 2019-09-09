@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/BootOptionCollection",
+    "Id": "BootOptionCollection",
+    "Name": "BootOptionCollection Schema File",
+    "Description": "BootOptionCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "BootOptionCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/BootOptionCollection.json"
+        }
+    ],
+    "Oem": {}
+}

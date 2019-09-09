@@ -1,0 +1,150 @@
+{
+    "Name": "HPE Common Message Registry",
+    "@odata.type": "#MessageRegistry.v1_0_0.MessageRegistry",
+    "Id": "HpeCommon.json",
+    "Language": "en",
+    "Description": "This registry defines the common messages for HPE RESTful API implementations.",
+    "RegistryPrefix": "HpeCommon",
+    "RegistryVersion": "2.0.0",
+    "OwningEntity": "Hewlett Packard Enterprise",
+    "Messages": {
+        "ArrayPropertyOutOfBound": {
+            "Description": "The items in the array exceed the maximum  number supported.",
+            "Message": "An array %1 was supplied with %2 items that exceeds the maximum supported count of %3.",
+            "Severity": "Warning",
+            "NumberOfArgs": 3,
+            "ParamTypes": [
+                "string",
+                "string",
+                "string"
+            ],
+            "Resolution": "Retry the operation using the correct number of items for the array."
+        },
+        "ConditionalSuccess": {
+            "Description": "A property value was successfully changed but the change may be reverted upon system reset.",
+            "Message": "The property %1 was successfully changed to %2, but the change may be reverted upon system reset.",
+            "Severity": "Warning",
+            "NumberOfArgs": 2,
+            "ParamTypes": [
+                "string",
+                "string"
+            ],
+            "Resolution": "Check the \"SettingsResult\" messages after the system has reset for errors referring to the corresponding property."
+        },
+        "InternalErrorWithParam": {
+            "Description": "The operation was not successful due to an internal service error (shown), but the service is still operational.",
+            "Message": "The operation was not successful due to an internal service error (%1), but the service is still operational.",
+            "Severity": "Critical",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "Retry the operation. If the problem persists, consider resetting the service."
+        },
+        "InvalidConfigurationSpecified": {
+            "Description": "The specified configuration is not valid.",
+            "Message": "The specified configuration is not valid.",
+            "Severity": "Warning",
+            "NumberOfArgs": 0,
+            "ParamTypes": [],
+            "Resolution": "Correct the configuration, and then retry the operation."
+        },
+        "PropertyValueExceedsMaxLength": {
+            "Description": "The value for the property exceeds the maximum length.",
+            "Message": "The value %1 for the property %2 exceeds the maximum length of %3.",
+            "Severity": "Warning",
+            "NumberOfArgs": 3,
+            "ParamTypes": [
+                "string",
+                "string",
+                "string"
+            ],
+            "Resolution": "Correct the value for the property in the request body, and then retry the operation."
+        },
+        "PropertyValueIncompatible": {
+            "Description": "The value for the property is the correct type, but this value is incompatible with the current value of another property.",
+            "Message": "The value %1 for the property %2 is incompatible with the value for property %3.",
+            "Severity": "Warning",
+            "NumberOfArgs": 3,
+            "ParamTypes": [
+                "string",
+                "string",
+                "string"
+            ],
+            "Resolution": "Correct the value for the property in the request body, and then retry the operation."
+        },
+        "PropertyValueOutOfRange": {
+            "Description": "The value for the property is out of range.",
+            "Message": "The value %1 for the property %2 is out of range %3.",
+            "Severity": "Warning",
+            "NumberOfArgs": 3,
+            "ParamTypes": [
+                "string",
+                "string",
+                "string"
+            ],
+            "Resolution": "Correct the value for the property in the request body, and then retry the operation."
+        },
+        "ResetInProgress": {
+            "Description": "A device or service reset is in progress.",
+            "Message": "A reset on %1 is in progress.",
+            "Severity": "Warning",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "Wait for device or service reset to complete, and then retry the operation."
+        },
+        "ResetRequired": {
+            "Description": "One or more properties were changed, but these changes will not take effect until the device or service is reset.",
+            "Message": "One or more properties were changed, but these changes will not take effect until %1 is reset.",
+            "Severity": "Warning",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "To enable the changed properties, reset the device or service."
+        },
+        "ResourceNotReadyRetry": {
+            "Description": "The resource is present but is not ready to perform operations due to an internal condition such as initialization or reset.",
+            "Message": "The resource is present but is not ready to perform operations.  The resource will be ready in %1 seconds.",
+            "Severity": "Warning",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "Retry the operation when the resource is ready."
+        },
+        "SuccessFeedback": {
+            "Description": "The operation completed successfully",
+            "Message": "The operation completed successfully",
+            "Severity": "OK",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "None"
+        },
+        "TaskCreated": {
+            "Description": "A task was created in response to the operation.",
+            "Message": "A task was created in response to the operation and is accessible at %1.",
+            "Severity": "OK",
+            "NumberOfArgs": 1,
+            "ParamTypes": [
+                "string"
+            ],
+            "Resolution": "Perform an HTTP GET request on the supplied URI for task status."
+        },
+        "UnsupportedHwConfiguration": {
+            "Description": "A previously requested property value change was reverted because the current hardware configuration does not support it.",
+            "Message": "The value %1 for property %2 was reverted because the current hardware configuration does not support it.",
+            "Severity": "Warning",
+            "NumberOfArgs": 2,
+            "ParamTypes": [
+                "string",
+                "string"
+            ],
+            "Resolution": "Ensure that the system's hardware configuration supports the property value."
+        }
+    }
+}

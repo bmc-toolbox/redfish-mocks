@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Thermal",
+    "Id": "Thermal",
+    "Name": "Thermal Schema File",
+    "Description": "Thermal Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Thermal",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Thermal.json"
+        }
+    ],
+    "Oem": {}
+}

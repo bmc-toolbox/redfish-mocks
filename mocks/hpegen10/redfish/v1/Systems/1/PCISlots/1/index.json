@@ -1,0 +1,27 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerPCISlot.HpeServerPCISlot",
+    "@odata.etag": "W/\"CF253BC8\"",
+    "@odata.id": "/redfish/v1/Systems/1/PCISlots/1/",
+    "@odata.type": "#HpeServerPCISlot.v2_1_0.HpeServerPCISlot",
+    "Id": "1",
+    "BusNumber": 3,
+    "Characteristics": {
+        "Provides3_3Volts": true,
+        "SupportsHotPlugDevices": true,
+        "SupportsSMBusSignal": true
+    },
+    "DeviceNumber": 0,
+    "FunctionNumber": 0,
+    "Length": "Other",
+    "LinkLanes": "x2",
+    "Name": "NVMe Slot ",
+    "Status": {
+        "OperationalStatus": [
+            {
+                "Status": "Empty"
+            }
+        ]
+    },
+    "SupportsHotPlug": true,
+    "UEFIDevicePath": "PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)"
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.etag": "W/\"B5666FE9\"",
+    "@odata.id": "/redfish/v1/JsonSchemas/SmartStorageConfig.v2_0_1.SmartStorageConfig/",
+    "@odata.type": "#JsonSchemaFile.v1_0_4.JsonSchemaFile",
+    "Id": "SmartStorageConfig.v2_0_1.SmartStorageConfig",
+    "Description": "Schema Definition File for #SmartStorageConfig.v2_0_1.SmartStorageConfig",
+    "Languages": [
+        "en"
+    ],
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/redfish/v1/schemastore/en/smartstorageconfig.v2_0_1.json/"
+        }
+    ],
+    "Name": "#SmartStorageConfig.v2_0_1.SmartStorageConfig Schema Definition File",
+    "Schema": "#SmartStorageConfig.v2_0_1.SmartStorageConfig"
+}

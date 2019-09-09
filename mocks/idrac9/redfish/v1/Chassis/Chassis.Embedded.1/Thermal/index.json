@@ -1,0 +1,14 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Thermal.Thermal",
+    "@odata.id": "/redfish/v1/Chassis/Chassis.Embedded.1/Thermal",
+    "@odata.type": "#Thermal.v1_4_0.Thermal",
+    "Description": "Represents the properties for Temperature and Cooling",
+    "Fans": [],
+    "Fans@odata.count": 0,
+    "Id": "Thermal",
+    "Name": "Thermal",
+    "Redundancy": [],
+    "Redundancy@odata.count": 0,
+    "Temperatures": [],
+    "Temperatures@odata.count": 0
+}

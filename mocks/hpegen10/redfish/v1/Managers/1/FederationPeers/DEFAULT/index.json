@@ -1,0 +1,31 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeiLOFederationPeers.HpeiLOFederationPeers",
+    "@odata.etag": "W/\"F054B1CD\"",
+    "@odata.id": "/redfish/v1/Managers/1/FederationPeers/DEFAULT/",
+    "@odata.type": "#HpeiLOFederationPeers.v2_0_0.HpeiLOFederationPeers",
+    "Id": "DEFAULT",
+    "Name": "DEFAULT",
+    "Peers": [
+        {
+            "HttpErrorCode": 0,
+            "ManagerIPAddress": "2a01:5041:2000:49:7646:a0ff:fef7:57c3",
+            "Time": "2019-09-05T13:03:21Z",
+            "URL": "http://[2a01:5041:2000:49:7646:a0ff:fef7:57c3]:80/",
+            "UUID": "31ff49a0-5370-55f0-8d98-381529727af4"
+        },
+        {
+            "HttpErrorCode": 0,
+            "ManagerIPAddress": "2a01:5041:2000:49:b6b5:2fff:fe58:ed10",
+            "Time": "2019-09-05T13:07:01Z",
+            "URL": "http://[2a01:5041:2000:49:b6b5:2fff:fe58:ed10]:80/",
+            "UUID": "46a287ed-a728-59a4-9176-e463ece0254a"
+        },
+        {
+            "HttpErrorCode": 0,
+            "ManagerIPAddress": "2a01:5041:2000:49:5265:f3ff:fe66:3902",
+            "Time": "2019-09-05T13:09:26Z",
+            "URL": "http://[2a01:5041:2000:49:5265:f3ff:fe66:3902]:80/",
+            "UUID": "e1fe7bc7-e5e9-57a2-951e-85039fa27caa"
+        }
+    ]
+}

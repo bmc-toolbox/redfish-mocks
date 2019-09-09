@@ -1,0 +1,23 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Session.Session",
+    "@odata.etag": "W/\"15D6F9AB\"",
+    "@odata.id": "/redfish/v1/SessionService/Sessions/psm000000005d7108f62621bc94/",
+    "@odata.type": "#Session.v1_0_0.Session",
+    "Id": "psm000000005d7108f62621bc94",
+    "Description": "Manager User Session",
+    "Name": "User Session",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOSession.HpeiLOSession",
+            "@odata.type": "#HpeiLOSession.v2_1_0.HpeiLOSession",
+            "AccessTime": "2019-09-05T13:11:42Z",
+            "LoginTime": "2019-09-05T13:09:10Z",
+            "MySession": false,
+            "UserExpires": "2019-09-05T13:41:42Z",
+            "UserIP": "10.156.63.11",
+            "UserTag": "Web UI",
+            "UserType": "Local"
+        }
+    },
+    "UserName": "psm"
+}

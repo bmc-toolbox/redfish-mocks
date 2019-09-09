@@ -1,0 +1,15 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SerialInterface.SerialInterface",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/SerialInterfaces/iDRAC.Embedded.1%23Serial.1",
+    "@odata.type": "#SerialInterface.v1_1_2.SerialInterface",
+    "ConnectorType": "DB9 Male",
+    "DataBits": "8",
+    "Description": "Management for Serial Interface",
+    "FlowControl": "Hardware",
+    "Id": "iDRAC.Embedded.1#Serial.1",
+    "Name": "Managed Serial Interface 1",
+    "Parity": "None",
+    "PinOut": "Cisco",
+    "SignalType": "Rs232",
+    "StopBits": "1"
+}

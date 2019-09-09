@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/75",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:20:37+02:00",
+    "Description": " Log Entry 75",
+    "EntryType": "Oem",
+    "Id": "75",
+    "Links": {},
+    "Message": "Completed System Erase Job ID: JID_676786819687",
+    "MessageArgs": [
+        "JID_676786819687"
+    ],
+    "MessageArgs@odata.count": 1,
+    "MessageId": "SYS151",
+    "Name": " Log Entry 75",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

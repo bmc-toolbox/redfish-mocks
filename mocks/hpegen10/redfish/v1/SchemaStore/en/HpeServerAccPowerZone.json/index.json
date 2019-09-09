@@ -1,0 +1,201 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "actions": {
+        "description": "POST custom actions defined for this type. (The implemented actions may be a subset of these.)",
+        "actions": {
+            "HpeServerAccPowerZone.ConfigureZone": {
+                "additionalProperties": false,
+                "description": "Execute the Apollo Chassis Controller power regulation zone configuration.",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "readonly": true,
+                        "enum": [
+                            "HpeServerAccPowerZone.ConfigureZone"
+                        ]
+                    },
+                    "Zone": {
+                        "items": {
+                            "readonly": true,
+                            "type": "object",
+                            "properties": {
+                                "ZoneNumber": {
+                                    "type": "integer",
+                                    "readonly": false
+                                },
+                                "ZonePriority": {
+                                    "type": "integer",
+                                    "readonly": false
+                                },
+                                "Node": {
+                                    "items": {
+                                        "readonly": true,
+                                        "type": "object",
+                                        "properties": {
+                                            "NodeNumber": {
+                                                "type": "integer",
+                                                "readonly": false
+                                            },
+                                            "NodePriority": {
+                                                "type": "integer",
+                                                "readonly": false
+                                            }
+                                        }
+                                    },
+                                    "readonly": false,
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "readonly": false,
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "Action",
+                    "Zone"
+                ],
+                "type": "object"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2017 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeServerAccPowerZone.ConfigureZone": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "Zone@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "object",
+                                "items": {
+                                    "readonly": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "ZoneNumber": {
+                                            "type": "integer",
+                                            "readonly": false
+                                        },
+                                        "ZonePriority": {
+                                            "type": "integer",
+                                            "readonly": false
+                                        },
+                                        "Node": {
+                                            "items": {
+                                                "readonly": true,
+                                                "type": "object",
+                                                "properties": {
+                                                    "NodeNumber": {
+                                                        "type": "integer",
+                                                        "readonly": false
+                                                    },
+                                                    "NodePriority": {
+                                                        "type": "integer",
+                                                        "readonly": false
+                                                    }
+                                                }
+                                            },
+                                            "readonly": false,
+                                            "type": "array"
+                                        }
+                                    }
+                                },
+                                "readonly": false
+                            },
+                            "type": "array",
+                            "description": "Fill Zone array to depoly zone configuration or fill empty Zone array to remove zone configuration."
+                        },
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        },
+        "ZoneConfiguration": {
+            "type": "object",
+            "additionalProperties": false,
+            "readonly": false,
+            "properties": {
+                "Zone": {
+                    "description": "Contains the zone configuration for each zone.",
+                    "items": {
+                        "properties": {
+                            "ZoneNumber": {
+                                "type": "integer",
+                                "description": "The zone number of zone configuration.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "ZonePriority": {
+                                "type": "integer",
+                                "description": "The power regulation zone priority, the range must between 1 - 5. 5 is default and lowest priority.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "Node": {
+                                "description": "Contains the node configuration for each node.",
+                                "items": {
+                                    "readonly": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "NodeNumber": {
+                                            "type": "integer",
+                                            "description": "The node number of zone configuration.",
+                                            "readonly": true,
+                                            "etag": true
+                                        },
+                                        "NodePriority": {
+                                            "type": "integer",
+                                            "description": "The power regulation node priority, the range must between 1 - 5. 5 is default and lowest priority.",
+                                            "readonly": true,
+                                            "etag": true
+                                        }
+                                    }
+                                },
+                                "readonly": true,
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readonly": true,
+                    "type": "array"
+                }
+            },
+            "deprecated": "This indicates zone configurations of ACC power service."
+        }
+    },
+    "readonly": true,
+    "title": "#HpeServerAccPowerZone.v1_0_0.HpeServerAccPowerZone",
+    "type": "object"
+}

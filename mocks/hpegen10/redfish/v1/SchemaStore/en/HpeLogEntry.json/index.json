@@ -1,0 +1,109 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Categories": {
+            "description": "The log entry categories.",
+            "etag": true,
+            "items": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "readonly": true,
+            "type": "array"
+        },
+        "Class": {
+            "description": "The log entry event class.",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "Code": {
+            "description": "The log entry event code.",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "Count": {
+            "description": "The occurrence count of the log entry.",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "Destination": {
+            "description": "The destination host name or IP address of the remote server that recevied the service event.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "EventNumber": {
+            "description": "The event log identification number. Events are numbered in the order in which they are generated.",
+            "etag": true,
+            "readonly": true,
+            "type": "integer"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Identifier": {
+            "description": "The unique identifier of the service event.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "LearnMoreLink": {
+            "description": "The link to troubleshooting information.",
+            "etag": true,
+            "format": "uri",
+            "readonly": true,
+            "type": "string"
+        },
+        "RecommendedAction": {
+            "description": "The recommended action for the event.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "Repaired": {
+            "description": "The repaired status of the IML event.",
+            "etag": true,
+            "readonly": false,
+            "type": "boolean"
+        },
+        "SubmitStatus": {
+            "description": "The service event log submission status .",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "Updated": {
+            "description": "The date and time of the latest log entry update, for example, 2014-04-15T00:38:00Z.",
+            "etag": true,
+            "format": "date-time",
+            "readonly": true,
+            "type": "string"
+        }
+    },
+    "required": [
+        "Categories",
+        "EventNumber"
+    ],
+    "readonly": false,
+    "title": "#HpeLogEntry.v2_1_0.HpeLogEntry",
+    "type": "object"
+}

@@ -1,0 +1,237 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Assembly.v1_1_0",
+    "definitions": {
+        "Assembly": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Assembly.v1_0_0.json#/definitions/Actions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Assemblies@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "Assemblies@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Assemblies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/Assembly.v1_0_0.json#/definitions/AssemblyData"
+                    },
+                    "readonly": false,
+                    "description": "This is the definition for an assembly information record.",
+                    "longDescription": "These properties shall be the definition for assembly records  for a Redfish implementation."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the schema definition for the Assembly properties.",
+            "longDescription": "This resource shall be used to represent an assembly information resource for a Redfish implementation."
+        },
+        "AssemblyData": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "MemberId": {
+                    "type": "string",
+                    "readonly": true,
+                    "description": "This is the identifier for the member within the collection.",
+                    "longDescription": "The value of this string shall uniquely identify the member within the collection."
+                },
+                "Name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Name of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the assembly."
+                },
+                "Description": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Description of the Assembly.",
+                    "longDescription": "The value of this property shall be a description of this assembly."
+                },
+                "Model": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Model number of the Assembly.",
+                    "longDescription": "The value of this property shall be the name by which the manufacturer generally refers to the assembly."
+                },
+                "PartNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Part number of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the assembly."
+                },
+                "SparePartNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Spare part number of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the assembly."
+                },
+                "SKU": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "SKU of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the assembly."
+                },
+                "Vendor": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Vendor of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the company which provides the final product that includes this assembly. This value shall be equal to the 'Vendor' field in a PLDM FRU structure, if applicable, for this assembly."
+                },
+                "ProductionDate": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "format": "date-time",
+                    "readonly": true,
+                    "description": "Production date of the Assembly.",
+                    "longDescription": "The value of this property shall be the date of production or manufacture for this assembly."
+                },
+                "Producer": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Producer or manufacturer of the Assembly.",
+                    "longDescription": "The value of this property shall be the name of the company which supplied or manufactured this assembly. This value shall be equal to the 'Manufacturer' field in a PLDM FRU structure, if applicable, for this assembly."
+                },
+                "Version": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Version of the Assembly.",
+                    "longDescription": "The value of this property shall be the version of the assembly as determined by the vendor or supplier."
+                },
+                "EngineeringChangeLevel": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Engineering change level of the Assembly.",
+                    "longDescription": "The value of this property shall be the Engineering Change Level (ECL) or revision of the assembly."
+                },
+                "BinaryDataURI": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "URI that provides the ability to access an image of the assembly information.",
+                    "longDescription": "The value of this property shall be a URI at which the Service provides for the download of the OEM-specific binary image of the assembly data.  An HTTP GET from this URI shall return a response payload of MIME time application/octet-stream. An HTTP PUT to this URI, if supported by the Service, shall replace the binary image of the assembly."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Assembly.v1_0_0.json#/definitions/AssemblyDataActions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                }
+            },
+            "description": "This is the base type for addressable members of an array.",
+            "longDescription": "Array members can be referenced using the value returned in the @odata.id property which may or may not be a dereferenceable URL. The @odata.id of this entity shall be the location of this element within an Item."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

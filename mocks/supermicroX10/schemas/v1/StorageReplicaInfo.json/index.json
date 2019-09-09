@@ -1,0 +1,41 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#StorageReplicaInfo",
+    "definitions": {
+        "ReplicaType": {
+            "type": "string",
+            "enum": [
+                "Mirror",
+                "Snapshot",
+                "Clone",
+                "TokenizedClone"
+            ],
+            "enumDescriptions": {
+                "Mirror": "Create and maintain a copy of the source.",
+                "Snapshot": "Create a point in time, virtual copy of the source.",
+                "Clone": "Create a point in time, full copy the source.",
+                "TokenizedClone": "Create a token based clone."
+            },
+            "description": "Values of ReplicaType describe the intended outcome of the replication.",
+            "longDescription": "The enumeration literals may be used to specify the intended outcome of the replication."
+        },
+        "ReplicaUpdateMode": {
+            "type": "string",
+            "enum": [
+                "Active",
+                "Synchronous",
+                "Asynchronous",
+                "Adaptive"
+            ],
+            "enumDescriptions": {
+                "Active": "Active-Active (i.e. bidirectional) synchronous updates.",
+                "Synchronous": "Synchronous updates.",
+                "Asynchronous": "Asynchronous updates.",
+                "Adaptive": "Allows implementation to switch between synchronous and asynchronous modes."
+            },
+            "description": "Values of ReplicaUpdateMode describe whether the target elements will be updated synchronously or asynchronously.",
+            "longDescription": "The enumeration literals may be used to specify whether the target elements will be updated synchronously or asynchronously."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

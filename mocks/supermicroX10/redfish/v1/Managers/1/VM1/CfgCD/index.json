@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#IsoConfig.IsoConfig",
+    "@odata.type": "#IsoConfig.IsoConfig",
+    "@odata.id": "/redfish/v1/Managers/1/VM1/CfgCD",
+    "Id": "1",
+    "Name": "VM1",
+    "Host": "",
+    "Path": "",
+    "Username": "",
+    "Password": "",
+    "Actions": {
+        "#IsoConfig.Mount": {
+            "target": "/redfish/v1/Managers/1/VM1/CfgCD/Actions/IsoConfig.Mount"
+        },
+        "#IsoConfig.UnMount": {
+            "target": "/redfish/v1/Managers/1/VM1/CfgCD/Actions/IsoConfig.UnMount"
+        }
+    }
+}

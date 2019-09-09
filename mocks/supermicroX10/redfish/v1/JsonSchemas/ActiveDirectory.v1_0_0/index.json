@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ActiveDirectory.v1_0_0",
+    "Id": "ActiveDirectory.v1_0_0",
+    "Name": "ActiveDirectory Schema File",
+    "Description": "ActiveDirectory Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ActiveDirectory.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ActiveDirectory.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

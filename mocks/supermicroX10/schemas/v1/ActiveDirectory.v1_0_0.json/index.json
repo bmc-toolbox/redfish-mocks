@@ -1,0 +1,120 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#ActiveDirectory.v1_0_0",
+    "definitions": {
+        "ActiveDirectory": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "AuthenticationEnabled": {
+                    "type": "boolean",
+                    "readonly": false,
+                    "description": "Active Directory authentication is enabled or not",
+                    "longDescription": "If Active Directory is enabled, central authentication and authorization services is provided"
+                },
+                "AuthenticationOverSSLEnabled": {
+                    "type": "boolean",
+                    "readonly": false,
+                    "description": "Active Directory SSL Authentication is enabled or not",
+                    "longDescription": "If Authentication Over SSL be enabled, the connection between server and client will over SSL."
+                },
+                "PortNumber": {
+                    "type": "number",
+                    "readonly": false,
+                    "description": "The port number for Active Directory server.",
+                    "longDescription": "The value of this property shall be in the range between 1~65535."
+                },
+                "UserDomainName": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "The domain name of user in Active Directory server.",
+                    "longDescription": "The value of this property shall be match the format of domain name."
+                },
+                "Timeout": {
+                    "type": "number",
+                    "readonly": false,
+                    "description": "The timeout value for disconnected, active, and idle sessions .",
+                    "longDescription": "The value of this property shall be in the range between 10~30."
+                },
+                "DCSAddress1": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The Domain Controller Server Address 1 for the AD (Active Directory) server.",
+                    "longDescription": "The value of this property shall be a  domain controller server address. A domain controller (DC) is a server that responds to security authentication requests (logging in, checking permissions, etc.) "
+                },
+                "DCSAddress2": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "TThe Domain Controller Server Address 2 for the AD (Active Directory) server.",
+                    "longDescription": "The value of this property shall be a  domain controller server address. A domain controller (DC) is a server that responds to security authentication requests (logging in, checking permissions, etc.) "
+                },
+                "DCSAddress3": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "The Domain Controller Server Address 3 for the AD (Active Directory) server.",
+                    "longDescription": "The value of this property shall be a  domain controller server address. A domain controller (DC) is a server that responds to security authentication requests (logging in, checking permissions, etc.) "
+                },
+                "RoleGroups": {
+                    "$ref": "http://10.193.251.59/schemas/RoleGroupCollection.json#/definitions/RoleGroupCollection",
+                    "readonly": true,
+                    "description": "This is a reference to a collection of Role Group used by Active Directory.",
+                    "longDescription": "The value of this property shall contain a reference to a collection of type Role Group which are for the use of Active Directory."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the base type for resources and referenceable members."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

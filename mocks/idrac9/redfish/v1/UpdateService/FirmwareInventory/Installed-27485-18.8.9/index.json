@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-27485-18.8.9",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-27485-18.8.9",
+    "Name": "Intel(R) Ethernet 10G 2P X520-k bNDC - 24:6E:96:78:33:0C",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23701__NIC.Integrated.1-1-1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "27485",
+                "ComponentType": "FRMW",
+                "DeviceID": "10F8",
+                "ElementName": "Intel(R) Ethernet 10G 2P X520-k bNDC - 24:6E:96:78:33:0C",
+                "HashValue": null,
+                "InstallationDate": "2019-06-05T20:18:04Z",
+                "IsEntity": true,
+                "RevisionNumber": 9,
+                "Status": "Installed",
+                "SubDeviceID": "1F63",
+                "SubVendorID": "1028",
+                "VendorID": "8086"
+            }
+        }
+    },
+    "SoftwareId": "27485",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "18.8.9"
+}

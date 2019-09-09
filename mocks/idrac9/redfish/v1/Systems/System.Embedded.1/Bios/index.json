@@ -1,0 +1,30 @@
+{
+    "@Redfish.Settings": {
+        "@odata.context": "/redfish/v1/$metadata#Settings.Settings",
+        "@odata.type": "#Settings.v1_1_0.Settings",
+        "SettingsObject": {
+            "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Bios/Settings"
+        },
+        "SupportedApplyTimes": [
+            "OnReset",
+            "AtMaintenanceWindowStart",
+            "InMaintenanceWindowOnReset"
+        ]
+    },
+    "@odata.context": "/redfish/v1/$metadata#Bios.Bios",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Bios",
+    "@odata.type": "#Bios.v1_0_3.Bios",
+    "Actions": {
+        "#Bios.ChangePassword": {
+            "target": "/redfish/v1/Systems/System.Embedded.1/Bios/Actions/Bios.ChangePassword"
+        },
+        "#Bios.ResetBios": {
+            "target": "/redfish/v1/Systems/System.Embedded.1/Bios/Actions/Bios.ResetBios"
+        }
+    },
+    "AttributeRegistry": "BiosAttributeRegistry.v1_0_3",
+    "Attributes": {},
+    "Description": "BIOS Configuration Current Settings",
+    "Id": "Bios",
+    "Name": "BIOS Configuration Current Settings"
+}

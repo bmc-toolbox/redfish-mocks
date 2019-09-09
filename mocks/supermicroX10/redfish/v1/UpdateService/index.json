@@ -1,0 +1,30 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#UpdateService.UpdateService",
+    "@odata.type": "#UpdateService.UpdateService",
+    "@odata.id": "/redfish/v1/UpdateService",
+    "Id": "UpdateService",
+    "Name": "Update Service",
+    "Description": "Service for updating firmware and includes inventory of firmware",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollup": "OK"
+    },
+    "ServiceEnabled": true,
+    "Actions": {
+        "Oem": {}
+    },
+    "Oem": {
+        "Supermicro": {
+            "SSLCert": {
+                "@odata.id": "/redfish/v1/UpdateService/SSLCert"
+            },
+            "IPMIConfig": {
+                "@odata.id": "/redfish/v1/UpdateService/IPMIConfig"
+            },
+            "FirmwareInventory": {
+                "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory"
+            }
+        }
+    }
+}

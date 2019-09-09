@@ -1,0 +1,252 @@
+{
+    "$ref": "#/definitions/DellNICCapabilities",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "DellNICCapabilities": {
+            "additionalProperties": false,
+            "description": "An instance of DellNICCapabilities will have data specific to NIC and its port and partitions capabilities.",
+            "longDescription": "An instance of DellNICCapabilities will have data specific to NIC and its port and partitions capabilities.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "FCoEBootSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/FCoEBootSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent FCoE boot support for a NIC port.",
+                    "longDescription": "The property shall represent FCoE boot support for a NIC port.",
+                    "readonly": true
+                },
+                "FCoEOffloadSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/FCoEOffloadSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent FCoE offload support for the NIC.",
+                    "longDescription": "The property shall represent FCoE offload support for the NIC.",
+                    "readonly": true
+                },
+                "FlexAddressingSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/FlexAddressingSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent flex adddressing support for a NIC port.",
+                    "longDescription": "The property shall represent flex adddressing support for a NIC port.",
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "PXEBootSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/PXEBootSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent PXE boot support for a NIC port.",
+                    "longDescription": "The property shall represent PXE boot support for a NIC port.",
+                    "readonly": true
+                },
+                "iSCSIBootSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/iSCSIBootSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent iSCSI boot support for a NIC port.",
+                    "longDescription": "The property shall represent iSCSI boot support for a NIC port.",
+                    "readonly": true
+                },
+                "iSCSIOffloadSupport": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/iSCSIOffloadSupport"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent iSCSI offload support for a NIC port.",
+                    "longDescription": "The property shall represent iSCSI offload support for a NIC port.",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "FCoEBootSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "FCoEOffloadSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "FlexAddressingSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "PXEBootSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "iSCSIBootSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "iSCSIOffloadSupport": {
+            "enum": [
+                "NotSupported",
+                "Supported",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "NotSupported": "Not Supported",
+                "Supported": "Supported",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellNICCapabilities.v1_0_0.DellNICCapabilities"
+}

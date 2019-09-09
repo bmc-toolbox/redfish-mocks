@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ToggleSUM",
+    "Id": "ToggleSUM",
+    "Name": "ToggleSUM Schema File",
+    "Description": "ToggleSUM Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ToggleSUM",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ToggleSUM.json"
+        }
+    ],
+    "Oem": {}
+}

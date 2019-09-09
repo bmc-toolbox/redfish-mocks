@@ -1,0 +1,15 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/6",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:18:24+02:00",
+    "Description": " Log Entry 6",
+    "EntryType": "Oem",
+    "Id": "6",
+    "Links": {},
+    "Message": "System is turning on.",
+    "MessageId": "SYS1000",
+    "Name": " Log Entry 6",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

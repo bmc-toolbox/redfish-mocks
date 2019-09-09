@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IPAddresses",
+    "Id": "IPAddresses",
+    "Name": "IPAddresses Schema File",
+    "Description": "IPAddresses Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IPAddresses",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IPAddresses.json"
+        }
+    ],
+    "Oem": {}
+}

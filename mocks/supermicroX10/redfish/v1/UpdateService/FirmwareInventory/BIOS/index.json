@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#FirmwareInventory.FirmwareInventory",
+    "@odata.type": "#FirmwareInventory.FirmwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/BIOS",
+    "Id": "FirmwareInventory",
+    "Name": "SUPERMICRO BMC BIOS",
+    "Description": "Description of SUPERMICRO BMC BIOS",
+    "Updatable": true,
+    "VersionSequence": "BIOS Date:  <Date> Rev <major>.<minor>",
+    "Version": "BIOS Date:  04/27/2019 Rev 3.1c",
+    "Actions": {
+        "Oem": {
+            "#FirmwareInventory.EnterUpdateMode": {
+                "target": "/redfish/v1/UpdateService/FirmwareInventory/BIOS/Actions/Oem/FirmwareInventory.EnterUpdateMode"
+            }
+        }
+    },
+    "Oem": {}
+}

@@ -1,0 +1,145 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Drives": {
+            "description": "Array of links to drives attached to this controller.",
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "@odata.id": {
+                        "$ref": "Resource.json#/definitions/odataid"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Links": {
+            "additionalProperties": false,
+            "description": "Array of links to enclosing chassis.",
+            "properties": {
+                "Enclosures": {
+                    "items": {
+                        "additionalProperties": false,
+                        "properties": {
+                            "@odata.id": {
+                                "$ref": "Resource.json#/definitions/odataid"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Status": {
+            "$ref": "Resource.json#/definitions/Status"
+        },
+        "StorageControllers": {
+            "items": {
+                "additionalProperties": false,
+                "properties": {
+                    "@odata.id": {
+                        "$ref": "Resource.json#/definitions/odataid"
+                    },
+                    "@odata.type": {
+                        "$ref": "Resource.json#/definitions/odatatype"
+                    },
+                    "Description": {
+                        "$ref": "Resource.json#/definitions/Description"
+                    },
+                    "Id": {
+                        "$ref": "Resource.json#/definitions/Id"
+                    },
+                    "MemberId": {
+                        "description": "This is the identifier for the member within the collection.",
+                        "longDescription": "The value of this string shall uniquely identify the member within the collection.",
+                        "type": "string"
+                    },
+                    "Manufacturer": {
+                        "description": "Controller Manufacturer name.",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "Model": {
+                        "description": "Controller model name.",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "Name": {
+                        "$ref": "Resource.json#/definitions/Name"
+                    },
+                    "SerialNumber": {
+                        "description": "Controller serial number.",
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "Status": {
+                        "$ref": "Resource.json#/definitions/Status"
+                    },
+                    "SupportedControllerProtocols": {
+                        "items": {
+                            "enum": [
+                                "PCIe"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "SupportedDeviceProtocols": {
+                        "items": {
+                            "enum": [
+                                "USB",
+                                "SATA",
+                                "NVMe"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "Volumes": {
+            "description": "A reference to the Volumes associated with this storage system.",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "type": "object",
+            "readonly": true
+        }
+    },
+    "title": "#Storage.v1_1_0.Storage",
+    "type": "object"
+}

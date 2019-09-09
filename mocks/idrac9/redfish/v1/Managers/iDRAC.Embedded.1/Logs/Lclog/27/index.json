@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/27",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:20:04+02:00",
+    "Description": " Log Entry 27",
+    "EntryType": "Oem",
+    "Id": "27",
+    "Links": {},
+    "Message": "The job JID_598077557811 is successfully deleted.",
+    "MessageArgs": [
+        "JID_598077557811"
+    ],
+    "MessageArgs@odata.count": 1,
+    "MessageId": "JCP036",
+    "Name": " Log Entry 27",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

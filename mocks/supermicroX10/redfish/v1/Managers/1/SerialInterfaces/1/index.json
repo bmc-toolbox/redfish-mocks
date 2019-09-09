@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SerialInterface.SerialInterface",
+    "@odata.type": "#SerialInterface.SerialInterface",
+    "@odata.id": "/redfish/v1/Managers/1/SerialInterfaces/1",
+    "Id": "1",
+    "Name": "SerialInterface",
+    "Description": "Serial over LAN",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "InterfaceEnabled": true,
+    "SignalType": "Rs232",
+    "BitRate": "115200",
+    "Parity": "None",
+    "DataBits": "8",
+    "StopBits": "1",
+    "FlowControl": "None"
+}

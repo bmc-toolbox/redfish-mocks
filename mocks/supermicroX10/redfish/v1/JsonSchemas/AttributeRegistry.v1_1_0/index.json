@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/AttributeRegistry.v1_1_0",
+    "Id": "AttributeRegistry.v1_1_0",
+    "Name": "AttributeRegistry Schema File",
+    "Description": "AttributeRegistry Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "AttributeRegistry.v1_1_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/AttributeRegistry.v1_1_0.json"
+        }
+    ],
+    "Oem": {}
+}

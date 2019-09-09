@@ -1,0 +1,9 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntryCollection.LogEntryCollection",
+    "@odata.type": "#LogEntryCollection.LogEntryCollection",
+    "@odata.id": "/redfish/v1/Managers/1/LogServices/Log1/Entries",
+    "Name": "Health Event Log Entry Collection",
+    "Description": "Collection of Health Event Logs for this System",
+    "Members@odata.count": 0,
+    "Members": []
+}

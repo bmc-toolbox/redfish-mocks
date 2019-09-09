@@ -1,0 +1,325 @@
+{
+    "$ref": "#/definitions/DellVirtualDisk",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "BusProtocol": {
+            "enum": [
+                "FIBRE",
+                "PATA",
+                "SAS",
+                "SATA",
+                "SCSI",
+                "USB",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "FIBRE": "FIBRE",
+                "PATA": "PATA",
+                "SAS": "SAS",
+                "SATA": "SATA",
+                "SCSI": "SCSI",
+                "USB": "USB",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "FIBRE": "FIBRE",
+                "PATA": "PATA",
+                "SAS": "SAS",
+                "SATA": "SATA",
+                "SCSI": "SCSI",
+                "USB": "USB",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "Cachecade": {
+            "enum": [
+                "CachecadeVD",
+                "NonCachecadeVD"
+            ],
+            "enumDescriptions": {
+                "CachecadeVD": "Cachecade Virtual Disk",
+                "NonCachecadeVD": "Not a Cachecade Virtual Disk"
+            },
+            "enumLongDescriptions": {
+                "CachecadeVD": "Cachecade Virtual Disk",
+                "NonCachecadeVD": "Not a Cachecade Virtual Disk"
+            },
+            "type": "string"
+        },
+        "DellVirtualDisk": {
+            "additionalProperties": false,
+            "description": "An instance of DellVirtualDisk will have data specific to the Virtual Disks in the system.",
+            "longDescription": "An instance of DellVirtualDisk will have data specific to the Virtual Disks in the system.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "BusProtocol": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/BusProtocol"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the bus protocol.",
+                    "longDescription": "The property shall represent the bus protocol.",
+                    "readonly": true
+                },
+                "Cachecade": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Cachecade"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the Cachecade property can have following values and shall be one of the following values:0-Not a cachecade Virtual Disk,  1-Cachecade Virtual Disk.",
+                    "longDescription": "The property shall represent the Cachecade property can have following values and shall be one of the following values:0-Not a cachecade Virtual Disk,  1-Cachecade Virtual Disk.",
+                    "readonly": true
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "DiskCachePolicy": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/DiskCachePolicy"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the policy for physical disks included in the virtual disk.",
+                    "longDescription": "The property shall represent the policy for physical disks included in the virtual disk.",
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "LockStatus": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/LockStatus"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent if this Virtual Disk is locked.",
+                    "longDescription": "The property shall represent if this Virtual Disk is locked.",
+                    "readonly": true
+                },
+                "MediaType": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/MediaType"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the drive media type.",
+                    "longDescription": "The property shall represent the drive media type.",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "ReadCachePolicy": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/ReadCachePolicy"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the current read policy.",
+                    "longDescription": "The property shall represent the current read policy.",
+                    "readonly": true
+                },
+                "SpanDepth": {
+                    "description": "The property shall represent the number of spans in virtual disk.",
+                    "longDescription": "The property shall represent the number of spans in virtual disk.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "SpanLength": {
+                    "description": "The property shall represent the number of physical disks per span.",
+                    "longDescription": "The property shall represent the number of physical disks per span.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "VirtualDiskTargetID": {
+                    "description": "The property shall represent the virtual disk target number.",
+                    "longDescription": "The property shall represent the virtual disk target number.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "WriteCachePolicy": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/WriteCachePolicy"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the current write policy.",
+                    "longDescription": "The property shall represent the current write policy.",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "DiskCachePolicy": {
+            "enum": [
+                "Default",
+                "Disabled",
+                "Enabled",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Default": "Default",
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "Default": "Default",
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "LockStatus": {
+            "enum": [
+                "Locked",
+                "Unlocked"
+            ],
+            "enumDescriptions": {
+                "Locked": "Locked",
+                "Unlocked": "Unlocked"
+            },
+            "enumLongDescriptions": {
+                "Locked": "Locked",
+                "Unlocked": "Unlocked"
+            },
+            "type": "string"
+        },
+        "MediaType": {
+            "enum": [
+                "HardDiskDrive",
+                "SolidStateDrive",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "HardDiskDrive": "Hard Disk Drive",
+                "SolidStateDrive": "Solid State Drive",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "HardDiskDrive": "Hard Disk Drive",
+                "SolidStateDrive": "Solid State Drive",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "ReadCachePolicy": {
+            "enum": [
+                "AdaptiveReadAhead",
+                "NoReadAhead",
+                "ReadAhead",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "AdaptiveReadAhead": "Adaptive Read Ahead",
+                "NoReadAhead": "No Read Ahead",
+                "ReadAhead": "Read Ahead",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "AdaptiveReadAhead": "Adaptive Read Ahead",
+                "NoReadAhead": "No Read Ahead",
+                "ReadAhead": "Read Ahead",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "WriteCachePolicy": {
+            "enum": [
+                "Unknown",
+                "WriteBack",
+                "WriteBackForce",
+                "WriteThrough"
+            ],
+            "enumDescriptions": {
+                "Unknown": "Unknown",
+                "WriteBack": "Write Back",
+                "WriteBackForce": "Write Back Force",
+                "WriteThrough": "Write Through"
+            },
+            "enumLongDescriptions": {
+                "Unknown": "Unknown",
+                "WriteBack": "Write Back",
+                "WriteBackForce": "Write Back Force",
+                "WriteThrough": "Write Through"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellVirtualDisk.v1_0_0.DellVirtualDisk"
+}

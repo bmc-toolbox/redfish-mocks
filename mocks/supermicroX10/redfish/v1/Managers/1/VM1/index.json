@@ -1,0 +1,16 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#VirtualMediaCollection.VirtualMediaCollection",
+    "@odata.type": "#VirtualMediaCollection.VirtualMediaCollection",
+    "@odata.id": "/redfish/v1/Managers/1/VM1",
+    "Name": "Virtual Media Collection",
+    "Description": "Collection of Virtual Media for this System",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Oem": {
+        "Supermicro": {
+            "VirtualMediaConfig": {
+                "@odata.id": "/redfish/v1/Managers/1/VM1/CfgCD"
+            }
+        }
+    }
+}

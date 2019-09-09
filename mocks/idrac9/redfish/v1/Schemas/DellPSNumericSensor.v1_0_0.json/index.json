@@ -1,0 +1,544 @@
+{
+    "$ref": "#/definitions/DellPSNumericSensor",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "BaseUnits": {
+            "enum": [
+                "Amps",
+                "Becquerels",
+                "Bits",
+                "Bytes",
+                "CFM",
+                "Candelas",
+                "ColorTemperatureDegreesK",
+                "Coulombs",
+                "CubicCentimeters",
+                "CubicFeet",
+                "CubicInches",
+                "CubicMeters",
+                "Cycles",
+                "Days",
+                "DbA",
+                "DbC",
+                "Decibels",
+                "DegreesC",
+                "DegreesF",
+                "DegreesK",
+                "DoubleWords",
+                "Farads",
+                "Feet",
+                "FluidOunces",
+                "Foot-Pounds",
+                "Gauss",
+                "Gilberts",
+                "Gravities",
+                "Grays",
+                "Henries",
+                "Hertz",
+                "Hours",
+                "Inches",
+                "Joules",
+                "Liters",
+                "Lumens",
+                "Lux",
+                "Meters",
+                "Mils",
+                "Minutes",
+                "Moles",
+                "Newtons",
+                "Nits",
+                "Ohms",
+                "Other",
+                "Ounce-Inches",
+                "Ounces",
+                "PPM(Parts/Million)",
+                "PSI",
+                "Pascals",
+                "Percentage",
+                "Pounds",
+                "QuadWords",
+                "RPM",
+                "Radians",
+                "Revolutions",
+                "Seconds",
+                "Siemens",
+                "Sieverts",
+                "Steradians",
+                "Unknown",
+                "VA",
+                "Volts",
+                "Watts",
+                "Weeks",
+                "Words",
+                "kPa"
+            ],
+            "enumDescriptions": {
+                "Amps": "Amps",
+                "Becquerels": "Becquerels",
+                "Bits": "Bits",
+                "Bytes": "Bytes",
+                "CFM": "CFM",
+                "Candelas": "Candelas",
+                "ColorTemperatureDegreesK": "Color Temperature Degrees K",
+                "Coulombs": "Coulombs",
+                "CubicCentimeters": "Cubic Centimeters",
+                "CubicFeet": "Cubic Feet",
+                "CubicInches": "Cubic Inches",
+                "CubicMeters": "Cubic Meters",
+                "Cycles": "Cycles",
+                "Days": "Days",
+                "DbA": "DbA",
+                "DbC": "DbC",
+                "Decibels": "Decibels",
+                "DegreesC": "Degrees C",
+                "DegreesF": "Degrees F",
+                "DegreesK": "Degrees K",
+                "DoubleWords": "DoubleWords",
+                "Farads": "Farads",
+                "Feet": "Feet",
+                "FluidOunces": "Fluid Ounces",
+                "Foot-Pounds": "Foot-Pounds",
+                "Gauss": "Gauss",
+                "Gilberts": "Gilberts",
+                "Gravities": "Gravities",
+                "Grays": "Grays",
+                "Henries": "Henries",
+                "Hertz": "Hertz",
+                "Hours": "Hours",
+                "Inches": "Inches",
+                "Joules": "Joules",
+                "Liters": "Liters",
+                "Lumens": "Lumens",
+                "Lux": "Lux",
+                "Meters": "Meters",
+                "Mils": "Mils",
+                "Minutes": "Minutes",
+                "Moles": "Moles",
+                "Newtons": "Newtons",
+                "Nits": "Nits",
+                "Ohms": "Ohms",
+                "Other": "Other",
+                "Ounce-Inches": "Ounce-Inches",
+                "Ounces": "Ounces",
+                "PPM(Parts/Million)": "PPM (parts/million)",
+                "PSI": "PSI",
+                "Pascals": "Pascals",
+                "Percentage": "Percentage",
+                "Pounds": "Pounds",
+                "QuadWords": "QuadWords",
+                "RPM": "RPM",
+                "Radians": "Radians",
+                "Revolutions": "Revolutions",
+                "Seconds": "Seconds",
+                "Siemens": "Siemens",
+                "Sieverts": "Sieverts",
+                "Steradians": "Steradians",
+                "Unknown": "Unknown",
+                "VA": "VA",
+                "Volts": "Volts",
+                "Watts": "Watts",
+                "Weeks": "Weeks",
+                "Words": "Words (data)",
+                "kPa": "kPa"
+            },
+            "enumLongDescriptions": {
+                "Amps": "Amps",
+                "Becquerels": "Becquerels",
+                "Bits": "Bits",
+                "Bytes": "Bytes",
+                "CFM": "CFM",
+                "Candelas": "Candelas",
+                "ColorTemperatureDegreesK": "Color Temperature Degrees K",
+                "Coulombs": "Coulombs",
+                "CubicCentimeters": "Cubic Centimeters",
+                "CubicFeet": "Cubic Feet",
+                "CubicInches": "Cubic Inches",
+                "CubicMeters": "Cubic Meters",
+                "Cycles": "Cycles",
+                "Days": "Days",
+                "DbA": "DbA",
+                "DbC": "DbC",
+                "Decibels": "Decibels",
+                "DegreesC": "Degrees C",
+                "DegreesF": "Degrees F",
+                "DegreesK": "Degrees K",
+                "DoubleWords": "DoubleWords",
+                "Farads": "Farads",
+                "Feet": "Feet",
+                "FluidOunces": "Fluid Ounces",
+                "Foot-Pounds": "Foot-Pounds",
+                "Gauss": "Gauss",
+                "Gilberts": "Gilberts",
+                "Gravities": "Gravities",
+                "Grays": "Grays",
+                "Henries": "Henries",
+                "Hertz": "Hertz",
+                "Hours": "Hours",
+                "Inches": "Inches",
+                "Joules": "Joules",
+                "Liters": "Liters",
+                "Lumens": "Lumens",
+                "Lux": "Lux",
+                "Meters": "Meters",
+                "Mils": "Mils",
+                "Minutes": "Minutes",
+                "Moles": "Moles",
+                "Newtons": "Newtons",
+                "Nits": "Nits",
+                "Ohms": "Ohms",
+                "Other": "Other",
+                "Ounce-Inches": "Ounce-Inches",
+                "Ounces": "Ounces",
+                "PPM(Parts/Million)": "PPM (parts/million)",
+                "PSI": "PSI",
+                "Pascals": "Pascals",
+                "Percentage": "Percentage",
+                "Pounds": "Pounds",
+                "QuadWords": "QuadWords",
+                "RPM": "RPM",
+                "Radians": "Radians",
+                "Revolutions": "Revolutions",
+                "Seconds": "Seconds",
+                "Siemens": "Siemens",
+                "Sieverts": "Sieverts",
+                "Steradians": "Steradians",
+                "Unknown": "Unknown",
+                "VA": "VA",
+                "Volts": "Volts",
+                "Watts": "Watts",
+                "Weeks": "Weeks",
+                "Words": "Words (data)",
+                "kPa": "kPa"
+            },
+            "type": "string"
+        },
+        "DellPSNumericSensor": {
+            "additionalProperties": true,
+            "description": "An instance of DellPSNumericSensor will have data specific to a power sensor device that returns only numeric readings and optionally supports of thresholds settings.",
+            "longDescription": "An instance of DellPSNumericSensor will have data specific to a power sensor device that returns only numeric readings and optionally supports of thresholds settings.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "BaseUnits": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/BaseUnits"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The base unit of the values returned by the Sensor. All the values returned by the Sensor are represented in the units obtained by (BaseUnits * 10 raised to the power of the UnitModifier). For example, if BaseUnits is Volts and the UnitModifier is -6, then the units of the values returned are MicroVolts. However, if the RateUnits property is set to a value other than \"None\", then the units are further qualified as rate units. In the above example, if RateUnits is set to \"Per Second\", then the values returned by the Sensor are in MicroVolts/Second. The units apply to all numeric properties of the Sensor, unless explicitly overridden by the Units qualifier.",
+                    "longDescription": "The base unit of the values returned by the Sensor. All the values returned by the Sensor are represented in the units obtained by (BaseUnits * 10 raised to the power of the UnitModifier). For example, if BaseUnits is Volts and the UnitModifier is -6, then the units of the values returned are MicroVolts. However, if the RateUnits property is set to a value other than \"None\", then the units are further qualified as rate units. In the above example, if RateUnits is set to \"Per Second\", then the values returned by the Sensor are in MicroVolts/Second. The units apply to all numeric properties of the Sensor, unless explicitly overridden by the Units qualifier.",
+                    "readonly": true
+                },
+                "CurrentReading": {
+                    "description": "The current value indicated by the Sensor. The property value shall be in units specified by the BaseUnit property value multiplied by 10 to the power of the UnitModier property value.",
+                    "longDescription": "The current value indicated by the Sensor. The property value shall be in units specified by the BaseUnit property value multiplied by 10 to the power of the UnitModier property value.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "CurrentState": {
+                    "description": "The current state indicated by the Sensor. This property value is always one of the \"PossibleStates\".",
+                    "longDescription": "The current state indicated by the Sensor. This property value is always one of the \"PossibleStates\".",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "ElementName": {
+                    "description": "The user-friendly name for the class instance.This value does not have to be unique within its namespace.",
+                    "longDescription": "The user-friendly name for the class instance.This value does not have to be unique within its namespace.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "EnabledState": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/EnabledState"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "EnabledState is an integer enumeration that indicates the enabled and disabled states of an element. It can also indicate the transitions between these requested states. For example, shutting down (value=4) and starting (value=10) are transient states between enabled and disabled. The following text briefly summarizes the various enabled and disabled states: Enabled (2) indicates that the element is or could be executing commands, will process any queued commands, and queues new requests. Disabled (3) indicates that the element will not execute commands and will drop any new requests. Shutting Down (4) indicates that the element is in the process of going to a Disabled state. Not Applicable (5) indicates the element does not support being enabled or disabled. Enabled but Offline (6) indicates that the element might be completing commands, and will drop any new requests. Test (7) indicates that the element is in a test state. Deferred (8) indicates that the element might be completing commands, but will queue any new requests. Quiesce (9) indicates that the element is enabled but in a restricted mode. Starting (10) indicates that the element is in the process of going to an Enabled state. New requests are queued.",
+                    "longDescription": "EnabledState is an integer enumeration that indicates the enabled and disabled states of an element. It can also indicate the transitions between these requested states. For example, shutting down (value=4) and starting (value=10) are transient states between enabled and disabled. The following text briefly summarizes the various enabled and disabled states: Enabled (2) indicates that the element is or could be executing commands, will process any queued commands, and queues new requests. Disabled (3) indicates that the element will not execute commands and will drop any new requests. Shutting Down (4) indicates that the element is in the process of going to a Disabled state. Not Applicable (5) indicates the element does not support being enabled or disabled. Enabled but Offline (6) indicates that the element might be completing commands, and will drop any new requests. Test (7) indicates that the element is in a test state. Deferred (8) indicates that the element might be completing commands, but will queue any new requests. Quiesce (9) indicates that the element is enabled but in a restricted mode. Starting (10) indicates that the element is in the process of going to an Enabled state. New requests are queued.",
+                    "readonly": true
+                },
+                "HealthState": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/HealthState"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Indicates the current health of the element.",
+                    "longDescription": "Indicates the current health of the element.",
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Links": {
+                    "$ref": "#/definitions/Links",
+                    "description": "Contains references to other resources that are related to this resource.",
+                    "longDescription": "The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource."
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "SensorType": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/SensorType"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The Type of the Sensor, e.g. Voltage or Temperature Sensor. If the type is set to \"Other\", then the OtherSensorType Description can be used to further identify the type, or if the Sensor has numeric readings, then the type of the Sensor can be implicitly determined by the Units. A description of the different Sensor types is as follows: A Temperature Sensor measures the environmental temperature. Voltage and Current Sensors measure electrical voltage and current readings. A Tachometer measures speed/revolutions of a Device. For example, a Fan Device can have an associated Tachometer which measures its speed. A Counter is a general purpose Sensor that measures some numerical property of a Device. A Counter value can be cleared, but it never decreases. A Switch Sensor has states like Open/Close, On/Off, or Up/Down. A Lock has states of Locked/Unlocked. Humidity, Smoke Detection and Air Flow Sensors measure the equivalent environmental characteristics. A Presence Sensor detects the presence of a PhysicalElement. A Power Consumption Sensor measures the instantaneous power consumed by a managed element. A Power Production Sensor measures the instantaneous power produced by a managed element such as a power supply or a voltage regulator. A pressure sensor is used to report pressure. Intrusion sensor reports an intrusion of an enclosure regardless whether it was authorized or not.",
+                    "longDescription": "The Type of the Sensor, e.g. Voltage or Temperature Sensor. If the type is set to \"Other\", then the OtherSensorType Description can be used to further identify the type, or if the Sensor has numeric readings, then the type of the Sensor can be implicitly determined by the Units. A description of the different Sensor types is as follows: A Temperature Sensor measures the environmental temperature. Voltage and Current Sensors measure electrical voltage and current readings. A Tachometer measures speed/revolutions of a Device. For example, a Fan Device can have an associated Tachometer which measures its speed. A Counter is a general purpose Sensor that measures some numerical property of a Device. A Counter value can be cleared, but it never decreases. A Switch Sensor has states like Open/Close, On/Off, or Up/Down. A Lock has states of Locked/Unlocked. Humidity, Smoke Detection and Air Flow Sensors measure the equivalent environmental characteristics. A Presence Sensor detects the presence of a PhysicalElement. A Power Consumption Sensor measures the instantaneous power consumed by a managed element. A Power Production Sensor measures the instantaneous power produced by a managed element such as a power supply or a voltage regulator. A pressure sensor is used to report pressure. Intrusion sensor reports an intrusion of an enclosure regardless whether it was authorized or not.",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "EnabledState": {
+            "enum": [
+                "Deferred",
+                "Disabled",
+                "Enabled",
+                "EnabledButOffline",
+                "InTest",
+                "NotApplicable",
+                "Other",
+                "Quiesce",
+                "ShuttingDown",
+                "Starting",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Deferred": "Deferred",
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "EnabledButOffline": "Enabled but Offline",
+                "InTest": "In Test",
+                "NotApplicable": "Not Applicable",
+                "Other": "Other",
+                "Quiesce": "Quiesce",
+                "ShuttingDown": "Shutting Down",
+                "Starting": "Starting",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "Deferred": "Deferred",
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "EnabledButOffline": "Enabled but Offline",
+                "InTest": "In Test",
+                "NotApplicable": "Not Applicable",
+                "Other": "Other",
+                "Quiesce": "Quiesce",
+                "ShuttingDown": "Shutting Down",
+                "Starting": "Starting",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "HealthState": {
+            "enum": [
+                "CriticalFailure",
+                "Degraded/Warning",
+                "MajorFailure",
+                "MinorFailure",
+                "NonRecoverableError",
+                "OK",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "CriticalFailure": "Critical failure",
+                "Degraded/Warning": "Degraded/Warning",
+                "MajorFailure": "Major failure",
+                "MinorFailure": "Minor failure",
+                "NonRecoverableError": "Non-recoverable Error",
+                "OK": "OK",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "CriticalFailure": "Critical failure",
+                "Degraded/Warning": "Degraded/Warning",
+                "MajorFailure": "Major failure",
+                "MinorFailure": "Minor failure",
+                "NonRecoverableError": "Non-recoverable Error",
+                "OK": "OK",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        },
+        "Links": {
+            "additionalProperties": true,
+            "description": "Contains references to other resources that are related to this resource.",
+            "longDescription": "This type, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "ComputerSystem": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/ComputerSystem.json#/definitions/ComputerSystem"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "TBD.",
+                    "longDescription": "TBD.",
+                    "readonly": true
+                },
+                "DellPowerSupplyCollection": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/DellPowerSupplyCollection.json#/definitions/DellPowerSupplyCollection"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "TBD.",
+                    "longDescription": "TBD.",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "Oem extension object.",
+                    "longDescription": "This object represents the Oem property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification."
+                }
+            },
+            "type": "object"
+        },
+        "SensorType": {
+            "enum": [
+                "AirFlow",
+                "Counter",
+                "Current",
+                "Humidity",
+                "Intrusion",
+                "Lock",
+                "Other",
+                "PowerConsumption",
+                "PowerProduction",
+                "Presence",
+                "Pressure",
+                "SmokeDetection",
+                "Switch",
+                "Tachometer",
+                "Temperature",
+                "Unknown",
+                "Voltage"
+            ],
+            "enumDescriptions": {
+                "AirFlow": "Air Flow",
+                "Counter": "Counter",
+                "Current": "Current",
+                "Humidity": "Humidity",
+                "Intrusion": "Intrusion",
+                "Lock": "Lock",
+                "Other": "Other",
+                "PowerConsumption": "Power Consumption",
+                "PowerProduction": "Power Production",
+                "Presence": "Presence",
+                "Pressure": "Pressure",
+                "SmokeDetection": "Smoke Detection",
+                "Switch": "Switch",
+                "Tachometer": "Tachometer",
+                "Temperature": "Temperature",
+                "Unknown": "Unknown",
+                "Voltage": "Voltage"
+            },
+            "enumLongDescriptions": {
+                "AirFlow": "Air Flow",
+                "Counter": "Counter",
+                "Current": "Current",
+                "Humidity": "Humidity",
+                "Intrusion": "Intrusion",
+                "Lock": "Lock",
+                "Other": "Other",
+                "PowerConsumption": "Power Consumption",
+                "PowerProduction": "Power Production",
+                "Presence": "Presence",
+                "Pressure": "Pressure",
+                "SmokeDetection": "Smoke Detection",
+                "Switch": "Switch",
+                "Tachometer": "Tachometer",
+                "Temperature": "Temperature",
+                "Unknown": "Unknown",
+                "Voltage": "Voltage"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellPSNumericSensor.v1_0_0.DellPSNumericSensor"
+}

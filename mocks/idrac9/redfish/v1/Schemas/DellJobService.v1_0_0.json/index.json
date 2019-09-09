@@ -1,0 +1,192 @@
+{
+    "$ref": "#/definitions/DellJobService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "Actions": {
+            "additionalProperties": false,
+            "description": "The available actions for this resource.",
+            "longDescription": "This type shall contain the available actions for this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "#DellJobService.DeleteJobQueue": {
+                    "$ref": "#/definitions/DeleteJobQueue"
+                },
+                "#DellJobService.SetupJobQueue": {
+                    "$ref": "#/definitions/SetupJobQueue"
+                }
+            },
+            "type": "object"
+        },
+        "DeleteJobQueue": {
+            "additionalProperties": false,
+            "description": "The DeleteJobQueue() method is used for deleting jobs from the JobQueue or the job store. To clear all the jobs, use the keyword JID_CLEARALL for the JobID. Successful execution of this method with the JID_CLEARALL parameter value also clears all the pending attribute values. When the number of jobs in the JobQueue reaches the maximum limit, jobs in the \"\"Completed\"\" state are deleted automatically. Note: on 11th Generation of PowerEdge systems, jobs in the \"\"Failed\"\" state are not deleted automatically and must be removed manually one at a time, or all together using the keyword JID_CLEARALL.",
+            "longDescription": "The DeleteJobQueue() method is used for deleting jobs from the JobQueue or the job store. To clear all the jobs, use the keyword JID_CLEARALL for the JobID. Successful execution of this method with the JID_CLEARALL parameter value also clears all the pending attribute values. When the number of jobs in the JobQueue reaches the maximum limit, jobs in the \"\"Completed\"\" state are deleted automatically. Note: on 11th Generation of PowerEdge systems, jobs in the \"\"Failed\"\" state are not deleted automatically and must be removed manually one at a time, or all together using the keyword JID_CLEARALL.",
+            "parameters": {
+                "JobID": {
+                    "description": "The JobID parameter specifies the job to be deleted. The value \"JID_CLEARALL\" for the JobID clears all the jobs.",
+                    "longDescription": "The JobID parameter specifies the job to be deleted. The value \"JID_CLEARALL\" for the JobID clears all the jobs.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DellJobService": {
+            "additionalProperties": false,
+            "description": "The DellJobService resource provides some actions to support Job management functionality.",
+            "longDescription": "The DellJobService resource provides some actions to support Job management functionality.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Actions": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Actions"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "SetupJobQueue": {
+            "additionalProperties": false,
+            "description": "This method is used for creating a job queue that shall contain one or more DellJobs with a specified order of execution within the queue.",
+            "longDescription": "This method is used for creating a job queue that shall contain one or more DellJobs with a specified order of execution within the queue.",
+            "parameters": {
+                "JobArray": {
+                    "description": "The JobArray parameter will contain the array of JobIDs which represent the set of jobs to add to the job queue. This is an ordered array that represents the sequence in which the jobs are run.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "longDescription": "The JobArray parameter will contain the array of JobIDs which represent the set of jobs to add to the job queue. This is an ordered array that represents the sequence in which the jobs are run.",
+                    "type": "array"
+                },
+                "StartTimeInterval": {
+                    "description": "Start time for the job execution in the format yyyymmddhhmmss. The string \"TIME_NOW\" means immediate.",
+                    "longDescription": "Start time for the job execution in the format yyyymmddhhmmss. The string \"TIME_NOW\" means immediate.",
+                    "type": "string"
+                },
+                "UntilTime": {
+                    "description": "End time for the job execution in the format yyyymmddhhmmss. If this parameter is not NULL, then StartTimeInterval parameter must be specified.",
+                    "longDescription": "End time for the job execution in the format yyyymmddhhmmss. If this parameter is not NULL, then StartTimeInterval parameter must be specified.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "title": "#DellJobService.v1_0_0.DellJobService"
+}

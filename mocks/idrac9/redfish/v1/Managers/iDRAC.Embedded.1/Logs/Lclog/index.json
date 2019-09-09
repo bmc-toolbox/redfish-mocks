@@ -1,0 +1,1424 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntryCollection.LogEntryCollection",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog",
+    "@odata.type": "#LogEntryCollection.LogEntryCollection",
+    "Description": "LC Logs for this manager",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/80",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:37:43+02:00",
+            "Description": " Log Entry 80",
+            "EntryType": "Oem",
+            "Id": "80",
+            "Links": {
+                "OriginOfCondition": {
+                    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                }
+            },
+            "Message": "Successfully logged in using psm, from 10.156.63.11 and REDFISH.",
+            "MessageArgs": [
+                "psm",
+                "10.156.63.11",
+                "REDFISH"
+            ],
+            "MessageArgs@odata.count": 3,
+            "MessageId": "USR0030",
+            "Name": " Log Entry 80",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/79",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:24:31+02:00",
+            "Description": " Log Entry 79",
+            "EntryType": "Oem",
+            "Id": "79",
+            "Links": {},
+            "Message": "The iDRAC IP Address changed from 0.0.0.0 to 10.193.251.137.",
+            "MessageArgs": [
+                "0.0.0.0",
+                "10.193.251.137"
+            ],
+            "MessageArgs@odata.count": 2,
+            "MessageId": "IPA0100",
+            "Name": " Log Entry 79",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/78",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:23:09+02:00",
+            "Description": " Log Entry 78",
+            "EntryType": "Oem",
+            "Id": "78",
+            "Links": {
+                "OriginOfCondition": {
+                    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                }
+            },
+            "Message": "Auto Discovery feature disabled.",
+            "MessageId": "DIS002",
+            "Name": " Log Entry 78",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/77",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:23:06+02:00",
+            "Description": " Log Entry 77",
+            "EntryType": "Oem",
+            "Id": "77",
+            "Links": {},
+            "Message": "The iDRAC firmware was rebooted with the following reason: user initiated.",
+            "MessageArgs": [
+                "user initiated"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "RAC0182",
+            "Name": " Log Entry 77",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/76",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:59+02:00",
+            "Description": " Log Entry 76",
+            "EntryType": "Oem",
+            "Id": "76",
+            "Links": {
+                "OriginOfCondition": {
+                    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                }
+            },
+            "Message": "The session for psm from 10.156.63.11 using SSH is logged off.",
+            "MessageArgs": [
+                "psm",
+                "10.156.63.11",
+                "SSH"
+            ],
+            "MessageArgs@odata.count": 3,
+            "MessageId": "USR0032",
+            "Name": " Log Entry 76",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/75",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:37+02:00",
+            "Description": " Log Entry 75",
+            "EntryType": "Oem",
+            "Id": "75",
+            "Links": {},
+            "Message": "Completed System Erase Job ID: JID_676786819687",
+            "MessageArgs": [
+                "JID_676786819687"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "SYS151",
+            "Name": " Log Entry 75",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/74",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:37+02:00",
+            "Description": " Log Entry 74",
+            "EntryType": "Oem",
+            "Id": "74",
+            "Links": {},
+            "Message": "Job completed successfully.",
+            "MessageId": "SYS018",
+            "Name": " Log Entry 74",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/73",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:37+02:00",
+            "Description": " Log Entry 73",
+            "EntryType": "Oem",
+            "Id": "73",
+            "Links": {},
+            "Message": "The (installation or configuration) job JID_676786819687 is successfully completed.",
+            "MessageArgs": [
+                "JID_676786819687"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP037",
+            "Name": " Log Entry 73",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/72",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:32+02:00",
+            "Description": " Log Entry 72",
+            "EntryType": "Oem",
+            "Id": "72",
+            "Links": {},
+            "Message": "The iDRAC is restarting to complete the System Erase operation. Do not restart server until the iDRAC restarts.",
+            "MessageId": "SYS163",
+            "Name": " Log Entry 72",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/71",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:31+02:00",
+            "Description": " Log Entry 71",
+            "EntryType": "Oem",
+            "Id": "71",
+            "Links": {},
+            "Message": "System is turning off.",
+            "MessageId": "SYS1001",
+            "Name": " Log Entry 71",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/70",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:31+02:00",
+            "Description": " Log Entry 70",
+            "EntryType": "Oem",
+            "Id": "70",
+            "Links": {},
+            "Message": "System CPU Resetting.",
+            "MessageId": "SYS1003",
+            "Name": " Log Entry 70",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/69",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:28+02:00",
+            "Description": " Log Entry 69",
+            "EntryType": "Oem",
+            "Id": "69",
+            "Links": {},
+            "Message": "Erase operations for System Erase tasks successfully completed.",
+            "MessageId": "SYS156",
+            "Name": " Log Entry 69",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/68",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:08+02:00",
+            "Description": " Log Entry 68",
+            "EntryType": "Oem",
+            "Id": "68",
+            "Links": {},
+            "Message": "The job JID_446315315618 is successfully deleted.",
+            "MessageArgs": [
+                "JID_446315315618"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 68",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/67",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 67",
+            "EntryType": "Oem",
+            "Id": "67",
+            "Links": {},
+            "Message": "The job JID_451391363693 is successfully deleted.",
+            "MessageArgs": [
+                "JID_451391363693"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 67",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/66",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 66",
+            "EntryType": "Oem",
+            "Id": "66",
+            "Links": {},
+            "Message": "The job JID_453068783377 is successfully deleted.",
+            "MessageArgs": [
+                "JID_453068783377"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 66",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/65",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 65",
+            "EntryType": "Oem",
+            "Id": "65",
+            "Links": {},
+            "Message": "The job JID_456659824010 is successfully deleted.",
+            "MessageArgs": [
+                "JID_456659824010"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 65",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/64",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 64",
+            "EntryType": "Oem",
+            "Id": "64",
+            "Links": {},
+            "Message": "The job JID_475496211290 is successfully deleted.",
+            "MessageArgs": [
+                "JID_475496211290"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 64",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/63",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 63",
+            "EntryType": "Oem",
+            "Id": "63",
+            "Links": {},
+            "Message": "The job JID_477397083339 is successfully deleted.",
+            "MessageArgs": [
+                "JID_477397083339"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 63",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/62",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 62",
+            "EntryType": "Oem",
+            "Id": "62",
+            "Links": {},
+            "Message": "The job JID_481516277998 is successfully deleted.",
+            "MessageArgs": [
+                "JID_481516277998"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 62",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/61",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 61",
+            "EntryType": "Oem",
+            "Id": "61",
+            "Links": {},
+            "Message": "The job JID_482471832535 is successfully deleted.",
+            "MessageArgs": [
+                "JID_482471832535"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 61",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/60",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 60",
+            "EntryType": "Oem",
+            "Id": "60",
+            "Links": {},
+            "Message": "The job JID_482526217973 is successfully deleted.",
+            "MessageArgs": [
+                "JID_482526217973"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 60",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/59",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 59",
+            "EntryType": "Oem",
+            "Id": "59",
+            "Links": {},
+            "Message": "The job JID_482751986288 is successfully deleted.",
+            "MessageArgs": [
+                "JID_482751986288"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 59",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/58",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 58",
+            "EntryType": "Oem",
+            "Id": "58",
+            "Links": {},
+            "Message": "The job JID_484308614521 is successfully deleted.",
+            "MessageArgs": [
+                "JID_484308614521"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 58",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/57",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 57",
+            "EntryType": "Oem",
+            "Id": "57",
+            "Links": {},
+            "Message": "The job JID_486741915875 is successfully deleted.",
+            "MessageArgs": [
+                "JID_486741915875"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 57",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/56",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 56",
+            "EntryType": "Oem",
+            "Id": "56",
+            "Links": {},
+            "Message": "The job JID_498804358739 is successfully deleted.",
+            "MessageArgs": [
+                "JID_498804358739"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 56",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/55",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:07+02:00",
+            "Description": " Log Entry 55",
+            "EntryType": "Oem",
+            "Id": "55",
+            "Links": {},
+            "Message": "The job JID_498831383484 is successfully deleted.",
+            "MessageArgs": [
+                "JID_498831383484"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 55",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/54",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 54",
+            "EntryType": "Oem",
+            "Id": "54",
+            "Links": {},
+            "Message": "The job JID_498891735488 is successfully deleted.",
+            "MessageArgs": [
+                "JID_498891735488"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 54",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/53",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 53",
+            "EntryType": "Oem",
+            "Id": "53",
+            "Links": {},
+            "Message": "The job JID_498991561484 is successfully deleted.",
+            "MessageArgs": [
+                "JID_498991561484"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 53",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/52",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 52",
+            "EntryType": "Oem",
+            "Id": "52",
+            "Links": {},
+            "Message": "The job JID_499209473903 is successfully deleted.",
+            "MessageArgs": [
+                "JID_499209473903"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 52",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/51",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 51",
+            "EntryType": "Oem",
+            "Id": "51",
+            "Links": {},
+            "Message": "The job JID_499680261701 is successfully deleted.",
+            "MessageArgs": [
+                "JID_499680261701"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 51",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/50",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 50",
+            "EntryType": "Oem",
+            "Id": "50",
+            "Links": {},
+            "Message": "The job JID_499794324148 is successfully deleted.",
+            "MessageArgs": [
+                "JID_499794324148"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 50",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/49",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 49",
+            "EntryType": "Oem",
+            "Id": "49",
+            "Links": {},
+            "Message": "The job JID_500659380870 is successfully deleted.",
+            "MessageArgs": [
+                "JID_500659380870"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 49",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/48",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 48",
+            "EntryType": "Oem",
+            "Id": "48",
+            "Links": {},
+            "Message": "The job JID_501600301793 is successfully deleted.",
+            "MessageArgs": [
+                "JID_501600301793"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 48",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/47",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 47",
+            "EntryType": "Oem",
+            "Id": "47",
+            "Links": {},
+            "Message": "The job JID_501715506394 is successfully deleted.",
+            "MessageArgs": [
+                "JID_501715506394"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 47",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/46",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 46",
+            "EntryType": "Oem",
+            "Id": "46",
+            "Links": {},
+            "Message": "The job JID_505010671926 is successfully deleted.",
+            "MessageArgs": [
+                "JID_505010671926"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 46",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/45",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 45",
+            "EntryType": "Oem",
+            "Id": "45",
+            "Links": {},
+            "Message": "The job JID_508395149766 is successfully deleted.",
+            "MessageArgs": [
+                "JID_508395149766"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 45",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/44",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 44",
+            "EntryType": "Oem",
+            "Id": "44",
+            "Links": {},
+            "Message": "The job JID_508451411618 is successfully deleted.",
+            "MessageArgs": [
+                "JID_508451411618"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 44",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/43",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:06+02:00",
+            "Description": " Log Entry 43",
+            "EntryType": "Oem",
+            "Id": "43",
+            "Links": {},
+            "Message": "The job JID_511872710186 is successfully deleted.",
+            "MessageArgs": [
+                "JID_511872710186"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 43",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/42",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 42",
+            "EntryType": "Oem",
+            "Id": "42",
+            "Links": {},
+            "Message": "The job JID_511977510411 is successfully deleted.",
+            "MessageArgs": [
+                "JID_511977510411"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 42",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/41",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 41",
+            "EntryType": "Oem",
+            "Id": "41",
+            "Links": {},
+            "Message": "The job JID_512637249463 is successfully deleted.",
+            "MessageArgs": [
+                "JID_512637249463"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 41",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/40",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 40",
+            "EntryType": "Oem",
+            "Id": "40",
+            "Links": {},
+            "Message": "The job JID_513487041311 is successfully deleted.",
+            "MessageArgs": [
+                "JID_513487041311"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 40",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/39",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 39",
+            "EntryType": "Oem",
+            "Id": "39",
+            "Links": {},
+            "Message": "The job JID_538521023226 is successfully deleted.",
+            "MessageArgs": [
+                "JID_538521023226"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 39",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/38",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 38",
+            "EntryType": "Oem",
+            "Id": "38",
+            "Links": {},
+            "Message": "The job JID_541211823824 is successfully deleted.",
+            "MessageArgs": [
+                "JID_541211823824"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 38",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/37",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 37",
+            "EntryType": "Oem",
+            "Id": "37",
+            "Links": {},
+            "Message": "The job JID_547072607517 is successfully deleted.",
+            "MessageArgs": [
+                "JID_547072607517"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 37",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/36",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 36",
+            "EntryType": "Oem",
+            "Id": "36",
+            "Links": {},
+            "Message": "The job JID_549892704654 is successfully deleted.",
+            "MessageArgs": [
+                "JID_549892704654"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 36",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/35",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 35",
+            "EntryType": "Oem",
+            "Id": "35",
+            "Links": {},
+            "Message": "The job JID_555072560118 is successfully deleted.",
+            "MessageArgs": [
+                "JID_555072560118"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 35",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/34",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 34",
+            "EntryType": "Oem",
+            "Id": "34",
+            "Links": {},
+            "Message": "The job JID_555760572182 is successfully deleted.",
+            "MessageArgs": [
+                "JID_555760572182"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 34",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/33",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:05+02:00",
+            "Description": " Log Entry 33",
+            "EntryType": "Oem",
+            "Id": "33",
+            "Links": {},
+            "Message": "The job JID_555817516163 is successfully deleted.",
+            "MessageArgs": [
+                "JID_555817516163"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 33",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/32",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 32",
+            "EntryType": "Oem",
+            "Id": "32",
+            "Links": {},
+            "Message": "The job JID_562662571010 is successfully deleted.",
+            "MessageArgs": [
+                "JID_562662571010"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 32",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/31",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 31",
+            "EntryType": "Oem",
+            "Id": "31",
+            "Links": {},
+            "Message": "The job JID_596421955326 is successfully deleted.",
+            "MessageArgs": [
+                "JID_596421955326"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 31",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/30",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 30",
+            "EntryType": "Oem",
+            "Id": "30",
+            "Links": {},
+            "Message": "The job JID_596533800216 is successfully deleted.",
+            "MessageArgs": [
+                "JID_596533800216"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 30",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/29",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 29",
+            "EntryType": "Oem",
+            "Id": "29",
+            "Links": {},
+            "Message": "The job JID_597217879026 is successfully deleted.",
+            "MessageArgs": [
+                "JID_597217879026"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 29",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/28",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 28",
+            "EntryType": "Oem",
+            "Id": "28",
+            "Links": {},
+            "Message": "The job JID_597478292288 is successfully deleted.",
+            "MessageArgs": [
+                "JID_597478292288"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 28",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/27",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 27",
+            "EntryType": "Oem",
+            "Id": "27",
+            "Links": {},
+            "Message": "The job JID_598077557811 is successfully deleted.",
+            "MessageArgs": [
+                "JID_598077557811"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 27",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/26",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 26",
+            "EntryType": "Oem",
+            "Id": "26",
+            "Links": {},
+            "Message": "The job JID_616180429828 is successfully deleted.",
+            "MessageArgs": [
+                "JID_616180429828"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 26",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/25",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 25",
+            "EntryType": "Oem",
+            "Id": "25",
+            "Links": {},
+            "Message": "The job JID_631839638338 is successfully deleted.",
+            "MessageArgs": [
+                "JID_631839638338"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 25",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/24",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:04+02:00",
+            "Description": " Log Entry 24",
+            "EntryType": "Oem",
+            "Id": "24",
+            "Links": {},
+            "Message": "The job JID_635168014489 is successfully deleted.",
+            "MessageArgs": [
+                "JID_635168014489"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 24",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/23",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 23",
+            "EntryType": "Oem",
+            "Id": "23",
+            "Links": {},
+            "Message": "The job JID_635236024582 is successfully deleted.",
+            "MessageArgs": [
+                "JID_635236024582"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 23",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/22",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 22",
+            "EntryType": "Oem",
+            "Id": "22",
+            "Links": {},
+            "Message": "The job JID_639651643181 is successfully deleted.",
+            "MessageArgs": [
+                "JID_639651643181"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 22",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/21",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 21",
+            "EntryType": "Oem",
+            "Id": "21",
+            "Links": {},
+            "Message": "The job JID_640605841976 is successfully deleted.",
+            "MessageArgs": [
+                "JID_640605841976"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 21",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/20",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 20",
+            "EntryType": "Oem",
+            "Id": "20",
+            "Links": {},
+            "Message": "The job JID_643964095870 is successfully deleted.",
+            "MessageArgs": [
+                "JID_643964095870"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 20",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/19",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 19",
+            "EntryType": "Oem",
+            "Id": "19",
+            "Links": {},
+            "Message": "The job JID_656808324017 is successfully deleted.",
+            "MessageArgs": [
+                "JID_656808324017"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 19",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/18",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 18",
+            "EntryType": "Oem",
+            "Id": "18",
+            "Links": {},
+            "Message": "The job JID_657011468079 is successfully deleted.",
+            "MessageArgs": [
+                "JID_657011468079"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 18",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/17",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 17",
+            "EntryType": "Oem",
+            "Id": "17",
+            "Links": {},
+            "Message": "The job JID_662030727622 is successfully deleted.",
+            "MessageArgs": [
+                "JID_662030727622"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 17",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/16",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 16",
+            "EntryType": "Oem",
+            "Id": "16",
+            "Links": {},
+            "Message": "The job JID_663743419881 is successfully deleted.",
+            "MessageArgs": [
+                "JID_663743419881"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 16",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/15",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 15",
+            "EntryType": "Oem",
+            "Id": "15",
+            "Links": {},
+            "Message": "The job JID_670705712779 is successfully deleted.",
+            "MessageArgs": [
+                "JID_670705712779"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 15",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/14",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:03+02:00",
+            "Description": " Log Entry 14",
+            "EntryType": "Oem",
+            "Id": "14",
+            "Links": {},
+            "Message": "The job JID_671521647619 is successfully deleted.",
+            "MessageArgs": [
+                "JID_671521647619"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 14",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/13",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 13",
+            "EntryType": "Oem",
+            "Id": "13",
+            "Links": {},
+            "Message": "The job JID_671622390911 is successfully deleted.",
+            "MessageArgs": [
+                "JID_671622390911"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 13",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/12",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 12",
+            "EntryType": "Oem",
+            "Id": "12",
+            "Links": {},
+            "Message": "The job JID_671674490275 is successfully deleted.",
+            "MessageArgs": [
+                "JID_671674490275"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 12",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/11",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 11",
+            "EntryType": "Oem",
+            "Id": "11",
+            "Links": {},
+            "Message": "The job JID_674249800097 is successfully deleted.",
+            "MessageArgs": [
+                "JID_674249800097"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 11",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/10",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 10",
+            "EntryType": "Oem",
+            "Id": "10",
+            "Links": {},
+            "Message": "The job JID_674288374199 is successfully deleted.",
+            "MessageArgs": [
+                "JID_674288374199"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 10",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/9",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 9",
+            "EntryType": "Oem",
+            "Id": "9",
+            "Links": {},
+            "Message": "The job JID_675173889260 is successfully deleted.",
+            "MessageArgs": [
+                "JID_675173889260"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 9",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/8",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:20:02+02:00",
+            "Description": " Log Entry 8",
+            "EntryType": "Oem",
+            "Id": "8",
+            "Links": {},
+            "Message": "The job JID_675891470357 is successfully deleted.",
+            "MessageArgs": [
+                "JID_675891470357"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "JCP036",
+            "Name": " Log Entry 8",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/7",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:32+02:00",
+            "Description": " Log Entry 7",
+            "EntryType": "Oem",
+            "Id": "7",
+            "Links": {},
+            "Message": "System CPU Resetting.",
+            "MessageId": "SYS1003",
+            "Name": " Log Entry 7",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/6",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:24+02:00",
+            "Description": " Log Entry 6",
+            "EntryType": "Oem",
+            "Id": "6",
+            "Links": {},
+            "Message": "System is turning on.",
+            "MessageId": "SYS1000",
+            "Name": " Log Entry 6",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/5",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:22+02:00",
+            "Description": " Log Entry 5",
+            "EntryType": "Oem",
+            "Id": "5",
+            "Links": {
+                "OriginOfCondition": {
+                    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+                }
+            },
+            "Message": "Requested system powerup.",
+            "MessageId": "RAC0701",
+            "Name": " Log Entry 5",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/4",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:22+02:00",
+            "Description": " Log Entry 4",
+            "EntryType": "Oem",
+            "Id": "4",
+            "Links": {},
+            "Message": "Turning on the server to perform System Erase tasks.",
+            "MessageId": "SYS162",
+            "Name": " Log Entry 4",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/3",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:22+02:00",
+            "Description": " Log Entry 3",
+            "EntryType": "Oem",
+            "Id": "3",
+            "Links": {},
+            "Message": "Lifecycle Controller data is deleted.",
+            "MessageId": "SYS141",
+            "Name": " Log Entry 3",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/2",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:22+02:00",
+            "Description": " Log Entry 2",
+            "EntryType": "Oem",
+            "Id": "2",
+            "Links": {},
+            "Message": "Starting System Erase operation. Job ID: JID_676786819687",
+            "MessageArgs": [
+                "JID_676786819687"
+            ],
+            "MessageArgs@odata.count": 1,
+            "MessageId": "SYS150",
+            "Name": " Log Entry 2",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        },
+        {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/1",
+            "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+            "Created": "2019-09-05T12:18:22+02:00",
+            "Description": " Log Entry 1",
+            "EntryType": "Oem",
+            "Id": "1",
+            "Links": {},
+            "Message": "The Lifecycle Controller logs are cleared.",
+            "MessageId": "SYS160",
+            "Name": " Log Entry 1",
+            "OemRecordFormat": "Dell",
+            "Severity": "OK"
+        }
+    ],
+    "Members@odata.count": 80,
+    "Members@odata.nextLink": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog?$skip=50",
+    "Name": "Log Entry Collection"
+}

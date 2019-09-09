@@ -1,0 +1,151 @@
+{
+    "$ref": "#/definitions/DellNIC",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "DellNIC": {
+            "additionalProperties": false,
+            "description": "An instance of DellNIC will have NIC device specific data.",
+            "longDescription": "An instance of DellNIC will have NIC device specific data.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "BusNumber": {
+                    "description": "The bus number where this PCI device resides.",
+                    "longDescription": "The bus number where this PCI device resides.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "FamilyVersion": {
+                    "description": "Represents family version of firmware.",
+                    "longDescription": "Represents family version of firmware.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "MediaType": {
+                    "description": "The property shall represent the drive media type.",
+                    "longDescription": "The property shall represent the drive media type.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "NicMode": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/NicMode"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Represents if network interface card personality is enabled or disabled on current partition in a Converged Network Adaptor device.",
+                    "longDescription": "Represents if network interface card personality is enabled or disabled on current partition in a Converged Network Adaptor device.",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "PermanentFCOEMACAddress": {
+                    "description": "PermanentFCOEMACAddress defines the network address that is hardcoded into a port for FCoE.",
+                    "longDescription": "PermanentFCOEMACAddress defines the network address that is hardcoded into a port for FCoE.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "PermanentiSCSIMACAddress": {
+                    "description": "PermanentAddress defines the network address that is hardcoded into a port for iSCSI. This 'hardcoded' address can be changed using a firmware upgrade or a software configuration. When this change is made, the field should be updated at the same time. PermanentAddress should be left blank if no 'hardcoded' address exists for the NetworkAdapter.",
+                    "longDescription": "PermanentAddress defines the network address that is hardcoded into a port for iSCSI. This 'hardcoded' address can be changed using a firmware upgrade or a software configuration. When this change is made, the field should be updated at the same time. PermanentAddress should be left blank if no 'hardcoded' address exists for the NetworkAdapter.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ProductName": {
+                    "description": "A string containing the product name.",
+                    "longDescription": "A string containing the product name.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "NicMode": {
+            "enum": [
+                "Disabled",
+                "Enabled",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "Unknown": "Unknown"
+            },
+            "enumLongDescriptions": {
+                "Disabled": "Disabled",
+                "Enabled": "Enabled",
+                "Unknown": "Unknown"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellNIC.v1_0_0.DellNIC"
+}

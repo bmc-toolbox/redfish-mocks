@@ -1,0 +1,363 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#NetworkPort.v1_2_0.NetworkPort",
+    "type": "object",
+    "etag": true,
+    "additionalProperties": false,
+    "definitions": {
+        "FlowControl": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "None",
+                "TX",
+                "RX",
+                "TX_RX"
+            ],
+            "enumDescriptions": {
+                "None": "No IEEE 802.3x flow control is enabled on this port.",
+                "TX": "IEEE 802.3x flow control may be initiated by this station.",
+                "RX": "IEEE 802.3x flow control may be initiated by the link partner.",
+                "TX_RX": "IEEE 802.3x flow control may be initiated by this station or the link partner."
+            },
+            "description": "Ethernet flow control configuration values."
+        },
+        "dLinkNetworkTechnology": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "Ethernet",
+                "InfiniBand",
+                "FibreChannel"
+            ],
+            "enumDescriptions": {
+                "Ethernet": "The port is capable of connecting to an Ethernet network.",
+                "InfiniBand": "The port is capable of connecting to an InfiniBand network.",
+                "FibreChannel": "The port is capable of connecting to a Fibre Channel network."
+            },
+            "description": "Physical link technology values."
+        },
+        "dLinkStatus": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "Down",
+                "Up"
+            ],
+            "enumDescriptions": {
+                "Down": "The port is enabled but link is down.",
+                "Up": "The port is enabled and link is good (up)."
+            },
+            "description": "Physical link status values."
+        },
+        "dNetDevFuncMaxBWAlloc": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": false,
+            "properties": {
+                "MaxBWAllocPercent": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": false,
+                    "description": "The maximum bandwidth allocation percentage allocated to the associated network device function."
+                },
+                "NetworkDeviceFunction": {
+                    "readonly": true,
+                    "type": "object",
+                    "etag": true,
+                    "properties": {
+                        "@odata.id": {
+                            "etag": true,
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "description": "A reference to the associated network device function that this maximum bandwidth percentage allocation applies to."
+                }
+            }
+        },
+        "dNetDevFuncMinBWAlloc": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": false,
+            "properties": {
+                "MinBWAllocPercent": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": false,
+                    "description": "The minimum bandwidth allocation percentage allocated to the associated network device function instance. The sum total of all minimum percentages shall not exceed 100."
+                },
+                "NetworkDeviceFunction": {
+                    "readonly": true,
+                    "type": "object",
+                    "etag": true,
+                    "properties": {
+                        "@odata.id": {
+                            "etag": true,
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "description": "A reference to the associated network device function that this minimum bandwidth percentage allocation applies to."
+                }
+            }
+        },
+        "dSupportedEthernetCapabilities": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "enum": [
+                null,
+                "WakeOnLAN",
+                "EEE"
+            ],
+            "enumDescriptions": {
+                "WakeOnLAN": "Wake on LAN (WoL) is supported on this port.",
+                "EEE": "IEEE 802.3az Energy Efficient Ethernet (EEE) is supported on this port."
+            },
+            "description": "Supported Ethernet capability values."
+        },
+        "dSupportedLinkCapabilities": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "LinkNetworkTechnology": {
+                    "$ref": "#/definitions/dLinkNetworkTechnology",
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The physical link network technology capability of this port."
+                },
+                "CapableLinkSpeedMbps": {
+                    "etag": true,
+                    "readonly": true,
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "description": "The value of this property shall be all of the possible network link speed capabilities of this port."
+                },
+                "LinkSpeedMbps": {
+                    "deprecated": "This property has been Deprecated in favor of the CapableLinkSpeedMbps collection found in NetworkPort.v1_2_0.",
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The speed of the link in Mbps when this link network technology is active."
+                }
+            }
+        }
+    },
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "Oem": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "readonly": false,
+            "properties": {
+                "Hpe": {
+                    "$ref": "HpeNetworkPort.json#",
+                    "readonly": false
+                }
+            },
+            "description": "HPE specific extentions for NetworkAdapter."
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Status": {
+            "$ref": "Resource.json#/definitions/Status"
+        },
+        "Settings": {
+            "$ref": "Resource.json#/definitions/Settings"
+        },
+        "PhysicalPortNumber": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The physical port number on the network adapter hardware that this Network Port corresponds to.  This value should match a value visible on the hardware.  When HostPortEnabled and ManagementPortEnabled are both \"false\", the port shall not establish physical link."
+        },
+        "LinkStatus": {
+            "$ref": "#/definitions/dLinkStatus",
+            "etag": true,
+            "readonly": true,
+            "description": "The status of the link between this port and its link partner."
+        },
+        "SupportedLinkCapabilities": {
+            "type": "array",
+            "etag": true,
+            "items": {
+                "$ref": "#/definitions/dSupportedLinkCapabilities"
+            },
+            "description": "The supported physical capabilities of this port, irrespective of transient conditions such as cabling, interface module presence, or remote link parter status or configuration."
+        },
+        "ActiveLinkTechnology": {
+            "$ref": "#/definitions/dLinkNetworkTechnology",
+            "etag": true,
+            "readonly": false,
+            "description": "The configured link technology of this port."
+        },
+        "CurrentLinkSpeedMbps": {
+            "etag": true,
+            "description": "Network Port Current Link Speed.",
+            "longDescription": "The value of this property shall be the current configured link speed of this port.",
+            "readonly": false,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "SupportedEthernetCapabilities": {
+            "type": "array",
+            "etag": true,
+            "items": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "etag": true,
+                "enum": [
+                    null,
+                    "WakeOnLAN",
+                    "EEE"
+                ],
+                "enumDescriptions": {
+                    "WakeOnLAN": "Wake on LAN (WoL) is supported on this port.",
+                    "EEE": "IEEE 802.3az Energy Efficient Ethernet (EEE) is supported on this port."
+                }
+            },
+            "readonly": true,
+            "description": "The set of Ethernet capabilities that this port supports."
+        },
+        "NetDevFuncMinBWAlloc": {
+            "type": "array",
+            "etag": true,
+            "readonly": false,
+            "items": {
+                "$ref": "#/definitions/dNetDevFuncMinBWAlloc"
+            },
+            "description": "The array of minimum bandwidth allocation percentages for the network device functions associated with this port."
+        },
+        "NetDevFuncMaxBWAlloc": {
+            "type": "array",
+            "etag": true,
+            "readonly": false,
+            "items": {
+                "$ref": "#/definitions/dNetDevFuncMaxBWAlloc"
+            },
+            "description": "The array of maximum bandwidth allocation percentages for the network device functions associated with this port."
+        },
+        "AssociatedNetworkAddresses": {
+            "type": "array",
+            "etag": true,
+            "items": {
+                "type": [
+                    "string",
+                    "null"
+                ]
+            },
+            "readonly": true,
+            "description": "The array of configured network addresses (MAC or WWN) that are associated with this Network Port, including the programmed address of the lowest numbered Network Device Function, the configured but not active address if applicable, the address for hardware port teaming, or other network addresses."
+        },
+        "EEEEnabled": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "etag": true,
+            "readonly": false,
+            "description": "Indicates whether IEEE 802.3az Energy Efficient Ethernet (EEE) is enabled for this network port."
+        },
+        "WakeOnLANEnabled": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "etag": true,
+            "readonly": false,
+            "description": "Indicates whether Wake on LAN (WoL) is enabled for this network port."
+        },
+        "PortMaximumMTU": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The largest maximum transmission unit (MTU) that can be configured for this network port."
+        },
+        "FlowControlStatus": {
+            "$ref": "#/definitions/FlowControl",
+            "etag": true,
+            "readonly": true,
+            "description": "The 802.3x flow control behavior negotiated with the link partner for this network port (Ethernet-only)."
+        },
+        "FlowControlConfiguration": {
+            "$ref": "#/definitions/FlowControl",
+            "etag": true,
+            "readonly": false,
+            "description": "The locally configured 802.3x flow control setting for this network port."
+        },
+        "SignalDetected": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "longDescription": "Indicates whether the port has detected enough signal, on enough lanes to establish link."
+        }
+    },
+    "required": [
+        "@odata.id",
+        "@odata.type",
+        "Id",
+        "Name"
+    ],
+    "description": "A Network Port represents a discrete physical port capable of connecting to a network.",
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2018 Distributed Management Task Force. All rights reserved."
+}

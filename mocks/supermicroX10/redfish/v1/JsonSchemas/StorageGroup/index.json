@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/StorageGroup",
+    "Id": "StorageGroup",
+    "Name": "StorageGroup Schema File",
+    "Description": "StorageGroup Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "StorageGroup",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/StorageGroup.json"
+        }
+    ],
+    "Oem": {}
+}

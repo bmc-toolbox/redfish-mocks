@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Privileges.v1_0_4",
+    "Id": "Privileges.v1_0_4",
+    "Name": "Privileges Schema File",
+    "Description": "Privileges Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Privileges.v1_0_4",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Privileges.v1_0_4.json"
+        }
+    ],
+    "Oem": {}
+}

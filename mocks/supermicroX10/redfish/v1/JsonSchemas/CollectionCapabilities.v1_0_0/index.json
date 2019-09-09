@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/CollectionCapabilities.v1_0_0",
+    "Id": "CollectionCapabilities.v1_0_0",
+    "Name": "CollectionCapabilities Schema File",
+    "Description": "CollectionCapabilities Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "CollectionCapabilities.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/CollectionCapabilities.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,134 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "description": "This resource shall be used to represent a destination for events that have been subscribed to by a client.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "RequestedMaxEventsToQueueDefault": {
+            "description": "This represents the default number of events the service should queue.",
+            "minimum": 0,
+            "readonly": true,
+            "type": "integer"
+        },
+        "RetireOldEventInMinutesDefault": {
+            "description": "This represents the default number of minutes until an event is expired.",
+            "minimum": 1,
+            "readonly": true,
+            "type": "integer"
+        },
+        "TTLCountDefault": {
+            "description": "The default number of TTLUnits until this listener destination subscription expires.  It may be renewed prior to expire to reset the Time to Live counter.  The value 999999 is reserved to mean a perpetual subscription.",
+            "maximum": 999999,
+            "minimum": 0,
+            "readonly": true,
+            "type": "integer"
+        },
+        "TTLUnitsDefault": {
+            "description": "The default time unit used to measure the subscription time of this listener destination.  This is the units for TTLCount and is used to express the subscription lifetime of the listener destination.",
+            "enum": [
+                "seconds",
+                "minutes",
+                "days"
+            ],
+            "enumDescriptions": {
+                "days": "Time to Live (TTL) in Days",
+                "minutes": "Time to Live (TTL) in Minutes",
+                "seconds": "Time to Live (TTL) in Seconds"
+            },
+            "readonly": true,
+            "type": "string"
+        },
+        "CACertificates": {
+            "description": "The value of this property shall be a reference to a Collection of HpeCertificate resources.",
+            "readonly": true,
+            "etag": false,
+            "type": "object",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            }
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeEventService.ImportCACertificate": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "Certificate@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "readonly": "false",
+                                "format": "text",
+                                "description": "Contains PEM formatted X509 certificate (Base64 encoded).",
+                                "etag": true
+                            },
+                            "etag": true,
+                            "type": "array",
+                            "description": "The supported values for the Certificate parameter.",
+                            "longDescription": "The supported values for the Certificate parameter."
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "actions": {
+        "description": "Importing CA certificates for mutual authentication.",
+        "actions": {
+            "HpeEventService.ImportCACertificate": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Imports a Trusted CA Certificate",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "HpeEventService.ImportCACertificate"
+                        ]
+                    },
+                    "Certificate": {
+                        "type": "string",
+                        "readonly": "false",
+                        "format": "text",
+                        "description": "Contains PEM formatted X509 certificate or PKCS7 certificate chain (Base64 encoded).",
+                        "etag": true
+                    }
+                },
+                "required": [
+                    "Action",
+                    "Certificate"
+                ]
+            }
+        }
+    },
+    "readonly": true,
+    "title": "#HpeEventService.v2_1_0.HpeEventService",
+    "type": "object"
+}

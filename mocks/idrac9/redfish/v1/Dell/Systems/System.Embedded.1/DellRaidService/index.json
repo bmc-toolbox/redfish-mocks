@@ -1,0 +1,144 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellRaidService.DellRaidService",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService",
+    "@odata.type": "#DellRaidService.v1_0_0.DellRaidService",
+    "Actions": {
+        "#DellRaidService.AssignSpare": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.AssignSpare"
+        },
+        "#DellRaidService.BlinkTarget": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.BlinkTarget"
+        },
+        "#DellRaidService.CheckVDValues": {
+            "VDPropNameArrayIn@Redfish.AllowableValues": [
+                "RAIDLevel",
+                "Size",
+                "SpanDepth",
+                "SpanLength",
+                "StartingLBA",
+                "T10PIStatus"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.CheckVDValues"
+        },
+        "#DellRaidService.ClearForeignConfig": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.ClearForeignConfig"
+        },
+        "#DellRaidService.ConvertToNonRAID": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.ConvertToNonRAID"
+        },
+        "#DellRaidService.ConvertToRAID": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.ConvertToRAID"
+        },
+        "#DellRaidService.EnableControllerEncryption": {
+            "Mode@Redfish.AllowableValues": [
+                "DKM",
+                "LKM"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.EnableControllerEncryption"
+        },
+        "#DellRaidService.GetAvailableDisks": {
+            "BlockSizeInBytes@Redfish.AllowableValues": [
+                "4096",
+                "512",
+                "All"
+            ],
+            "DiskEncrypt@Redfish.AllowableValues": [
+                "All",
+                "FDE",
+                "NonFDE"
+            ],
+            "DiskType@Redfish.AllowableValues": [
+                "All",
+                "HDD",
+                "SSD"
+            ],
+            "Diskprotocol@Redfish.AllowableValues": [
+                "AllProtocols",
+                "NVMe",
+                "SAS",
+                "SATA"
+            ],
+            "FormFactor@Redfish.AllowableValues": [
+                "All",
+                "M.2"
+            ],
+            "RaidLevel@Redfish.AllowableValues": [
+                "NoRAID",
+                "RAID0",
+                "RAID1",
+                "RAID10",
+                "RAID5",
+                "RAID50",
+                "RAID6",
+                "RAID60"
+            ],
+            "T10PIStatus@Redfish.AllowableValues": [
+                "All",
+                "T10PICapable",
+                "T10PIIncapable"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.GetAvailableDisks"
+        },
+        "#DellRaidService.GetDHSDisks": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.GetDHSDisks"
+        },
+        "#DellRaidService.GetRAIDLevels": {
+            "BlockSizeInBytes@Redfish.AllowableValues": [
+                "4096",
+                "512",
+                "All"
+            ],
+            "DiskEncrypt@Redfish.AllowableValues": [
+                "All",
+                "FDE",
+                "NonFDE"
+            ],
+            "DiskType@Redfish.AllowableValues": [
+                "All",
+                "HDD",
+                "SSD"
+            ],
+            "Diskprotocol@Redfish.AllowableValues": [
+                "AllProtocols",
+                "NVMe",
+                "SAS",
+                "SATA"
+            ],
+            "FormFactor@Redfish.AllowableValues": [
+                "All",
+                "M.2"
+            ],
+            "T10PIStatus@Redfish.AllowableValues": [
+                "All",
+                "T10PICapable",
+                "T10PIIncapable"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.GetRAIDLevels"
+        },
+        "#DellRaidService.LockVirtualDisk": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.LockVirtualDisk"
+        },
+        "#DellRaidService.ReKey": {
+            "Mode@Redfish.AllowableValues": [
+                "DKM",
+                "LKM"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.ReKey"
+        },
+        "#DellRaidService.RemoveControllerKey": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.RemoveControllerKey"
+        },
+        "#DellRaidService.ResetConfig": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.ResetConfig"
+        },
+        "#DellRaidService.SetControllerKey": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.SetControllerKey"
+        },
+        "#DellRaidService.UnBlinkTarget": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService/Actions/DellRaidService.UnBlinkTarget"
+        }
+    },
+    "Description": "The DellRaidService resource provides some actions to support RAID functionality.",
+    "Id": "DellRaidService",
+    "Name": "DellRaidService"
+}

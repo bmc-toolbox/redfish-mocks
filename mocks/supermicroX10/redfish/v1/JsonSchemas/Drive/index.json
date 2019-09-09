@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Drive",
+    "Id": "Drive",
+    "Name": "Drive Schema File",
+    "Description": "Drive Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Drive",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Drive.json"
+        }
+    ],
+    "Oem": {}
+}

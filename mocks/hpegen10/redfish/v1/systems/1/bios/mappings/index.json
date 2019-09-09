@@ -1,0 +1,166 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeBiosMapping.HpeBiosMapping",
+    "@odata.etag": "W/\"D9E5610349B0BEBEBE1FBEB9D54CB629\"",
+    "@odata.id": "/redfish/v1/systems/1/bios/mappings/",
+    "@odata.type": "#HpeBiosMapping.v2_0_0.HpeBiosMapping",
+    "BiosPciSettingsMappings": [
+        {
+            "Associations": [
+                "EmbSata1Aspm",
+                "EmbSata1PCIeOptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x0)/Pci(0x17,0x0)",
+            "Instance": 1,
+            "Subinstances": []
+        },
+        {
+            "Associations": [
+                "EmbSata2Aspm",
+                "EmbSata2PCIeOptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x0)/Pci(0x11,0x5)",
+            "Instance": 2,
+            "Subinstances": []
+        },
+        {
+            "Associations": [
+                "PciSlot3LinkSpeed",
+                "PciSlot3OptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x1)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "Instance": 3,
+            "Subinstances": []
+        },
+        {
+            "Associations": [
+                "FlexLom1Enable",
+                "FlexLom1LinkSpeed",
+                "FlexLom1Aspm",
+                "FlexLom1PCIeOptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "Instance": 4,
+            "Subinstances": [
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port7"
+                        },
+                        "NicBoot7"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x6)",
+                    "Subinstance": 7
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port3"
+                        },
+                        "NicBoot3"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x2)",
+                    "Subinstance": 3
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port4"
+                        },
+                        "NicBoot4"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x3)",
+                    "Subinstance": 4
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port5"
+                        },
+                        "NicBoot5"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x4)",
+                    "Subinstance": 5
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port6"
+                        },
+                        "NicBoot6"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x5)",
+                    "Subinstance": 6
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port8"
+                        },
+                        "NicBoot8"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x7)",
+                    "Subinstance": 8
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port1"
+                        },
+                        "NicBoot1"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+                    "Subinstance": 1
+                },
+                {
+                    "Associations": [
+                        {
+                            "PreBootNetwork": "FlexLom1Port2"
+                        },
+                        "NicBoot2"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x1)",
+                    "Subinstance": 2
+                }
+            ]
+        },
+        {
+            "Associations": [
+                "EmbSas1Enable",
+                "EmbSas1LinkSpeed",
+                "EmbSas1Aspm",
+                "EmbSas1PcieOptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x2,0x0)/Pci(0x0,0x0)",
+            "Instance": 5,
+            "Subinstances": [
+                {
+                    "Associations": [
+                        "EmbSas1Boot"
+                    ],
+                    "CorrelatableID": "PciRoot(0x2)/Pci(0x2,0x0)/Pci(0x0,0x0)",
+                    "Subinstance": 1
+                }
+            ]
+        },
+        {
+            "Associations": [
+                "PciSlot1LinkSpeed",
+                "PciSlot1OptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x3)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "Instance": 6,
+            "Subinstances": []
+        },
+        {
+            "Associations": [
+                "PciSlot2LinkSpeed",
+                "PciSlot2OptionROM"
+            ],
+            "CorrelatableID": "PciRoot(0x9)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "Instance": 7,
+            "Subinstances": []
+        }
+    ],
+    "Id": "mappings",
+    "Name": "BIOS mappings"
+}

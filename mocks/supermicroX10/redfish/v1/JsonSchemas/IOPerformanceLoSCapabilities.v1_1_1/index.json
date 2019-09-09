@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IOPerformanceLoSCapabilities.v1_1_1",
+    "Id": "IOPerformanceLoSCapabilities.v1_1_1",
+    "Name": "IOPerformanceLoSCapabilities Schema File",
+    "Description": "IOPerformanceLoSCapabilities Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IOPerformanceLoSCapabilities.v1_1_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IOPerformanceLoSCapabilities.v1_1_1.json"
+        }
+    ],
+    "Oem": {}
+}

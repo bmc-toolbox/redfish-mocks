@@ -1,0 +1,62 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Protocol",
+    "definitions": {
+        "Protocol": {
+            "type": "string",
+            "enum": [
+                "PCIe",
+                "AHCI",
+                "UHCI",
+                "SAS",
+                "SATA",
+                "USB",
+                "NVMe",
+                "FC",
+                "iSCSI",
+                "FCoE",
+                "FCP",
+                "FICON",
+                "NVMeOverFabrics",
+                "SMB",
+                "NFSv3",
+                "NFSv4",
+                "HTTP",
+                "HTTPS",
+                "FTP",
+                "SFTP",
+                "iWARP",
+                "RoCE",
+                "RoCEv2",
+                "OEM"
+            ],
+            "enumDescriptions": {
+                "PCIe": "PCI Express (Vendor Proprietary).",
+                "AHCI": "Advanced Host Controller Interface.",
+                "UHCI": "Universal Host Controller Interface.",
+                "SAS": "Serial Attached SCSI.",
+                "SATA": "Serial AT Attachment.",
+                "USB": "Universal Serial Bus.",
+                "NVMe": "Non-Volatile Memory Express.",
+                "FC": "Fibre Channel.",
+                "iSCSI": "Internet SCSI.",
+                "FCoE": "Fibre Channel over Ethernet.",
+                "FCP": "Fibre Channel Protocol for SCSI.",
+                "FICON": "FIbre CONnection (FICON).",
+                "NVMeOverFabrics": "NVMe over Fabrics.",
+                "SMB": "Server Message Block (aka CIFS Common Internet File System).",
+                "NFSv3": "Network File System version 3.",
+                "NFSv4": "Network File System version 4.",
+                "HTTP": "Hypertext Transport Protocol.",
+                "HTTPS": "Secure Hypertext Transport Protocol.",
+                "FTP": "File Transfer Protocol.",
+                "SFTP": "Secure File Transfer Protocol.",
+                "iWARP": "Internet Wide Area Remote Direct Memory Access Protocol.",
+                "RoCE": "RDMA over Converged Ethernet Protocol.",
+                "RoCEv2": "RDMA over Converged Ethernet Protocol Version 2.",
+                "OEM": "OEM specific."
+            }
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

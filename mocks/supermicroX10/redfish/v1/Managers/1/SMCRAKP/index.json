@@ -1,0 +1,7 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SMCRAKP.SMCRAKP",
+    "@odata.type": "#SMCRAKP.SMCRAKP",
+    "@odata.id": "/redfish/v1/Managers/1/SMCRAKP",
+    "Name": "SMCRAKP",
+    "Mode": "Disabled"
+}

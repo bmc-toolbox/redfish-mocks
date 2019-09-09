@@ -1,0 +1,173 @@
+{
+    "@odata.type": "#SUTSystemInventory.v2_2_0.SUTSystemInventory",
+    "copyright": "(C)Copyright 2017 Hewlett Packard Enterprise Development LP",
+    "title": "#SUTSystemInventory.v2_2_0.SUTSystemInventory",
+    "@odata.id": "/redfish/v1/Systems/1/sut/systeminventory",
+    "@odata.context": "/redfish/v1/$metadata#Systems/Members/1/sut/Members/$entity",
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "SoftwareComponentCount": {
+            "readonly": false,
+            "type": "integer",
+            "description": "This indicates how many, software components going to be deployed, or deployed"
+        },
+        "links": {
+            "additionalProperties": false,
+            "required": [
+                "self"
+            ],
+            "type": "object",
+            "properties": {
+                "self": {
+                    "readonly": true,
+                    "description": "link to self",
+                    "$ref": "href.2.2.0.json#"
+                }
+            }
+        },
+        "NodeStatus": {
+            "readonly": false,
+            "enum": [
+                "Success",
+                "SuccessRebootRequired",
+                "UptoDate",
+                "CancelledByUser",
+                "FailedToRunComponent",
+                "UpdateReturnedError",
+                "ReadyToDeploy"
+            ],
+            "type": "string",
+            "description": "This indicates the state of the node after the deployment."
+        },
+        "ComponentInventory": {
+            "type": "array",
+            "readonly": true,
+            "Component": {
+                "additionalProperties": false,
+                "readonly": true,
+                "type": "object",
+                "properties": {
+                    "PreviousInstalledVersion": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The version installed on the server before deploy operation"
+                    },
+                    "ComponentFile": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The component file name mentioned in the bundle file(Ex: cp*.exe, CP.scexe, hp*.rpm, etc)"
+                    },
+                    "ComponentName": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The short description of the component"
+                    },
+                    "DeploymentResult": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The human readable installation return code string"
+                    },
+                    "VersionInBaseline": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The available version of the component in the baseline"
+                    },
+                    "ComponentType": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "This specifies whether type of component is software or firmware"
+                    },
+                    "RebootRequired": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "Indicates whether the component requires a reboot for the software/firmware to take effect"
+                    },
+                    "InstalledVersion": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The version installed on the server after deploy operation"
+                    }
+                }
+            }
+        },
+        "FailedDependencyComponents": {
+            "component": {
+                "additionalProperties": false,
+                "readonly": true,
+                "type": "object",
+                "properties": {
+                    "ReasonForFailedDependency": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "Indicates the reason for the depndency failure for this component"
+                    },
+                    "ComponentFile": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The component file name mentioned in the bundle file(Ex: cp*.exe, CP.scexe, hp*.rpm, etc)"
+                    },
+                    "ComponentName": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The short description of the component"
+                    },
+                    "InstalledVersion": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The version installed on the server"
+                    },
+                    "VersionInBaseline": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "The available version of the component in the baseline"
+                    },
+                    "ComponentType": {
+                        "readonly": true,
+                        "type": "string",
+                        "description": "This specifies whether type of component is software or firmware"
+                    }
+                }
+            },
+            "readonly": true,
+            "type": "array"
+        },
+        "IsInstallerSuccess": {
+            "readonly": false,
+            "type": "boolean",
+            "description": "This indicates whether deploy succeeded or failed"
+        },
+        "ComponentCount": {
+            "readonly": false,
+            "type": "integer",
+            "description": "This indicates how many components are going to be deployed"
+        },
+        "@odata.id": {
+            "readonly": true,
+            "description": "link to self",
+            "$ref": "href.json#"
+        },
+        "RebootRequiredAfterDeploy": {
+            "readonly": false,
+            "type": "boolean",
+            "description": "This indicates whether reboot is required after deploy operation"
+        },
+        "FirmwareComponentCount": {
+            "readonly": false,
+            "type": "integer",
+            "description": "This indicates how many, firmware components going to be deployed, or deployed"
+        },
+        "@odata.context": "/redfish/v1/$metadata#Systems/Members/1/hpsut/Members/$entity",
+        "HasOmittedComponents": {
+            "readonly": false,
+            "type": "boolean",
+            "description": "This indicates whether any of components is omitted or going to be omitted from deployment"
+        },
+        "HasFailedDependencies": {
+            "readonly": false,
+            "type": "boolean",
+            "description": "This indicates whether any of the components has failed dependencies"
+        }
+    }
+}

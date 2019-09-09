@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2014-2016 Distributed Management Task Force, Inc. (DMTF). All rights reserved.-->
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="/redfish/v1/Schemas/AccountService_v1.xml">
+      <edmx:Include Namespace="AccountService"/>
+      <edmx:Include Namespace="AccountService.v1_0_0"/>
+	  <edmx:Include Namespace="AccountService.v1_0_2"/>
+	  <edmx:Include Namespace="AccountService.v1_0_3"/>
+	  <edmx:Include Namespace="AccountService.v1_0_4"/>
+	  <edmx:Include Namespace="AccountService.v1_0_5"/>
+	  <edmx:Include Namespace="AccountService.v1_1_0"/>
+	  <edmx:Include Namespace="AccountService.v1_1_1"/>
+	  <edmx:Include Namespace="AccountService.v1_1_2"/>
+	  <edmx:Include Namespace="AccountService.v1_2_0"/>
+	  <edmx:Include Namespace="AccountService.v1_2_1"/>
+	  <edmx:Include Namespace="AccountService.v1_2_2"/>	  
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ActionInfo_v1.xml">
+      <edmx:Include Namespace="ActionInfo"/>
+      <edmx:Include Namespace="ActionInfo.v1_0_0"/>
+	  <edmx:Include Namespace="ActionInfo.v1_0_1"/>
+	  <edmx:Include Namespace="ActionInfo.v1_0_2"/>
+	  <edmx:Include Namespace="ActionInfo.v1_0_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Assembly_v1.xml">
+      <edmx:Include Namespace="Assembly"/>
+      <edmx:Include Namespace="Assembly.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/AttributeRegistry_v1.xml">
+    	<edmx:Include Namespace="AttributeRegistry"/>
+        <edmx:Include Namespace="AttributeRegistry.v1_0_0"/>
+		<edmx:Include Namespace="AttributeRegistry.v1_0_1"/>
+		<edmx:Include Namespace="AttributeRegistry.v1_0_2"/>
+        <edmx:Include Namespace="AttributeRegistry.v1_1_0"/>
+		<edmx:Include Namespace="AttributeRegistry.v1_1_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Bios_v1.xml">
+    	<edmx:Include Namespace="Bios"/>
+        <edmx:Include Namespace="Bios.v1_0_0"/>
+        <edmx:Include Namespace="Bios.v1_0_1"/>
+		<edmx:Include Namespace="Bios.v1_0_2"/>
+		<edmx:Include Namespace="Bios.v1_0_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/BootOption_v1.xml">
+        <edmx:Include Namespace="BootOption"/>
+		<edmx:Include Namespace="BootOption.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/BootOptionCollection_v1.xml">
+        <edmx:Include Namespace="BootOptionCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Chassis_v1.xml">
+      <edmx:Include Namespace="Chassis"/>
+      <edmx:Include Namespace="Chassis.v1_0_0"/>
+	  <edmx:Include Namespace="Chassis.v1_0_1"/>
+	  <edmx:Include Namespace="Chassis.v1_0_2"/>
+	  <edmx:Include Namespace="Chassis.v1_0_3"/>
+	  <edmx:Include Namespace="Chassis.v1_0_4"/>
+	  <edmx:Include Namespace="Chassis.v1_0_5"/>
+	  <edmx:Include Namespace="Chassis.v1_0_6"/>
+	  <edmx:Include Namespace="Chassis.v1_1_0"/>
+	  <edmx:Include Namespace="Chassis.v1_1_2"/>
+	  <edmx:Include Namespace="Chassis.v1_1_3"/>
+	  <edmx:Include Namespace="Chassis.v1_1_4"/>
+	  <edmx:Include Namespace="Chassis.v1_1_5"/>
+	  <edmx:Include Namespace="Chassis.v1_1_6"/>
+      <edmx:Include Namespace="Chassis.v1_2_0"/>
+	  <edmx:Include Namespace="Chassis.v1_2_1"/>
+	  <edmx:Include Namespace="Chassis.v1_2_2"/>
+	  <edmx:Include Namespace="Chassis.v1_2_3"/>
+	  <edmx:Include Namespace="Chassis.v1_2_4"/>
+	  <edmx:Include Namespace="Chassis.v1_3_0"/>
+	  <edmx:Include Namespace="Chassis.v1_3_1"/>
+	  <edmx:Include Namespace="Chassis.v1_3_2"/>
+	  <edmx:Include Namespace="Chassis.v1_3_3"/>
+	  <edmx:Include Namespace="Chassis.v1_3_4"/>
+	  <edmx:Include Namespace="Chassis.v1_4_0"/>
+	  <edmx:Include Namespace="Chassis.v1_4_1"/>
+	  <edmx:Include Namespace="Chassis.v1_4_2"/>
+	  <edmx:Include Namespace="Chassis.v1_4_3"/>
+	  <edmx:Include Namespace="Chassis.v1_5_0"/>
+	  <edmx:Include Namespace="Chassis.v1_5_1"/>
+	  <edmx:Include Namespace="Chassis.v1_5_2"/>
+	  <edmx:Include Namespace="Chassis.v1_6_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ChassisCollection_v1.xml">
+        <edmx:Include Namespace="ChassisCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ClassOfService_v1.xml">
+        <edmx:Include Namespace="ClassOfService"/>
+		<edmx:Include Namespace="ClassOfService.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ClassOfServiceCollection_v1.xml">
+        <edmx:Include Namespace="ClassOfServiceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/CollectionCapabilities_v1.xml">
+        <edmx:Include Namespace="CollectionCapabilities"/>
+		<edmx:Include Namespace="CollectionCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/CompositionService_v1.xml">
+        <edmx:Include Namespace="CompositionService"/>
+		<edmx:Include Namespace="CompositionService.v1_0_0"/>
+		<edmx:Include Namespace="CompositionService.v1_0_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ComputerSystem_v1.xml">
+        <edmx:Include Namespace="ComputerSystem"/>
+        <edmx:Include Namespace="ComputerSystem.v1_0_0"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_1"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_2"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_3"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_4"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_5"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_6"/>
+		<edmx:Include Namespace="ComputerSystem.v1_0_7"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_0"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_1"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_2"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_3"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_4"/>
+		<edmx:Include Namespace="ComputerSystem.v1_1_5"/>
+		<edmx:Include Namespace="ComputerSystem.v1_2_0"/>
+		<edmx:Include Namespace="ComputerSystem.v1_2_1"/>
+		<edmx:Include Namespace="ComputerSystem.v1_2_2"/>
+		<edmx:Include Namespace="ComputerSystem.v1_2_3"/>
+		<edmx:Include Namespace="ComputerSystem.v1_2_4"/>
+		<edmx:Include Namespace="ComputerSystem.v1_3_0"/>
+		<edmx:Include Namespace="ComputerSystem.v1_3_1"/>
+		<edmx:Include Namespace="ComputerSystem.v1_3_2"/>
+		<edmx:Include Namespace="ComputerSystem.v1_3_3"/>
+		<edmx:Include Namespace="ComputerSystem.v1_4_0"/>
+		<edmx:Include Namespace="ComputerSystem.v1_4_1"/>
+		<edmx:Include Namespace="ComputerSystem.v1_4_2"/>
+		<edmx:Include Namespace="ComputerSystem.v1_5_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/ComputerSystemCollection_v1.xml">
+        <edmx:Include Namespace="ComputerSystemCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DataProtectionLoSCapabilities_v1.xml">
+        <edmx:Include Namespace="DataProtectionLoSCapabilities"/>
+		<edmx:Include Namespace="DataProtectionLoSCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DataSecurityLoSCapabilities_v1.xml">
+        <edmx:Include Namespace="DataSecurityLoSCapabilities"/>
+		<edmx:Include Namespace="DataSecurityLoSCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DataStorageLoSCapabilities_v1.xml">
+        <edmx:Include Namespace="DataStorageLoSCapabilities"/>
+		<edmx:Include Namespace="DataStorageLoSCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellAttributes_v1.xml">
+		<edmx:Include Namespace="DellAttributes"/>
+        <edmx:Include Namespace="DellAttributes.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellAttributeRegistry_v1.xml">
+                <edmx:Include Namespace="DellAttributeRegistry"/>
+		<edmx:Include Namespace="DellAttributeRegistry.v1_0_0"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellBootSources_v1.xml">
+		<edmx:Include Namespace="DellBootSources"/>
+        <edmx:Include Namespace="DellBootSources.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellBootSourcesRegistry_v1.xml">
+		<edmx:Include Namespace="DellBootSourcesRegistry"/>
+        <edmx:Include Namespace="DellBootSourcesRegistry.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellCertificate_v1.xml">
+		<edmx:Include Namespace="DellCertificate"/>
+        <edmx:Include Namespace="DellCertificate.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellCertificateCollection_v1.xml">
+		<edmx:Include Namespace="DellCertificateCollection"/>
+    </edmx:Reference>	
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellCertificateStoreCollection_v1.xml">
+		<edmx:Include Namespace="DellCertificateStoreCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellComputerSystem_v1.xml">
+		<edmx:Include Namespace="DellComputerSystem"/>
+        <edmx:Include Namespace="DellComputerSystem.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellJobCollection_v1.xml">
+		<edmx:Include Namespace="DellJobCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellJob_v1.xml">
+		<edmx:Include Namespace="DellJob"/>
+        <edmx:Include Namespace="DellJob.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellManager_v1.xml">
+		<edmx:Include Namespace="DellManager"/>
+        <edmx:Include Namespace="DellManager.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellSecureBoot_v1.xml">
+		<edmx:Include Namespace="DellSecureBoot"/>
+        <edmx:Include Namespace="DellSecureBoot.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellServiceRoot_v1.xml">
+		<edmx:Include Namespace="DellServiceRoot"/>
+        <edmx:Include Namespace="DellServiceRoot.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DellUpdateService_v1.xml">
+		<edmx:Include Namespace="DellUpdateService"/>
+        <edmx:Include Namespace="DellUpdateService.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Drive_v1.xml">
+        <edmx:Include Namespace="Drive"/>
+        <edmx:Include Namespace="Drive.v1_0_0"/>
+		<edmx:Include Namespace="Drive.v1_0_1"/>
+		<edmx:Include Namespace="Drive.v1_0_2"/>
+		<edmx:Include Namespace="Drive.v1_0_3"/>
+		<edmx:Include Namespace="Drive.v1_0_4"/>
+		<edmx:Include Namespace="Drive.v1_1_0"/>
+		<edmx:Include Namespace="Drive.v1_1_1"/>
+		<edmx:Include Namespace="Drive.v1_1_2"/>
+		<edmx:Include Namespace="Drive.v1_1_3"/>
+		<edmx:Include Namespace="Drive.v1_2_0"/>
+		<edmx:Include Namespace="Drive.v1_2_1"/>
+		<edmx:Include Namespace="Drive.v1_3_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/DriveCollection_v1.xml">
+        <edmx:Include Namespace="DriveCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Endpoint_v1.xml">
+        <edmx:Include Namespace="Endpoint"/>
+		<edmx:Include Namespace="Endpoint.v1_0_0"/>
+		<edmx:Include Namespace="Endpoint.v1_0_1"/>
+		<edmx:Include Namespace="Endpoint.v1_0_2"/>
+		<edmx:Include Namespace="Endpoint.v1_0_3"/>
+		<edmx:Include Namespace="Endpoint.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/EndpointCollection_v1.xml">
+        <edmx:Include Namespace="EndpointCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/EndpointGroup_v1.xml">
+        <edmx:Include Namespace="EndpointGroup"/>
+		<edmx:Include Namespace="EndpointGroup.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/EndpointGroupCollection_v1.xml">
+        <edmx:Include Namespace="EndpointGroupCollection"/>
+    </edmx:Reference>
+	 <edmx:Reference Uri="/redfish/v1/Schemas/EthernetInterface_v1.xml">
+        <edmx:Include Namespace="EthernetInterface"/>
+        <edmx:Include Namespace="EthernetInterface.v1_0_0"/>
+		<edmx:Include Namespace="EthernetInterface.v1_0_2"/>
+		<edmx:Include Namespace="EthernetInterface.v1_0_3"/>
+		<edmx:Include Namespace="EthernetInterface.v1_0_4"/>
+		<edmx:Include Namespace="EthernetInterface.v1_0_5"/>
+		<edmx:Include Namespace="EthernetInterface.v1_1_0"/>
+		<edmx:Include Namespace="EthernetInterface.v1_1_1"/>
+		<edmx:Include Namespace="EthernetInterface.v1_1_2"/>
+		<edmx:Include Namespace="EthernetInterface.v1_1_3"/>
+		<edmx:Include Namespace="EthernetInterface.v1_2_0"/>
+		<edmx:Include Namespace="EthernetInterface.v1_2_1"/>
+		<edmx:Include Namespace="EthernetInterface.v1_2_2"/>
+		<edmx:Include Namespace="EthernetInterface.v1_3_0"/>
+		<edmx:Include Namespace="EthernetInterface.v1_3_1"/>
+		<edmx:Include Namespace="EthernetInterface.v1_4_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/EthernetInterfaceCollection_v1.xml">
+        <edmx:Include Namespace="EthernetInterfaceCollection"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Event_v1.xml">
+        <edmx:Include Namespace="Event"/>
+        <edmx:Include Namespace="Event.v1_0_0"/>
+		<edmx:Include Namespace="Event.v1_0_2"/>
+		<edmx:Include Namespace="Event.v1_0_3"/>
+		<edmx:Include Namespace="Event.v1_0_4"/>
+		<edmx:Include Namespace="Event.v1_0_5"/>
+		<edmx:Include Namespace="Event.v1_0_6"/>
+		<edmx:Include Namespace="Event.v1_1_0"/>
+		<edmx:Include Namespace="Event.v1_1_1"/>
+		<edmx:Include Namespace="Event.v1_1_2"/>
+		<edmx:Include Namespace="Event.v1_1_3"/>
+		<edmx:Include Namespace="Event.v1_1_4"/>
+		<edmx:Include Namespace="Event.v1_2_0"/>
+		<edmx:Include Namespace="Event.v1_2_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/EventDestination_v1.xml">
+        <edmx:Include Namespace="EventDestination" />
+        <edmx:Include Namespace="EventDestination.v1_0_0"/>
+		<edmx:Include Namespace="EventDestination.v1_0_2"/>
+		<edmx:Include Namespace="EventDestination.v1_0_3"/>
+		<edmx:Include Namespace="EventDestination.v1_0_4"/>
+		<edmx:Include Namespace="EventDestination.v1_0_5"/>
+		<edmx:Include Namespace="EventDestination.v1_1_0"/>
+		<edmx:Include Namespace="EventDestination.v1_1_1"/>
+		<edmx:Include Namespace="EventDestination.v1_1_2"/>
+		<edmx:Include Namespace="EventDestination.v1_1_3"/>
+		<edmx:Include Namespace="EventDestination.v1_1_4"/>
+		<edmx:Include Namespace="EventDestination.v1_2_0"/>
+		<edmx:Include Namespace="EventDestination.v1_2_1"/>
+		<edmx:Include Namespace="EventDestination.v1_2_2"/>	
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/EventDestinationCollection_v1.xml">
+        <edmx:Include Namespace="EventDestinationCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/EventService_v1.xml">
+        <edmx:Include Namespace="EventService"/>
+        <edmx:Include Namespace="EventService.v1_0_0"/>
+		<edmx:Include Namespace="EventService.v1_0_2"/>
+		<edmx:Include Namespace="EventService.v1_0_3"/>
+		<edmx:Include Namespace="EventService.v1_0_4"/>
+		<edmx:Include Namespace="EventService.v1_0_5"/>
+		<edmx:Include Namespace="EventService.v1_0_6"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Fabric_v1.xml">
+        <edmx:Include Namespace="Fabric"/>
+        <edmx:Include Namespace="Fabric.v1_0_0"/>
+		<edmx:Include Namespace="Fabric.v1_0_1"/>
+		<edmx:Include Namespace="Fabric.v1_0_2"/>
+		<edmx:Include Namespace="Fabric.v1_0_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/FabricCollection_v1.xml">
+        <edmx:Include Namespace="FabricCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/FileShare_v1.xml">
+        <edmx:Include Namespace="FileShare"/>
+        <edmx:Include Namespace="FileShare.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/FileSystem_v1.xml">
+        <edmx:Include Namespace="FileSystem"/>
+        <edmx:Include Namespace="FileSystem.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/FileSystemCollection_v1.xml">
+        <edmx:Include Namespace="FileSystemCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/HostedStorageServices_v1.xml">
+        <edmx:Include Namespace="HostedStorageServices"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/HostInterface_v1.xml">
+        <edmx:Include Namespace="HostInterface"/>
+        <edmx:Include Namespace="HostInterface.v1_0_0"/>
+		<edmx:Include Namespace="HostInterface.v1_0_1"/>
+		<edmx:Include Namespace="HostInterface.v1_1_0"/>
+		<edmx:Include Namespace="HostInterface.v1_1_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/HostInterfaceCollection_v1.xml">
+        <edmx:Include Namespace="HostInterfaceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/IOConnectivityLoSCapabilities_v1.xml">
+        <edmx:Include Namespace="IOConnectivityLoSCapabilities"/>
+        <edmx:Include Namespace="IOConnectivityLoSCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/IOPerformanceLoSCapabilities_v1.xml">
+        <edmx:Include Namespace="IOPerformanceLoSCapabilities"/>
+        <edmx:Include Namespace="IOPerformanceLoSCapabilities.v1_0_0"/>
+    </edmx:Reference>
+	 <edmx:Reference Uri="/redfish/v1/Schemas/IPAddresses_v1.xml">
+        <edmx:Include Namespace="IPAddresses"/>
+        <edmx:Include Namespace="IPAddresses.v1_0_0"/>
+		<edmx:Include Namespace="IPAddresses.v1_0_2"/>
+		<edmx:Include Namespace="IPAddresses.v1_0_3"/>
+		<edmx:Include Namespace="IPAddresses.v1_0_4"/>
+		<edmx:Include Namespace="IPAddresses.v1_0_5"/>
+		<edmx:Include Namespace="IPAddresses.v1_0_6"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/JsonSchemaFile_v1.xml">
+        <edmx:Include Namespace="JsonSchemaFile"/>
+		<edmx:Include Namespace="JsonSchemaFile.v1_0_0"/>
+		<edmx:Include Namespace="JsonSchemaFile.v1_0_2"/>
+		<edmx:Include Namespace="JsonSchemaFile.v1_0_3"/>
+		<edmx:Include Namespace="JsonSchemaFile.v1_0_4"/>
+		<edmx:Include Namespace="JsonSchemaFile.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/JsonSchemaFileCollection_v1.xml">
+        <edmx:Include Namespace="JsonSchemaFileCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/LogEntry_v1.xml">
+        <edmx:Include Namespace="LogEntry"/>
+        <edmx:Include Namespace="LogEntry.v1_0_0"/>
+		<edmx:Include Namespace="LogEntry.v1_0_2"/>
+		<edmx:Include Namespace="LogEntry.v1_0_3"/>
+		<edmx:Include Namespace="LogEntry.v1_0_4"/>
+		<edmx:Include Namespace="LogEntry.v1_0_5"/>
+		<edmx:Include Namespace="LogEntry.v1_1_0"/>
+		<edmx:Include Namespace="LogEntry.v1_1_1"/>
+		<edmx:Include Namespace="LogEntry.v1_1_2"/>
+		<edmx:Include Namespace="LogEntry.v1_1_3"/>
+		<edmx:Include Namespace="LogEntry.v1_2_0"/>
+		<edmx:Include Namespace="LogEntry.v1_2_1"/>
+		<edmx:Include Namespace="LogEntry.v1_3_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/LogEntryCollection_v1.xml">
+        <edmx:Include Namespace="LogEntryCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/LogService_v1.xml">
+        <edmx:Include Namespace="LogService"/>
+        <edmx:Include Namespace="LogService.v1_0_0"/>
+		<edmx:Include Namespace="LogService.v1_0_2"/>
+		<edmx:Include Namespace="LogService.v1_0_3"/>
+		<edmx:Include Namespace="LogService.v1_0_4"/>
+		<edmx:Include Namespace="LogService.v1_0_5"/>
+		<edmx:Include Namespace="LogService.v1_1_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/LogServiceCollection_v1.xml">
+        <edmx:Include Namespace="LogServiceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Manager_v1.xml">
+        <edmx:Include Namespace="Manager"/>
+        <edmx:Include Namespace="Manager.v1_0_0"/>
+		<edmx:Include Namespace="Manager.v1_0_1"/>
+		<edmx:Include Namespace="Manager.v1_0_2"/>
+		<edmx:Include Namespace="Manager.v1_0_3"/>
+		<edmx:Include Namespace="Manager.v1_0_4"/>
+		<edmx:Include Namespace="Manager.v1_0_5"/>
+		<edmx:Include Namespace="Manager.v1_0_6"/>
+		<edmx:Include Namespace="Manager.v1_1_0"/>
+		<edmx:Include Namespace="Manager.v1_1_1"/>
+		<edmx:Include Namespace="Manager.v1_1_2"/>
+		<edmx:Include Namespace="Manager.v1_1_3"/>
+		<edmx:Include Namespace="Manager.v1_1_4"/>
+		<edmx:Include Namespace="Manager.v1_2_0"/>
+		<edmx:Include Namespace="Manager.v1_2_1"/>
+		<edmx:Include Namespace="Manager.v1_2_2"/>
+		<edmx:Include Namespace="Manager.v1_2_3"/>
+		<edmx:Include Namespace="Manager.v1_2_4"/>
+		<edmx:Include Namespace="Manager.v1_3_0"/>
+		<edmx:Include Namespace="Manager.v1_3_1"/>
+		<edmx:Include Namespace="Manager.v1_3_2"/>
+		<edmx:Include Namespace="Manager.v1_3_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ManagerAccount_v1.xml">
+        <edmx:Include Namespace="ManagerAccount"/>
+        <edmx:Include Namespace="ManagerAccount.v1_0_0"/>
+		<edmx:Include Namespace="ManagerAccount.v1_0_2"/>
+		<edmx:Include Namespace="ManagerAccount.v1_0_3"/>
+		<edmx:Include Namespace="ManagerAccount.v1_0_4"/>
+		<edmx:Include Namespace="ManagerAccount.v1_0_5"/>
+		<edmx:Include Namespace="ManagerAccount.v1_1_0"/>
+		<edmx:Include Namespace="ManagerAccount.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/ManagerAccountCollection_v1.xml">
+        <edmx:Include Namespace="ManagerAccountCollection" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/ManagerCollection_v1.xml">
+        <edmx:Include Namespace="ManagerCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ManagerNetworkProtocol_v1.xml">
+        <edmx:Include Namespace="ManagerNetworkProtocol"/>
+        <edmx:Include Namespace="ManagerNetworkProtocol.v1_0_0"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_0_2"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_0_3"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_0_4"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_1_0"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_1_1"/>
+		<edmx:Include Namespace="ManagerNetworkProtocol.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Memory_v1.xml">
+        <edmx:Include Namespace="Memory"/>
+        <edmx:Include Namespace="Memory.v1_0_0"/>
+        <edmx:Include Namespace="Memory.v1_0_1"/>
+        <edmx:Include Namespace="Memory.v1_0_2"/>
+		<edmx:Include Namespace="Memory.v1_0_3"/>
+        <edmx:Include Namespace="Memory.v1_1_0"/>
+        <edmx:Include Namespace="Memory.v1_1_1"/>
+		<edmx:Include Namespace="Memory.v1_1_2"/>
+        <edmx:Include Namespace="Memory.v1_2_0"/>
+		<edmx:Include Namespace="Memory.v1_2_1"/>
+		<edmx:Include Namespace="Memory.v1_3_0"/>
+		<edmx:Include Namespace="Memory.v1_3_1"/>
+		<edmx:Include Namespace="Memory.v1_4_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/MemoryChunks_v1.xml">
+        <edmx:Include Namespace="MemoryChunks"/>
+		<edmx:Include Namespace="MemoryChunks.v1_0_0"/>
+		<edmx:Include Namespace="MemoryChunks.v1_0_1"/>
+		<edmx:Include Namespace="MemoryChunks.v1_0_2"/>
+		<edmx:Include Namespace="MemoryChunks.v1_1_0"/>
+		<edmx:Include Namespace="MemoryChunks.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/MemoryChunksCollection_v1.xml">
+        <edmx:Include Namespace="MemoryChunksCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/MemoryCollection_v1.xml">
+        <edmx:Include Namespace="MemoryCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/MemoryDomain_v1.xml">
+        <edmx:Include Namespace="MemoryDomain"/>
+		<edmx:Include Namespace="MemoryDomain.v1_0_0"/>
+		<edmx:Include Namespace="MemoryDomain.v1_0_1"/>
+		<edmx:Include Namespace="MemoryDomain.v1_0_2"/>
+		<edmx:Include Namespace="MemoryDomain.v1_1_0"/>
+		<edmx:Include Namespace="MemoryDomain.v1_1_1"/>
+		<edmx:Include Namespace="MemoryDomain.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/MemoryDomainCollection_v1.xml">
+        <edmx:Include Namespace="MemoryDomainCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/MemoryMetrics_v1.xml">
+        <edmx:Include Namespace="MemoryMetrics"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_0_0"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_0_1"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_0_2"/>
+		<edmx:Include Namespace="MemoryMetrics.v1_0_3"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_1_0"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_1_1"/>
+        <edmx:Include Namespace="MemoryMetrics.v1_1_2"/>
+		<edmx:Include Namespace="MemoryMetrics.v1_1_3"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/Message_v1.xml">
+        <edmx:Include Namespace="Message"/>
+        <edmx:Include Namespace="Message.v1_0_0"/>
+		<edmx:Include Namespace="Message.v1_0_2"/>
+		<edmx:Include Namespace="Message.v1_0_3"/>
+		<edmx:Include Namespace="Message.v1_0_4"/>
+		<edmx:Include Namespace="Message.v1_0_5"/>
+    </edmx:Reference>
+	 <edmx:Reference Uri="/redfish/v1/Schemas/MessageRegistry_v1.xml">
+        <edmx:Include Namespace="MessageRegistry"/>
+        <edmx:Include Namespace="MessageRegistry.v1_0_0"/>
+		<edmx:Include Namespace="MessageRegistry.v1_0_2"/>
+		<edmx:Include Namespace="MessageRegistry.v1_0_3"/>
+		<edmx:Include Namespace="MessageRegistry.v1_0_4"/>
+		<edmx:Include Namespace="MessageRegistry.v1_0_5"/>
+		<edmx:Include Namespace="MessageRegistry.v1_1_0"/>
+		<edmx:Include Namespace="MessageRegistry.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/MessageRegistryCollection_v1.xml">
+        <edmx:Include Namespace="MessageRegistryCollection" />
+    </edmx:Reference>
+        <edmx:Reference Uri="/redfish/v1/Schemas/MessageRegistryFile_v1.xml">
+        <edmx:Include Namespace="MessageRegistryFile"/>
+        <edmx:Include Namespace="MessageRegistryFile.v1_0_0"/>
+		<edmx:Include Namespace="MessageRegistryFile.v1_0_2"/>
+		<edmx:Include Namespace="MessageRegistryFile.v1_0_3"/>
+		<edmx:Include Namespace="MessageRegistryFile.v1_0_4"/>
+		<edmx:Include Namespace="MessageRegistryFile.v1_1_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/MessageRegistryFileCollection_v1.xml">
+        <edmx:Include Namespace="MessageRegistryFileCollection"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkAdapter_v1.xml">
+		<edmx:Include Namespace="NetworkAdapter"/>
+		<edmx:Include Namespace="NetworkAdapter.v1_0_0"/>  
+		<edmx:Include Namespace="NetworkAdapter.v1_0_1"/>
+		<edmx:Include Namespace="NetworkAdapter.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkAdapterCollection_v1.xml">
+		<edmx:Include Namespace="NetworkAdapterCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkDeviceFunction_v1.xml">
+		<edmx:Include Namespace="NetworkDeviceFunction"/>
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_0_0"/>  
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_0_1"/>
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_0_2"/>
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_1_0"/>
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_1_1"/>
+		<edmx:Include Namespace="NetworkDeviceFunction.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkDeviceFunctionCollection_v1.xml">
+		<edmx:Include Namespace="NetworkDeviceFunctionCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkInterface_v1.xml">
+		<edmx:Include Namespace="NetworkInterface"/>
+		<edmx:Include Namespace="NetworkInterface.v1_0_0"/>  
+		<edmx:Include Namespace="NetworkInterface.v1_0_1"/>
+		<edmx:Include Namespace="NetworkInterface.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkInterfaceCollection_v1.xml">
+		<edmx:Include Namespace="NetworkInterfaceCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/NetworkPort_v1.xml">
+		<edmx:Include Namespace="NetworkPort"/>
+		<edmx:Include Namespace="NetworkPort.v1_0_0"/>  
+		<edmx:Include Namespace="NetworkPort.v1_0_1"/>
+		<edmx:Include Namespace="NetworkPort.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/NetworkPortCollection_v1.xml">
+		<edmx:Include Namespace="NetworkPortCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/OemManager_v1.xml">
+    	<edmx:Include Namespace="EID_674_Manager"/>
+        <edmx:Include Namespace="EID_674_Manager.v1_0_0"/>
+		<edmx:Include Namespace="EID_674_Manager.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/PCIeDevice_v1.xml">
+      <edmx:Include Namespace="PCIeDevice"/>
+      <edmx:Include Namespace="PCIeDevice.v1_0_0"/>
+	  <edmx:Include Namespace="PCIeDevice.v1_0_1"/>
+	  <edmx:Include Namespace="PCIeDevice.v1_0_2"/>
+	  <edmx:Include Namespace="PCIeDevice.v1_1_0"/>
+	  <edmx:Include Namespace="PCIeDevice.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/PCIeFunction_v1.xml">
+      <edmx:Include Namespace="PCIeFunction"/>
+      <edmx:Include Namespace="PCIeFunction.v1_0_0"/>
+	  <edmx:Include Namespace="PCIeFunction.v1_0_1"/>
+	  <edmx:Include Namespace="PCIeFunction.v1_0_2"/>
+	  <edmx:Include Namespace="PCIeFunction.v1_0_3"/>
+	  <edmx:Include Namespace="PCIeFunction.v1_1_0"/>
+	  <edmx:Include Namespace="PCIeFunction.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/PhysicalContext_v1.xml">
+        <edmx:Include Namespace="PhysicalContext"/>
+        <edmx:Include Namespace="PhysicalContext.v1_0_0"/>
+		<edmx:Include Namespace="PhysicalContext.v1_0_2"/>
+		<edmx:Include Namespace="PhysicalContext.v1_0_3"/>
+		<edmx:Include Namespace="PhysicalContext.v1_0_4"/>
+		<edmx:Include Namespace="PhysicalContext.v1_1_0"/>
+		<edmx:Include Namespace="PhysicalContext.v1_1_1"/>
+		<edmx:Include Namespace="PhysicalContext.v1_2_0"/>
+		<edmx:Include Namespace="PhysicalContext.v1_2_1"/>
+		<edmx:Include Namespace="PhysicalContext.v1_3_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Port_v1.xml">
+      <edmx:Include Namespace="Port"/>
+      <edmx:Include Namespace="Port.v1_0_0"/>
+	  <edmx:Include Namespace="Port.v1_0_1"/>
+	  <edmx:Include Namespace="Port.v1_0_2"/>
+	  <edmx:Include Namespace="Port.v1_0_3"/>
+	  <edmx:Include Namespace="Port.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/PortCollection_v1.xml">
+		<edmx:Include Namespace="PortCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Power_v1.xml">
+        <edmx:Include Namespace="Power"/>
+        <edmx:Include Namespace="Power.v1_0_0"/>
+		<edmx:Include Namespace="Power.v1_0_1"/>
+		<edmx:Include Namespace="Power.v1_0_2"/>
+		<edmx:Include Namespace="Power.v1_0_3"/>
+		<edmx:Include Namespace="Power.v1_0_4"/>
+		<edmx:Include Namespace="Power.v1_0_5"/>
+		<edmx:Include Namespace="Power.v1_0_6"/>
+		<edmx:Include Namespace="Power.v1_1_0"/>
+		<edmx:Include Namespace="Power.v1_1_1"/>
+		<edmx:Include Namespace="Power.v1_1_2"/>
+		<edmx:Include Namespace="Power.v1_1_3"/>
+		<edmx:Include Namespace="Power.v1_1_4"/>
+		<edmx:Include Namespace="Power.v1_2_0"/>
+		<edmx:Include Namespace="Power.v1_2_1"/>
+		<edmx:Include Namespace="Power.v1_2_2"/>
+		<edmx:Include Namespace="Power.v1_2_3"/>
+		<edmx:Include Namespace="Power.v1_2_4"/>
+		<edmx:Include Namespace="Power.v1_3_0"/>
+		<edmx:Include Namespace="Power.v1_3_1"/>
+		<edmx:Include Namespace="Power.v1_3_2"/>
+		<edmx:Include Namespace="Power.v1_4_0"/>
+		<edmx:Include Namespace="Power.v1_4_1"/>
+		<edmx:Include Namespace="Power.v1_5_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/PrivilegeRegistry_v1.xml">
+        <edmx:Include Namespace="PrivilegeRegistry"/>
+        <edmx:Include Namespace="PrivilegeRegistry.v1_0_0"/>
+		<edmx:Include Namespace="PrivilegeRegistry.v1_0_1"/>
+		<edmx:Include Namespace="PrivilegeRegistry.v1_0_2"/>
+		<edmx:Include Namespace="PrivilegeRegistry.v1_1_0"/>
+		<edmx:Include Namespace="PrivilegeRegistry.v1_1_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Privileges_v1.xml">
+        <edmx:Include Namespace="Privileges"/>
+        <edmx:Include Namespace="Privileges.v1_0_0"/>
+		<edmx:Include Namespace="Privileges.v1_0_2"/>
+		<edmx:Include Namespace="Privileges.v1_0_3"/>
+		<edmx:Include Namespace="Privileges.v1_0_4"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Processor_v1.xml">
+        <edmx:Include Namespace="Processor"/>
+        <edmx:Include Namespace="Processor.v1_0_0"/>
+		<edmx:Include Namespace="Processor.v1_0_2"/>
+		<edmx:Include Namespace="Processor.v1_0_3"/>
+		<edmx:Include Namespace="Processor.v1_0_4"/>
+		<edmx:Include Namespace="Processor.v1_1_0"/>
+		<edmx:Include Namespace="Processor.v1_2_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/ProcessorCollection_v1.xml">
+        <edmx:Include Namespace="ProcessorCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Protocol_v1.xml">
+		<edmx:Include Namespace="Protocol"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/RedfishExtensions_v1.xml">
+        <edmx:Include Namespace="RedfishExtensions.v1_0_0" Alias="Redfish"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Redundancy_v1.xml">
+        <edmx:Include Namespace="Redundancy"/>
+        <edmx:Include Namespace="Redundancy.v1_0_0"/>
+		<edmx:Include Namespace="Redundancy.v1_0_1"/>
+		<edmx:Include Namespace="Redundancy.v1_0_2"/>
+		<edmx:Include Namespace="Redundancy.v1_0_3"/>
+		<edmx:Include Namespace="Redundancy.v1_0_4"/>
+		<edmx:Include Namespace="Redundancy.v1_1_0"/>
+		<edmx:Include Namespace="Redundancy.v1_1_1"/>
+		<edmx:Include Namespace="Redundancy.v1_1_2"/>
+		<edmx:Include Namespace="Redundancy.v1_2_0"/>
+		<edmx:Include Namespace="Redundancy.v1_3_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Resource_v1.xml">
+        <edmx:Include Namespace="Resource"/>
+        <edmx:Include Namespace="Resource.v1_0_0"/>
+        <edmx:Include Namespace="Resource.v1_0_2"/>
+		<edmx:Include Namespace="Resource.v1_0_3"/>
+		<edmx:Include Namespace="Resource.v1_0_4"/>
+		<edmx:Include Namespace="Resource.v1_1_0"/>
+		<edmx:Include Namespace="Resource.v1_1_1"/>
+		<edmx:Include Namespace="Resource.v1_1_2"/>
+		<edmx:Include Namespace="Resource.v1_1_3"/>
+		<edmx:Include Namespace="Resource.v1_1_4"/>
+		<edmx:Include Namespace="Resource.v1_1_5"/>
+		<edmx:Include Namespace="Resource.v1_2_0"/>
+		<edmx:Include Namespace="Resource.v1_2_1"/>
+		<edmx:Include Namespace="Resource.v1_2_2"/>
+		<edmx:Include Namespace="Resource.v1_2_3"/>
+		<edmx:Include Namespace="Resource.v1_2_4"/>
+		<edmx:Include Namespace="Resource.v1_3_0"/>
+		<edmx:Include Namespace="Resource.v1_3_1"/>
+		<edmx:Include Namespace="Resource.v1_3_2"/>
+		<edmx:Include Namespace="Resource.v1_3_3"/>
+        <edmx:Include Namespace="Resource.v1_4_0"/>
+		<edmx:Include Namespace="Resource.v1_4_1"/>
+		<edmx:Include Namespace="Resource.v1_4_2"/>
+		<edmx:Include Namespace="Resource.v1_5_0"/>
+		<edmx:Include Namespace="Resource.v1_5_1"/>
+		<edmx:Include Namespace="Resource.v1_6_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ResourceBlock_v1.xml">
+        <edmx:Include Namespace="ResourceBlock"/>
+        <edmx:Include Namespace="ResourceBlock.v1_0_0"/>
+	</edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Role_v1.xml">
+        <edmx:Include Namespace="Role"/>
+        <edmx:Include Namespace="Role.v1_0_0"/>
+		<edmx:Include Namespace="Role.v1_0_2"/>
+		<edmx:Include Namespace="Role.v1_0_3"/>
+		<edmx:Include Namespace="Role.v1_1_0"/>
+		<edmx:Include Namespace="Role.v1_1_1"/>
+		<edmx:Include Namespace="Role.v1_2_0"/>
+		<edmx:Include Namespace="Role.v1_2_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/RoleCollection_v1.xml">
+        <edmx:Include Namespace="RoleCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SecureBoot_v1.xml">
+		<edmx:Include Namespace="SecureBoot"/>
+        <edmx:Include Namespace="SecureBoot.v1_0_0"/>
+		<edmx:Include Namespace="SecureBoot.v1_0_1"/>
+        <edmx:Include Namespace="SecureBoot.v1_0_2"/>
+		<edmx:Include Namespace="SecureBoot.v1_0_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SerialInterface_v1.xml">
+        <edmx:Include Namespace="SerialInterface"/>
+        <edmx:Include Namespace="SerialInterface.v1_0_0"/>
+		<edmx:Include Namespace="SerialInterface.v1_0_2"/>
+		<edmx:Include Namespace="SerialInterface.v1_0_3"/>
+		<edmx:Include Namespace="SerialInterface.v1_0_4"/>
+		<edmx:Include Namespace="SerialInterface.v1_0_5"/>
+		<edmx:Include Namespace="SerialInterface.v1_1_0"/>
+		<edmx:Include Namespace="SerialInterface.v1_1_1"/>
+		<edmx:Include Namespace="SerialInterface.v1_1_2"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/SerialInterfaceCollection_v1.xml">
+        <edmx:Include Namespace="SerialInterfaceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/ServiceRoot_v1.xml">
+      <edmx:Include Namespace="ServiceRoot"/>
+      <edmx:Include Namespace="ServiceRoot.v1_0_0"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_0_2"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_0_3"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_0_4"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_0_5"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_1_0"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_1_1"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_1_2"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_2_0"/>
+	  <edmx:Include Namespace="ServiceRoot.v1_3_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Session_v1.xml">
+        <edmx:Include Namespace="Session"/>
+        <edmx:Include Namespace="Session.v1_0_0"/>
+		<edmx:Include Namespace="Session.v1_0_2"/>
+		<edmx:Include Namespace="Session.v1_0_3"/>
+		<edmx:Include Namespace="Session.v1_1_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/SessionCollection_v1.xml">
+        <edmx:Include Namespace="SessionCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/SessionService_v1.xml">
+        <edmx:Include Namespace="SessionService"/>
+        <edmx:Include Namespace="SessionService.v1_0_0"/>
+		<edmx:Include Namespace="SessionService.v1_0_2"/>
+		<edmx:Include Namespace="SessionService.v1_0_3"/>
+		<edmx:Include Namespace="SessionService.v1_0_4"/>
+		<edmx:Include Namespace="SessionService.v1_1_0"/>
+		<edmx:Include Namespace="SessionService.v1_1_1"/>
+		<edmx:Include Namespace="SessionService.v1_1_2"/>
+		<edmx:Include Namespace="SessionService.v1_1_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Settings_v1.xml">
+    	<edmx:Include Namespace="Settings"/>
+        <edmx:Include Namespace="Settings.v1_0_0"/>
+		<edmx:Include Namespace="Settings.v1_0_2"/>
+		<edmx:Include Namespace="Settings.v1_0_3"/>
+		<edmx:Include Namespace="Settings.v1_0_4"/>
+		<edmx:Include Namespace="Settings.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SimpleStorage_v1.xml">
+        <edmx:Include Namespace="SimpleStorage"/>
+        <edmx:Include Namespace="SimpleStorage.v1_0_0"/>
+		<edmx:Include Namespace="SimpleStorage.v1_0_2"/>
+		<edmx:Include Namespace="SimpleStorage.v1_0_3"/>
+		<edmx:Include Namespace="SimpleStorage.v1_0_4"/>
+		<edmx:Include Namespace="SimpleStorage.v1_1_0"/>
+		<edmx:Include Namespace="SimpleStorage.v1_1_1"/>
+		<edmx:Include Namespace="SimpleStorage.v1_1_2"/>
+		<edmx:Include Namespace="SimpleStorage.v1_2_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/SimpleStorageCollection_v1.xml">
+        <edmx:Include Namespace="SimpleStorageCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SoftwareInventory_v1.xml">
+		<edmx:Include Namespace="SoftwareInventory"/>
+        <edmx:Include Namespace="SoftwareInventory.v1_0_0"/>
+		<edmx:Include Namespace="SoftwareInventory.v1_0_1"/>
+		<edmx:Include Namespace="SoftwareInventory.v1_0_2"/>
+		<edmx:Include Namespace="SoftwareInventory.v1_1_0"/>
+		<edmx:Include Namespace="SoftwareInventory.v1_1_1"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SoftwareInventoryCollection_v1.xml">
+		<edmx:Include Namespace="SoftwareInventoryCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Storage_v1.xml">
+        <edmx:Include Namespace="Storage"/>
+		<edmx:Include Namespace="Storage.v1_0_0"/>
+		<edmx:Include Namespace="Storage.v1_0_1"/>
+		<edmx:Include Namespace="Storage.v1_0_2"/>
+		<edmx:Include Namespace="Storage.v1_0_3"/>
+		<edmx:Include Namespace="Storage.v1_0_4"/>
+		<edmx:Include Namespace="Storage.v1_1_0"/>
+		<edmx:Include Namespace="Storage.v1_1_1"/>
+		<edmx:Include Namespace="Storage.v1_1_2"/>
+		<edmx:Include Namespace="Storage.v1_1_3"/>
+        <edmx:Include Namespace="Storage.v1_2_0"/>
+		<edmx:Include Namespace="Storage.v1_2_1"/>
+		<edmx:Include Namespace="Storage.v1_3_0"/>
+		<edmx:Include Namespace="Storage.v1_3_1"/>
+		<edmx:Include Namespace="Storage.v1_4_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageCollection_v1.xml">
+	  <edmx:Include Namespace="StorageCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageGroup_v1.xml">
+	  <edmx:Include Namespace="StorageGroup"/>
+	  <edmx:Include Namespace="StorageGroup.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageGroupCollection_v1.xml">
+	  <edmx:Include Namespace="StorageGroupCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StoragePool_v1.xml">
+	  <edmx:Include Namespace="StoragePool"/>
+	  <edmx:Include Namespace="StoragePool.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StoragePoolCollection_v1.xml">
+	  <edmx:Include Namespace="StoragePoolCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageService_v1.xml">
+	  <edmx:Include Namespace="StorageService"/>
+	  <edmx:Include Namespace="StorageService.v1_0_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageServiceCollection_v1.xml">
+	  <edmx:Include Namespace="StorageServiceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/StorageSystemCollection_v1.xml">
+	  <edmx:Include Namespace="StorageSystemCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Switch_v1.xml">
+        <edmx:Include Namespace="Switch"/>
+		<edmx:Include Namespace="Switch.v1_0_0"/>
+		<edmx:Include Namespace="Switch.v1_0_1"/>
+		<edmx:Include Namespace="Switch.v1_0_2"/>
+		<edmx:Include Namespace="Switch.v1_0_3"/>
+		<edmx:Include Namespace="Switch.v1_1_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/SwitchCollection_v1.xml">
+	  <edmx:Include Namespace="SwitchCollection"/>
+	</edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/Task_v1.xml">
+        <edmx:Include Namespace="Task"/>
+        <edmx:Include Namespace="Task.v1_0_0"/>
+		<edmx:Include Namespace="Task.v1_0_2"/>
+		<edmx:Include Namespace="Task.v1_0_3"/>
+		<edmx:Include Namespace="Task.v1_0_4"/>
+		<edmx:Include Namespace="Task.v1_1_0"/>
+		<edmx:Include Namespace="Task.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/TaskCollection_v1.xml">
+        <edmx:Include Namespace="TaskCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/TaskService_v1.xml">
+        <edmx:Include Namespace="TaskService"/>
+        <edmx:Include Namespace="TaskService.v1_0_0"/>
+		<edmx:Include Namespace="TaskService.v1_0_2"/>
+		<edmx:Include Namespace="TaskService.v1_0_3"/>
+		<edmx:Include Namespace="TaskService.v1_0_4"/>
+		<edmx:Include Namespace="TaskService.v1_1_0"/>
+		<edmx:Include Namespace="TaskService.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/Thermal_v1.xml">
+        <edmx:Include Namespace="Thermal"/>
+        <edmx:Include Namespace="Thermal.v1_0_0"/>
+		<edmx:Include Namespace="Thermal.v1_0_1"/>
+        <edmx:Include Namespace="Thermal.v1_0_2"/>
+		<edmx:Include Namespace="Thermal.v1_0_3"/>
+		<edmx:Include Namespace="Thermal.v1_0_4"/>
+		<edmx:Include Namespace="Thermal.v1_0_5"/>
+		<edmx:Include Namespace="Thermal.v1_0_6"/>
+		<edmx:Include Namespace="Thermal.v1_1_0"/>
+		<edmx:Include Namespace="Thermal.v1_1_1"/>
+		<edmx:Include Namespace="Thermal.v1_1_2"/>
+		<edmx:Include Namespace="Thermal.v1_1_3"/>
+		<edmx:Include Namespace="Thermal.v1_1_4"/>
+		<edmx:Include Namespace="Thermal.v1_2_0"/>
+		<edmx:Include Namespace="Thermal.v1_2_1"/>
+		<edmx:Include Namespace="Thermal.v1_2_2"/>
+		<edmx:Include Namespace="Thermal.v1_2_3"/>
+		<edmx:Include Namespace="Thermal.v1_3_0"/>
+		<edmx:Include Namespace="Thermal.v1_3_1"/>
+		<edmx:Include Namespace="Thermal.v1_3_2"/>
+		<edmx:Include Namespace="Thermal.v1_4_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/UpdateService_v1.xml">
+		<edmx:Include Namespace="UpdateService"/>
+        <edmx:Include Namespace="UpdateService.v1_0_0"/>
+		<edmx:Include Namespace="UpdateService.v1_0_1"/>
+		<edmx:Include Namespace="UpdateService.v1_0_2"/>
+		<edmx:Include Namespace="UpdateService.v1_1_0"/>
+		<edmx:Include Namespace="UpdateService.v1_1_1"/>
+		<edmx:Include Namespace="UpdateService.v1_2_0"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/VirtualMedia_v1.xml">
+        <edmx:Include Namespace="VirtualMedia"/>
+        <edmx:Include Namespace="VirtualMedia.v1_0_0"/>
+		<edmx:Include Namespace="VirtualMedia.v1_0_2"/>
+		<edmx:Include Namespace="VirtualMedia.v1_0_3"/>
+		<edmx:Include Namespace="VirtualMedia.v1_1_0"/>
+		<edmx:Include Namespace="VirtualMedia.v1_1_1"/>
+		<edmx:Include Namespace="VirtualMedia.v1_2_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/VirtualMediaCollection_v1.xml">
+        <edmx:Include Namespace="VirtualMediaCollection"/>
+    </edmx:Reference>
+	 <edmx:Reference Uri="/redfish/v1/Schemas/VLanNetworkInterface_v1.xml">
+        <edmx:Include Namespace="VLanNetworkInterface"/>
+        <edmx:Include Namespace="VLanNetworkInterface.v1_0_0"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_0_1"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_0_2"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_0_3"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_0_4"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_0_5"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_1_0"/>
+		<edmx:Include Namespace="VLanNetworkInterface.v1_1_1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/VLanNetworkInterfaceCollection_v1.xml">
+        <edmx:Include Namespace="VLanNetworkInterfaceCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Volume_v1.xml">
+        <edmx:Include Namespace="Volume"/>
+		<edmx:Include Namespace="Volume.v1_0_0"/>
+		<edmx:Include Namespace="Volume.v1_0_1"/>
+		<edmx:Include Namespace="Volume.v1_0_2"/>
+        <edmx:Include Namespace="Volume.v1_0_3"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/VolumeCollection_v1.xml">
+        <edmx:Include Namespace="VolumeCollection"/>
+    </edmx:Reference>
+	<edmx:Reference Uri="/redfish/v1/Schemas/Zone_v1.xml">
+        <edmx:Include Namespace="Zone"/>
+		<edmx:Include Namespace="Zone.v1_0_0"/>
+		<edmx:Include Namespace="Zone.v1_0_1"/>
+		<edmx:Include Namespace="Zone.v1_0_2"/>
+        <edmx:Include Namespace="Zone.v1_1_0"/>
+		<edmx:Include Namespace="Zone.v1_1_1"/>
+		<edmx:Include Namespace="Zone.v1_2_0"/>
+    </edmx:Reference>
+	
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Service">
+            <EntityContainer Name="Service" Extends="ServiceRoot.v1_0_0.ServiceContainer"/>
+        </Schema>
+    </edmx:DataServices>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellControllerCollection_v1.xml">
+        <edmx:Include Namespace="DellControllerCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellController_v1.xml">
+        <edmx:Include Namespace="DellController"/>
+        <edmx:Include Namespace="DellController.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureCollection_v1.xml">
+        <edmx:Include Namespace="DellEnclosureCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureEMMCollection_v1.xml">
+        <edmx:Include Namespace="DellEnclosureEMMCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureEMM_v1.xml">
+        <edmx:Include Namespace="DellEnclosureEMM"/>
+        <edmx:Include Namespace="DellEnclosureEMM.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureFanSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellEnclosureFanSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureFanSensor_v1.xml">
+        <edmx:Include Namespace="DellEnclosureFanSensor"/>
+        <edmx:Include Namespace="DellEnclosureFanSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosurePowerSupplyCollection_v1.xml">
+        <edmx:Include Namespace="DellEnclosurePowerSupplyCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosurePowerSupply_v1.xml">
+        <edmx:Include Namespace="DellEnclosurePowerSupply"/>
+        <edmx:Include Namespace="DellEnclosurePowerSupply.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureTemperatureSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellEnclosureTemperatureSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosureTemperatureSensor_v1.xml">
+        <edmx:Include Namespace="DellEnclosureTemperatureSensor"/>
+        <edmx:Include Namespace="DellEnclosureTemperatureSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellEnclosure_v1.xml">
+        <edmx:Include Namespace="DellEnclosure"/>
+        <edmx:Include Namespace="DellEnclosure.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellFCCollection_v1.xml">
+        <edmx:Include Namespace="DellFCCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellFCStatisticsCollection_v1.xml">
+        <edmx:Include Namespace="DellFCStatisticsCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellFCStatistics_v1.xml">
+        <edmx:Include Namespace="DellFCStatistics"/>
+        <edmx:Include Namespace="DellFCStatistics.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellFC_v1.xml">
+        <edmx:Include Namespace="DellFC"/>
+        <edmx:Include Namespace="DellFC.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellJobService_v1.xml">
+        <edmx:Include Namespace="DellJobService"/>
+        <edmx:Include Namespace="DellJobService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellLCService_v1.xml">
+        <edmx:Include Namespace="DellLCService"/>
+        <edmx:Include Namespace="DellLCService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellLicenseCollection_v1.xml">
+        <edmx:Include Namespace="DellLicenseCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellLicenseManagementService_v1.xml">
+        <edmx:Include Namespace="DellLicenseManagementService"/>
+        <edmx:Include Namespace="DellLicenseManagementService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellLicense_v1.xml">
+        <edmx:Include Namespace="DellLicense"/>
+        <edmx:Include Namespace="DellLicense.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellMemoryCollection_v1.xml">
+        <edmx:Include Namespace="DellMemoryCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellMemory_v1.xml">
+        <edmx:Include Namespace="DellMemory"/>
+        <edmx:Include Namespace="DellMemory.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNICCapabilitiesCollection_v1.xml">
+        <edmx:Include Namespace="DellNICCapabilitiesCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNICCapabilities_v1.xml">
+        <edmx:Include Namespace="DellNICCapabilities"/>
+        <edmx:Include Namespace="DellNICCapabilities.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNICCollection_v1.xml">
+        <edmx:Include Namespace="DellNICCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNICStatisticsCollection_v1.xml">
+        <edmx:Include Namespace="DellNICStatisticsCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNICStatistics_v1.xml">
+        <edmx:Include Namespace="DellNICStatistics"/>
+        <edmx:Include Namespace="DellNICStatistics.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNIC_v1.xml">
+        <edmx:Include Namespace="DellNIC"/>
+        <edmx:Include Namespace="DellNIC.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNumericSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellNumericSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellNumericSensor_v1.xml">
+        <edmx:Include Namespace="DellNumericSensor"/>
+        <edmx:Include Namespace="DellNumericSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellOSDeploymentService_v1.xml">
+        <edmx:Include Namespace="DellOSDeploymentService"/>
+        <edmx:Include Namespace="DellOSDeploymentService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeFunctionCollection_v1.xml">
+        <edmx:Include Namespace="DellPCIeFunctionCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeFunction_v1.xml">
+        <edmx:Include Namespace="DellPCIeFunction"/>
+        <edmx:Include Namespace="DellPCIeFunction.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSDBackPlaneCollection_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSDBackPlaneCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSDBackPlane_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSDBackPlane"/>
+        <edmx:Include Namespace="DellPCIeSSDBackPlane.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSDCollection_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSDCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSDExtenderCollection_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSDExtenderCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSDExtender_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSDExtender"/>
+        <edmx:Include Namespace="DellPCIeSSDExtender.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPCIeSSD_v1.xml">
+        <edmx:Include Namespace="DellPCIeSSD"/>
+        <edmx:Include Namespace="DellPCIeSSD.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPSNumericSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellPSNumericSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPSNumericSensor_v1.xml">
+        <edmx:Include Namespace="DellPSNumericSensor"/>
+        <edmx:Include Namespace="DellPSNumericSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPersistentStorageService_v1.xml">
+        <edmx:Include Namespace="DellPersistentStorageService"/>
+        <edmx:Include Namespace="DellPersistentStorageService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPhysicalDiskCollection_v1.xml">
+        <edmx:Include Namespace="DellPhysicalDiskCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPhysicalDisk_v1.xml">
+        <edmx:Include Namespace="DellPhysicalDisk"/>
+        <edmx:Include Namespace="DellPhysicalDisk.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPowerSupplyViewCollection_v1.xml">
+        <edmx:Include Namespace="DellPowerSupplyViewCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPowerSupplyView_v1.xml">
+        <edmx:Include Namespace="DellPowerSupplyView"/>
+        <edmx:Include Namespace="DellPowerSupplyView.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPowerSupplyCollection_v1.xml">
+        <edmx:Include Namespace="DellPowerSupplyCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPowerSupply_v1.xml">
+        <edmx:Include Namespace="DellPowerSupply"/>
+        <edmx:Include Namespace="DellPowerSupply.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPresenceAndStatusSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellPresenceAndStatusSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellPresenceAndStatusSensor_v1.xml">
+        <edmx:Include Namespace="DellPresenceAndStatusSensor"/>
+        <edmx:Include Namespace="DellPresenceAndStatusSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellProcessorCollection_v1.xml">
+        <edmx:Include Namespace="DellProcessorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellProcessor_v1.xml">
+        <edmx:Include Namespace="DellProcessor"/>
+        <edmx:Include Namespace="DellProcessor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellRaidService_v1.xml">
+        <edmx:Include Namespace="DellRaidService"/>
+        <edmx:Include Namespace="DellRaidService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSensorCollection_v1.xml">
+        <edmx:Include Namespace="DellSensorCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSensor_v1.xml">
+        <edmx:Include Namespace="DellSensor"/>
+        <edmx:Include Namespace="DellSensor.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSoftwareInstallationService_v1.xml">
+        <edmx:Include Namespace="DellSoftwareInstallationService"/>
+        <edmx:Include Namespace="DellSoftwareInstallationService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSoftwareInventoryCollection_v1.xml">
+        <edmx:Include Namespace="DellSoftwareInventoryCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSoftwareInventory_v1.xml">
+        <edmx:Include Namespace="DellSoftwareInventory"/>
+        <edmx:Include Namespace="DellSoftwareInventory.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSwitchConnectionCollection_v1.xml">
+        <edmx:Include Namespace="DellSwitchConnectionCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSwitchConnection_v1.xml">
+        <edmx:Include Namespace="DellSwitchConnection"/>
+        <edmx:Include Namespace="DellSwitchConnection.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSystemCollection_v1.xml">
+        <edmx:Include Namespace="DellSystemCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellSystem_v1.xml">
+        <edmx:Include Namespace="DellSystem"/>
+        <edmx:Include Namespace="DellSystem.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellVirtualDiskCollection_v1.xml">
+        <edmx:Include Namespace="DellVirtualDiskCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellVirtualDisk_v1.xml">
+        <edmx:Include Namespace="DellVirtualDisk"/>
+        <edmx:Include Namespace="DellVirtualDisk.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DelliDRACCardCollection_v1.xml">
+        <edmx:Include Namespace="DelliDRACCardCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DelliDRACCardService_v1.xml">
+        <edmx:Include Namespace="DelliDRACCardService"/>
+        <edmx:Include Namespace="DelliDRACCardService.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DelliDRACCard_v1.xml">
+        <edmx:Include Namespace="DelliDRACCard"/>
+        <edmx:Include Namespace="DelliDRACCard.v1_0_0"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellvFlashCollection_v1.xml">
+        <edmx:Include Namespace="DellvFlashCollection"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/redfish/v1/Schemas/DellvFlash_v1.xml">
+        <edmx:Include Namespace="DellvFlash"/>
+        <edmx:Include Namespace="DellvFlash.v1_0_0"/>
+    </edmx:Reference>
+</edmx:Edmx>
+
+
+
+
+
+

@@ -1,0 +1,649 @@
+{
+    "$ref": "#/definitions/DellLicenseManagementService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "Actions": {
+            "additionalProperties": false,
+            "description": "The available actions for this resource.",
+            "longDescription": "This type shall contain the available actions for this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "#DellLicenseManagementService.DeleteLicense": {
+                    "$ref": "#/definitions/DeleteLicense"
+                },
+                "#DellLicenseManagementService.ExportLicense": {
+                    "$ref": "#/definitions/ExportLicense"
+                },
+                "#DellLicenseManagementService.ExportLicenseByDeviceToNetworkShare": {
+                    "$ref": "#/definitions/ExportLicenseByDeviceToNetworkShare"
+                },
+                "#DellLicenseManagementService.ExportLicenseToNetworkShare": {
+                    "$ref": "#/definitions/ExportLicenseToNetworkShare"
+                },
+                "#DellLicenseManagementService.ImportLicense": {
+                    "$ref": "#/definitions/ImportLicense"
+                },
+                "#DellLicenseManagementService.ImportLicenseFromNetworkShare": {
+                    "$ref": "#/definitions/ImportLicenseFromNetworkShare"
+                },
+                "#DellLicenseManagementService.ShowLicenseBits": {
+                    "$ref": "#/definitions/ShowLicenseBits"
+                }
+            },
+            "type": "object"
+        },
+        "DeleteLicense": {
+            "additionalProperties": false,
+            "description": "A method used to delete assigned licenses. The DeleteLicense() method deletes a specific license from all devices it is assigned to if only the EntitlementID parameter is present, all licenses from a specific device if only the FQDD parameter is present, or a specific license from a specific device if both the EntitlementID and FQDD parameters are present. Either the EntitlementID or FQDD parameter shall be present.",
+            "longDescription": "A method used to delete assigned licenses. The DeleteLicense() method deletes a specific license from all devices it is assigned to if only the EntitlementID parameter is present, all licenses from a specific device if only the FQDD parameter is present, or a specific license from a specific device if both the EntitlementID and FQDD parameters are present. Either the EntitlementID or FQDD parameter shall be present.",
+            "parameters": {
+                "DeleteOptions": {
+                    "$ref": "#/definitions/DeleteOptions",
+                    "description": "Flag used to force delete or delete license from all like devices.",
+                    "longDescription": "Flag used to force delete or delete license from all like devices."
+                },
+                "EntitlementID": {
+                    "description": "Entitlement ID of the license to delete.",
+                    "longDescription": "Entitlement ID of the license to delete.",
+                    "type": "string"
+                },
+                "FQDD": {
+                    "description": "FQDD of the device to delete the license from.",
+                    "longDescription": "FQDD of the device to delete the license from.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DeleteOptions": {
+            "enum": [
+                "All",
+                "Force",
+                "NoOption"
+            ],
+            "enumDescriptions": {
+                "All": "All",
+                "Force": "Force",
+                "NoOption": "No option"
+            },
+            "type": "string"
+        },
+        "DellLicenseManagementService": {
+            "additionalProperties": false,
+            "description": "The DellLicenseManagementService resource provides some actions to support License Management functionality.",
+            "longDescription": "The DellLicenseManagementService resource provides some actions to support License Management functionality.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Actions": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Actions"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "ExportLicense": {
+            "additionalProperties": false,
+            "description": "ExportLicense is a method used to export License files from the iDRAC. The ExportLicense method returns a License, specified by Entitlement ID, as a base64 encoded string.",
+            "longDescription": "ExportLicense is a method used to export License files from the iDRAC. The ExportLicense method returns a License, specified by Entitlement ID, as a base64 encoded string.",
+            "parameters": {
+                "EntitlementID": {
+                    "description": "Entitlement ID of the license being exported.",
+                    "longDescription": "Entitlement ID of the license being exported.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExportLicenseByDeviceToNetworkShare": {
+            "additionalProperties": false,
+            "description": "ExportLicenseByDeviceToNetworkShare is a method used to export License files from the IDRAC. The ExportLicenseByDeviceToNetworkShare method exports all licenses from a device, specified by FQDD, to a user defined location. The following tables specify ExportLicenseByDeviceToNetworkShare return values and parameters.",
+            "longDescription": "ExportLicenseByDeviceToNetworkShare is a method used to export License files from the IDRAC. The ExportLicenseByDeviceToNetworkShare method exports all licenses from a device, specified by FQDD, to a user defined location. The following tables specify ExportLicenseByDeviceToNetworkShare return values and parameters.",
+            "parameters": {
+                "FQDD": {
+                    "description": "FQDD of the device to export licenses from.",
+                    "longDescription": "FQDD of the device to export licenses from.",
+                    "type": "string"
+                },
+                "FileName": {
+                    "description": "The exported license is renamed to <FileName>.",
+                    "longDescription": "The exported license is renamed to <FileName>.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP Address of the machine hosting the CIFS/NFS share.",
+                    "longDescription": "IP Address of the machine hosting the CIFS/NFS share.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password  for CIFS share authentication.",
+                    "longDescription": "Password  for CIFS share authentication.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "Username for CIFS share authentication.",
+                    "longDescription": "Username for CIFS share authentication.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExportLicenseToNetworkShare": {
+            "additionalProperties": false,
+            "description": "ExportLicenseToNetworkShare is a method used to export License files from the IDRAC. The ExportLicenseToNetworkShare method exports a License, specified by EntitlementID, to a user defined location.",
+            "longDescription": "ExportLicenseToNetworkShare is a method used to export License files from the IDRAC. The ExportLicenseToNetworkShare method exports a License, specified by EntitlementID, to a user defined location.",
+            "parameters": {
+                "EntitlementID": {
+                    "description": "Entitlement ID of the license being exported.",
+                    "longDescription": "Entitlement ID of the license being exported.",
+                    "type": "string"
+                },
+                "FileName": {
+                    "description": "If included, the exported license is renamed as <FileName>.",
+                    "longDescription": "If included, the exported license is renamed as <FileName>.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the machine hosting the Network share.",
+                    "longDescription": "IP address of the machine hosting the Network share.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning is to be ignored when HTTPS is specified. If IgnoreCertWarning is on:certificate will be ignored. Default is 1 (Off).",
+                    "longDescription": "Specifies if certificate warning is to be ignored when HTTPS is specified. If IgnoreCertWarning is on:certificate will be ignored. Default is 1 (Off)."
+                },
+                "Password": {
+                    "description": "Password for Network share authentication.",
+                    "longDescription": "Password for Network share authentication.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password to login into proxy server.",
+                    "longDescription": "The password to login into proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP Adrress of the proxy server.",
+                    "longDescription": "The IP Adrress of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy is to be used or not. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy is to be used or not. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The username for proxy server.",
+                    "longDescription": "The username for proxy server.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "Username for Network share authentication.",
+                    "longDescription": "Username for Network share authentication.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "IgnoreCertWarning": {
+            "enum": [
+                "Off",
+                "On"
+            ],
+            "enumDescriptions": {
+                "Off": "Off",
+                "On": "On"
+            },
+            "type": "string"
+        },
+        "ImportLicense": {
+            "additionalProperties": false,
+            "description": "The ImportLicense() method imports the License given in the input parameter to the License Manager Data Store.",
+            "longDescription": "The ImportLicense() method imports the License given in the input parameter to the License Manager Data Store.",
+            "parameters": {
+                "FQDD": {
+                    "description": "FQDD of the device to apply the License to.",
+                    "longDescription": "FQDD of the device to apply the License to.",
+                    "type": "string"
+                },
+                "ImportOptions": {
+                    "$ref": "#/definitions/ImportOptions",
+                    "description": "Flag to force or install for all like devices.",
+                    "longDescription": "Flag to force or install for all like devices."
+                },
+                "LicenseFile": {
+                    "description": "A base 64 encoded string of the XML License file.",
+                    "longDescription": "A base 64 encoded string of the XML License file.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ImportLicenseFromNetworkShare": {
+            "additionalProperties": false,
+            "description": "The ImportLicenseFromNetworkShare() method imports the License given in the network share location.",
+            "longDescription": "The ImportLicenseFromNetworkShare() method imports the License given in the network share location.",
+            "parameters": {
+                "FQDD": {
+                    "description": "FQDD of the device to apply the License to.",
+                    "longDescription": "FQDD of the device to apply the License to.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "IP address of the machine hosting the Network share.",
+                    "longDescription": "IP address of the machine hosting the Network share.",
+                    "type": "string"
+                },
+                "IgnoreCertWarning": {
+                    "$ref": "#/definitions/IgnoreCertWarning",
+                    "description": "Specifies if certificate warning is to be ignored when HTTPS is specified. If IgnoreCertWarning is on:certificate will be ignored. Default is 1 (Off).",
+                    "longDescription": "Specifies if certificate warning is to be ignored when HTTPS is specified. If IgnoreCertWarning is on:certificate will be ignored. Default is 1 (Off)."
+                },
+                "ImportOptions": {
+                    "$ref": "#/definitions/ImportOptions",
+                    "description": "Flag to force or install for all like devices.",
+                    "longDescription": "Flag to force or install for all like devices."
+                },
+                "LicenseName": {
+                    "description": "The file name of the license file to be imported.",
+                    "longDescription": "The file name of the license file to be imported.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password for Network share authentication.",
+                    "longDescription": "Password for Network share authentication.",
+                    "type": "string"
+                },
+                "ProxyPasswd": {
+                    "description": "The password to login into proxy server.",
+                    "longDescription": "The password to login into proxy server.",
+                    "type": "string"
+                },
+                "ProxyPort": {
+                    "description": "Port for the proxy server. Default is set to 80.",
+                    "longDescription": "Port for the proxy server. Default is set to 80.",
+                    "type": "string"
+                },
+                "ProxyServer": {
+                    "description": "The IP Adrress of the proxy server.",
+                    "longDescription": "The IP Adrress of the proxy server.",
+                    "type": "string"
+                },
+                "ProxySupport": {
+                    "$ref": "#/definitions/ProxySupport",
+                    "description": "Specifies if proxy is to be used or not. Default is 1 (Off).",
+                    "longDescription": "Specifies if proxy is to be used or not. Default is 1 (Off)."
+                },
+                "ProxyType": {
+                    "$ref": "#/definitions/ProxyType",
+                    "description": "The proxy type of the proxy server. Default is 0 (HTTP).",
+                    "longDescription": "The proxy type of the proxy server. Default is 0 (HTTP)."
+                },
+                "ProxyUname": {
+                    "description": "The username for proxy server.",
+                    "longDescription": "The username for proxy server.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "Username for Network share authentication.",
+                    "longDescription": "Username for Network share authentication.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ImportOptions": {
+            "enum": [
+                "All",
+                "Force",
+                "NoOption"
+            ],
+            "enumDescriptions": {
+                "All": "All",
+                "Force": "Force",
+                "NoOption": "No Option"
+            },
+            "type": "string"
+        },
+        "ProxySupport": {
+            "enum": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "enumDescriptions": {
+                "DefaultProxy": "On - use default proxy settings",
+                "Off": "Off",
+                "ParametersProxy": "On - use passed in parameters for proxy"
+            },
+            "type": "string"
+        },
+        "ProxyType": {
+            "enum": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "enumDescriptions": {
+                "HTTP": "HTTP",
+                "SOCKS": "SOCKS"
+            },
+            "type": "string"
+        },
+        "ShareType": {
+            "enum": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "NFS"
+            ],
+            "enumDescriptions": {
+                "CIFS": "CIFS",
+                "HTTP": "HTTP",
+                "HTTPS": "HTTPS",
+                "NFS": "NFS"
+            },
+            "type": "string"
+        },
+        "ShowLicenseBits": {
+            "additionalProperties": false,
+            "description": "The ShowLicenseBits() method is used to retrieve the iDRAC feature license bit string for the Licenses in iDRAC in a hexadecimal representation of a 256 bit-string. To read the output, you'll need to see which bit position is TRUE from right-to-left. Please refer to the Appendix section that will show which bit represents what feature.",
+            "longDescription": "The ShowLicenseBits() method is used to retrieve the iDRAC feature license bit string for the Licenses in iDRAC in a hexadecimal representation of a 256 bit-string. To read the output, you'll need to see which bit position is TRUE from right-to-left. Please refer to the Appendix section that will show which bit represents what feature.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "title": "#DellLicenseManagementService.v1_0_0.DellLicenseManagementService"
+}

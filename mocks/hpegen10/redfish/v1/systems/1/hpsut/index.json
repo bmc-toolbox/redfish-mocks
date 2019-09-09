@@ -1,0 +1,16 @@
+{
+    "@odata.type": "#SUT.v2_2_0.SUT",
+    "HPSUMPID": 0,
+    "IsSelfUpdate": false,
+    "LastBootUptime": "none",
+    "LastOperationTime": "none",
+    "Mode": "OnDemand",
+    "OperationRequestor": "OS Administrator",
+    "PollingIntervalInMinutes": 5,
+    "SUTCompName": "",
+    "SelfUpdateStatus": "none",
+    "ServiceState": "Disabled",
+    "ServiceVersion": "2.2.0.0",
+    "StagingDirectory": "/var/tmp/sut/stagingdirectory",
+    "Verify": "autoVerify"
+}

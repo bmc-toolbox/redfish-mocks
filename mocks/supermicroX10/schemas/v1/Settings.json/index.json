@@ -1,0 +1,22 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Settings",
+    "definitions": {
+        "OperationApplyTime": {
+            "type": "string",
+            "enum": [
+                "Immediate",
+                "OnReset",
+                "AtMaintenanceWindowStart",
+                "InMaintenanceWindowOnReset"
+            ],
+            "enumDescriptions": {
+                "Immediate": "Apply the requested operation immediately.",
+                "OnReset": "Apply the requested operation on a reset.",
+                "AtMaintenanceWindowStart": "Apply the requested operation during a maintenance window as specified by an administrator.",
+                "InMaintenanceWindowOnReset": "Apply the requested operation after a reset but within maintenance window as specified by an adminstrator."
+            }
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

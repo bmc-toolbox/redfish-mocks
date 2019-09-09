@@ -1,0 +1,81 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#RADIUS.v1_0_0",
+    "definitions": {
+        "RADIUS": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "RadiusEnabled": {
+                    "type": "boolean",
+                    "readonly": false,
+                    "description": "RADIUS is enabled or not",
+                    "longDescription": "If RADIUS is enabled, a centralized authentication, authorization and accounting management for users is provided"
+                },
+                "RadiusPortNumber": {
+                    "type": "number",
+                    "readonly": false,
+                    "description": "The port number for RADIUS server.",
+                    "longDescription": "The value of this property shall be in the range between 1~65535."
+                },
+                "RadiusServerIP": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "The IP address of the RADIUS server.",
+                    "longDescription": "The value of this property shall be match the format of IP address."
+                },
+                "RadiusSecret": {
+                    "type": "string",
+                    "readonly": false,
+                    "description": "A (secret) password for the user to access the Radius server.",
+                    "longDescription": "The value of this property shall not contain special characteristics and its max length is 32."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the base type for resources and referenceable members."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

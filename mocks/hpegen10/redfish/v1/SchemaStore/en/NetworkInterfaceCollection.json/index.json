@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#NetworkInterfaceCollection.NetworkInterfaceCollection",
+    "type": "object",
+    "etag": true,
+    "additionalProperties": false,
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Members": {
+            "type": "array",
+            "readonly": true,
+            "items": {
+                "properties": {
+                    "@odata.id": {
+                        "$ref": "Resource.json#/definitions/odataid"
+                    }
+                },
+                "type": "object"
+            },
+            "description": "Contains the members of this collection."
+        },
+        "Members@odata.count": {
+            "type": "integer",
+            "readonly": true,
+            "etag": true,
+            "minimum": 0,
+            "description": "The total number of collection members."
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Oem": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "Hpe": {
+                    "$ref": "HpeNetworkInterfaceStatus.json#"
+                }
+            }
+        }
+    },
+    "description": "A Collection of NetworkInterface resource instances.",
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2018 Distributed Management Task Force. All rights reserved."
+}

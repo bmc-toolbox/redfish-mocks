@@ -1,0 +1,142 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP. Portions Copyright 2017 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Links": {
+            "additionalProperties": false,
+            "description": "THE URIs for the resources related to the Hdd zone resource.",
+            "properties": {
+                "Zone": {
+                    "description": "A link to the Hdd Zone resource which associated with Apollo chassis controller.",
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    },
+                    "readonly": true,
+                    "type": "object"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "BackplaneInfo": {
+            "type": "object",
+            "additionalProperties": false,
+            "readonly": false,
+            "properties": {
+                "TypeID": {
+                    "type": "integer",
+                    "description": "Indicates the Backplane type ID for the identifier for backplane type.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "SEPNodeId": {
+                    "type": "integer",
+                    "description": "The node ID represent the node ID where the storage enclosure processor is residing.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "WWID": {
+                    "type": "string",
+                    "description": "Represents a unique world wide ID defining a SEP.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "SEPID": {
+                    "type": "integer",
+                    "description": "Indicates the storage enclosure processor ID.",
+                    "readonly": true,
+                    "etag": true
+                },
+                "Name": {
+                    "description": "Displays the Backplane Name as read from chassis manager.",
+                    "etag": true,
+                    "readonly": true,
+                    "type": "string"
+                },
+                "FirmwareRevision": {
+                    "description": "Indicates the firmware revision in ASCII value.",
+                    "etag": true,
+                    "readonly": true,
+                    "type": "string"
+                },
+                "TotalBays": {
+                    "description": "Total bay count represents the number of bays attached to the SEP.",
+                    "etag": true,
+                    "readonly": true,
+                    "type": "integer"
+                },
+                "StartBay": {
+                    "description": "Represents a starting number of the bay.",
+                    "etag": true,
+                    "readonly": true,
+                    "type": "integer"
+                },
+                "EndBay": {
+                    "description": "Represents a ending number of the bay.",
+                    "etag": true,
+                    "readonly": true,
+                    "type": "integer"
+                },
+                "HostPortsInfo": {
+                    "type": "array",
+                    "readonly": true,
+                    "items": {
+                        "type": "object",
+                        "description": "Contains host ports information.",
+                        "readonly": true,
+                        "additionalProperties": false,
+                        "properties": {
+                            "PortNumber": {
+                                "type": "integer",
+                                "description": "Represents the number of physical host ports in SEP.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "NodeNumber": {
+                                "type": "integer",
+                                "description": "Represents the node number of compute node attached to host port x in SEP.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "SlotNumber": {
+                                "type": "integer",
+                                "description": "Represents the slot number of SAS attached to host port x in SEP.",
+                                "readonly": true,
+                                "etag": true
+                            }
+                        },
+                        "etag": true
+                    }
+                }
+            },
+            "deprecated": "Shows the information for HardDrive Backplane."
+        }
+    },
+    "readonly": false,
+    "title": "#HpeServerAccHddService.v1_0_0.HpeServerAccHddService",
+    "type": "object"
+}

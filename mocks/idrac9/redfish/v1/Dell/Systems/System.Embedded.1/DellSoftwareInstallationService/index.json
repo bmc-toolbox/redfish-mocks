@@ -1,0 +1,57 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellSoftwareInstallationService.DellSoftwareInstallationService",
+    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSoftwareInstallationService",
+    "@odata.type": "#DellSoftwareInstallationService.v1_0_0.DellSoftwareInstallationService",
+    "Actions": {
+        "#DellSoftwareInstallationService.GetRepoBasedUpdateList": {
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSoftwareInstallationService/Actions/DellSoftwareInstallationService.GetRepoBasedUpdateList"
+        },
+        "#DellSoftwareInstallationService.InstallFromRepository": {
+            "ApplyUpdate@Redfish.AllowableValues": [
+                "False",
+                "True"
+            ],
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "FTP",
+                "HTTP",
+                "HTTPS",
+                "NFS",
+                "TFTP"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSoftwareInstallationService/Actions/DellSoftwareInstallationService.InstallFromRepository"
+        },
+        "#DellSoftwareInstallationService.InstallFromURI": {
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "target": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSoftwareInstallationService/Actions/DellSoftwareInstallationService.InstallFromURI"
+        }
+    },
+    "Description": "The DellSoftwareInstallationService resource provides some actions to support software installation functionality.",
+    "Id": "DellSoftwareInstallationService",
+    "Name": "DellSoftwareInstallationService"
+}

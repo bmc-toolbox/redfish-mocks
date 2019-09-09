@@ -1,0 +1,491 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "definitions": {
+        "AvailableActions": {
+            "additionalItems": true,
+            "items": {
+                "additionalProperties": false,
+                "description": "This array item defines an available custom action on this resource.",
+                "properties": {
+                    "Action": {
+                        "description": "Defines the name of the custom action for which the following properties are supported on this resource.",
+                        "readonly": true,
+                        "type": "string"
+                    },
+                    "Capabilities": {
+                        "description": "This array item defines the allowable values supported for this custom action on this resource.",
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "AllowableValues": {
+                                    "description": "Defines the allowable values for this property on this resource.",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "readonly": true,
+                                    "type": "array"
+                                },
+                                "PropertyName": {
+                                    "description": "Defines the property name for which the following allowable values apply.",
+                                    "readonly": true,
+                                    "type": "string"
+                                }
+                            },
+                            "readonly": true,
+                            "type": "object"
+                        },
+                        "readonly": true,
+                        "type": "array"
+                    }
+                },
+                "readonly": true,
+                "type": "object"
+            },
+            "readonly": true,
+            "type": "array",
+            "uniqueItems": true
+        },
+        "Context": {
+            "description": "This object represents the Context property.",
+            "etag": true,
+            "readonly": true,
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "CurrentFirmwareVersion": {
+            "additionalProperties": false,
+            "description": "The schema definition for the current firmware version.",
+            "properties": {
+                "Current": {
+                    "$ref": "#/definitions/FWVersion"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "Description": {
+            "description": "Provides a description of this resource and is used for commonality  in the schema definitions.",
+            "longDescription": "This object represents the Description property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification.",
+            "readonly": true,
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "FWVersion": {
+            "additionalProperties": false,
+            "description": "This object contains information about the version of a firmware image.",
+            "properties": {
+                "VersionString": {
+                    "description": "This string represents the version of the firmware image.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "HpePowerSupplyStatus": {
+            "additionalProperties": false,
+            "description": "This object represents the status of power the power supply.",
+            "properties": {
+                "State": {
+                    "description": "Indicates the known state of the resource.",
+                    "enum": [
+                        "Unknown",
+                        "Ok",
+                        "Degraded",
+                        "Failed",
+                        "OverVoltage",
+                        "OverCurrent",
+                        "OverTemperature",
+                        "ACPowerLost",
+                        "FanFailure",
+                        "WarningHighInputVoltage",
+                        "WarningLowInputVoltage",
+                        "WarningHighOutputVoltage",
+                        "WarningLowOutputVoltage",
+                        "WarningInletTemperature",
+                        "WarningInternalTemperature",
+                        "WarningHighAuxiliaryVoltage",
+                        "WarningLowAuxiliaryVoltage",
+                        "PowerSupplyMismatch",
+                        "GoodInStandby"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "Id": {
+            "description": "Uniquely identifies the resource within the collection of like resources.",
+            "longDescription": "This property represents an identifier for the resource.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification.",
+            "readonly": true,
+            "type": "string"
+        },
+        "Name": {
+            "description": "The name of the resource or array element.",
+            "etag": true,
+            "readonly": true,
+            "type": "string"
+        },
+        "Oem": {
+            "additionalProperties": false,
+            "description": "This object represents the Oem property.",
+            "patternProperties": {
+                "^[A-Za-z0-9]+$": {
+                    "additionalProperties": true,
+                    "description": "This is the manufacturer/provider-specific property used to divide the OEM object into sections.",
+                    "properties": {
+                        "Type": {
+                            "etag": true,
+                            "pattern": "^[A-Z][A-Za-z0-9]+\\.\\d+\\.\\d+\\.\\d+$",
+                            "readonly": true,
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "PhysicalContext": {
+            "enum": [
+                null,
+                "Room",
+                "Intake",
+                "Exhaust",
+                "Front",
+                "Back",
+                "Upper",
+                "Lower",
+                "CPU",
+                "GPU",
+                "Backplane",
+                "SystemBoard",
+                "PowerSupply",
+                "VoltageRegulator",
+                "StorageDevice",
+                "NetworkingDevice",
+                "ComputeBay",
+                "StorageBay",
+                "NetworkBay",
+                "ExpansionBay",
+                "PowerSupplyBay"
+            ],
+            "enumDescriptions": {
+                "Back": "The back of the chassis",
+                "Backplane": "A backplane within the chassis",
+                "CPU": "A Processor (CPU)",
+                "ComputeBay": "Within a compute bay",
+                "Exhaust": "The exhaust point of the chassis",
+                "ExpansionBay": "Within an expansion bay",
+                "Front": "The front of the chassis",
+                "GPU": "A Graphics Processor (GPU)",
+                "Intake": "The intake point of the chassis",
+                "Lower": "The lower portion of the chassis",
+                "NetworkBay": "Within a networking bay",
+                "NetworkingDevice": "A networking device",
+                "PowerSupply": "A power supply",
+                "PowerSupplyBay": "Within a power supply bay",
+                "Room": "The room",
+                "StorageBay": "Within a storage bay",
+                "StorageDevice": "A storage device",
+                "SystemBoard": "The system board (PCB)",
+                "Upper": "The upper portion of the chassis",
+                "VoltageRegulator": "A voltage regulator device"
+            },
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "Redundancy": {
+            "additionalProperties": false,
+            "description": "This is the redundancy definition to be used in other resource schemas.",
+            "longDescription": "This object represents the Redundancy element property.  All values for resources described by this schema shall comply to the requirements as described in the Redfish specification.  The value of this string shall be of the format for the reserved word *Redundancy*",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "#/definitions/odataid"
+                },
+                "MaxNumSupported": {
+                    "description": "This is the maximum number of members allowable for this particular managers redundancy, including this manager.",
+                    "longDescription": "The value of this property shall contain the maximum number of members allowed in the redundancy group.",
+                    "readonly": true,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "MemberId": {
+                    "description": "This is the identifier for the member within the collection.",
+                    "longDescription": "The value of this string shall uniquely identify the member within the collection.",
+                    "type": "string"
+                },
+                "MinNumNeeded": {
+                    "description": "This is the minumum number of managers needed for this manager to be redundant.",
+                    "longDescription": "The value of this property shall contain the maximum number of members allowed in the redundancy group for the current redundancy mode to still be fault tolerant.",
+                    "readonly": true,
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
+                },
+                "Mode": {
+                    "description": "This is the redundancy mode of the group.",
+                    "enum": [
+                        null,
+                        "Failover",
+                        "N+1",
+                        "LoadBalanced",
+                        "Sparing",
+                        "LimitedSparing"
+                    ],
+                    "enumDescriptions": {
+                        "Failover": "Failure of the primary unit will cause a secondary unit to take over the functions of the primary unit",
+                        "LimitedSparing": "A spare unit is available to take over the function of a failed unit, but may require intervention to facilitate the transition",
+                        "LoadBalanced": "Multiple units are available such that the system will continue operation at a reduced capacity if one unit fails",
+                        "N+1": "Multiple units are available such that the system can continue normal operation if one unit fails",
+                        "Sparing": "A spare unit is available to take over the function of a failed unit"
+                    },
+                    "longDescription": "The value of this property shall contain the information about the redundancy mode of this manager.  Failover shall indicate a master/slave type arrangement where status indicates the role of this manager.  N+1 indicates an arrangement where the redundancy set needs MaxNumSupported-1 number of resources in order to be redundant.  Load Balanced indicates all members are active. However, there functionality is not independent of each other. Their functioning is determined by some sort of load balancing algorithm. Sparing is implied (i.e. each member can be a spare for the other(s). Sparing indicates that all members are active and are aware of each others. However, their functionality is independent until failover. Each member can be a spare for the other(s). Limited Sparing indicates that all members are active, and they may or may not be aware of each and they are not spares for each other.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Name": {
+                    "$ref": "#/definitions/Name"
+                },
+                "Oem": {
+                    "$ref": "#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "RedundancySet": {
+                    "description": "Contains any ids that represent components of this reduncancy set.",
+                    "items": {
+                        "properties": {
+                            "@odata.id": {
+                                "$ref": "#/definitions/odataid"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "longDescription": "The value of this property shall contain the ids of components that are part of this redundancy set. The id values may or may not be dereferenceable.",
+                    "readonly": true,
+                    "type": "array"
+                },
+                "Status": {
+                    "$ref": "#/definitions/Status"
+                }
+            },
+            "type": "object"
+        },
+        "ResetType": {
+            "enum": [
+                "On",
+                "ForceOff",
+                "GracefulRestart",
+                "ForceRestart",
+                "Nmi",
+                "ForceOn",
+                "PushPowerButton"
+            ],
+            "enumDescriptions": {
+                "ForceOff": "Turn the system off immediately (non-graceful) shutdown",
+                "ForceOn": "Turn the system on immediately",
+                "ForceRestart": "Perform an immediate (non-graceful) shutdown, followed by a restart of the system",
+                "GracefulRestart": "Perform a graceful system shutdown followed by a restart of the system",
+                "Nmi": "Generate a Non-Maskable Interrupt to cause an immediate system halt",
+                "On": "Turn the system on",
+                "PushPowerButton": "Simulate the pressing of the physical power button on this system"
+            },
+            "type": "string"
+        },
+        "Settings": {
+            "additionalProperties": false,
+            "properties": {
+                "href": {
+                    "description": "Reference to the resource the client may PUT/PATCH to in order to change this resource.",
+                    "longDescription": "The value of this property shall be the URI of the resource to which a client must do a PUT or PATCh in order to modify this resource.",
+                    "readonly": true,
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "SettingsResult": {
+            "additionalProperties": false,
+            "properties": {
+                "ETag": {
+                    "description": "The ETag of the resource to which the settings were applied, after the application.",
+                    "longDescription": "The value of this property shall be the ETag of the resource to which the settings were applied, after the application.  This is here so that the client can check it against the ETag of the current resource to see if any other changes have also happened to the resource.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Operation": {
+                    "description": "Last operation detail.",
+                    "enum": [
+                        "SettingsApply"
+                    ],
+                    "longDescription": "The value of this property shall indicate the results of the settings application.  The value SettingsApply shall be used to indicate the Settings were applied during the normal course of operations, such as what happens during a reboot.",
+                    "readonly": true,
+                    "type": "string"
+                },
+                "Time": {
+                    "description": "Indicates the time the settings were applied.",
+                    "longDescription": "The value of this property shall indicate the time that the settings object was applied to the resource.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "Status": {
+            "additionalProperties": false,
+            "properties": {
+                "Health": {
+                    "description": "This represents the health state of this resource in the absence of its dependent resources.",
+                    "enum": [
+                        null,
+                        "OK",
+                        "Warning",
+                        "Critical"
+                    ],
+                    "enumDescriptions": {
+                        "Critical": "A critical condition exists that requires immediate attention",
+                        "OK": "Normal",
+                        "Warning": "A condition exists that requires attention"
+                    },
+                    "longDescription": "This property shall represent the HealthState of the resource without considering its dependent resources. The values shall conform to those defined in the Redfish specification.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "HealthRollup": {
+                    "description": "This represents the overall health state from the view of this resource.",
+                    "enum": [
+                        null,
+                        "OK",
+                        "Warning",
+                        "Critical"
+                    ],
+                    "enumDescriptions": {
+                        "Critical": "A critical condition exists that requires immediate attention",
+                        "OK": "Normal",
+                        "Warning": "A condition exists that requires attention"
+                    },
+                    "longDescription": "This property shall represent the HealthState of the resource and its dependent resources.  The values shall conform to those defined in the Redfish specification.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "State": {
+                    "description": "This indicates the known state of the resource, such as if it is enabled.",
+                    "enum": [
+                        null,
+                        "Enabled",
+                        "Disabled",
+                        "StandbyOffline",
+                        "StandbySpare",
+                        "InTest",
+                        "Starting",
+                        "Absent",
+                        "UnavailableOffline",
+                        "Deferring",
+                        "Quiesced",
+                        "Updating"
+                    ],
+                    "enumDescriptions": {
+                        "Absent": "This function or resource is not present or not detected.",
+                        "Deferring": "The element will not process any commands but will queue new requests.",
+                        "Disabled": "This function or resource has been disabled.",
+                        "Enabled": "This function or resource has been enabled.",
+                        "InTest": "This function or resource is undergoing testing.",
+                        "Quiesced": "The element is enabled but only processes a restricted set of commands.",
+                        "StandbyOffline": "This function or resource is enabled, but awaiting an external action to activate it.",
+                        "StandbySpare": "This function or resource is part of a redundancy set and is awaiting a failover or other external action to activate it.",
+                        "Starting": "This function or resource is starting.",
+                        "UnavailableOffline": "This function or resource is present but cannot be used.",
+                        "Updating": "The element is updating and may be unavailable or degraded."
+                    },
+                    "longDescription": "This property shall represent if this component is available or not and why.  Enabled indicates the resource is available.  Disabled indicates the resource has been intentionally made unavailable but it can be enabled.  Offline indicates the resource is unavailable intentionally and requires action to be made available.  InTest indicates that the component is undergoing testing.  Starting indicates that the resource is on its way to becoming available.  Absent indicates the resources is physically unavailable.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "extref": {
+            "properties": {
+                "extref": {
+                    "description": "The URI of an external resource.",
+                    "etag": true,
+                    "format": "uri",
+                    "readonly": true,
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "odatacontext": {
+            "format": "uri",
+            "longDescription": "The value of this property shall be the context URL that describes the resource according to OData-Protocol and shall be of the form defined in the SPMF specification.",
+            "readonly": true,
+            "type": "string"
+        },
+        "odataetag": {
+            "longDescription": "The value of this property is the Etag of the resource.",
+            "readonly": true,
+            "type": "string"
+        },
+        "odataid": {
+            "format": "uri",
+            "longDescription": "The value of this property shall be the unique identifier for the resource and it shall be of the form defined in the SPMF specification.",
+            "readonly": true,
+            "type": "string"
+        },
+        "odatatype": {
+            "longDescription": "The value of this property shall be an absolute URL that specifies the type of the resource and it shall be of the form defined in the SPMF specification.",
+            "readonly": true,
+            "type": "string"
+        },
+        "odatacount": {
+            "type": "number",
+            "readonly": true,
+            "description": "The number of items in a collection.",
+            "longDescription": "The value of this property shall be an integer representing the number of items in a collection."
+        }
+    },
+    "title": "#Resource.v1_1_0.Resource",
+    "type": "object"
+}

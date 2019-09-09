@@ -1,0 +1,508 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#HpeNetworkPortEVB.v1_1_1.HpeNetworkPortEVB",
+    "type": "object",
+    "etag": true,
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Transmitting": {
+            "type": "object",
+            "readonly": true,
+            "etag": true,
+            "properties": {
+                "ChannelDescriptionRemoteSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": false,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The link partner's channel discovery local sequence number that was last successfully received and processed."
+                },
+                "ChannelDescriptionLocalSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": false,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "This station's channel discovery local sequence number which will be transmitted to the link partner on this port."
+                },
+                "ChannelLinkControlRemoteSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": false,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The link partner's channel link control local sequence number that was last successfully received and processed."
+                },
+                "ChannelLinkControlLocalSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": false,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "This station's channel link control local sequence number which will be transmitted to the link partner on this port."
+                },
+                "ChannelDescriptorCount": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "minimum": 0,
+                    "maximum": 66,
+                    "etag": true,
+                    "description": "The number of channel descriptor pairs being transmitted to the link partner on this port."
+                },
+                "VirtualLinkStatusVector": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "pattern": "^([0-1]){1,}$",
+                    "description": "A bit vector indicating S-Channel status being transmitted on this link, 1=up, 0=down. S-Channel status bits are ordered by SCID from lowest numbered (first) to highest (last)."
+                },
+                "SChannelMaxCount": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 4095,
+                    "description": "The Channel Capacity value being advertised to the link partner. It indicates the number of S-Channels this station can support on this physical link."
+                },
+                "ChannelLinkControlMCEnable": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "The Feature Indicators field, Management Controller (MC) Channel (SCID 4094) enabled state in the HPE CLC TLV being transmitted to the link partner on this port."
+                },
+                "SChannelsSupported": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "When true, indicates that this physical link has S-Channel capability."
+                },
+                "SChannelAssignments": {
+                    "type": "array",
+                    "readonly": true,
+                    "etag": true,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "readonly": true,
+                        "etag": true,
+                        "properties": {
+                            "Svid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 0,
+                                "maximum": 4095,
+                                "description": "SVID assignment value for this <SCID,SVID> S-Channel identifier pair being transmitted to the link partner on this port. When 0 it indicates an SVID assignment request to the link partner is in progress."
+                            },
+                            "Scid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 1,
+                                "maximum": 4095,
+                                "description": "SCID value for this <SCID,SVID> S-Channel identifier pair being transmitted to the link partner on this port."
+                            }
+                        },
+                        "description": "An EVB <SCID,SVID> S-Channel identifier pair."
+                    },
+                    "description": "The set of all EVB <SCID,SVID> S-Channel assignments being transmitted to the link partner on this port."
+                },
+                "Role": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "enum": [
+                        null,
+                        "bridge",
+                        "station"
+                    ],
+                    "enumDescriptions": {
+                        "bridge": "Indicates this link is operating locally as a Bridge.",
+                        "station": "Indicates this link is operating locally as a Station."
+                    },
+                    "description": "This port's IEEE 802.1Qbg role being advertised on the link."
+                },
+                "ChannelDescriptionData": {
+                    "type": "array",
+                    "readonly": true,
+                    "etag": true,
+                    "items": {
+                        "type": "object",
+                        "readonly": true,
+                        "etag": true,
+                        "properties": {
+                            "Descriptor0PcpSupport": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "pattern": "^(([0-1]){8})$",
+                                "description": "Indicates which IEEE 802.1Q Ethernet Priority Code Point (PCP) classes are supported on this S-Channel. When no PCPs are supported, the S-Channel makes no attempt to filter or control traffic class. A string of 1/0 characters indicating 1=enabled, 0=disabled. PCP classes are ordered from highest numbered 7 (first) to lowest 0 (last)."
+                            },
+                            "Descriptor0BandwidthPirMbps": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "The bandwidth Peak Information Rate (PIR) for this S-Channel, in Mbps."
+                            },
+                            "Descriptor0BandwidthCirMbps": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "The bandwidth Commited Information Rate (CIR) for this S-Channel, in Mbps."
+                            },
+                            "Descriptor0Scid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 0,
+                                "maximum": 4095,
+                                "description": "The S-Channel identifier for this Descriptor0 instance."
+                            },
+                            "Descriptor0RoCEESupport": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "When true, this S-Channel supports RDMA over Converged Enhanced Ethernet (RoCEE)."
+                            },
+                            "Descriptor0EthernetSupport": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "When true, this S-Channel supports Ethernet."
+                            },
+                            "Descriptor0FCoESupport": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "When true, this S-Channel supports Fibre Channel over Ethernet (FCoE)."
+                            },
+                            "Descriptor0iSCSISupport": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "description": "When true, this S-Channel supports Internet SCSI (iSCSI)."
+                            },
+                            "Descriptor0ChannelTerminationType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "enum": [
+                                    null,
+                                    "primary-physical",
+                                    "SR-IOV-virtual",
+                                    "secondary-physical",
+                                    "vSwitch-port",
+                                    "NCSI-port"
+                                ],
+                                "enumDescriptions": {
+                                    "primary-physical": "This S-Channel is presented to the host OS as a primary PCI physical function.",
+                                    "SR-IOV-virtual": "This S-Channel is presented to the host OS as a PCI SR-IOV virtual function.",
+                                    "secondary-physical": "This S-Channel is presented to the host OS as a secondary PCI physical function, i.e. a PCI physical function behind a bridge on the device.",
+                                    "vSwitch-port": "This S-Channel is mapped to a Virtual Switch port.",
+                                    "NCSI-port": "This S-Channel is mapped to the NCSI internal port for management."
+                                },
+                                "description": "Indicates the termination provided for this S-Channel."
+                            },
+                            "Descriptor1Scid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 0,
+                                "maximum": 4095,
+                                "description": "The S-Channel identifier for this Descriptor1 instance."
+                            },
+                            "Descriptor1ConnectionID": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "pattern": "^([0-9A-F]){8}(-([0-9A-F]){4}){3}-([0-9A-F]){12}$",
+                                "description": "A unique S-Channel identifer in UUID format."
+                            }
+                        },
+                        "description": "Descriptive data for one S-Channel being transmitted to the link partner on this port."
+                    },
+                    "description": "The set of all S-Channel descriptions being transmitted to the link partner on this port."
+                }
+            },
+            "description": "EVB TLV data being transmitted to the link partner on this port."
+        },
+        "Receiving": {
+            "type": "object",
+            "readonly": true,
+            "etag": true,
+            "properties": {
+                "ChannelDescriptionRemoteSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The last HPE Channel Decsription sequence number sent on this link that was successfully received and processed by the link partner."
+                },
+                "ChannelDescriptionLocalSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The link partner's HPE Channel Description sequence number that was last successfully received and processed."
+                },
+                "ChannelDescriptionSubtype": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "The header subtype field of the last received HPE Channel Description TLV."
+                },
+                "ChannelLinkControlLocalSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The link partner's HPE Channel Link Control sequence number that was last successfully received and processed."
+                },
+                "ChannelLinkControlRemoteSequenceNumber": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 65535,
+                    "description": "The last HPE Channel Link control sequence number sent on this link that was successfully received and processed by the link partner."
+                },
+                "ChannelLinkControlSubtype": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 255,
+                    "description": "The header subtype field of the last received HPE Channel Link Control TLV."
+                },
+                "SChannelMaxCount": {
+                    "type": [
+                        "integer",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "minimum": 0,
+                    "maximum": 4095,
+                    "description": "Indicates the number of S-Channels the link partner can support on this physical link."
+                },
+                "CdcpActive": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "True if a currently active IEEE 802.1Qbg CDCP TLV has been received from the link partner."
+                },
+                "ChannelLinkControlMCEnable": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The Feature Indicators field, Management Controller (MC) Channel (SCID 4094) enabled state in the HPE CLC TLV being received from the link partner on this port.",
+                    "etag": true
+                },
+                "ChannelActive": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "A currently unexpired HPE Channel Link Control or HPE Channel Description TLV has been received from the link partner."
+                },
+                "SChannelsSupported": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "description": "When true this link supports S-Channels."
+                },
+                "Role": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "enum": [
+                        null,
+                        "bridge",
+                        "station"
+                    ],
+                    "enumDescriptions": {
+                        "bridge": "Indicates the link partner is operating as a Bridge.",
+                        "station": "Indicates the link partner is operating as a Station."
+                    },
+                    "description": "The link partner's IEEE 802.1Qbg operating role."
+                },
+                "VirtualLinkStatusVector": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "etag": true,
+                    "pattern": "^([0-1]){1,}$",
+                    "description": "A bit vector indicating S-Channel status received from the link partner, 1=up, 0=down. S-Channel status bits are ordered by SCID from lowest numbered (first) to highest (last)."
+                },
+                "SChannelAssignments": {
+                    "type": "array",
+                    "readonly": true,
+                    "etag": true,
+                    "uniqueItems": true,
+                    "items": {
+                        "type": "object",
+                        "readonly": true,
+                        "etag": true,
+                        "properties": {
+                            "Svid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 0,
+                                "maximum": 4095,
+                                "description": "SVID assignment value for this <SCID,SVID> S-Channel identifier pair received from the link partner on this port. When 0 it indicates an assignment request is in progress."
+                            },
+                            "Scid": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "readonly": true,
+                                "etag": true,
+                                "minimum": 1,
+                                "maximum": 4095,
+                                "description": "SCID value for this <SCID,SVID> S-Channel identifier pairreceived from the link partner on this port."
+                            }
+                        },
+                        "description": "An EVB <SCID,SVID> S-Channel identifier pair."
+                    },
+                    "description": "The set of all EVB <SCID,SVID> S-Channel assignments received from the link partner on this port."
+                }
+            },
+            "description": "EVB TLV data received from the link partner on this port."
+        }
+    },
+    "description": "Hewlett Packard Enterprise property extensions for Network Ports Edge Virtual Bridging",
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2018 Distributed Management Task Force. All rights reserved."
+}

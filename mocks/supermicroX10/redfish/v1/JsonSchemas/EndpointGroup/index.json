@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/EndpointGroup",
+    "Id": "EndpointGroup",
+    "Name": "EndpointGroup Schema File",
+    "Description": "EndpointGroup Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "EndpointGroup",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/EndpointGroup.json"
+        }
+    ],
+    "Oem": {}
+}

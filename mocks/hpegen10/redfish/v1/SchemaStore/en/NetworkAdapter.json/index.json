@@ -1,0 +1,411 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#NetworkAdapter.v1_2_0.NetworkAdapter",
+    "type": "object",
+    "etag": true,
+    "additionalProperties": false,
+    "definitions": {
+        "ControllerCapabilities": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "NetworkPortCount": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The number of physical ports on this controller."
+                },
+                "NetworkDeviceFunctionCount": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The maximum number of physical functions available on this controller."
+                },
+                "DataCenterBridging": {
+                    "$ref": "#/definitions/DCB",
+                    "description": "This object shall contain capability, status, and configuration values related to Data Center Bridging (DCB) for this controller."
+                },
+                "NPAR": {
+                    "$ref": "#/definitions/NicPartitioning",
+                    "description": "NIC Partitioning (NPAR) capabilities for this controller.",
+                    "longDescription": "This object shall contain capability, status, and configuration values related to NIC partitioning for this controller."
+                },
+                "VirtualizationOffload": {
+                    "$ref": "#/definitions/VirtualizationOffload",
+                    "description": "This object shall contain capability, status, and configuration values related to virtualization offload for this controller."
+                },
+                "NPIV": {
+                    "$ref": "#/definitions/NPortIDVirtualization",
+                    "description": "This object shall contain N_Port ID Virtualization (NPIV) capabilties for this controller."
+                }
+            }
+        },
+        "Controller": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "FirmwarePackageVersion": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The version number of the user-facing firmware package."
+                },
+                "Links": {
+                    "type": "object",
+                    "readonly": true,
+                    "etag": false,
+                    "additionalProperties": false,
+                    "properties": {
+                        "NetworkPorts": {
+                            "description": "A reference to the collection(s) of physical network ports associated with this network adapter controller.",
+                            "etag": false,
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "@odata.id": {
+                                        "$ref": "Resource.json#/definitions/odataid"
+                                    }
+                                }
+                            },
+                            "readonly": true
+                        },
+                        "NetworkDeviceFunctions": {
+                            "description": "A reference to the collection(s) of network device functions associated with this network adapter controller.",
+                            "etag": false,
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "@odata.id": {
+                                        "$ref": "Resource.json#/definitions/odataid"
+                                    }
+                                }
+                            },
+                            "readonly": true
+                        }
+                    },
+                    "description": "Links to other resources related to this controller."
+                },
+                "ControllerCapabilities": {
+                    "$ref": "#/definitions/ControllerCapabilities",
+                    "description": "The capabilities of this controller."
+                }
+            }
+        },
+        "DCB": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "Capable": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The value of this property shall be a boolean indicating whether this controller is capable of Data Center Bridging (DCB)."
+                }
+            }
+        },
+        "NPortIDVirtualization": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "MaxDeviceLogins": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The maximum number of N_Port ID Virtualization (NPIV) logins allowed simultaneously from all ports on this controller."
+                },
+                "MaxPortLogins": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The maximum number of N_Port ID Virtualization (NPIV) logins allowed per physical port on this controller."
+                }
+            }
+        },
+        "SRIOVirtualization": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "SRIOVVEPACapable": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The value of this property shall be a boolean indicating whether this controller supports Single Root Input/Output Virtualization (SR-IOV) in Virtual Ethernet Port Aggregator (VEPA) mode."
+                }
+            }
+        },
+        "VirtualFunction": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "DeviceMaxCount": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The maximum number of Virtual Functions (VFs) supported by this controller."
+                },
+                "NetworkPortMaxCount": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The maximum number of Virtual Functions (VFs) supported per network port for this controller."
+                },
+                "MinAssignmentGroupSize": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "etag": true,
+                    "readonly": true,
+                    "description": "The minimum number of Virtual Functions (VFs) that can be allocated or moved between physical functions for this controller."
+                }
+            }
+        },
+        "VirtualizationOffload": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "properties": {
+                "VirtualFunction": {
+                    "$ref": "#/definitions/VirtualFunction"
+                },
+                "SRIOV": {
+                    "$ref": "#/definitions/SRIOVirtualization",
+                    "description": "Single-Root Input/Output Virtualization (SR-IOV) capabilities."
+                }
+            }
+        },
+        "NicPartitioning": {
+            "etag": true,
+            "additionalProperties": false,
+            "description": "NIC Partitioning capability, status, and configuration for a controller.",
+            "longDescription": "This type shall contain the capability, status, and configuration values for a controller.",
+            "properties": {
+                "NparCapable": {
+                    "etag": true,
+                    "description": "Indicates whether or not NIC function partitioning is supported by a controller.",
+                    "longDescription": "This property shall indicate the ability of a controller to support NIC function partitioning.",
+                    "readonly": true,
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "NparEnabled": {
+                    "etag": true,
+                    "description": "When true, NIC function partitioning is active on this controller.",
+                    "longDescription": "This property shall indicate whether or not NIC function partitioning is active on this controller.",
+                    "readonly": false,
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                }
+            },
+            "type": "object"
+        }
+    },
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "Oem": {
+            "type": "object",
+            "etag": true,
+            "additionalProperties": true,
+            "readonly": false,
+            "properties": {
+                "Hpe": {
+                    "$ref": "HpeNetworkAdapter.json#",
+                    "readonly": false
+                }
+            }
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Status": {
+            "$ref": "Resource.json#/definitions/Status"
+        },
+        "Settings": {
+            "$ref": "Resource.json#/definitions/Settings"
+        },
+        "Manufacturer": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The manufacturer or OEM of this network adapter."
+        },
+        "Model": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The model string used by the manufacturer to reference this network adapter."
+        },
+        "SKU": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The value of this property shall contain the Stock Keeping Unit (SKU) for the network adapter."
+        },
+        "SerialNumber": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "The serial number for this network adapter."
+        },
+        "PartNumber": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "etag": true,
+            "readonly": true,
+            "description": "Manufacturer's Part number for this network adapter."
+        },
+        "Controllers": {
+            "type": "array",
+            "etag": true,
+            "items": {
+                "$ref": "#/definitions/Controller"
+            },
+            "description": "The set of network controllers ASICs that make up this network adapter."
+        },
+        "NetworkPorts": {
+            "etag": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@odata.id": {
+                        "$ref": "Resource.json#/definitions/odataid"
+                    }
+                }
+            },
+            "readonly": true,
+            "description": "A reference to the collection(s) of physical network ports associated with this network adapter."
+        },
+        "NetworkDeviceFunctions": {
+            "etag": false,
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "@odata.id": {
+                        "$ref": "Resource.json#/definitions/odataid"
+                    }
+                }
+            },
+            "readonly": true,
+            "description": "A reference to the collection(s) of physical network device functions associated with this network adapter."
+        },
+        "Actions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "#NetworkAdapter.ResetSettingsToDefault": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "@odata.id",
+        "@odata.type",
+        "Id",
+        "Name"
+    ],
+    "actions": {
+        "actions": {
+            "NetworkAdapter.ResetSettingsToDefault": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "NetworkAdapter.ResetSettingsToDefault"
+                        ]
+                    }
+                },
+                "required": [
+                    "Action"
+                ]
+            }
+        }
+    },
+    "description": "A NetworkAdapter represents the physical network adapter capable of connecting to a computer network.  Examples include but are not limited to Ethernet, Fibre Channel, and converged network adapters.",
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2018 Distributed Management Task Force. All rights reserved."
+}

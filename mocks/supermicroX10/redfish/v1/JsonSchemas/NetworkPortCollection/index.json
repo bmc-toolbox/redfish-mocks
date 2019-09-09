@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/NetworkPortCollection",
+    "Id": "NetworkPortCollection",
+    "Name": "NetworkPortCollection Schema File",
+    "Description": "NetworkPortCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "NetworkPortCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/NetworkPortCollection.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,101 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerBootSettings.HpeServerBootSettings",
+    "@odata.etag": "W/\"FE8AD8A70CEEF6F6F6B1D56F9FCB2610\"",
+    "@odata.id": "/redfish/v1/systems/1/bios/boot/settings/",
+    "@odata.type": "#HpeServerBootSettings.v2_0_0.HpeServerBootSettings",
+    "BootSources": [
+        {
+            "BootOptionNumber": "000A",
+            "BootString": "Generic USB Boot",
+            "CorrelatableID": "UsbClass(0xFFFF,0xFFFF,0xFF,0xFF,0xFF)",
+            "StructuredBootString": "Generic.USB.1.1",
+            "UEFIDevicePath": "UsbClass(0xFFFF,0xFFFF,0xFF,0xFF,0xFF)"
+        },
+        {
+            "BootOptionNumber": "000C",
+            "BootString": "Embedded FlexibleLOM 1 Port 1 : HP FlexFabric 10Gb 2-port 536FLB Adapter - CNA - HP FlexFabric 10Gb 2-port 536FLB Adapter - NIC (HTTP(S) IPv4)",
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "StructuredBootString": "NIC.FlexLOM.1.1.Httpv4",
+            "UEFIDevicePath": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/MAC(F40343A83380,0x1)/IPv4(0.0.0.0)/Uri()"
+        },
+        {
+            "BootOptionNumber": "000E",
+            "BootString": "Embedded FlexibleLOM 1 Port 1 : HP FlexFabric 10Gb 2-port 536FLB Adapter - CNA - HP FlexFabric 10Gb 2-port 536FLB Adapter - NIC (PXE IPv4)",
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "StructuredBootString": "NIC.FlexLOM.1.1.IPv4",
+            "UEFIDevicePath": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/MAC(F40343A83380,0x1)/IPv4(0.0.0.0)"
+        },
+        {
+            "BootOptionNumber": "000D",
+            "BootString": "Embedded FlexibleLOM 1 Port 1 : HP FlexFabric 10Gb 2-port 536FLB Adapter - CNA - HP FlexFabric 10Gb 2-port 536FLB Adapter - NIC (HTTP(S) IPv6)",
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "StructuredBootString": "NIC.FlexLOM.1.1.Httpv6",
+            "UEFIDevicePath": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/MAC(F40343A83380,0x1)/IPv6(0000:0000:0000:0000:0000:0000:0000:0000)/Uri()"
+        },
+        {
+            "BootOptionNumber": "000F",
+            "BootString": "Embedded FlexibleLOM 1 Port 1 : HP FlexFabric 10Gb 2-port 536FLB Adapter - CNA - HP FlexFabric 10Gb 2-port 536FLB Adapter - NIC (PXE IPv6)",
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)",
+            "StructuredBootString": "NIC.FlexLOM.1.1.IPv6",
+            "UEFIDevicePath": "PciRoot(0x2)/Pci(0x0,0x0)/Pci(0x0,0x0)/MAC(F40343A83380,0x1)/IPv6(0000:0000:0000:0000:0000:0000:0000:0000)"
+        },
+        {
+            "BootOptionNumber": "000B",
+            "BootString": "Embedded RAID 1 : HPE Smart Array P204i-b SR Gen10 - Size:1.7 TiB Port:1I Bay:1 Box:1",
+            "CorrelatableID": "PciRoot(0x2)/Pci(0x2,0x0)/Pci(0x0,0x0)",
+            "StructuredBootString": "HD.EmbRAID.1.2",
+            "UEFIDevicePath": "PciRoot(0x2)/Pci(0x2,0x0)/Pci(0x0,0x0)/Scsi(0x0,0x4000)"
+        }
+    ],
+    "DefaultBootOrder": [
+        "Cd",
+        "Usb",
+        "EmbeddedStorage",
+        "PcieSlotStorage",
+        "EmbeddedFlexLOM",
+        "PcieSlotNic",
+        "UefiShell"
+    ],
+    "DesiredBootDevices": [
+        {
+            "CorrelatableID": "",
+            "Lun": "",
+            "Wwn": "",
+            "iScsiTargetName": ""
+        },
+        {
+            "CorrelatableID": "",
+            "Lun": "",
+            "Wwn": "",
+            "iScsiTargetName": ""
+        },
+        {
+            "CorrelatableID": "",
+            "Lun": "",
+            "Wwn": "",
+            "iScsiTargetName": ""
+        },
+        {
+            "CorrelatableID": "",
+            "Lun": "",
+            "Wwn": "",
+            "iScsiTargetName": ""
+        },
+        {
+            "CorrelatableID": "",
+            "Lun": "",
+            "Wwn": "",
+            "iScsiTargetName": ""
+        }
+    ],
+    "Id": "settings",
+    "Name": "Boot Order Pending Settings",
+    "PersistentBootConfigOrder": [
+        "Generic.USB.1.1",
+        "NIC.FlexLOM.1.1.Httpv4",
+        "NIC.FlexLOM.1.1.IPv4",
+        "NIC.FlexLOM.1.1.Httpv6",
+        "NIC.FlexLOM.1.1.IPv6",
+        "HD.EmbRAID.1.2"
+    ]
+}

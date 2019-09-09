@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/RoleCollection",
+    "Id": "RoleCollection",
+    "Name": "RoleCollection Schema File",
+    "Description": "RoleCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "RoleCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/RoleCollection.json"
+        }
+    ],
+    "Oem": {}
+}

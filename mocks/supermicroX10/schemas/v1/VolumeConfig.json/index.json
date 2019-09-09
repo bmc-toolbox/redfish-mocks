@@ -1,0 +1,121 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#VolumeConfig",
+    "definitions": {
+        "AccessPolicy": {
+            "type": "string",
+            "enum": [
+                "ReadWrite",
+                "ReadOnly",
+                "Blocked"
+            ]
+        },
+        "DiskCachePolicy": {
+            "type": "string",
+            "enum": [
+                "Unchanged",
+                "Enable",
+                "Disable"
+            ]
+        },
+        "InitState": {
+            "type": "string",
+            "enum": [
+                "NoInit",
+                "QuickInit",
+                "FullInit"
+            ]
+        },
+        "LdIOPolicy": {
+            "type": "string",
+            "enum": [
+                "DirectIO",
+                "CachedIO"
+            ]
+        },
+        "LdReadPolicy": {
+            "type": "string",
+            "enum": [
+                "NoReadAhead",
+                "AlwaysReadAhead"
+            ]
+        },
+        "LdWritePolicy": {
+            "type": "string",
+            "enum": [
+                "WriteThrough",
+                "WriteBack",
+                "WriteBackWithBBU"
+            ]
+        },
+        "StripSize": {
+            "type": "string",
+            "enum": [
+                "64K",
+                "128K",
+                "256K",
+                "512K",
+                "1024K"
+            ],
+            "enumDescriptions": {
+                "64K": "64K strip size per DDF.",
+                "128K": "128K strip size per DDF.",
+                "256K": "256K strip size per DDF.",
+                "512K": "512K strip size per DDF.",
+                "1024K": "1024K strip size per DDF."
+            }
+        },
+        "VolumeConfig": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "VolumeConfig contains properties used to setup a volume for any system.",
+            "longDescription": "This resource shall be used to represent a volume config for a Redfish implementation."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

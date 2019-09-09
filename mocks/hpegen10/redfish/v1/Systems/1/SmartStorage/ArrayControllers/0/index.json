@@ -1,0 +1,59 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeSmartStorageArrayController.HpeSmartStorageArrayController",
+    "@odata.etag": "W/\"0818D4FF\"",
+    "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/",
+    "@odata.type": "#HpeSmartStorageArrayController.v2_2_0.HpeSmartStorageArrayController",
+    "Id": "0",
+    "AdapterType": "SmartArray",
+    "BackupPowerSourceStatus": "NotPresent",
+    "ControllerBoard": {
+        "Status": {
+            "Health": "OK"
+        }
+    },
+    "ControllerPartNumber": "836263-001",
+    "CurrentOperatingMode": "Mixed",
+    "Description": "HPE Smart Storage Array Controller View",
+    "DriveWriteCache": "Disabled",
+    "EncryptionCryptoOfficerPasswordSet": false,
+    "EncryptionCspTestPassed": true,
+    "EncryptionEnabled": false,
+    "EncryptionFwLocked": false,
+    "EncryptionHasLockedVolumesMissingBootPassword": false,
+    "EncryptionMixedVolumesEnabled": false,
+    "EncryptionSelfTestPassed": true,
+    "EncryptionStandaloneModeEnabled": false,
+    "ExternalPortCount": 0,
+    "FirmwareVersion": {
+        "Current": {
+            "VersionString": "1.99"
+        }
+    },
+    "HardwareRevision": "B",
+    "InternalPortCount": 1,
+    "Links": {
+        "LogicalDrives": {
+            "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/LogicalDrives/"
+        },
+        "StorageEnclosures": {
+            "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/StorageEnclosures/"
+        },
+        "PhysicalDrives": {
+            "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/DiskDrives/"
+        },
+        "UnconfiguredDrives": {
+            "@odata.id": "/redfish/v1/Systems/1/SmartStorage/ArrayControllers/0/UnconfiguredDrives/"
+        }
+    },
+    "Location": "Slot 0",
+    "LocationFormat": "PCISlot",
+    "Model": "HPE Smart Array P204i-b SR Gen10",
+    "Name": "HpeSmartStorageArrayController",
+    "ReadCachePercent": 0,
+    "SerialNumber": "PEYHF0HLMAI0U7",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "WriteCacheWithoutBackupPowerEnabled": false
+}

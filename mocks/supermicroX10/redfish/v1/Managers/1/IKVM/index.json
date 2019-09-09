@@ -1,0 +1,8 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#IKVM.IKVM",
+    "@odata.type": "#IKVM.IKVM",
+    "@odata.id": "/redfish/v1/Managers/1/IKVM",
+    "Id": "IKVM",
+    "Name": "HTML5 IKVM",
+    "URI": "/redfish/svWq2DVu8cUrEuI.IKVM"
+}

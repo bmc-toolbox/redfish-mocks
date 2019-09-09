@@ -1,0 +1,170 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#DellLCService.DellLCService",
+    "@odata.id": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService",
+    "@odata.type": "#DellLCService.v1_0_0.DellLCService",
+    "Actions": {
+        "#DellLCService.BackupImage": {
+            "CheckBackupDestinationAvailability@Redfish.AllowableValues": [
+                "Check",
+                "DoNotCheck"
+            ],
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "NFS",
+                "VFLASH"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.BackupImage"
+        },
+        "#DellLCService.ClearProvisioningServer": {
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ClearProvisioningServer"
+        },
+        "#DellLCService.ExportFactoryConfiguration": {
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "Local",
+                "NFS"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ExportFactoryConfiguration"
+        },
+        "#DellLCService.ExportHWInventory": {
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "Local",
+                "NFS"
+            ],
+            "XMLSchema@Redfish.AllowableValues": [
+                "CIM-XML",
+                "Simple"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ExportHWInventory"
+        },
+        "#DellLCService.ExportLCLog": {
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "Local",
+                "NFS"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ExportLCLog"
+        },
+        "#DellLCService.ExportTechSupportReport": {
+            "DataSelectorArrayIn@Redfish.AllowableValues": [
+                "HWData",
+                "OSAppData",
+                "OSAppDataWithoutPII",
+                "TTYLogs"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "NFS"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ExportTechSupportReport"
+        },
+        "#DellLCService.GetRSStatus": {
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.GetRSStatus"
+        },
+        "#DellLCService.GetRemoteServicesAPIStatus": {
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.GetRemoteServicesAPIStatus"
+        },
+        "#DellLCService.LCWipe": {
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.LCWipe"
+        },
+        "#DellLCService.ReInitiateDHS": {
+            "PerformAutoDiscovery@Redfish.AllowableValues": [
+                "NextBoot",
+                "Now",
+                "Off"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.ReInitiateDHS"
+        },
+        "#DellLCService.RestoreImage": {
+            "IgnoreCertWarning@Redfish.AllowableValues": [
+                "Off",
+                "On"
+            ],
+            "PreserveVDConfig@Redfish.AllowableValues": [
+                "False",
+                "True"
+            ],
+            "ProxySupport@Redfish.AllowableValues": [
+                "DefaultProxy",
+                "Off",
+                "ParametersProxy"
+            ],
+            "ProxyType@Redfish.AllowableValues": [
+                "HTTP",
+                "SOCKS"
+            ],
+            "ShareType@Redfish.AllowableValues": [
+                "CIFS",
+                "HTTP",
+                "HTTPS",
+                "NFS",
+                "VFLASH"
+            ],
+            "target": "/redfish/v1/Dell/Managers/iDRAC.Embedded.1/DellLCService/Actions/DellLCService.RestoreImage"
+        }
+    },
+    "Description": "The DellLCService resource provides some actions to support Lifecycle Controller functionality.",
+    "Id": "DellLCService",
+    "Name": "DellLCService"
+}

@@ -1,0 +1,102 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#AccountService.AccountService",
+    "@odata.etag": "W/\"53D6BEAE\"",
+    "@odata.id": "/redfish/v1/AccountService/",
+    "@odata.type": "#AccountService.v1_3_0.AccountService",
+    "Id": "AccountService",
+    "Accounts": {
+        "@odata.id": "/redfish/v1/AccountService/Accounts/"
+    },
+    "ActiveDirectory": {
+        "AccountProviderType": "ActiveDirectoryService",
+        "Authentication": {
+            "AuthenticationType": "UsernameAndPassword",
+            "Password": null,
+            "Username": ""
+        },
+        "RemoteRoleMapping": [
+            {
+                "LocalRole": "dirgroup4b8b8bab176d6c86e8c9e21b",
+                "RemoteGroup": "cn=hp,cn=bmcUsers"
+            },
+            {
+                "LocalRole": "dirgroup6024327d335e22c2f1206450",
+                "RemoteGroup": "cn=hp,cn=bmcAdmins"
+            }
+        ],
+        "ServiceAddresses": [
+            ""
+        ],
+        "ServiceEnabled": false
+    },
+    "Description": "iLO User Accounts",
+    "LDAP": {
+        "AccountProviderType": "LDAPService",
+        "Authentication": {
+            "AuthenticationType": "UsernameAndPassword",
+            "Password": null,
+            "Username": ""
+        },
+        "LDAPService": {
+            "SearchSettings": {
+                "BaseDistinguishedNames": [
+                    "cn=hp"
+                ]
+            }
+        },
+        "RemoteRoleMapping": [
+            {
+                "LocalRole": "dirgroup4b8b8bab176d6c86e8c9e21b",
+                "RemoteGroup": "cn=hp,cn=bmcUsers"
+            },
+            {
+                "LocalRole": "dirgroup6024327d335e22c2f1206450",
+                "RemoteGroup": "cn=hp,cn=bmcAdmins"
+            }
+        ],
+        "ServiceAddresses": [
+            "provision.anycast.prod.example.com"
+        ],
+        "ServiceEnabled": true
+    },
+    "LocalAccountAuth": "Enabled",
+    "Name": "Account Service",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOAccountService.HpeiLOAccountService",
+            "@odata.id": "/redfish/v1/AccountService/",
+            "@odata.type": "#HpeiLOAccountService.v2_3_0.HpeiLOAccountService",
+            "Id": "AccountService",
+            "Actions": {
+                "#HpeiLOAccountService.ImportKerberosKeytab": {
+                    "target": "/redfish/v1/AccountService/Actions/Oem/Hpe/HpeiLOAccountService.ImportKerberosKeytab/"
+                }
+            },
+            "AuthFailureDelayTimeSeconds": 10,
+            "AuthFailureLoggingThreshold": 3,
+            "AuthFailuresBeforeDelay": 1,
+            "DefaultPassword": null,
+            "DefaultUserName": null,
+            "DirectorySettings": {
+                "LdapAuthenticationMode": "DefaultSchema",
+                "LdapCaCertificateLoaded": false,
+                "LdapCaCertificates": {
+                    "@odata.id": "/redfish/v1/AccountService/ExternalAccountProviders/LDAP/Certificates/"
+                },
+                "LdapServerPort": 636
+            },
+            "DirectoryTest": {
+                "@odata.id": "/redfish/v1/AccountService/DirectoryTest/"
+            },
+            "EnforcePasswordComplexity": false,
+            "KerberosSettings": {
+                "KDCServerPort": 88,
+                "KerberosRealm": ""
+            },
+            "MinPasswordLength": 8
+        }
+    },
+    "Roles": {
+        "@odata.id": "/redfish/v1/AccountService/Roles/"
+    }
+}

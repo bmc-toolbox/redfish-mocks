@@ -1,0 +1,11 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#NTP.NTP",
+    "@odata.type": "#NTP.NTP",
+    "@odata.id": "/redfish/v1/Managers/1/NTP",
+    "Id": "NTP",
+    "Name": "NTP Service",
+    "NTPEnable": true,
+    "PrimaryNTPServer": "ntp0.prod.example.com",
+    "SecondaryNTPServer": "ntp1.prod.example.com",
+    "DaylightSavingTime": false
+}

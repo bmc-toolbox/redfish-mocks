@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Assembly",
+    "Id": "Assembly",
+    "Name": "Assembly Schema File",
+    "Description": "Assembly Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Assembly",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Assembly.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/StorageSystemCollection.v1_0_1",
+    "Id": "StorageSystemCollection.v1_0_1",
+    "Name": "StorageSystemCollection Schema File",
+    "Description": "StorageSystemCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "StorageSystemCollection.v1_0_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/StorageSystemCollection.v1_0_1.json"
+        }
+    ],
+    "Oem": {}
+}

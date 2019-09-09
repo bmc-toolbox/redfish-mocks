@@ -1,0 +1,18 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ManagerAccount.ManagerAccount",
+    "@odata.type": "#ManagerAccount.ManagerAccount",
+    "@odata.id": "/redfish/v1/AccountService/Accounts/3",
+    "Id": "3",
+    "Name": "User Account",
+    "Description": "User Account",
+    "Password": "null",
+    "UserName": "psm",
+    "Locked": false,
+    "RoleId": "Admin",
+    "Enabled": true,
+    "Links": {
+        "Role": {
+            "@odata.id": "/redfish/v1/AccountService/Roles/Admin"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/76",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:20:59+02:00",
+    "Description": " Log Entry 76",
+    "EntryType": "Oem",
+    "Id": "76",
+    "Links": {
+        "OriginOfCondition": {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+        }
+    },
+    "Message": "The session for psm from 10.156.63.11 using SSH is logged off.",
+    "MessageArgs": [
+        "psm",
+        "10.156.63.11",
+        "SSH"
+    ],
+    "MessageArgs@odata.count": 3,
+    "MessageId": "USR0032",
+    "Name": " Log Entry 76",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

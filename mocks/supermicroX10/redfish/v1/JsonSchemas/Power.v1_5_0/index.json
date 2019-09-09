@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Power.v1_5_0",
+    "Id": "Power.v1_5_0",
+    "Name": "Power Schema File",
+    "Description": "Power Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Power.v1_5_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Power.v1_5_0.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,42 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ManagerNetworkProtocol.ManagerNetworkProtocol",
+    "@odata.type": "#ManagerNetworkProtocol.ManagerNetworkProtocol",
+    "@odata.id": "/redfish/v1/Managers/1/NetworkProtocol",
+    "Id": "NetworkProtocol",
+    "Name": "",
+    "Description": "Manager Network Service Status",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "HostName": "",
+    "FQDN": "",
+    "HTTP": {
+        "ProtocolEnabled": true,
+        "Port": 80
+    },
+    "HTTPS": {
+        "ProtocolEnabled": true,
+        "Port": 443
+    },
+    "SNMP": {
+        "ProtocolEnabled": false,
+        "Port": 161
+    },
+    "IPMI": {
+        "ProtocolEnabled": true,
+        "Port": 623
+    },
+    "SSH": {
+        "ProtocolEnabled": true,
+        "Port": 22
+    },
+    "VirtualMedia": {
+        "ProtocolEnabled": true,
+        "Port": 623
+    },
+    "KVMIP": {
+        "ProtocolEnabled": true,
+        "Port": 5900
+    }
+}

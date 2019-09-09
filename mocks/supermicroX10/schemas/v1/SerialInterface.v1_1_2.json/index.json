@@ -1,0 +1,156 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#SerialInterface.v1_1_2",
+    "definitions": {
+        "SerialInterface": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "InterfaceEnabled": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": false,
+                    "description": "This indicates whether this interface is enabled.",
+                    "longDescription": "The value of this property shall be a boolean indicating whether this interface is enabled."
+                },
+                "SignalType": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/SignalType",
+                    "readonly": true,
+                    "description": "The type of signal used for the communication connection - RS232 or RS485.",
+                    "longDescription": "This property shall indicate the type of serial signalling that will be utilized for the serial connection."
+                },
+                "BitRate": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/BitRate",
+                    "readonly": false,
+                    "description": "The receive and transmit rate of data flow, typically in bits-per-second (bps), over the serial connection.",
+                    "longDescription": "This property shall indicate the transmit and receive speed of the serial connection."
+                },
+                "Parity": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/Parity",
+                    "readonly": false,
+                    "description": "The type of parity used by the sender and receiver in order to detect errors over the serial connection.",
+                    "longDescription": "This property shall indicate parity information for a serial connection."
+                },
+                "DataBits": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/DataBits",
+                    "readonly": false,
+                    "description": "The number of data bits that will follow the start bit over the serial connection.",
+                    "longDescription": "This property shall indicate number of data bits for the serial connection."
+                },
+                "StopBits": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/StopBits",
+                    "readonly": false,
+                    "description": "The period of time before the next start bit is transmitted.",
+                    "longDescription": "This property shall indicate the stop bits for the serial connection."
+                },
+                "FlowControl": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/FlowControl",
+                    "readonly": false,
+                    "description": "The type of flow control, if any, that will be imposed on the serial connection.",
+                    "longDescription": "This property shall indicate the flow control mechanism for the serial connection."
+                },
+                "ConnectorType": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/ConnectorType",
+                    "readonly": true,
+                    "description": "The type of connector used for this interface.",
+                    "longDescription": "This property shall indicate the type of phyiscal connector used for this serial connection."
+                },
+                "PinOut": {
+                    "$ref": "http://10.193.251.59/schemas/SerialInterface.v1_0_0.json#/definitions/PinOut",
+                    "readonly": true,
+                    "description": "The physical pin configuration needed for a serial connector.",
+                    "longDescription": "This property shall indicate the physical pin out for the serial connection."
+                },
+                "Actions": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                            "type": [
+                                "array",
+                                "boolean",
+                                "number",
+                                "null",
+                                "object",
+                                "string"
+                            ],
+                            "description": "This property shall specify a valid odata or Redfish property."
+                        }
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "Oem": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                                    "type": [
+                                        "array",
+                                        "boolean",
+                                        "number",
+                                        "null",
+                                        "object",
+                                        "string"
+                                    ],
+                                    "description": "This property shall specify a valid odata or Redfish property."
+                                }
+                            },
+                            "additionalProperties": true,
+                            "properties": {},
+                            "description": "The available OEM specific actions for this resource.",
+                            "longDescription": "This type shall contain any additional OEM actions for this resource."
+                        }
+                    },
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This schema defines an asynchronous serial interface resource.",
+            "longDescription": "This resource shall be used to represent serial resources as part of the Redfish specification."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

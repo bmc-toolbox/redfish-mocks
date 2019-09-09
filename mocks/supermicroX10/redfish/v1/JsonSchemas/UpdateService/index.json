@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/UpdateService",
+    "Id": "UpdateService",
+    "Name": "UpdateService Schema File",
+    "Description": "UpdateService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "UpdateService",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/UpdateService.json"
+        }
+    ],
+    "Oem": {}
+}

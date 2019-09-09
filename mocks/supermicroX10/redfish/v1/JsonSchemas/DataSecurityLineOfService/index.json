@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/DataSecurityLineOfService",
+    "Id": "DataSecurityLineOfService",
+    "Name": "DataSecurityLineOfService Schema File",
+    "Description": "DataSecurityLineOfService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "DataSecurityLineOfService",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/DataSecurityLineOfService.json"
+        }
+    ],
+    "Oem": {}
+}

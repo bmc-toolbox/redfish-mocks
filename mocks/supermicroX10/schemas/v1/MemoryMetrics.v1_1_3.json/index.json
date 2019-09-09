@@ -1,0 +1,158 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#MemoryMetrics.v1_1_3",
+    "definitions": {
+        "HealthData": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "RemainingSpareBlockPercentage": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Remaining spare blocks in percentage.",
+                    "longDescription": "The value of this property shall be the remaining spare blocks in percentage."
+                },
+                "LastShutdownSuccess": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Status of last shutdown.",
+                    "longDescription": "The value of this property shall be the status ofthe  last shutdown, with true indicating success."
+                },
+                "DataLossDetected": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Data loss detection status.",
+                    "longDescription": "The value of this property shall be data loss detection status, with true indicating data loss detected."
+                },
+                "PerformanceDegraded": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Performance degraded mode status.",
+                    "longDescription": "The value of this property shall be performance degraded mode status, with true indicating perfomance degraded."
+                },
+                "AlarmTrips": {
+                    "$ref": "http://10.193.251.59/schemas/MemoryMetrics.v1_0_0.json#/definitions/AlarmTrips",
+                    "description": "Alarm trip information about the memory.",
+                    "longDescription": "This object shall contain properties describe the types of alarms that have been raised by the memory."
+                },
+                "PredictedMediaLifeLeftPercent": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The percentage of reads and writes that are predicted to still be available for the media.",
+                    "longDescription": "This property shall contain an indicator of the percentage of life remaining in the media."
+                }
+            },
+            "description": "This type describes the health information of the memory.",
+            "longDescription": "This type shall contain properties which describe the HealthData metrics for the current resource."
+        },
+        "MemoryMetrics": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "BlockSizeBytes": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Block size in bytes.",
+                    "longDescription": "The value of this property shall be the block size in bytes of all stucture elements."
+                },
+                "CurrentPeriod": {
+                    "$ref": "http://10.193.251.59/schemas/MemoryMetrics.v1_0_0.json#/definitions/CurrentPeriod",
+                    "description": "This object contains the Memory metrics since last reset or ClearCurrentPeriod action.",
+                    "longDescription": "This object shall contain properties which describe the CurrentPeriod metrics for the current resource."
+                },
+                "LifeTime": {
+                    "$ref": "http://10.193.251.59/schemas/MemoryMetrics.v1_0_0.json#/definitions/LifeTime",
+                    "description": "This object contains the Memory metrics for the lifetime of the Memory.",
+                    "longDescription": "This object shall contain properties which describe the LifeTime metrics for the current resource."
+                },
+                "HealthData": {
+                    "$ref": "http://10.193.251.59/schemas/MemoryMetrics.v1_0_0.json#/definitions/HealthData",
+                    "description": "This object describes the health information of the memory.",
+                    "longDescription": "This object shall contain properties which describe the HealthData metrics for the current resource."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/MemoryMetrics.v1_0_0.json#/definitions/Actions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "MemoryMetrics contains usage and health statistics for a single Memory module or device instance.",
+            "longDescription": "This resource shall be used to represent the Memory Metrics for a single Memory device in a Redfish implementation."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

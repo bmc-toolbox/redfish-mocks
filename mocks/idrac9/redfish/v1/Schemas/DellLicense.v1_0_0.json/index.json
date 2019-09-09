@@ -1,0 +1,236 @@
+{
+    "$ref": "#/definitions/DellLicense",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "DellLicense": {
+            "additionalProperties": false,
+            "description": "An instance of DellLicense represents a feature license installed on a system.",
+            "longDescription": "An instance of DellLicense represents a feature license installed on a system.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "AssignedDevices": {
+                    "description": "The property array shall have values set to FQDDs of devices that have been assigned to this license.",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "longDescription": "The property array shall have values set to FQDDs of devices that have been assigned to this license.",
+                    "readonly": true,
+                    "type": "array"
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "EntitlementID": {
+                    "description": "The property shall have the value of the entitlement ID of the license which is a license unique ID.",
+                    "longDescription": "The property shall have the value of the entitlement ID of the license which is a license unique ID.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "EvalLicenseTimeRemainingDays": {
+                    "description": "The property shall represent the license period remaining in days and is counted only during the uptime of the system. The property shall be implemented, if the LicenseType property has value 3(Evaluation).",
+                    "longDescription": "The property shall represent the license period remaining in days and is counted only during the uptime of the system. The property shall be implemented, if the LicenseType property has value 3(Evaluation).",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "units": "Days"
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "InstanceID": {
+                    "description": "A unique identifier for the instance.",
+                    "longDescription": "A unique identifier for the instance.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LicenseDescription": {
+                    "description": "The property shall represent the licenses solution set in multiple languages.",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "longDescription": "The property shall represent the licenses solution set in multiple languages.",
+                    "readonly": true,
+                    "type": "array"
+                },
+                "LicenseDurationDays": {
+                    "description": "The property shall represent the license period in days and is counted only during the uptime of the system.",
+                    "longDescription": "The property shall represent the license period in days and is counted only during the uptime of the system.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "units": "Days"
+                },
+                "LicenseEndDate": {
+                    "description": "The property shall represent the end date of the license. The property shall be implemented, if the LicenseType property has value 2 (Leased) and 4 (Site).",
+                    "format": "date-time",
+                    "longDescription": "The property shall represent the end date of the license. The property shall be implemented, if the LicenseType property has value 2 (Leased) and 4 (Site).",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LicenseInstallDate": {
+                    "description": "The property shall represent the date on which the license was installed.",
+                    "format": "date-time",
+                    "longDescription": "The property shall represent the date on which the license was installed.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LicensePrimaryStatus": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/LicensePrimaryStatus"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the license status.",
+                    "longDescription": "The property shall represent the license status.",
+                    "readonly": true
+                },
+                "LicenseSoldDate": {
+                    "description": "The property shall represent the date the factory created the license.",
+                    "format": "date-time",
+                    "longDescription": "The property shall represent the date the factory created the license.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LicenseStartDate": {
+                    "description": "The property shall represent the license start date.",
+                    "format": "date-time",
+                    "longDescription": "The property shall represent the license start date.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "LicenseType": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/LicenseType"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The property shall represent the license type.",
+                    "longDescription": "The property shall represent the license type.",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "LicensePrimaryStatus": {
+            "enum": [
+                "Critical",
+                "OK",
+                "Unknown",
+                "Warning"
+            ],
+            "enumDescriptions": {
+                "Critical": "Critical",
+                "OK": "OK",
+                "Unknown": "Unknown",
+                "Warning": "Warning"
+            },
+            "enumLongDescriptions": {
+                "Critical": "Critical",
+                "OK": "OK",
+                "Unknown": "Unknown",
+                "Warning": "Warning"
+            },
+            "type": "string"
+        },
+        "LicenseType": {
+            "enum": [
+                "Evaluation",
+                "Leased",
+                "Perpetual",
+                "Site"
+            ],
+            "enumDescriptions": {
+                "Evaluation": "Evaluation",
+                "Leased": "Leased",
+                "Perpetual": "Perpetual",
+                "Site": "Site"
+            },
+            "enumLongDescriptions": {
+                "Evaluation": "Evaluation",
+                "Leased": "Leased",
+                "Perpetual": "Perpetual",
+                "Site": "Site"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellLicense.v1_0_0.DellLicense"
+}

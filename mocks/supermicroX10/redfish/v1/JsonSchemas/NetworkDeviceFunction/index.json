@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/NetworkDeviceFunction",
+    "Id": "NetworkDeviceFunction",
+    "Name": "NetworkDeviceFunction Schema File",
+    "Description": "NetworkDeviceFunction Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "NetworkDeviceFunction",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/NetworkDeviceFunction.json"
+        }
+    ],
+    "Oem": {}
+}

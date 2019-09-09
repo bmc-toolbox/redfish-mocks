@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/PrivilegeRegistry",
+    "Id": "PrivilegeRegistry",
+    "Name": "PrivilegeRegistry Schema File",
+    "Description": "PrivilegeRegistry Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "PrivilegeRegistry",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/PrivilegeRegistry.json"
+        }
+    ],
+    "Oem": {}
+}

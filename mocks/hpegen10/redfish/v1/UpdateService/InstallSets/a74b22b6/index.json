@@ -1,0 +1,64 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeComponentInstallSet.HpeComponentInstallSet",
+    "@odata.etag": "W/\"298E1A70\"",
+    "@odata.id": "/redfish/v1/UpdateService/InstallSets/a74b22b6/",
+    "@odata.type": "#HpeComponentInstallSet.v1_0_3.HpeComponentInstallSet",
+    "Id": "a74b22b6",
+    "Actions": {
+        "#HpeComponentInstallSet.Invoke": {
+            "target": "/redfish/v1/UpdateService/InstallSets/a74b22b6/Actions/HpeComponentInstallSet.Invoke/"
+        }
+    },
+    "Created": "2017-11-21T01:03:49Z",
+    "Description": "Essential system firmware components",
+    "IsRecovery": true,
+    "Modified": "2017-11-21T01:03:49Z",
+    "Name": "System Recovery Set",
+    "Sequence": [
+        {
+            "Command": "ApplyUpdate",
+            "Component": "/redfish/v1/UpdateService/ComponentRepository/2b5d5ac4",
+            "Filename": "ilo5_110.bin",
+            "Name": "System Recovery Set item (iLO 5)",
+            "UpdatableBy": [
+                "Bmc"
+            ]
+        },
+        {
+            "Command": "ApplyUpdate",
+            "Component": "/redfish/v1/UpdateService/ComponentRepository/8f3ee990",
+            "Filename": "IEGen10_0.1.0.28.signed.bin",
+            "Name": "System Recovery Set item (Innovation Engine)",
+            "UpdatableBy": [
+                "Bmc"
+            ]
+        },
+        {
+            "Command": "ApplyUpdate",
+            "Component": "/redfish/v1/UpdateService/ComponentRepository/fae5dfbd",
+            "Filename": "CPLD_BL460_Gen10_v1E1E_full_signed.vme",
+            "Name": "System Recovery Set item (System Programmable Logic Device)",
+            "UpdatableBy": [
+                "Bmc"
+            ]
+        },
+        {
+            "Command": "ApplyUpdate",
+            "Component": "/redfish/v1/UpdateService/ComponentRepository/fdc37790",
+            "Filename": "I41_1.00_06_01_2017.signed.flash",
+            "Name": "System Recovery Set item (System ROM)",
+            "UpdatableBy": [
+                "Bmc"
+            ]
+        },
+        {
+            "Command": "ApplyUpdate",
+            "Component": "/redfish/v1/UpdateService/ComponentRepository/b84aeda4",
+            "Filename": "SPSGen10_04.00.03.211.signed.bin",
+            "Name": "System Recovery Set item (Server Platform Services)",
+            "UpdatableBy": [
+                "Bmc"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SecureBoot",
+    "Id": "SecureBoot",
+    "Name": "SecureBoot Schema File",
+    "Description": "SecureBoot Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SecureBoot",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SecureBoot.json"
+        }
+    ],
+    "Oem": {}
+}

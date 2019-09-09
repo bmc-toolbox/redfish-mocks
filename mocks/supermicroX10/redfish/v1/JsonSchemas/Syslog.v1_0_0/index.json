@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Syslog.v1_0_0",
+    "Id": "Syslog.v1_0_0",
+    "Name": "Syslog Schema File",
+    "Description": "Syslog Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Syslog.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Syslog.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

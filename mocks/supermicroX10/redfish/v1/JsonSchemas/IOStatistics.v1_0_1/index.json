@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IOStatistics.v1_0_1",
+    "Id": "IOStatistics.v1_0_1",
+    "Name": "IOStatistics Schema File",
+    "Description": "IOStatistics Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IOStatistics.v1_0_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IOStatistics.v1_0_1.json"
+        }
+    ],
+    "Oem": {}
+}

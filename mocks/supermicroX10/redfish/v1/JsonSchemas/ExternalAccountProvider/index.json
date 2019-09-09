@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ExternalAccountProvider",
+    "Id": "ExternalAccountProvider",
+    "Name": "ExternalAccountProvider Schema File",
+    "Description": "ExternalAccountProvider Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ExternalAccountProvider",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ExternalAccountProvider.json"
+        }
+    ],
+    "Oem": {}
+}

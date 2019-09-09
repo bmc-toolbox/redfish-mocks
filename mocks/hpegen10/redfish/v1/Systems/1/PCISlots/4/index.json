@@ -1,0 +1,27 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerPCISlot.HpeServerPCISlot",
+    "@odata.etag": "W/\"4798D55E\"",
+    "@odata.id": "/redfish/v1/Systems/1/PCISlots/4/",
+    "@odata.type": "#HpeServerPCISlot.v2_1_0.HpeServerPCISlot",
+    "Id": "4",
+    "BusNumber": 216,
+    "Characteristics": {
+        "Provides3_3Volts": true,
+        "SupportsPowerManagementEventSignal": true
+    },
+    "DeviceNumber": 0,
+    "FunctionNumber": 0,
+    "Length": "Other",
+    "LinkLanes": "x16",
+    "Name": "Mezzanine Slot 2",
+    "Status": {
+        "OperationalStatus": [
+            {
+                "Status": "Empty"
+            }
+        ]
+    },
+    "SupportsHotPlug": false,
+    "Technology": "PCIExpressGen3",
+    "UEFIDevicePath": "PciRoot(0x9)/Pci(0x0,0x0)/Pci(0x0,0x0)"
+}

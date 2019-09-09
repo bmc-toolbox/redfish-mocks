@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ServiceRoot.v1_3_1",
+    "Id": "ServiceRoot.v1_3_1",
+    "Name": "ServiceRoot Schema File",
+    "Description": "ServiceRoot Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ServiceRoot.v1_3_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ServiceRoot.v1_3_1.json"
+        }
+    ],
+    "Oem": {}
+}

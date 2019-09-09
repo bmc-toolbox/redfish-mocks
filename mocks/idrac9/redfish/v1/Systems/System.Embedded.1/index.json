@@ -1,0 +1,193 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#ComputerSystem.ComputerSystem",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1",
+    "@odata.type": "#ComputerSystem.v1_5_0.ComputerSystem",
+    "Actions": {
+        "#ComputerSystem.Reset": {
+            "ResetType@Redfish.AllowableValues": [
+                "On",
+                "ForceOff",
+                "ForceRestart",
+                "GracefulShutdown",
+                "PushPowerButton",
+                "Nmi"
+            ],
+            "target": "/redfish/v1/Systems/System.Embedded.1/Actions/ComputerSystem.Reset"
+        }
+    },
+    "AssetTag": "",
+    "Bios": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Bios"
+    },
+    "BiosVersion": "",
+    "Boot": {
+        "BootOptions": {
+            "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootOptions"
+        },
+        "BootOrder": [],
+        "BootOrder@odata.count": 0,
+        "BootSourceOverrideEnabled": "Once",
+        "BootSourceOverrideTarget": "None",
+        "BootSourceOverrideTarget@Redfish.AllowableValues": [
+            "None",
+            "Pxe",
+            "Floppy",
+            "Cd",
+            "Hdd",
+            "BiosSetup",
+            "Utilities",
+            "UefiTarget",
+            "SDCard",
+            "UefiHttp"
+        ]
+    },
+    "Description": "Computer System which represents a machine (physical or virtual) and the local resources such as memory, cpu and other devices that can be accessed from that machine.",
+    "EthernetInterfaces": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/EthernetInterfaces"
+    },
+    "HostName": "graphite-1503.ams4.prod.example.com",
+    "HostWatchdogTimer": {
+        "FunctionEnabled": false,
+        "Status": {
+            "State": "Disabled"
+        },
+        "TimeoutAction": "None"
+    },
+    "HostingRoles": [],
+    "HostingRoles@odata.count": 0,
+    "Id": "System.Embedded.1",
+    "IndicatorLED": "Off",
+    "Links": {
+        "Chassis": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/System.Embedded.1"
+            }
+        ],
+        "Chassis@odata.count": 1,
+        "CooledBy": [],
+        "CooledBy@odata.count": 0,
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+            }
+        ],
+        "ManagedBy@odata.count": 1,
+        "Oem": {
+            "Dell": {
+                "BootOrder": {
+                    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources"
+                },
+                "DellNumericSensorCollection": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellNumericSensorCollection"
+                },
+                "DellOSDeploymentService": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellOSDeploymentService"
+                },
+                "DellPresenceAndStatusSensorCollection": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellPresenceAndStatusSensorCollection"
+                },
+                "DellRaidService": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellRaidService"
+                },
+                "DellSensorCollection": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSensorCollection"
+                },
+                "DellSoftwareInstallationService": {
+                    "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSoftwareInstallationService"
+                }
+            }
+        },
+        "PoweredBy": [],
+        "PoweredBy@odata.count": 0
+    },
+    "Manufacturer": "",
+    "Memory": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Memory"
+    },
+    "MemorySummary": {
+        "MemoryMirroring": "None",
+        "Status": {
+            "Health": null,
+            "HealthRollup": null,
+            "State": "Absent"
+        },
+        "TotalSystemMemoryGiB": 0.0
+    },
+    "Model": "PowerEdge M640",
+    "Name": "System",
+    "NetworkInterfaces": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/NetworkInterfaces"
+    },
+    "Oem": {
+        "Dell": {
+            "DellSystem": {
+                "@odata.context": "/redfish/v1/$metadata#DellSystem.DellSystem",
+                "@odata.id": "/redfish/v1/Dell/Systems/System.Embedded.1/DellSystem/System.Embedded.1",
+                "@odata.type": "#DellSystem.v1_0_0.DellSystem",
+                "BIOSReleaseDate": null,
+                "BaseBoardChassisSlot": "5",
+                "BatteryRollupStatus": "OK",
+                "BladeGeometry": "SingleWidth,HalfHeight",
+                "CMCIP": "10.193.251.36",
+                "CPURollupStatus": "Unknown",
+                "ChassisServiceTag": "51F3DK2",
+                "ExpressServiceCode": "37077482522",
+                "FanRollupStatus": "Unknown",
+                "IntrusionRollupStatus": "Unknown",
+                "LicensingRollupStatus": "OK",
+                "MaxDIMMSlots": 0,
+                "MaxPCIeSlots": 3,
+                "NodeID": "FOOBAZ",
+                "PSRollupStatus": "Unknown",
+                "PowerCapEnabledState": "Disabled",
+                "StorageRollupStatus": "OK",
+                "SysMemPrimaryStatus": "OK",
+                "SystemGeneration": "14G Modular",
+                "SystemID": 1863,
+                "TempRollupStatus": "OK",
+                "UUID": "4c4c4544-0031-3610-805a-c8c04f344d32",
+                "VoltRollupStatus": "OK"
+            }
+        }
+    },
+    "PCIeDevices": null,
+    "PCIeDevices@odata.count": 0,
+    "PCIeFunctions": null,
+    "PCIeFunctions@odata.count": 0,
+    "PartNumber": "05YC4PA01",
+    "PowerState": "Off",
+    "ProcessorSummary": {
+        "Count": 0,
+        "LogicalProcessorCount": 0,
+        "Model": null,
+        "Status": {
+            "Health": null,
+            "HealthRollup": null,
+            "State": "Absent"
+        }
+    },
+    "Processors": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Processors"
+    },
+    "SKU": "FOOBAZ",
+    "SecureBoot": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/SecureBoot"
+    },
+    "SerialNumber": "CNWS30079D00BW",
+    "SimpleStorage": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/SimpleStorage/Controllers"
+    },
+    "Status": {
+        "Health": "OK",
+        "HealthRollup": "OK",
+        "State": "StandbyOffline"
+    },
+    "Storage": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Storage"
+    },
+    "SystemType": "Physical",
+    "TrustedModules": [
+        {}
+    ],
+    "UUID": "4c4c4544-0031-3610-805a-c8c04f344d32"
+}

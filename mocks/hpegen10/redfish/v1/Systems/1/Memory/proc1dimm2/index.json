@@ -1,0 +1,57 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Memory.Memory",
+    "@odata.etag": "W/\"E6EC3A2C\"",
+    "@odata.id": "/redfish/v1/Systems/1/Memory/proc1dimm2/",
+    "@odata.type": "#Memory.v1_7_0.Memory",
+    "Id": "proc1dimm2",
+    "BaseModuleType": "RDIMM",
+    "BusWidthBits": 72,
+    "CacheSizeMiB": 0,
+    "CapacityMiB": 32768,
+    "DataWidthBits": 64,
+    "DeviceLocator": "PROC 1 DIMM 2",
+    "ErrorCorrection": "MultiBitECC",
+    "LogicalSizeMiB": 0,
+    "Manufacturer": "HPE",
+    "MemoryDeviceType": "DDR4",
+    "MemoryLocation": {
+        "Channel": 2,
+        "MemoryController": 1,
+        "Slot": 2,
+        "Socket": 1
+    },
+    "MemoryMedia": [
+        "DRAM"
+    ],
+    "MemoryType": "DRAM",
+    "Name": "proc1dimm2",
+    "NonVolatileSizeMiB": 0,
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeMemoryExt.HpeMemoryExt",
+            "@odata.type": "#HpeMemoryExt.v2_3_0.HpeMemoryExt",
+            "Attributes": [
+                "HpeSmartMemory"
+            ],
+            "BaseModuleType": "RDIMM",
+            "DIMMStatus": "GoodInUse",
+            "MaxOperatingSpeedMTs": 2666,
+            "MinimumVoltageVoltsX10": 12
+        }
+    },
+    "OperatingMemoryModes": [
+        "Volatile"
+    ],
+    "OperatingSpeedMhz": 2400,
+    "PartNumber": "840758-091",
+    "PersistentRegionSizeLimitMiB": 0,
+    "RankCount": 2,
+    "SecurityCapabilities": {},
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "VendorID": "52736",
+    "VolatileRegionSizeLimitMiB": 32768,
+    "VolatileSizeMiB": 32768
+}

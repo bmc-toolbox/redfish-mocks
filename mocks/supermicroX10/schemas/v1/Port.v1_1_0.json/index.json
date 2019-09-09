@@ -1,0 +1,122 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Port.v1_1_0",
+    "definitions": {
+        "Port": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "PortId": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "This is the label of this port on the physical switch package.",
+                    "longDescription": "The value of this property shall be the name of the switch port as indicated on the outside of the switch."
+                },
+                "PortProtocol": {
+                    "$ref": "http://10.193.251.59/schemas/Protocol.json#/definitions/Protocol",
+                    "readonly": true,
+                    "description": "The protocol being sent over this port.",
+                    "longDescription": "The value of this property shall contain the protocol being sent over this port."
+                },
+                "PortType": {
+                    "$ref": "http://10.193.251.59/schemas/Port.v1_0_0.json#/definitions/PortType",
+                    "readonly": true,
+                    "description": "This is the type of this port.",
+                    "longDescription": "The value of this property shall be the port type for this port."
+                },
+                "CurrentSpeedGbps": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The current speed of this port.",
+                    "longDescription": "The value of this property shall be the speed of this port currently negotiated and running."
+                },
+                "MaxSpeedGbps": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The maximum speed of this port as currently configured.",
+                    "longDescription": "The value of this property shall be the maximum speed of which this port is capable of being configured.  If capable of auto-negotiation, the system shall attempt to negotiate at the maximum speed set."
+                },
+                "Width": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The number of lanes, phys, or other physical transport links that this port contains.",
+                    "longDescription": "The value of this property shall be the number of physical transport links that this port contains."
+                },
+                "Links": {
+                    "$ref": "http://10.193.251.59/schemas/Port.v1_0_0.json#/definitions/Links",
+                    "description": "Contains references to other resources that are related to this resource.",
+                    "longDescription": "The Links property, as described by the Redfish Specification, shall contain references to resources that are related to, but not contained by (subordinate to), this resource."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Port.v1_0_0.json#/definitions/Actions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Location": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Port contains properties describing a port of a switch.",
+            "longDescription": "This resource shall be used to represent a simple switch port for a Redfish implementation."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

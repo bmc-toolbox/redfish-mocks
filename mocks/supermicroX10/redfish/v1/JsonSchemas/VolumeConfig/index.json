@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/VolumeConfig",
+    "Id": "VolumeConfig",
+    "Name": "VolumeConfig Schema File",
+    "Description": "VolumeConfig Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "VolumeConfig",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/VolumeConfig.json"
+        }
+    ],
+    "Oem": {}
+}

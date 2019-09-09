@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Snooping.v1_0_0",
+    "Id": "Snooping.v1_0_0",
+    "Name": "Snooping Schema File",
+    "Description": "Snooping Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Snooping.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Snooping.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

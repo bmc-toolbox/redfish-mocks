@@ -1,0 +1,20 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeiLOAccountCertificateMapCollection.HpeiLOAccountCertificateMapCollection",
+    "@odata.etag": "W/\"E589C4BF\"",
+    "@odata.id": "/redfish/v1/AccountService/UserCertificateMapping/",
+    "@odata.type": "#HpeiLOAccountCertificateMapCollection.HpeiLOAccountCertificateMapCollection",
+    "Description": "iLO User Certificate Mapping",
+    "Name": "UserCertMapping",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/AccountService/UserCertificateMapping/1/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/UserCertificateMapping/97/"
+        },
+        {
+            "@odata.id": "/redfish/v1/AccountService/UserCertificateMapping/4/"
+        }
+    ],
+    "Members@odata.count": 3
+}

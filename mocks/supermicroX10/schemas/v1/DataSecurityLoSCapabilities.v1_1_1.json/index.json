@@ -1,0 +1,196 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#DataSecurityLoSCapabilities.v1_1_1",
+    "definitions": {
+        "DataSecurityLoSCapabilities": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Identifier": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": false,
+                    "description": "The value identifies this resource.",
+                    "longDescription": "The value identifies this resource.  The value shall be unique within the managed ecosystem."
+                },
+                "SupportedMediaEncryptionStrengths": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/KeySize"
+                    },
+                    "readonly": false,
+                    "description": "Supported key sizes for media encryption.",
+                    "longDescription": "The enumeration literal shall specify supported key sizes in a symmetric encryption algorithm (AES) for media encryption."
+                },
+                "SupportedChannelEncryptionStrengths": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/KeySize"
+                    },
+                    "readonly": false,
+                    "description": "Supported key sizes for transport channel encryption.",
+                    "longDescription": "The enumeration literal shall specify supported key sizes in a symmetric encryption algorithm (AES) for transport channel encryption."
+                },
+                "SupportedHostAuthenticationTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AuthenticationType"
+                    },
+                    "readonly": false,
+                    "description": "Supported authentication types for hosts (servers) or initiator endpoints.",
+                    "longDescription": "The enumeration literal shall specify supported authentication types for hosts (servers) or initiator endpoints."
+                },
+                "SupportedUserAuthenticationTypes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AuthenticationType"
+                    },
+                    "readonly": false,
+                    "description": "Supported authentication types for users (or programs).",
+                    "longDescription": "The enumeration literal shall specify supported authentication types for users (or programs)."
+                },
+                "SupportedSecureChannelProtocols": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/SecureChannelProtocol"
+                    },
+                    "readonly": false,
+                    "description": "Supported protocols that provide encrypted communication.",
+                    "longDescription": "The enumeration literal shall specify supported protocols that provide encrypted communication."
+                },
+                "SupportedAntivirusScanPolicies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/AntiVirusScanTrigger"
+                    },
+                    "readonly": false,
+                    "description": "Supported policies that trigger an AntiVirus scan.",
+                    "longDescription": "The enumeration literal shall specify supported policies that trigger an AntiVirus scan."
+                },
+                "SupportedAntivirusEngineProviders": {
+                    "type": "array",
+                    "items": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "readonly": false,
+                    "description": "Supported AntiVirus providers.",
+                    "longDescription": "The entry values shall specify supported AntiVirus providers."
+                },
+                "SupportedDataSanitizationPolicies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/DataSecurityLoSCapabilities.json#/definitions/DataSanitizationPolicy"
+                    },
+                    "readonly": false,
+                    "description": "Supported data sanitization policies.",
+                    "longDescription": "The enumeration literal shall specify supported data sanitization policies."
+                },
+                "SupportedLinesOfService@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "SupportedLinesOfService@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "SupportedLinesOfService": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": false,
+                    "description": "Collection of known and supported DataSecurityLinesOfService.",
+                    "longDescription": "The collection shall contain supported DataSecurity service options."
+                },
+                "Actions": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                            "type": [
+                                "array",
+                                "boolean",
+                                "number",
+                                "null",
+                                "object",
+                                "string"
+                            ],
+                            "description": "This property shall specify a valid odata or Redfish property."
+                        }
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "Oem": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                                    "type": [
+                                        "array",
+                                        "boolean",
+                                        "number",
+                                        "null",
+                                        "object",
+                                        "string"
+                                    ],
+                                    "description": "This property shall specify a valid odata or Redfish property."
+                                }
+                            },
+                            "additionalProperties": true,
+                            "properties": {},
+                            "description": "The available OEM specific actions for this resource.",
+                            "longDescription": "This type shall contain any additional OEM actions for this resource."
+                        }
+                    },
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "Describe data security capabilities.",
+            "longDescription": "This resource may be used to describe data security capabilities."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

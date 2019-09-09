@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/NetworkInterface",
+    "Id": "NetworkInterface",
+    "Name": "NetworkInterface Schema File",
+    "Description": "NetworkInterface Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "NetworkInterface",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/NetworkInterface.json"
+        }
+    ],
+    "Oem": {}
+}

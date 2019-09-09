@@ -1,0 +1,24 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.etag": "W/\"E82219D0\"",
+    "@odata.id": "/redfish/v1/JsonSchemas/SUT.v2_2_0.SUT/",
+    "@odata.type": "#JsonSchemaFile.v1_0_4.JsonSchemaFile",
+    "Id": "SUT.v2_2_0.SUT",
+    "Description": "Schema Definition File for #SUT.v2_2_0.SUT",
+    "Languages": [
+        "en",
+        "jp"
+    ],
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/redfish/v1/schemastore/en/sut.v2_2_0.sut/"
+        },
+        {
+            "Language": "jp",
+            "Uri": "/redfish/v1/schemastore/jp/sut.v2_2_0.sut/"
+        }
+    ],
+    "Name": "#SUT.v2_2_0.SUT Schema Definition File",
+    "Schema": "#SUT.v2_2_0.SUT"
+}

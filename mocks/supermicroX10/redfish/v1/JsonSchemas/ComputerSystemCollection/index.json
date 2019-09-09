@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/ComputerSystemCollection",
+    "Id": "ComputerSystemCollection",
+    "Name": "ComputerSystemCollection Schema File",
+    "Description": "ComputerSystemCollection Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "ComputerSystemCollection",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/ComputerSystemCollection.json"
+        }
+    ],
+    "Oem": {}
+}

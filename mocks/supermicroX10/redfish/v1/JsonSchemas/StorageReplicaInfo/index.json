@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/StorageReplicaInfo",
+    "Id": "StorageReplicaInfo",
+    "Name": "StorageReplicaInfo Schema File",
+    "Description": "StorageReplicaInfo Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "StorageReplicaInfo",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/StorageReplicaInfo.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,25 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#AccountService.AccountService",
+    "@odata.type": "#AccountService.AccountService",
+    "@odata.id": "/redfish/v1/AccountService",
+    "Id": "AccountService",
+    "Name": "Account Service",
+    "Description": "Account Service",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "ServiceEnabled": true,
+    "MinPasswordLength": 8,
+    "MaxPasswordLength": 19,
+    "AuthFailureLoggingThreshold": 3,
+    "AccountLockoutThreshold": 5,
+    "AccountLockoutDuration": 30,
+    "AccountLockoutCounterResetAfter": 30,
+    "Accounts": {
+        "@odata.id": "/redfish/v1/AccountService/Accounts"
+    },
+    "Roles": {
+        "@odata.id": "/redfish/v1/AccountService/Roles"
+    }
+}

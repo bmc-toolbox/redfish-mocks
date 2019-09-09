@@ -1,0 +1,259 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "#HpeCertAuth.v1_1_0.HpeCertAuth",
+    "type": "object",
+    "readonly": false,
+    "additionalProperties": false,
+    "description": "This is the schema definition for certificate based authentication configuration.",
+    "properties": {
+        "CertificateLoginEnabled": {
+            "type": "boolean",
+            "readonly": false,
+            "description": "Specifies whether Certificate login is enabled.",
+            "etag": true
+        },
+        "LDAPCertificateNameMapping": {
+            "type": "string",
+            "enum": [
+                "SubjectCN",
+                "SubjectDN",
+                "SANRFC822",
+                "SANUPN"
+            ],
+            "enumDescriptions": {
+                "SubjectCN": "The CN portion of the certificate subject will be used as the LDAP username.",
+                "SubjectDN": "The fully qualified DN of the certificate subject will be used as the LDAP username.",
+                "SANRFC822": "The RFC822 name from the certificate's subjectAlternativeName extension will be used as the LDAP username.",
+                "SANUPN": "The UserPrincipalName from the certificate's subjectAlternativeName extension will be used as the LDAP username."
+            },
+            "readonly": false,
+            "description": "The method used to map a certificate to its associated LDAP user account.",
+            "etag": true
+        },
+        "StrictCACModeEnabled": {
+            "description": "Whether or not Strict CAC Mode is enabled.",
+            "longDescription": "Whether or not Strict CAC Mode is enabled. In strict mode, certificates must be supplied for every SSL connection and only key-based authentication mechanisms are accepted.",
+            "readonly": false,
+            "type": "boolean",
+            "etag": "true"
+        },
+        "CACertificates": {
+            "description": "The value of this property shall be a reference to a Collection of HpeCertificate resources.",
+            "readonly": true,
+            "etag": false,
+            "type": "object",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            }
+        },
+        "CRLIssuer": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Issuer of the installed CRL, if present.",
+            "readonly": true,
+            "etag": true
+        },
+        "CRLSerial": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "description": "Serial Number of the installed CRL, if present.",
+            "readonly": true,
+            "etag": true
+        },
+        "OCSPUri": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "format": "uri",
+            "description": "URL to use for OCSP certificate checking.",
+            "readonly": false,
+            "etag": true
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeCertAuth.ImportCACertificate": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "Certificate@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "readonly": "false",
+                                "format": "text",
+                                "description": "Contains PEM formatted X509 certificate (Base64 encoded).",
+                                "etag": true
+                            },
+                            "etag": true,
+                            "type": "array",
+                            "description": "The supported values for the Certificate parameter.",
+                            "longDescription": "The supported values for the Certificate parameter."
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                },
+                "#HpeCertAuth.ImportCRL": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "ImportUri": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "string",
+                                "readonly": "false",
+                                "format": "text",
+                                "description": "Contains PEM formatted X509 certificate (Base64 encoded).",
+                                "etag": true
+                            },
+                            "etag": true,
+                            "type": "array",
+                            "description": "The supported values for the Certificate parameter.",
+                            "longDescription": "The supported values for the Certificate parameter."
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                },
+                "#HpeCertAuth.DeleteCRL": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                }
+            }
+        },
+        "Links": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "UserCertificateMapping": {
+                    "description": "The value of this property shall be a reference to a resource of Type HpeiLOAccountCertificateMapCollection.",
+                    "readonly": true,
+                    "etag": false,
+                    "type": "object",
+                    "properties": {
+                        "@odata.id": {
+                            "$ref": "Resource.json#/definitions/odataid"
+                        }
+                    }
+                }
+            },
+            "description": "The links array contains the links to other resources that are related to this resource."
+        }
+    },
+    "actions": {
+        "description": "Importing CA certificates and CRLs.",
+        "actions": {
+            "HpeCertAuth.ImportCACertificate": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Imports a Trusted Certificate",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "HpeCertAuth.ImportCACertificate"
+                        ]
+                    },
+                    "Certificate": {
+                        "type": "string",
+                        "readonly": "false",
+                        "format": "text",
+                        "description": "Contains PEM formatted X509 certificate or PKCS7 certificate chain (Base64 encoded).",
+                        "etag": true
+                    }
+                },
+                "required": [
+                    "Action",
+                    "Certificate"
+                ]
+            },
+            "HpeCertAuth.ImportCRL": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Imports a Certificate Revocation List (CRL).",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "HpeCertAuth.ImportCRL"
+                        ]
+                    },
+                    "ImportUri": {
+                        "type": "string",
+                        "readonly": "false",
+                        "format": "uri",
+                        "description": "Contains URI of PEM formatted certificate revocation list (CRL) (Base64 encoded).",
+                        "etag": true
+                    }
+                },
+                "required": [
+                    "Action",
+                    "ImportUri"
+                ]
+            },
+            "HpeCertAuth.DeleteCRL": {
+                "type": "object",
+                "additionalProperties": false,
+                "description": "Remove an installed Certificate Revocation List (CRL).",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "enum": [
+                            "HpeCertAuth.DeleteCRL"
+                        ]
+                    }
+                },
+                "required": [
+                    "Action"
+                ]
+            }
+        }
+    },
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved."
+}

@@ -1,0 +1,12 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Processor.Processor",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/Processors/CPU.Socket.2",
+    "@odata.type": "#Processor.v1_2_0.Processor",
+    "Id": "CPU.Socket.2",
+    "Name": "CPU 2",
+    "Socket": "CPU.Socket.2",
+    "Status": {
+        "Health": null,
+        "State": null
+    }
+}

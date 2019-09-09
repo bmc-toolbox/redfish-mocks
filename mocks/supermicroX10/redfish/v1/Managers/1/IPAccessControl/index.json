@@ -1,0 +1,11 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#IPAccessControl.IPAccessControl",
+    "@odata.type": "#IPAccessControl.IPAccessControl",
+    "@odata.id": "/redfish/v1/Managers/1/IPAccessControl",
+    "Id": "IP Access Control",
+    "Name": "IP Access Control",
+    "ServiceEnabled": false,
+    "FilterRule": {
+        "@odata.id": "/redfish/v1/Managers/1/IPAccessControl/FilterRule"
+    }
+}

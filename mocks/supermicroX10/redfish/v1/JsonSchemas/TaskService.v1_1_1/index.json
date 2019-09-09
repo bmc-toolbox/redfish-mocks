@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/TaskService.v1_1_1",
+    "Id": "TaskService.v1_1_1",
+    "Name": "TaskService Schema File",
+    "Description": "TaskService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "TaskService.v1_1_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/TaskService.v1_1_1.json"
+        }
+    ],
+    "Oem": {}
+}

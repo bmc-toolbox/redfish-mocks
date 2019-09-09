@@ -1,0 +1,594 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#Thermal.v1_4_0",
+    "definitions": {
+        "Fan": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "MemberId": {
+                    "type": "string",
+                    "readonly": true,
+                    "description": "This is the identifier for the member within the collection.",
+                    "longDescription": "The value of this string shall uniquely identify the member within the collection."
+                },
+                "FanName": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Name of the fan.",
+                    "longDescription": "The value of this property shall be the name of the fan."
+                },
+                "PhysicalContext": {
+                    "$ref": "http://10.193.251.59/schemas/PhysicalContext.json#/definitions/PhysicalContext",
+                    "readonly": true,
+                    "description": "Describes the area or device associated with this fan.",
+                    "longDescription": "The value of this property shall be a description of the affected device or region within the chassis to which this fan is associated."
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "Reading": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Current fan speed.",
+                    "longDescription": "The value of this property shall be the current value of the fan sensor's reading."
+                },
+                "UpperThresholdNonCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range.",
+                    "longDescription": "The value of this property shall indicate the Reading is above the normal range but is not critical. The units shall be the same units as the related Reading property."
+                },
+                "UpperThresholdCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range but not yet fatal.",
+                    "longDescription": "The value of this property shall indicate the Reading is above the normal range but is not yet fatal. The units shall be the same units as the related Reading property."
+                },
+                "UpperThresholdFatal": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range and is fatal.",
+                    "longDescription": "The value of this property shall indicate the Reading is above the normal range and is fatal. The units shall be the same units as the related Reading property."
+                },
+                "LowerThresholdNonCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range.",
+                    "longDescription": "The value of this property shall indicate the Reading is below the normal range but is not critical. The units shall be the same units as the related Reading property."
+                },
+                "LowerThresholdCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range but not yet fatal.",
+                    "longDescription": "The value of this property shall indicate the Reading is below the normal range but is not yet fatal. The units shall be the same units as the related Reading property."
+                },
+                "LowerThresholdFatal": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range and is fatal.",
+                    "longDescription": "The value of this property shall indicate the Reading is below the normal range and is fatal. The units shall be the same units as the related Reading property."
+                },
+                "MinReadingRange": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Minimum value for Reading.",
+                    "longDescription": "The value of this property shall indicate the lowest possible value for Reading. The units shall be the same units as the related Reading property."
+                },
+                "MaxReadingRange": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Maximum value for Reading.",
+                    "longDescription": "The value of this property shall indicate the highest possible value for Reading. The units shall be the same units as the related Reading property."
+                },
+                "RelatedItem@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "RelatedItem@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "RelatedItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": true,
+                    "description": "The ID(s) of the resources serviced with this fan.",
+                    "longDescription": "The value of this property shall be an array of IDs containing pointers consistent with JSON pointer syntax to the resource that are being serviced by this fan."
+                },
+                "Redundancy@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "Redundancy@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Redundancy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups.",
+                    "longDescription": "The values of the properties in this array shall be used to show redundancy for fans and other elements in this resource.  The use of IDs within these arrays shall reference the members of the redundancy groups."
+                },
+                "ReadingUnits": {
+                    "$ref": "http://10.193.251.59/schemas/Thermal.v1_0_1.json#/definitions/ReadingUnits",
+                    "readonly": true,
+                    "description": "Units in which the reading and thresholds are measured.",
+                    "longDescription": "The value of this property shall be the units in which the fan's reading and thresholds are measured."
+                },
+                "Name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Name of the fan.",
+                    "longDescription": "The value of this property shall be the name of the fan."
+                },
+                "Manufacturer": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "This is the manufacturer of this Fan.",
+                    "longDescription": "The value of this property shall be the name of the organization responsible for producing the fan. This organization might be the entity from whom the fan is purchased, but this is not necessarily true."
+                },
+                "Model": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The model number for this Fan.",
+                    "longDescription": "This property shall contain the model information as defined by the manufacturer for the associated fan."
+                },
+                "SerialNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The serial number for this Fan.",
+                    "longDescription": "This property shall contain the serial number as defined by the manufacturer for the associated fan."
+                },
+                "PartNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The part number for this Fan.",
+                    "longDescription": "This property shall contain the part number as defined by the manufacturer for the associated fan."
+                },
+                "SparePartNumber": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "The spare part number for this Fan.",
+                    "longDescription": "This property shall contain the spare or replacement part number as defined by the manufacturer for the associated fan."
+                },
+                "IndicatorLED": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/IndicatorLED",
+                    "readonly": false,
+                    "description": "The state of the indicator LED, used to identify this Fan.",
+                    "longDescription": "The value of this property shall contain the indicator light state for the indicator light associated with this fan."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Thermal.v1_3_0.json#/definitions/FanActions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "HotPluggable": {
+                    "type": [
+                        "boolean",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Indicates if this device can be inserted or removed while the equipment is in operation.",
+                    "longDescription": "The value of this property shall indicate whether the device can be inserted or removed while the underlying equipment otherwise remains in its current operational state.  Devices indicated as hot-pluggable shall allow the device to become operable without altering the operational state of the underlying equipment. Devices that cannot be inserted or removed from equipment in operation, or devices that cannot become operable without affecting the operational state of that equipment, shall be indicated as not hot-pluggable."
+                },
+                "Location": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                },
+                "Assembly": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef",
+                    "readonly": true,
+                    "description": "A reference to the Assembly resource associated with this fan.",
+                    "longDescription": "The value of this property shall be a link to a resource of type Assembly."
+                }
+            },
+            "description": "This is the base type for addressable members of an array.",
+            "longDescription": "Array members can be referenced using the value returned in the @odata.id property which may or may not be a dereferenceable URL. The @odata.id of this entity shall be the location of this element within an Item."
+        },
+        "Temperature": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "MemberId": {
+                    "type": "string",
+                    "readonly": true,
+                    "description": "This is the identifier for the member within the collection.",
+                    "longDescription": "The value of this string shall uniquely identify the member within the collection."
+                },
+                "Name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Temperature sensor name.",
+                    "longDescription": "The value of this property shall be the name of the temperature sensor."
+                },
+                "SensorNumber": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "A numerical identifier to represent the temperature sensor.",
+                    "longDescription": "The value of this property shall be a numerical identifier for this temperature sensor that is unique within this resource."
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "ReadingCelsius": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Temperature.",
+                    "longDescription": "The value of this property shall be the current value of the temperature sensor's reading."
+                },
+                "UpperThresholdNonCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is above the normal range but is not critical. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "UpperThresholdCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range but not yet fatal.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is above the normal range but is not yet fatal. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "UpperThresholdFatal": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Above normal range and is fatal.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is above the normal range and is fatal. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "LowerThresholdNonCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is below the normal range but is not critical. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "LowerThresholdCritical": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range but not yet fatal.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is below the normal range but is not yet fatal. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "LowerThresholdFatal": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Below normal range and is fatal.",
+                    "longDescription": "The value of this property shall indicate the ReadingCelsius is below the normal range and is fatal. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "MinReadingRangeTemp": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Minimum value for ReadingCelsius.",
+                    "longDescription": "The value of this property shall indicate the lowest possible value for ReadingCelsius. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "MaxReadingRangeTemp": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Maximum value for ReadingCelsius.",
+                    "longDescription": "The value of this property shall indicate the highest possible value for ReadingCelsius. The units shall be the same units as the related ReadingCelsius property."
+                },
+                "PhysicalContext": {
+                    "$ref": "http://10.193.251.59/schemas/PhysicalContext.json#/definitions/PhysicalContext",
+                    "readonly": true,
+                    "description": "Describes the area or device to which this temperature measurement applies.",
+                    "longDescription": "The value of this property shall be a description of the affected device or region within the chassis to which this temperature measurement applies."
+                },
+                "RelatedItem@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "RelatedItem@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "RelatedItem": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "readonly": true,
+                    "description": "Describes the areas or devices to which this temperature measurement applies.",
+                    "longDescription": "The value of this property shall the array of IDs of areas or devices to which this temperature measurement applies."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Thermal.v1_3_0.json#/definitions/TemperatureActions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "DeltaReadingCelsius": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Delta Temperature reading.",
+                    "longDescription": "The value of this property shall be the delta of the values of the temperature readings across this sensor and the sensor at DeltaPhysicalContext."
+                },
+                "DeltaPhysicalContext": {
+                    "$ref": "http://10.193.251.59/schemas/PhysicalContext.json#/definitions/PhysicalContext",
+                    "readonly": true,
+                    "description": "Describes the area or device to which the DeltaReadingCelsius temperature measurement applies, relative to PhysicalContext.",
+                    "longDescription": "The value of this property shall be a description of the affected device or region within the chassis to which the DeltaReadingCelsius temperature measurement applies, relative to PhysicalContext."
+                },
+                "MaxAllowableOperatingValue": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Maximum allowable operating temperature for this equipment.",
+                    "longDescription": "The value of this property shall indicate the maximum allowable operating temperature for the equipment monitored by this temperature sensor, as specified by a standards body, manufacturer, or a combination."
+                },
+                "MinAllowableOperatingValue": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Minimum allowable operating temperature for this equipment.",
+                    "longDescription": "The value of this property shall indicate the minimum allowable operating temperature for the equipment monitored by this temperature sensor, as specified by a standards body, manufacturer, or a combination."
+                },
+                "AdjustedMaxAllowableOperatingValue": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Adjusted maximum allowable operating temperature for this equipment based on the current environmental conditions present.",
+                    "longDescription": "The value of this property shall indicate the adjusted maximum allowable operating temperature for the equipment monitored by this temperature sensor, as specified by a standards body, manufacturer, or a combination, and adjusted based on environmental conditions present. For example, liquid inlet temperature may be adjusted based on the available liquid pressure."
+                },
+                "AdjustedMinAllowableOperatingValue": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "readonly": true,
+                    "description": "Adjusted minimum allowable operating temperature for this equipment based on the current environmental conditions present.",
+                    "longDescription": "The value of this property shall indicate the adjusted minimum allowable operating temperature for the equipment monitored by this temperature sensor, as specified by a standards body, manufacturer, or a combination, and adjusted based on environmental conditions present. For example, liquid inlet temperature may be adjusted based on the available liquid pressure."
+                }
+            },
+            "description": "This is the base type for addressable members of an array.",
+            "longDescription": "Array members can be referenced using the value returned in the @odata.id property which may or may not be a dereferenceable URL. The @odata.id of this entity shall be the location of this element within an Item."
+        },
+        "Thermal": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Status": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Status"
+                },
+                "Temperatures@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "Temperatures@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Temperatures": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/Thermal.v1_0_0.json#/definitions/Temperature"
+                    },
+                    "readonly": false,
+                    "description": "This is the definition for temperature sensors.",
+                    "longDescription": "These properties shall be the definition for temperature sensors for a Redfish implementation."
+                },
+                "Fans@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "Fans@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Fans": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://10.193.251.59/schemas/Thermal.v1_0_0.json#/definitions/Fan"
+                    },
+                    "readonly": false,
+                    "description": "This is the definition for fans.",
+                    "longDescription": "These properties shall be the definition for fans for a Redfish implementation."
+                },
+                "Redundancy@odata.count": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/count"
+                },
+                "Redundancy@odata.navigationLink": {
+                    "type": "string",
+                    "format": "uri"
+                },
+                "Redundancy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/idRef"
+                    },
+                    "description": "This structure is used to show redundancy for fans.  The Component ids will reference the members of the redundancy groups.",
+                    "longDescription": "The values of the properties in this array shall be used to show redundancy for fans and other elements in this resource.  The use of IDs within these arrays shall reference the members of the redundancy groups."
+                },
+                "Actions": {
+                    "$ref": "http://10.193.251.59/schemas/Thermal.v1_3_0.json#/definitions/ThermalActions",
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the schema definition for the Thermal properties.  It represents the properties for Temperature and Cooling.",
+            "longDescription": "This resource shall be used to represent a thermal metrics resource for a Redfish implementation."
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

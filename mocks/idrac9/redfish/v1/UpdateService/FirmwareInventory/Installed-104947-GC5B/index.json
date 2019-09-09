@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-104947-GC5B",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-104947-GC5B",
+    "Name": "Disk 0 in Backplane 1 of Integrated RAID Controller 1",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23304_C_Disk.Bay.0:Enclosure.Internal.0-1:RAID.Integrated.1-1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "104947",
+                "ComponentType": "FRMW",
+                "DeviceID": null,
+                "ElementName": "Disk 0 in Backplane 1 of Integrated RAID Controller 1",
+                "HashValue": null,
+                "InstallationDate": "2018-09-26T12:47:30Z",
+                "IsEntity": true,
+                "RevisionNumber": 0,
+                "Status": "Installed",
+                "SubDeviceID": null,
+                "SubVendorID": null,
+                "VendorID": null
+            }
+        }
+    },
+    "SoftwareId": "104947",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "GC5B"
+}

@@ -1,0 +1,30 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Role.Role",
+    "@odata.etag": "W/\"6F7FD42C\"",
+    "@odata.id": "/redfish/v1/AccountService/Roles/dirgroup6024327d335e22c2f1206450/",
+    "@odata.type": "#Role.v1_2_1.Role",
+    "Id": "dirgroup6024327d335e22c2f1206450",
+    "AssignedPrivileges": [
+        "Login",
+        "ConfigureSelf",
+        "ConfigureManager",
+        "ConfigureUsers"
+    ],
+    "Description": "iLO Directory Group Role",
+    "IsPredefined": false,
+    "Name": "Group Role",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeDirectoryGroup.HpeDirectoryGroup",
+            "@odata.type": "#HpeDirectoryGroup.v1_0_0.HpeDirectoryGroup",
+            "GroupDn": "cn=hp,cn=bmcAdmins",
+            "GroupSid": ""
+        }
+    },
+    "OemPrivileges": [
+        "RemoteConsolePriv",
+        "VirtualMediaPriv",
+        "VirtualPowerAndResetPriv"
+    ],
+    "RoleId": "dirgroup6024327d335e22c2f1206450"
+}

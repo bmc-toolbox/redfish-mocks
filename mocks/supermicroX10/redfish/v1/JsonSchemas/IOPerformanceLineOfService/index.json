@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/IOPerformanceLineOfService",
+    "Id": "IOPerformanceLineOfService",
+    "Name": "IOPerformanceLineOfService Schema File",
+    "Description": "IOPerformanceLineOfService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "IOPerformanceLineOfService",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/IOPerformanceLineOfService.json"
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,328 @@
+{
+    "$ref": "#/definitions/DelliDRACCardService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "Actions": {
+            "additionalProperties": false,
+            "description": "The available actions for this resource.",
+            "longDescription": "This type shall contain the available actions for this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "#DelliDRACCardService.ExportSSLCertificate": {
+                    "$ref": "#/definitions/ExportSSLCertificate"
+                },
+                "#DelliDRACCardService.ImportSSLCertificate": {
+                    "$ref": "#/definitions/ImportSSLCertificate"
+                },
+                "#DelliDRACCardService.iDRACReset": {
+                    "$ref": "#/definitions/iDRACReset"
+                },
+                "#DelliDRACCardService.iDRACResetCfg": {
+                    "$ref": "#/definitions/iDRACResetCfg"
+                }
+            },
+            "type": "object"
+        },
+        "CertificateType": {
+            "enum": [
+                "CA",
+                "CSC",
+                "ClientTrustCertificate",
+                "Server"
+            ],
+            "enumDescriptions": {
+                "CA": "CA",
+                "CSC": "CSC",
+                "ClientTrustCertificate": "Client Trust Certificate",
+                "Server": "Server"
+            },
+            "type": "string"
+        },
+        "DelliDRACCardService": {
+            "additionalProperties": false,
+            "description": "The DelliDRACCardService resource provides some actions to support iDRAC configurations.",
+            "longDescription": "The DelliDRACCardService resource provides some actions to support iDRAC configurations.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Actions": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Actions"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "ExportSSLCertificate": {
+            "additionalProperties": false,
+            "description": "This method is used to export the ssl certificate from the idrac, based on input parameter Type. ExportSSLCertificate returns the certificate.",
+            "longDescription": "This method is used to export the ssl certificate from the idrac, based on input parameter Type. ExportSSLCertificate returns the certificate.",
+            "parameters": {
+                "SSLCertType": {
+                    "$ref": "#/definitions/SSLCertType",
+                    "description": "The type of the certificate to be exported.",
+                    "longDescription": "The type of the certificate to be exported."
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Force": {
+            "enum": [
+                "Force",
+                "Graceful"
+            ],
+            "enumDescriptions": {
+                "Force": "Force",
+                "Graceful": "Graceful"
+            },
+            "type": "string"
+        },
+        "ImportSSLCertificate": {
+            "additionalProperties": false,
+            "description": "This method is used to import the ssl certificate to iDRAC, on the basis of input parameter Type. After importing the certificate, the iDRAC will automatically restart.",
+            "longDescription": "This method is used to import the ssl certificate to iDRAC, on the basis of input parameter Type. After importing the certificate, the iDRAC will automatically restart.",
+            "parameters": {
+                "CertificateType": {
+                    "$ref": "#/definitions/CertificateType",
+                    "description": "Type of the certificate to be imported.",
+                    "longDescription": "Type of the certificate to be imported."
+                },
+                "Passphrase": {
+                    "description": "A passphrase for certificate file. Note: This is optional parameter for CSC certificate, and not required for Server and CA certificates.",
+                    "longDescription": "A passphrase for certificate file. Note: This is optional parameter for CSC certificate, and not required for Server and CA certificates.",
+                    "type": "string"
+                },
+                "SSLCertificateFile": {
+                    "description": "A base 64 encoded string of the XML Certificate file. Note: For importing CSC certificate, user has to convert PKCS file to base64 format. Use the openssl command. The CTC file content has to be in PEM format (base 64 encoded).",
+                    "longDescription": "A base 64 encoded string of the XML Certificate file. Note: For importing CSC certificate, user has to convert PKCS file to base64 format. Use the openssl command. The CTC file content has to be in PEM format (base 64 encoded).",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Preserve": {
+            "enum": [
+                "All",
+                "Default",
+                "ResetAllWithRootDefaults"
+            ],
+            "enumDescriptions": {
+                "All": "All",
+                "Default": "Default",
+                "ResetAllWithRootDefaults": "ResetAllWithRootDefaults"
+            },
+            "type": "string"
+        },
+        "SSLCertType": {
+            "enum": [
+                "CA",
+                "CSC",
+                "ClientTrustCertificate",
+                "Server"
+            ],
+            "enumDescriptions": {
+                "CA": "CA",
+                "CSC": "CSC",
+                "ClientTrustCertificate": "Client Trust Certificate",
+                "Server": "Server"
+            },
+            "type": "string"
+        },
+        "iDRACReset": {
+            "additionalProperties": false,
+            "description": "This method is used to reset iDRAC .",
+            "longDescription": "This method is used to reset iDRAC .",
+            "parameters": {
+                "Force": {
+                    "$ref": "#/definitions/Force",
+                    "description": "This option is used to reset the iDRAC by force or gracefully.",
+                    "longDescription": "This option is used to reset the iDRAC by force or gracefully."
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "iDRACResetCfg": {
+            "additionalProperties": false,
+            "description": "This method is used to reset the iDRAC to factory default configurations.",
+            "longDescription": "This method is used to reset the iDRAC to factory default configurations.",
+            "parameters": {
+                "Force": {
+                    "$ref": "#/definitions/Force",
+                    "description": "This option is used to reset the iDRAC to factory defaults by force or gracefully.",
+                    "longDescription": "This option is used to reset the iDRAC to factory defaults by force or gracefully."
+                },
+                "Preserve": {
+                    "$ref": "#/definitions/Preserve",
+                    "description": "Preserve= 0 (Default)-reset all configuration to default except network and users. Preserve=1 (All)-reset all configuration to default including network and users. Preserve=2 (ResetAllWithRootDefaults)  - reset all configuration to default including network preserve default user as root calvin.",
+                    "longDescription": "Preserve= 0 (Default)-reset all configuration to default except network and users. Preserve=1 (All)-reset all configuration to default including network and users. Preserve=2 (ResetAllWithRootDefaults)  - reset all configuration to default including network preserve default user as root calvin."
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "title": "#DelliDRACCardService.v1_0_0.DelliDRACCardService"
+}

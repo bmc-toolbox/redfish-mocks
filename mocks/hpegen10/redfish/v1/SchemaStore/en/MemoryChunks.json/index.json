@@ -1,0 +1,144 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2018 Hewlett Packard Enterprise Development, LP. Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Description": {
+            "$ref": "Resource.json#/definitions/Description"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "Status": {
+            "$ref": "Resource.json#/definitions/Status"
+        },
+        "Oem": {
+            "additionalProperties": true,
+            "properties": {
+                "Hpe": {
+                    "$ref": "HpeMemoryChunksExt.json#",
+                    "readonly": false
+                }
+            },
+            "readonly": false,
+            "type": "object"
+        },
+        "MemoryChunkSizeMiB": {
+            "type": [
+                "number",
+                "null"
+            ],
+            "readonly": true,
+            "description": "Size of the memory chunk in MiB",
+            "longDescription": "The value of this property shall be the size of the memory chunk in MiB."
+        },
+        "AddressRangeType": {
+            "type": "string",
+            "enum": [
+                "PMEM"
+            ],
+            "enumDescriptions": {
+                "PMEM": "Byte accessible persistent memory"
+            },
+            "readonly": true,
+            "description": "Memory type of this memory chunk",
+            "longDescription": "The value of this property shall be the type of memory chunk."
+        },
+        "IsMirrorEnabled": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "readonly": true,
+            "description": "Mirror Enabled status",
+            "longDescription": "The value of this property shall indicate if memory mirroring is enabled for this MemoryChunk."
+        },
+        "IsSpare": {
+            "type": [
+                "boolean",
+                "null"
+            ],
+            "readonly": true,
+            "description": "Spare enabled status",
+            "longDescription": "The value of this property shall indicate if sparing is enabled for this MemoryChunk."
+        },
+        "InterleaveSets": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "Memory": {
+                        "type": "object",
+                        "properties": {
+                            "@odata.id": {
+                                "$ref": "Resource.json#/definitions/odataid"
+                            }
+                        },
+                        "readonly": true,
+                        "description": "Describes a memory device of the interleave set. ",
+                        "longDescription": "The value of this property shall be the memory device to which these settings apply."
+                    },
+                    "RegionId": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "readonly": true,
+                        "description": "DIMM region identifier",
+                        "longDescription": "The value of this property shall be the DIMM region identifier."
+                    },
+                    "OffsetMiB": {
+                        "type": [
+                            "number",
+                            "null"
+                        ],
+                        "readonly": true,
+                        "description": "Offset within the DIMM that corresponds to the start of this memory region, with units in MiB",
+                        "longDescription": "The value of this property shall be the offset within the DIMM that corresponds to the start of this memory region, with units in MiB."
+                    },
+                    "SizeMiB": {
+                        "type": [
+                            "number",
+                            "null"
+                        ],
+                        "readonly": true,
+                        "description": "Size of this memory region in MiB",
+                        "longDescription": "The value of this property shall be the size of this memory region, with units in MiB."
+                    },
+                    "MemoryLevel": {
+                        "type": [
+                            "number",
+                            "null"
+                        ],
+                        "readonly": true,
+                        "description": "Level of the interleave set for multi-level tiered memory.",
+                        "longDescription": "The value of this property shall be the level of this interleave set for multi-level tiered memory."
+                    }
+                }
+            },
+            "readonly": true,
+            "description": "This is the interleave sets for the memory chunk.",
+            "longDescription": "These properties shall represent the interleave sets for the memory chunk."
+        }
+    },
+    "title": "#MemoryChunks.v1_2_2.MemoryChunks",
+    "type": "object",
+    "description": "This is the schema definition of a Memory Chunk and its configuration.",
+    "longDescription": "This resource shall be used to represent Memory Chunks and Interleave Sets in a Redfish implementation."
+}

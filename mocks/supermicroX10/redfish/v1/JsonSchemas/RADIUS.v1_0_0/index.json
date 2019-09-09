@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/RADIUS.v1_0_0",
+    "Id": "RADIUS.v1_0_0",
+    "Name": "RADIUS Schema File",
+    "Description": "RADIUS Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "RADIUS.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/RADIUS.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

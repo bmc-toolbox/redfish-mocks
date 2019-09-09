@@ -1,0 +1,13 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry(MessageId,Name,Id,EntryType,Severity,Message,Created)",
+    "@odata.etag": "W/\"1563800738\"",
+    "@odata.id": "/redfish/v1/Managers/Self/LogServices/AuditLog/Entries/5",
+    "@odata.type": "#LogEntry.v1_1_1.LogEntry",
+    "Created": "2019-07-22T13:05:38Z",
+    "EntryType": "Event",
+    "Id": "5",
+    "Message": "User: Administrator, IP: ::ffff:10.156.63.33, Protocol: http - User Administrator is now logged off.",
+    "MessageId": "Security.1.0.UserLogOff",
+    "Name": "Audit Log Entry 5",
+    "Severity": "OK"
+}

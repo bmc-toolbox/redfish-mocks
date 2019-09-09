@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/FanMode.v1_0_0",
+    "Id": "FanMode.v1_0_0",
+    "Name": "FanMode Schema File",
+    "Description": "FanMode Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "FanMode.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/FanMode.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

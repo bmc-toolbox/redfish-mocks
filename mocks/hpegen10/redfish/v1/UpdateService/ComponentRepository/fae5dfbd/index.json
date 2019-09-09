@@ -1,0 +1,26 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeComponent.HpeComponent",
+    "@odata.etag": "W/\"CD21D410\"",
+    "@odata.id": "/redfish/v1/UpdateService/ComponentRepository/fae5dfbd/",
+    "@odata.type": "#HpeComponent.v1_0_1.HpeComponent",
+    "Id": "fae5dfbd",
+    "Activates": "AfterHardPowerCycle",
+    "ComponentUri": "/fwrepo/CPLD_BL460_Gen10_v1E1E_full_signed.vme",
+    "Configuration": "",
+    "Created": "2017-11-21T01:02:01Z",
+    "Criticality": "Optional",
+    "DeviceClass": "b1ad439a-9dd1-41c1-a496-2da9313f1f07",
+    "ExecutionParameters": "",
+    "Filename": "CPLD_BL460_Gen10_v1E1E_full_signed.vme",
+    "Filepath": "CPLD_BL460_Gen10_v1E1E_full_signed.vme",
+    "Locked": true,
+    "Name": "System Programmable Logic Device",
+    "SizeBytes": 1094226,
+    "Targets": [
+        "00000000-0000-0000-0000-000000000206"
+    ],
+    "UpdatableBy": [
+        "Bmc"
+    ],
+    "Version": "1E"
+}

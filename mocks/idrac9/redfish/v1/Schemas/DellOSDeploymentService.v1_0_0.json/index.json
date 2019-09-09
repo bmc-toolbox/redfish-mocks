@@ -1,0 +1,951 @@
+{
+    "$ref": "#/definitions/DellOSDeploymentService",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "Actions": {
+            "additionalProperties": false,
+            "description": "The available actions for this resource.",
+            "longDescription": "This type shall contain the available actions for this resource.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "#DellOSDeploymentService.BootToHD": {
+                    "$ref": "#/definitions/BootToHD"
+                },
+                "#DellOSDeploymentService.BootToISOFromVFlash": {
+                    "$ref": "#/definitions/BootToISOFromVFlash"
+                },
+                "#DellOSDeploymentService.BootToNetworkISO": {
+                    "$ref": "#/definitions/BootToNetworkISO"
+                },
+                "#DellOSDeploymentService.ConfigurableBootToNetworkISO": {
+                    "$ref": "#/definitions/ConfigurableBootToNetworkISO"
+                },
+                "#DellOSDeploymentService.ConnectNetworkISOImage": {
+                    "$ref": "#/definitions/ConnectNetworkISOImage"
+                },
+                "#DellOSDeploymentService.DeleteISOFromVFlash": {
+                    "$ref": "#/definitions/DeleteISOFromVFlash"
+                },
+                "#DellOSDeploymentService.DetachDrivers": {
+                    "$ref": "#/definitions/DetachDrivers"
+                },
+                "#DellOSDeploymentService.DetachISOFromVFlash": {
+                    "$ref": "#/definitions/DetachISOFromVFlash"
+                },
+                "#DellOSDeploymentService.DetachISOImage": {
+                    "$ref": "#/definitions/DetachISOImage"
+                },
+                "#DellOSDeploymentService.DisconnectNetworkISOImage": {
+                    "$ref": "#/definitions/DisconnectNetworkISOImage"
+                },
+                "#DellOSDeploymentService.DownloadISOToVFlash": {
+                    "$ref": "#/definitions/DownloadISOToVFlash"
+                },
+                "#DellOSDeploymentService.GetAttachStatus": {
+                    "$ref": "#/definitions/GetAttachStatus"
+                },
+                "#DellOSDeploymentService.GetDriverPackInfo": {
+                    "$ref": "#/definitions/GetDriverPackInfo"
+                },
+                "#DellOSDeploymentService.GetNetworkISOImageConnectionInfo": {
+                    "$ref": "#/definitions/GetNetworkISOImageConnectionInfo"
+                },
+                "#DellOSDeploymentService.UnpackAndAttach": {
+                    "$ref": "#/definitions/UnpackAndAttach"
+                },
+                "#DellOSDeploymentService.UnpackAndShare": {
+                    "$ref": "#/definitions/UnpackAndShare"
+                }
+            },
+            "type": "object"
+        },
+        "BootToHD": {
+            "additionalProperties": false,
+            "description": "The BootToHD() method is used for one time boot to the host server's hard disk. Return values for BootToHD() shall be as specified in Table 29, where the method-execution behavior matches the return- code description. BootToHD( ) method's parameters are specified in Table 30.",
+            "longDescription": "The BootToHD() method is used for one time boot to the host server's hard disk. Return values for BootToHD() shall be as specified in Table 29, where the method-execution behavior matches the return- code description. BootToHD( ) method's parameters are specified in Table 30.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "BootToISOFromVFlash": {
+            "additionalProperties": false,
+            "description": "The BootToISOFromVFlash() method is used to boot to the downloaded pre-operating system image on the vFlash SD card. The following table lists the return values for BootToISOFromVFlash() method, where the method-execution behavior matches the return-code description.",
+            "longDescription": "The BootToISOFromVFlash() method is used to boot to the downloaded pre-operating system image on the vFlash SD card. The following table lists the return values for BootToISOFromVFlash() method, where the method-execution behavior matches the return-code description.",
+            "parameters": {
+                "ExposeDuration": {
+                    "description": "Identifies the amount of time up to 18 hours for the drivers to be exposed as an USB device to the host. The default value shall be 18 hrs, if the parameter is not specified.The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "format": "date-time",
+                    "longDescription": "Identifies the amount of time up to 18 hours for the drivers to be exposed as an USB device to the host. The default value shall be 18 hrs, if the parameter is not specified.The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "BootToNetworkISO": {
+            "additionalProperties": false,
+            "description": "The BootToNetworkISO() method is used to boot to the iDRAC pre-operating system image that was already downloaded. The following table lists the return values for BootToNetworkISO() method, where the method-execution behavior matches the return-code description.",
+            "longDescription": "The BootToNetworkISO() method is used to boot to the iDRAC pre-operating system image that was already downloaded. The following table lists the return values for BootToNetworkISO() method, where the method-execution behavior matches the return-code description.",
+            "parameters": {
+                "ExposeDuration": {
+                    "description": "Identifies the amount of time (up to 18 hours) for the ISO Image to be exposed as a local CD-ROM device to the host. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "format": "date-time",
+                    "longDescription": "Identifies the amount of time (up to 18 hours) for the ISO Image to be exposed as a local CD-ROM device to the host. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "type": "string"
+                },
+                "FolderName": {
+                    "description": "Folder Name containing the ISO.",
+                    "longDescription": "Folder Name containing the ISO.",
+                    "type": "string"
+                },
+                "HashType": {
+                    "$ref": "#/definitions/HashType",
+                    "description": "Type of hash algorithm used to compute checksum.",
+                    "longDescription": "Type of hash algorithm used to compute checksum."
+                },
+                "HashValue": {
+                    "description": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "longDescription": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "NFS or CIFS share IPv4 address. For example, 192.168.10.100.",
+                    "longDescription": "NFS or CIFS share IPv4 address. For example, 192.168.10.100.",
+                    "type": "string"
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password, if applicable.",
+                    "longDescription": "Password, if applicable.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "UserName, if applicable. If the value contains domain name e.g. domain name/UserName, the \"domain name\" will be considered as Work group. Work group parameter will take precedence if value is separately passed for it along with UserName. Supports only '' and '/' for seperator.",
+                    "longDescription": "UserName, if applicable. If the value contains domain name e.g. domain name/UserName, the \"domain name\" will be considered as Work group. Work group parameter will take precedence if value is separately passed for it along with UserName. Supports only '' and '/' for seperator.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ConfigurableBootToNetworkISO": {
+            "additionalProperties": false,
+            "description": "The ConfigurableBootToNetworkISO() method exposes an ISO Image present on a network share as a CDROM device to the host server for a specified exposure duration interval or by default for 18 hrs. Upon the successful execution, based on the ResetType parameter, the host system shall either immediately cold boot or warm boot. Upon this reset, the system shall then boot to the ISO Image. If ResetType specifies no immediate reboot, then upon the next host system reset, the system shall boot to the ISO Image. Furthermore, if immediate reset is not specified, then the system should be rebooted before the exposure duration interval expires, otherwise the system shall fail to boot to the ISO Image.",
+            "longDescription": "The ConfigurableBootToNetworkISO() method exposes an ISO Image present on a network share as a CDROM device to the host server for a specified exposure duration interval or by default for 18 hrs. Upon the successful execution, based on the ResetType parameter, the host system shall either immediately cold boot or warm boot. Upon this reset, the system shall then boot to the ISO Image. If ResetType specifies no immediate reboot, then upon the next host system reset, the system shall boot to the ISO Image. Furthermore, if immediate reset is not specified, then the system should be rebooted before the exposure duration interval expires, otherwise the system shall fail to boot to the ISO Image.",
+            "parameters": {
+                "ExposeDuration": {
+                    "description": "Identifies the amount of time (up to 18 hours) for the ISO Image to be exposed as a local CD-ROM device to the host server after which it will be automatically detached. The default value shall be 18 hrs, if the parameter is not specified. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "format": "date-time",
+                    "longDescription": "Identifies the amount of time (up to 18 hours) for the ISO Image to be exposed as a local CD-ROM device to the host server after which it will be automatically detached. The default value shall be 18 hrs, if the parameter is not specified. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "type": "string"
+                },
+                "HashType": {
+                    "$ref": "#/definitions/HashType",
+                    "description": "Type of hash algorithm used to compute checksum.",
+                    "longDescription": "Type of hash algorithm used to compute checksum."
+                },
+                "HashValue": {
+                    "description": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "longDescription": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "NFS or CIFS share IPv4 address. For example, 192.168.10.100.",
+                    "longDescription": "NFS or CIFS share IPv4 address. For example, 192.168.10.100.",
+                    "type": "string"
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password, if applicable.",
+                    "longDescription": "Password, if applicable.",
+                    "type": "string"
+                },
+                "ResetType": {
+                    "$ref": "#/definitions/ResetType",
+                    "description": "Specifies if the host system needs to be immediately forced to cold/warm reset in order to boot to the ISO Image.",
+                    "longDescription": "Specifies if the host system needs to be immediately forced to cold/warm reset in order to boot to the ISO Image."
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "UserName, if applicable.",
+                    "longDescription": "UserName, if applicable.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ConnectNetworkISOImage": {
+            "additionalProperties": false,
+            "description": "The ConnectNetworkISOImage() method is used to connect to the ISO present on the network share and expose the ISO as a local USB CD-ROM device to the host system. This method will connect to the ISO located on an NFS/CIFS share and expose it as a virtual CDROM device to the host server. Even though the successful method execution shall not change the boot order of that device, the host shall always boot to the virtual CDROM. Also note that after the ISO is exposed to the host server, Lifecycle Controller shall be locked and no other jobs like configuration/update etc shall be performed until the ISO is detached using the DisconnectNetworkISOImage() method. The successful exection of the DisconnectNetworkISOImage() shall revert the host system to the regular boot list. NOTE: The recommended methodology for connecting to an ISO image is by using the ConnectRFSISOImage()  method that utilizes the remote file system (RFS).",
+            "longDescription": "The ConnectNetworkISOImage() method is used to connect to the ISO present on the network share and expose the ISO as a local USB CD-ROM device to the host system. This method will connect to the ISO located on an NFS/CIFS share and expose it as a virtual CDROM device to the host server. Even though the successful method execution shall not change the boot order of that device, the host shall always boot to the virtual CDROM. Also note that after the ISO is exposed to the host server, Lifecycle Controller shall be locked and no other jobs like configuration/update etc shall be performed until the ISO is detached using the DisconnectNetworkISOImage() method. The successful exection of the DisconnectNetworkISOImage() shall revert the host system to the regular boot list. NOTE: The recommended methodology for connecting to an ISO image is by using the ConnectRFSISOImage()  method that utilizes the remote file system (RFS).",
+            "parameters": {
+                "HashType": {
+                    "$ref": "#/definitions/HashType",
+                    "description": "Type of hash algorithm used to compute checksum.",
+                    "longDescription": "Type of hash algorithm used to compute checksum."
+                },
+                "HashValue": {
+                    "description": "Checksum value in string format computed using HashType algorithm.",
+                    "longDescription": "Checksum value in string format computed using HashType algorithm.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "CIFS or NFS share IPv4 address. For example, 192.168.10.100.",
+                    "longDescription": "CIFS or NFS share IPv4 address. For example, 192.168.10.100.",
+                    "type": "string"
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password of the account to access the share.",
+                    "longDescription": "Password of the account to access the share.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "UserName of the account to access the share.",
+                    "longDescription": "UserName of the account to access the share.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DeleteISOFromVFlash": {
+            "additionalProperties": false,
+            "description": "The DeleteISOFromVFlash() method is used to delete the ISO Image from vFlash SD card.The following table lists the return values for the DeleteISOFromVFlash() method, where the method- execution behavior matches the return-code description.",
+            "longDescription": "The DeleteISOFromVFlash() method is used to delete the ISO Image from vFlash SD card.The following table lists the return values for the DeleteISOFromVFlash() method, where the method- execution behavior matches the return-code description.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DellOSDeploymentService": {
+            "additionalProperties": false,
+            "description": "The DellOSDeploymentService resource provides some actions to support OS deployment configurations.",
+            "longDescription": "The DellOSDeploymentService resource provides some actions to support OS deployment configurations.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "Actions": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Actions"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "DetachDrivers": {
+            "additionalProperties": false,
+            "description": "This OSDeploymentService.DetachDrivers() method is used to detach the USB device containing the drivers from the host server. The following table lists the return values for DetachDrivers() method,, where the method-execution behavior matches the return-code description.",
+            "longDescription": "This OSDeploymentService.DetachDrivers() method is used to detach the USB device containing the drivers from the host server. The following table lists the return values for DetachDrivers() method,, where the method-execution behavior matches the return-code description.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DetachISOFromVFlash": {
+            "additionalProperties": false,
+            "description": "The DetachISOFromVFlash() method is used to detach the ISO Image (on a vFlash SD card) from the host system.",
+            "longDescription": "The DetachISOFromVFlash() method is used to detach the ISO Image (on a vFlash SD card) from the host system.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DetachISOImage": {
+            "additionalProperties": false,
+            "description": "The DetachISOImage() method is used to detach the ISO Image from the host server. The following table lists the return values for DetachISOImage() method, where the method-execution behavior matches the return-code description. The following table lists the return values for BootToNetworkISO() method, where the method-execution behavior matches the return-code description.",
+            "longDescription": "The DetachISOImage() method is used to detach the ISO Image from the host server. The following table lists the return values for DetachISOImage() method, where the method-execution behavior matches the return-code description. The following table lists the return values for BootToNetworkISO() method, where the method-execution behavior matches the return-code description.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DisconnectNetworkISOImage": {
+            "additionalProperties": false,
+            "description": "The DisconnectNetworkISOImage() method is used to disconnect and detach the ISO Image from the host system. The following table lists the return values for the DisconnectNetworkISOImage() method, where the method-execution behavior matches the return-code description.",
+            "longDescription": "The DisconnectNetworkISOImage() method is used to disconnect and detach the ISO Image from the host system. The following table lists the return values for the DisconnectNetworkISOImage() method, where the method-execution behavior matches the return-code description.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DownloadISOToVFlash": {
+            "additionalProperties": false,
+            "description": "The DownloadISOToVFlash() method is used to download the pre-operating system ISO Image to the vFlash SD card. The following table lists the return values for DownloadISOToVFlash() method, where the method-execution behavior matches the return-code description.",
+            "longDescription": "The DownloadISOToVFlash() method is used to download the pre-operating system ISO Image to the vFlash SD card. The following table lists the return values for DownloadISOToVFlash() method, where the method-execution behavior matches the return-code description.",
+            "parameters": {
+                "HashType": {
+                    "$ref": "#/definitions/HashType",
+                    "description": "Type of hash algorithm used to compute checksum.",
+                    "longDescription": "Type of hash algorithm used to compute checksum."
+                },
+                "HashValue": {
+                    "description": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "longDescription": "Checksum value in string format computed using 'HashType' algorithm.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "TFTP, CIFS, or NFS share IPv4 address. For example, 192.168.10.100.",
+                    "longDescription": "TFTP, CIFS, or NFS share IPv4 address. For example, 192.168.10.100.",
+                    "type": "string"
+                },
+                "ImageName": {
+                    "description": "Name of the image file.",
+                    "longDescription": "Name of the image file.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password, if applicable.",
+                    "longDescription": "Password, if applicable.",
+                    "type": "string"
+                },
+                "Port": {
+                    "description": "Port Number.",
+                    "longDescription": "Port Number.",
+                    "type": "number"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "UserName, if applicable.",
+                    "longDescription": "UserName, if applicable.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "GetAttachStatus": {
+            "additionalProperties": false,
+            "description": "The GetAttachStatus() method will give the status of the Drivers and ISO Image that has been exposed to host.",
+            "longDescription": "The GetAttachStatus() method will give the status of the Drivers and ISO Image that has been exposed to host.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "GetDriverPackInfo": {
+            "additionalProperties": false,
+            "description": "The GetDriverPackInfo() method is used get the list of operating systems that can be installed on the host system using the embedded device drivers present in the Lifecycle Controller.",
+            "longDescription": "The GetDriverPackInfo() method is used get the list of operating systems that can be installed on the host system using the embedded device drivers present in the Lifecycle Controller.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "GetNetworkISOImageConnectionInfo": {
+            "additionalProperties": false,
+            "description": "The GetNetworkISOImageConnectionInfo() method is used to give the status of the ISO Image that has been exposed to the host system. The following table lists the return values for GetNetworkISOImageConnectionInfo(), where the method-execution behavior matches the return-code description.",
+            "longDescription": "The GetNetworkISOImageConnectionInfo() method is used to give the status of the ISO Image that has been exposed to the host system. The following table lists the return values for GetNetworkISOImageConnectionInfo(), where the method-execution behavior matches the return-code description.",
+            "parameters": {},
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "HashType": {
+            "enum": [
+                "MD5",
+                "SHA1"
+            ],
+            "enumDescriptions": {
+                "MD5": "MD5",
+                "SHA1": "SHA1"
+            },
+            "type": "string"
+        },
+        "ResetType": {
+            "enum": [
+                "ColdReset",
+                "NoReset",
+                "WarmReset"
+            ],
+            "enumDescriptions": {
+                "ColdReset": "Cold reset",
+                "NoReset": "No reset",
+                "WarmReset": "Warm reset"
+            },
+            "type": "string"
+        },
+        "ShareType": {
+            "enum": [
+                "CIFS",
+                "NFS",
+                "TFTP"
+            ],
+            "enumDescriptions": {
+                "CIFS": "CIFS",
+                "NFS": "NFS",
+                "TFTP": "TFTP"
+            },
+            "type": "string"
+        },
+        "UnpackAndAttach": {
+            "additionalProperties": false,
+            "description": "The UnpackAndAttach() method is used to extract the drivers for the selected operating system to a USB device that is attached locally to the server for the specified time interval. The following talbe specifies the return values for UnpackAndAttach() method, where the method-execution behavior matches the return- code description.",
+            "longDescription": "The UnpackAndAttach() method is used to extract the drivers for the selected operating system to a USB device that is attached locally to the server for the specified time interval. The following talbe specifies the return values for UnpackAndAttach() method, where the method-execution behavior matches the return- code description.",
+            "parameters": {
+                "ExposeDuration": {
+                    "description": "Identifies the amount of time up to 18 hours for the drivers to be exposed as an USB device to the host. The default value shall be 18 hrs, if the parameter is not specified. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "format": "date-time",
+                    "longDescription": "Identifies the amount of time up to 18 hours for the drivers to be exposed as an USB device to the host. The default value shall be 18 hrs, if the parameter is not specified. The format for intervals is: YYYY-MM-DDThh:mm:ss[.SSS](Z|(+|-)hh:mm)",
+                    "type": "string"
+                },
+                "OSName": {
+                    "description": "Name of the OS to unpack drivers for, this value shall match one of the strings in OSList returned for GetDriverPackInfo.",
+                    "longDescription": "Name of the OS to unpack drivers for, this value shall match one of the strings in OSList returned for GetDriverPackInfo.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "UnpackAndShare": {
+            "additionalProperties": false,
+            "description": "The UnpackAndShare() method is used to extract the drivers for the selected operating system, and copy them to the specified network share. The following table lists the return values for UnpackAndShare(), where the method-execution behavior matches the return-code description.",
+            "longDescription": "The UnpackAndShare() method is used to extract the drivers for the selected operating system, and copy them to the specified network share. The following table lists the return values for UnpackAndShare(), where the method-execution behavior matches the return-code description.",
+            "parameters": {
+                "FolderName": {
+                    "description": "Folder Name.",
+                    "longDescription": "Folder Name.",
+                    "type": "string"
+                },
+                "IPAddress": {
+                    "description": "CIFS or NFS share IPv4 address.For example, 192.168.10.100.",
+                    "longDescription": "CIFS or NFS share IPv4 address.For example, 192.168.10.100.",
+                    "type": "string"
+                },
+                "OSName": {
+                    "description": "Operating System name.",
+                    "longDescription": "Operating System name.",
+                    "type": "string"
+                },
+                "Password": {
+                    "description": "Password, if applicable.",
+                    "longDescription": "Password, if applicable.",
+                    "type": "string"
+                },
+                "ShareName": {
+                    "description": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "longDescription": "Name of the CIFS share or full path to the NFS share. Optional for HTTP/HTTPS share (if supported), this may be treated as the path of the directory containing the file.",
+                    "type": "string"
+                },
+                "ShareType": {
+                    "$ref": "#/definitions/ShareType",
+                    "description": "Type of the Network Share.",
+                    "longDescription": "Type of the Network Share."
+                },
+                "UserName": {
+                    "description": "UserName, if applicable.",
+                    "longDescription": "UserName, if applicable.",
+                    "type": "string"
+                },
+                "Workgroup": {
+                    "description": "Workgroup for the CIFS share, optional.",
+                    "longDescription": "Workgroup for the CIFS share, optional.",
+                    "type": "string"
+                }
+            },
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "target": {
+                    "description": "Link to invoke action",
+                    "format": "uri",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "Friendly action name",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "title": "#DellOSDeploymentService.v1_0_0.DellOSDeploymentService"
+}

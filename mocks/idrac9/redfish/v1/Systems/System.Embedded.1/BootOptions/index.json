@@ -1,0 +1,9 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#BootOptionCollection.BootOptionCollection",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootOptions",
+    "@odata.type": "#BootOptionCollection.BootOptionCollection",
+    "Description": "Collection of BootOptions",
+    "Members": [],
+    "Members@odata.count": 0,
+    "Name": "Boot Options Collection"
+}

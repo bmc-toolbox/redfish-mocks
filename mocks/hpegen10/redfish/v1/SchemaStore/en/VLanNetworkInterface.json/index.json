@@ -1,0 +1,79 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2017 Distributed Management Task Force. All rights reserved.",
+    "description": "This resource contains information for a Virtual LAN (VLAN) network instance available on a manager, system or other device.",
+    "definitions": {
+        "VLAN": {
+            "type": "object",
+            "readonly": false,
+            "additionalProperties": false,
+            "properties": {
+                "VLANEnable": {
+                    "description": "This indicates if this VLAN is enabled.",
+                    "etag": true,
+                    "$ref": "#/definitions/VLANEnable",
+                    "readonly": false
+                },
+                "VLANId": {
+                    "description": "This indicates the VLAN identifier for this VLAN.",
+                    "etag": true,
+                    "$ref": "#/definitions/VLANId",
+                    "readonly": false
+                }
+            }
+        },
+        "VLANId": {
+            "description": "This indicates the VLAN identifier for this VLAN.",
+            "etag": true,
+            "maximum": 4094,
+            "minimum": 0,
+            "readonly": false,
+            "type": [
+                "integer",
+                "null"
+            ]
+        },
+        "VLANEnable": {
+            "description": "This indicates if this VLAN is enabled.",
+            "etag": true,
+            "readonly": false,
+            "type": [
+                "boolean",
+                "null"
+            ]
+        },
+        "VLanNetworkInterface": {
+            "type": "object",
+            "readonly": false,
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "Resource.json#/definitions/odatacontext"
+                },
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                },
+                "@odata.type": {
+                    "$ref": "Resource.json#/definitions/odatatype"
+                },
+                "Description": {
+                    "$ref": "Resource.json#/definitions/Description"
+                },
+                "VLANEnable": {
+                    "description": "This indicates if this VLAN is enabled.",
+                    "etag": true,
+                    "$ref": "#/definitions/VLANEnable",
+                    "readonly": false
+                },
+                "VLANId": {
+                    "description": "This indicates the VLAN identifier for this VLAN.",
+                    "etag": true,
+                    "$ref": "#/definitions/VLANId",
+                    "readonly": false
+                }
+            }
+        }
+    },
+    "title": "#VLanNetworkInterface.v1_0_0.VLanNetworkInterface",
+    "type": "object"
+}

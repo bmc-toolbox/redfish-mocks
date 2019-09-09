@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SNMPv3",
+    "Id": "SNMPv3",
+    "Name": "SNMPv3 Schema File",
+    "Description": "SNMPv3 Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SNMPv3",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SNMPv3.json"
+        }
+    ],
+    "Oem": {}
+}

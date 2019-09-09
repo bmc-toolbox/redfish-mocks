@@ -1,0 +1,25 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LogEntry.LogEntry",
+    "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1/Logs/Lclog/80",
+    "@odata.type": "#LogEntry.v1_3_0.LogEntry",
+    "Created": "2019-09-05T12:37:43+02:00",
+    "Description": " Log Entry 80",
+    "EntryType": "Oem",
+    "Id": "80",
+    "Links": {
+        "OriginOfCondition": {
+            "@odata.id": "/redfish/v1/Managers/iDRAC.Embedded.1"
+        }
+    },
+    "Message": "Successfully logged in using psm, from 10.156.63.11 and REDFISH.",
+    "MessageArgs": [
+        "psm",
+        "10.156.63.11",
+        "REDFISH"
+    ],
+    "MessageArgs@odata.count": 3,
+    "MessageId": "USR0030",
+    "Name": " Log Entry 80",
+    "OemRecordFormat": "Dell",
+    "Severity": "OK"
+}

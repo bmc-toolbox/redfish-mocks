@@ -1,0 +1,22 @@
+{
+    "@Redfish.Settings": {
+        "@odata.context": "/redfish/v1/$metadata#Settings.Settings",
+        "@odata.type": "#Settings.v1_1_0.Settings",
+        "SettingsObject": {
+            "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources/Settings"
+        },
+        "SupportedApplyTimes": [
+            "OnReset",
+            "AtMaintenanceWindowStart",
+            "InMaintenanceWindowOnReset"
+        ]
+    },
+    "@odata.context": "/redfish/v1/$metadata#DellBootSources.DellBootSources",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded.1/BootSources",
+    "@odata.type": "#DellBootSources.v1_0_0.DellBootSources",
+    "AttributeRegistry": "DellBootSourcesRegistry.v1_0_0",
+    "Attributes": {},
+    "Description": "Boot Sources Current Settings",
+    "Id": "BootSources",
+    "Name": "Boot Sources Configuration Current Settings"
+}

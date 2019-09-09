@@ -1,0 +1,38 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeSecurityService.HpeSecurityService",
+    "@odata.etag": "W/\"12DE477E\"",
+    "@odata.id": "/redfish/v1/Managers/1/SecurityService/",
+    "@odata.type": "#HpeSecurityService.v2_2_0.HpeSecurityService",
+    "Id": "SecurityService",
+    "CurrentCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+    "Links": {
+        "ESKM": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/ESKM/"
+        },
+        "HttpsCert": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/HttpsCert/"
+        },
+        "SSO": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/SSO/"
+        },
+        "SecurityDashboard": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/SecurityDashboard/"
+        },
+        "SecurityParams": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/SecurityDashboard/SecurityParams/"
+        },
+        "CertAuth": {
+            "@odata.id": "/redfish/v1/Managers/1/SecurityService/CertificateAuthentication/"
+        }
+    },
+    "LoginSecurityBanner": {
+        "IsEnabled": false
+    },
+    "SSHHostKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrij2jFt4JRHIm2mNSYki/rKYdiGwpdbDSp69W8h3hjQFt3RmcdvkctGkhx/Cvo81fJfaQtbhbN8jcZpzlYUZ1o3q0EKMiXG31qMZxN3kpGzwY1wKtcnILyy0l8062TtyrgGJWPMdqq5Rb/Kwu+jA7E5a1qc3wbbjFcGQsby+JLzWhylsrTM/cBp6ch1W9F2914jyEuh1QoltCjNnphDX/1oPW05sl7qJbi0slbUws3LDwGTHLYNh+LVpTxvtJ5VhLNo6BPEZHl+FFklYdbr1FQjkfd0ItsFr68YK9rr0l/qVztoeRsEGx5FB9hO624RSKFsyIWpSImBW4BzBeZMg1",
+    "SecurityState": "Production",
+    "SecurityState@Redfish.AllowableValues": [
+        "Production",
+        "HighSecurity",
+        "FIPS"
+    ]
+}

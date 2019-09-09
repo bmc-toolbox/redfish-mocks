@@ -1,0 +1,36 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SoftwareInventory.SoftwareInventory",
+    "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/Installed-25806-4301A29",
+    "@odata.type": "#SoftwareInventory.v1_1_1.SoftwareInventory",
+    "Description": "Represents Firmware Inventory",
+    "Id": "Installed-25806-4301A29",
+    "Name": "Dell 64 Bit uEFI Diagnostics, version 4301, 4301A29, 4301.30",
+    "Oem": {
+        "Dell": {
+            "DellSoftwareInventory": {
+                "@odata.context": "/redfish/v1/$metadata#DellSoftwareInventory.DellSoftwareInventory",
+                "@odata.id": "/redfish/v1/Dell/UpdateService/FirmwareInventory/DellSoftwareInventory/DCIM:INSTALLED%23802__Diagnostics.Embedded.1:LC.Embedded.1",
+                "@odata.type": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory",
+                "ComponentID": "25806",
+                "ComponentType": "APAC",
+                "DeviceID": null,
+                "ElementName": "Dell 64 Bit uEFI Diagnostics, version 4301, 4301A29, 4301.30",
+                "HashValue": null,
+                "InstallationDate": "2019-06-01T02:48:38Z",
+                "IsEntity": true,
+                "RevisionNumber": 0,
+                "Status": "Installed",
+                "SubDeviceID": null,
+                "SubVendorID": null,
+                "VendorID": null
+            }
+        }
+    },
+    "SoftwareId": "25806",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Updateable": true,
+    "Version": "4301A29"
+}

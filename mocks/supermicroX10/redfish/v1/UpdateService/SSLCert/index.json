@@ -1,0 +1,18 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#SSLCert.SSLCert",
+    "@odata.type": "#SSLCert.SSLCert",
+    "@odata.id": "/redfish/v1/UpdateService/SSLCert",
+    "Id": "SSLCert",
+    "Name": "SSLCert",
+    "VaildFrom": "Jul 26 17:29:56 2019 GMT",
+    "GoodTHRU": "Jul 26 17:30:26 2020 GMT",
+    "Actions": {
+        "#SSLCert.Upload": {
+            "target": "/redfish/v1/UpdateService/SSLCert/Actions/SSLCert.Upload",
+            "UploadKeyWords@Redfish.AllowableValues": [
+                "cert_file",
+                "key_file"
+            ]
+        }
+    }
+}

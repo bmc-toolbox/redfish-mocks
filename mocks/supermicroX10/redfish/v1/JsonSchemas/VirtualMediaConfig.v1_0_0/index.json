@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/VirtualMediaConfig.v1_0_0",
+    "Id": "VirtualMediaConfig.v1_0_0",
+    "Name": "VirtualMediaConfig Schema File",
+    "Description": "VirtualMediaConfig Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "VirtualMediaConfig.v1_0_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/VirtualMediaConfig.v1_0_0.json"
+        }
+    ],
+    "Oem": {}
+}

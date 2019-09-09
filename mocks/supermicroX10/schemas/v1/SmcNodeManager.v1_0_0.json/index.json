@@ -1,0 +1,551 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#SmcNodeManager.v1_0_0",
+    "definitions": {
+        "ClearAllPolicies": {
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "title": {
+                    "type": "string",
+                    "description": "Friendly action name"
+                },
+                "target": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Link to invoke action"
+                }
+            },
+            "description": "The action clear all policies.",
+            "longDescription": "This defines the name of the custom action supported when used in conjunction with a POST operation to this resource. When issued, this operation will clear all policies."
+        },
+        "Capabilities": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "DomainID": {
+                    "$ref": "#/definitions/DomainID",
+                    "readonly": true,
+                    "description": "The ID identifies the domain that this Intel NM setting applies to.",
+                    "longDescription": "The value of this property shall indicate the domain that this Intel NM setting applies to."
+                },
+                "PolicyType": {
+                    "$ref": "#/definitions/PolicyType",
+                    "readonly": true,
+                    "description": "The type of policy.",
+                    "longDescription": "The value of this property shall indicate the policy type."
+                },
+                "MaxConcurrentSettings": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The maximum concurrent settings for ME.",
+                    "longDescription": "The value of this property shall indicate the maximum concurrent settings of ME."
+                },
+                "MaxValueAfterReset": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The maximum value after reset for ME.",
+                    "longDescription": "The value of this property shall indicate the maximum value to be settable as trigger."
+                },
+                "MinValueAfterReset": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The minimum value after reset for ME.",
+                    "longDescription": "The value of this property shall indicate the minimum value to be settable as trigger."
+                },
+                "MaxCorrectionTime": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The maximum correction time for ME.",
+                    "longDescription": "The value of this property shall indicate the maximum correction time of ME."
+                },
+                "MinCorrectionTime": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The minimum correction time for ME.",
+                    "longDescription": "The value of this property shall indicate the minimum correction time of ME."
+                },
+                "MaxReportingPeriod": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The maximum reporting period for ME.",
+                    "longDescription": "The value of this property shall indicate the maximum reporting period of ME."
+                },
+                "MinReportingPeriod": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The minimum reporting period for ME.",
+                    "longDescription": "The value of this property shall indicate the minimum reporting period of ME."
+                },
+                "DomainLimitingScope": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The domain limiting scope for ME.",
+                    "longDescription": "The value of this property shall indicate the domain limiting scope of ME."
+                }
+            }
+        },
+        "DomainID": {
+            "type": "string",
+            "enum": [
+                "Entire platform",
+                "CPU subsystem",
+                "Memory subsystem",
+                "HW Protection",
+                "High Power I/O subsystem"
+            ],
+            "enumDescriptions": {
+                "Entire platform": "The Domain ID is entire platform.",
+                "CPU subsystem": "The Domain ID is CPU subsystem.",
+                "Memory subsystem": "The Domain ID is memory subsystem.",
+                "HW Protection": "The Domain ID is HW Protection.",
+                "High Power I/O subsystem": "The Domain ID is high power I/O subsystem."
+            }
+        },
+        "IPMIVersion": {
+            "type": "string",
+            "enum": [
+                "Intel NM IPMI version 1.0",
+                "Intel NM IPMI version 2.0",
+                "Intel NM IPMI version 3.0",
+                "Intel NM IPMI version 4.0",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Intel NM IPMI version 1.0": "The version of the Intel NM IPMI is 1.0.",
+                "Intel NM IPMI version 2.0": "The version of the Intel NM IPMI is 2.0.",
+                "Intel NM IPMI version 3.0": "The version of the Intel NM IPMI is 3.0.",
+                "Intel NM IPMI version 4.0": "The version of the Intel NM IPMI is 4.0.",
+                "Unknown": "Unknown version."
+            }
+        },
+        "ImageFlags": {
+            "type": "string",
+            "enum": [
+                "Recovery",
+                "Operational"
+            ],
+            "enumDescriptions": {
+                "Recovery": "The state of the ME is in recovery mode.",
+                "Operational": "The state of the ME is in operational mode."
+            }
+        },
+        "IntelNMVersion": {
+            "type": "string",
+            "enum": [
+                "Supported Intel NM 1.0 \u2013 one power policy",
+                "Supported Intel NM 1.5 \u2013 multiple policies and thermal triggers for power policy",
+                "Supported Intel NM 2.0 \u2013 multiple policies and thermal triggers for power policy",
+                "Supported Intel NM 2.5",
+                "Supported Intel NM 3.0",
+                "Supported Intel NM 4.0",
+                "Unknown"
+            ],
+            "enumDescriptions": {
+                "Supported Intel NM 1.0 \u2013 one power policy": "The version is supported Intel NM 1.0.",
+                "Supported Intel NM 1.5 \u2013 multiple policies and thermal triggers for power policy": "The version is supported Intel NM 1.5.",
+                "Supported Intel NM 2.0 \u2013 multiple policies and thermal triggers for power policy": "The version is supported Intel NM 2.0.",
+                "Supported Intel NM 2.5": "The version is supported Intel NM 2.5.",
+                "Supported Intel NM 3.0": "The version is supported Intel NM 3.0.",
+                "Supported Intel NM 4.0": "The version is supported Intel NM 4.0.",
+                "Unknown": "Unknown version."
+            }
+        },
+        "Mode": {
+            "type": "string",
+            "enum": [
+                "Global power statistics",
+                "Per policy power statistics"
+            ],
+            "enumDescriptions": {
+                "Global power statistics": "The mode is global power statistics in watts.",
+                "Per policy power statistics": "The mode is per policy power statistics in watts."
+            }
+        },
+        "Policy": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "DomainID": {
+                    "$ref": "#/definitions/DomainID",
+                    "readonly": true,
+                    "description": "The ID identifies the domain that this Intel NM setting applies to.",
+                    "longDescription": "The value of this property shall indicate the domain that this Intel NM setting applies to."
+                },
+                "PolicyID": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The number of the policy.",
+                    "longDescription": "The value of this property shall indicate the policy ID."
+                },
+                "PolicyType": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The type of the policy.",
+                    "longDescription": "The value of this property shall indicate the policy type."
+                },
+                "PolicyExceptionActions": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The policy exception actions",
+                    "longDescription": "The value of this property shall indicate the policy exception actions."
+                },
+                "PowerLimit": {
+                    "type": "number",
+                    "readonly": false,
+                    "description": "The power limit.",
+                    "longDescription": "The vlaue of this property shall indicate the power limit."
+                },
+                "CorrectionTimeLimit": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The correction time limit",
+                    "longDescription": "The vlaue of this property shall indicate the time is counted from the moment whenthe average power consumption exceeds the power limit."
+                },
+                "PolicyTriggerLimit": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The returned policy trigger limit value.",
+                    "longDescription": "The vlaue of this property shall indicate the returned policy trigger limit value."
+                },
+                "StatReportingPeriod": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The number of seconds that the measured power.",
+                    "longDescription": "The vlaue of this property shall indicate the measured power will be averaged over for the purpose of reporting statistics to external management SW."
+                }
+            }
+        },
+        "PolicyType": {
+            "type": "string",
+            "enum": [
+                "Power Control Policy"
+            ],
+            "enumDescriptions": {
+                "Power Control Policy": "The policy type is power control policy."
+            }
+        },
+        "Selftest": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "MajorCode": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The code of major.",
+                    "longDescription": "The value of this property shall indicate the major code."
+                },
+                "MinorCode": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The code of minor.",
+                    "longDescription": "The value of this property shall indicate the minor code."
+                },
+                "ImageFlags": {
+                    "$ref": "#/definitions/ImageFlags",
+                    "readonly": true,
+                    "description": "The state of the ME.",
+                    "longDescription": "The value of this property shall indicate the ME state."
+                }
+            }
+        },
+        "SmcNodeManager": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Capabilities": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Capabilities"
+                    },
+                    "description": "This type contains capabilities of a ME entity.",
+                    "longDescription": "This type shall contain properties which describe the capabilities of a ME entity."
+                },
+                "Statistics": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Statistics"
+                    },
+                    "description": "This type contains statistics of a ME entity.",
+                    "longDescription": "This type shall contain properties which describe the statistics of a ME entity."
+                },
+                "Version": {
+                    "$ref": "#/definitions/Version",
+                    "description": "This type contains version of a ME entity.",
+                    "longDescription": "This type shall contain properties which describe the version of a ME entity."
+                },
+                "Selftest": {
+                    "$ref": "#/definitions/Selftest",
+                    "description": "This type contains selftest of a ME entity.",
+                    "longDescription": "This type shall contain properties which describe the selftest of a ME entity."
+                },
+                "Policy": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Policy"
+                    },
+                    "description": "This type contains policy of a ME entity.",
+                    "longDescription": "This type shall contain properties which describe the policy of a ME entity."
+                },
+                "Actions": {
+                    "type": "object",
+                    "patternProperties": {
+                        "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                            "type": [
+                                "array",
+                                "boolean",
+                                "number",
+                                "null",
+                                "object",
+                                "string"
+                            ],
+                            "description": "This property shall specify a valid odata or Redfish property."
+                        }
+                    },
+                    "additionalProperties": false,
+                    "properties": {
+                        "Oem": {
+                            "type": "object",
+                            "patternProperties": {
+                                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                                    "type": [
+                                        "array",
+                                        "boolean",
+                                        "number",
+                                        "null",
+                                        "object",
+                                        "string"
+                                    ],
+                                    "description": "This property shall specify a valid odata or Redfish property."
+                                }
+                            },
+                            "additionalProperties": true,
+                            "properties": {},
+                            "description": "This property contains the available OEM specific actions for this resource.",
+                            "longDescription": "This property shall contain any additional OEM actions for this resource."
+                        },
+                        "#SmcNodeManager.ClearAllPolicies": {
+                            "$ref": "#/definitions/ClearAllPolicies"
+                        }
+                    },
+                    "description": "The available actions for this resource.",
+                    "longDescription": "The Actions property shall contain the available actions for this resource."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "description": "This is the base type for resources and referenceable members."
+        },
+        "Statistics": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "Mode": {
+                    "$ref": "#/definitions/Mode",
+                    "readonly": true,
+                    "description": "The mode of statistics.",
+                    "longDescription": "The value of this property shall indicate this Intel NM setting applies to."
+                },
+                "DomainID": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The domain ID identifies the domain that this Intel Noe Manager policy applies to.",
+                    "longDescription": "The value of this property shall identify the domain that this Intel Node Manager policy applies to."
+                },
+                "CurrentValue": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The recently measured value.",
+                    "longDescription": "The value of this property shall indicate the recently measured."
+                },
+                "MaximumValue": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The maximum measured value.",
+                    "longDescription": "The value of this property shall indicate the maximum measured."
+                },
+                "MinimumValue": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The minimum measured value.",
+                    "longDescription": "The value of this property shall indicate the minimum measured."
+                },
+                "AverageValue": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The average measured value.",
+                    "longDescription": "The value of this property shall indicate the average measured."
+                },
+                "Timestamp": {
+                    "type": "string",
+                    "format": "date-time",
+                    "readonly": true,
+                    "description": "TimeStamp indicates when the response message was sent.",
+                    "longDescription": "The value of this property shall be the time at which the response message was sent."
+                },
+                "ReportingPeriod": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The statistics reporting period.",
+                    "longDescription": "The value of this property shall be the time at which the reporting period."
+                }
+            }
+        },
+        "Version": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": true,
+            "properties": {
+                "IntelNMVersion": {
+                    "$ref": "#/definitions/IntelNMVersion",
+                    "readonly": true,
+                    "description": "The version of the Intel NM.",
+                    "longDescription": "The value of this property shall indicate the Intel NM version."
+                },
+                "IPMIVersion": {
+                    "$ref": "#/definitions/IPMIVersion",
+                    "readonly": true,
+                    "description": "The version of IPMI.",
+                    "longDescription": "The value of this property shall indicate the IPMI interface version."
+                },
+                "PatchVersion": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The version of the patch.",
+                    "longDescription": "The value of this property shall indicate the patch version."
+                },
+                "MajorRevision": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The revision of the major firmware.",
+                    "longDescription": "The value of this property shall indicate the major firmware revision."
+                },
+                "MinorRevision": {
+                    "type": "number",
+                    "readonly": true,
+                    "description": "The revision of the minor firmware.",
+                    "longDescription": "The value of this property shall indicate the minor firmware revision."
+                }
+            }
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

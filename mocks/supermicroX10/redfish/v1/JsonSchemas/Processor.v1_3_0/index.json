@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Processor.v1_3_0",
+    "Id": "Processor.v1_3_0",
+    "Name": "Processor Schema File",
+    "Description": "Processor Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Processor.v1_3_0",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Processor.v1_3_0.json"
+        }
+    ],
+    "Oem": {}
+}

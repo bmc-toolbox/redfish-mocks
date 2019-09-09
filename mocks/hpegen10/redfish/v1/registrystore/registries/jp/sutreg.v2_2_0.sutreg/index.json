@@ -1,0 +1,543 @@
+{
+    "Description": "This registry defines the Integrated Smart Update Tools(HP SUT) messages",
+    "Language": "jp",
+    "Messages": {
+        "SUMDeploymentFailed": {
+            "Message": "Deployment operation could not be completed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Check if the ports used for SUM are occupied. Configure the SUM to run using different ports if the ports are occupied.  Clear %localappdata%\\sut\\sum and %systemdrive%\\Windows\\Temp\\sut\\sum (Windows) and /var/tmp/sut/sum  (Linux) directories. Make sure that SUM (sum_service_x64) is not running. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the SUM and SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "Firmware/Driver/Software deployment could not be completed due to one or more of the following reasons: (1) Unable to run SUM (2) Deployment of one or more smart component update could not be completed (3) Report does not have the data for completing the deploy operation (4) Another SUM instance was running (5) Insufficient disk space to run SUM.",
+            "Severity": "Critical"
+        },
+        "SignatureValidationFailed": {
+            "Message": "Unable to apply the specified server settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal error occurred. Signature validation of the settings failed.",
+            "Severity": "Critical"
+        },
+        "LssUnableDeleteLogicalDrive": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "A logical drive could not be deleted.",
+            "Severity": "Critical"
+        },
+        "StagedInAutoMode": {
+            "Message": "Stage occurred via Auto mode.",
+            "NumberOfArgs": 0,
+            "Resolution": "None.",
+            "Description": "The stage operation was performed on Auto mode.",
+            "Severity": "Ok"
+        },
+        "ClearStagingFailed": {
+            "Message": "Unable to clear the staging directory.",
+            "NumberOfArgs": 0,
+            "Resolution": "Make sure that the staging directory has appropriate permissions and that previously staged files are not being used by any other application. Retry the operation by applying the baseline settings again. If the problem persists, contact your authorized support representative and provide them with support logs/dump.",
+            "Description": "While attempting to perform staging, clear staging directory operation could not be completed. Failure could be due to one or more of the following reasons. (1) No execution permission on the directory/file (2) The staged files are in use by other process.",
+            "Severity": "Critical"
+        },
+        "IncorrectExitCodeForConfigure": {
+            "Message": "Unable to apply the BIOS settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal error occurred while applying the BIOS settings to the server.",
+            "Severity": "Critical"
+        },
+        "BiosSettingInternalError": {
+            "Message": "Unable to apply BIOS settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal occurred while running the ROM Configuration Utility during BIOS configuration ",
+            "Severity": "Critical"
+        },
+        "IloQueuedUpdateRebootRequired": {
+            "Message": "Components uploaded in iloTaskQueue are deployed and needs a reboot to be applied.",
+            "NumberOfArgs": 0,
+            "Resolution": "Reboot the system or execute -deploy or -deployreboot command again to complete the deploy operation",
+            "Description": "Components uploaded in iloTaskQueue are deployed and needs a reboot to be applied.",
+            "Severity": "Critical"
+        },
+        "DeployedInAutoMode": {
+            "Message": "Deploy occurred via Auto mode.",
+            "NumberOfArgs": 0,
+            "Resolution": "None.",
+            "Description": "The deploy operation was performed on Auto mode.",
+            "Severity": "OK"
+        },
+        "AdvancediLOLicenseNeeded": {
+            "Message": "Unable to mount baseline through iLO Virtual Media because HPE iLO Advanced license is not installed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Add HP iLO Advanced license in iLO and retry the operation by applying the baseline settings again.",
+            "Description": "Indicates that the attempt to mount specified baseline through iLO Virtual Media could not be completed because an HPE iLO Advanced license is not installed.",
+            "Severity": "Critical"
+        },
+        "SUMInventoryFailed": {
+            "Message": "Baseline inventory operation could not be completed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the ports required by the SUM are available and if they are occupied then configure the SUM to run using different ports. Clear %localappdata%\\sut\\sum and %systemdrive%\\Windows\\Temp\\sut\\sum (Windows) and /var/tmp/sut/sum (Linux) directories. Make sure that SUM (sum_service_x64) is not running. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the SUM and SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "SUM inventory has could not be completed due to one or more of the following reasons: (1) Unable to start SUM (2) SUM report generation could not be completed (3) Report does not have the data for completing the inventory operation (4) Another SUM instance was running (5) Insufficient disk space to run SUM.",
+            "Severity": "Critical"
+        },
+        "UnknownDataInHPServerSettings": {
+            "Message": "Integrated Smart Update Tools does not understand the baseline request from OneView.",
+            "NumberOfArgs": 0,
+            "Resolution": "Make sure that version of OneView managing the server is compatible with installed version Integrated Smart Update Tools. Retry the operation by applying the baseline settings again.",
+            "Description": "Indicates that baseline request from OneView contains data that Integrated Smart Update Tools does not understand.",
+            "Severity": "Critical"
+        },
+        "LssStorageSettingFailLoadSettingsBlob": {
+            "Message": "Unable to read the specified local storage settings.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Encountered a failure while reading the local storage settings from iLO NAND",
+            "Severity": "Critical"
+        },
+        "LssWriteResultToBlobFailed": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An internal error occurred while writing to the iLO NAND.",
+            "Severity": "Critical"
+        },
+        "LssSetPriorityPrimaryFailed": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the controller has the necessary license present and then retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Setting of logical drive boot priority to primary could not be completed.",
+            "Severity": "Critical"
+        },
+        "IloQueuedUpdatePending": {
+            "Message": "Components are found in iLO Task Queue waiting to be updated.",
+            "NumberOfArgs": 0,
+            "Resolution": "In case SUT is running in autodeploy or autodeployreboot mode no user action needed. Otherwise use deploy or deployreboot command to deploy the components.",
+            "Description": "Components are found in iLO Task Queue waiting to be updated.",
+            "Severity": "Critical"
+        },
+        "SUMVersionMismatchInHighSecurityMode": {
+            "Message": "Version of Smart Update Manager in the baseline cannot perform deployment when iLO is configured in higher security mode (any version lower than 8.1.0)",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation by applying the baseline settings again with a baseline which has SUM 8.1.0 or greater.",
+            "Description": "Indicates the version of Smart Update Manager in the baseline cannot perform deployment when iLO is configured in higher security mode (any version lower than 8.1.0)",
+            "Severity": "Critical"
+        },
+        "LssB140IMismatchGuid": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "If this profile was originally assigned to a different server, ensure the physical disks were also moved to the target server and then try the operation again. Alternatively retry the operation with the initialize option enabled to overwrite the current configuration. For Dynamic Smart Array Controllers, ensure that the server is configured in UEFI boot mode before retrying the operation.",
+            "Description": "A logical drive tracked by the server profile was not found in the server configuration.",
+            "Severity": "Critical"
+        },
+        "RecoveryDeployFailed": {
+            "Message": "Unable to deploy the components from the specified baseline.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation by applying the baseline settings again. If the problem persists, collect support logs/dump and contact your authorized support representative and provide them with support logs/dump.",
+            "Description": "An unexpected problem occurred while deploying the components on the server.",
+            "Severity": "Critical"
+        },
+        "IloQueuedUpdateDisabled": {
+            "Message": "Set the enableiLOQueuedUpdates flag to true to perform deploy.",
+            "NumberOfArgs": 0,
+            "Resolution": "Set the enableiLOQueuedUpdates flag to true by running command sut -set enableiloqueuedupdates=true, to update the components uploaded to the iLO task queue.",
+            "Description": "There are SUT updatable components available in  iLO task queue but deploy is disabled as enableiLOQueuedUpdates flag is false.",
+            "Severity": "Critical"
+        },
+        "LssMismatchConfigurationsNotSupportedAcuDrivetype": {
+            "Message": "Unable to apply the specified local storage settings to the server as the drive technology field is not supported.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation without specifying a drive technology. Alternatively, use the latest version of the Service Pack for ProLiant, then retry the operation.",
+            "Description": "The drive technology field is not supported in the version of Service Pack for ProLiant used.",
+            "Severity": "Critical"
+        },
+        "LssFailEstablishReadControllerNode": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure that the Smart Array controller is enabled in the BIOS settings. For Dynamic Smart Array Controllers, ensure that the server is configured in UEFI boot mode.  If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Unable to read the controller node details.",
+            "Severity": "Critical"
+        },
+        "ActivationFailedDueToMissingFiles": {
+            "Message": "Verification of firmware/software deployment operation baseline compliance failed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify that the staging directory and all the files in the staging directory are available and accessible. If the disk is network mounted then ensure it is available during firmware deployment. Retry the deploy operation by applying the baseline settings again.",
+            "Description": "Verification procedure failed due to one of the following reasons: (1) Staging directory is deleted. (2) Staging directory is not accessible. (3) Staging directory content is changed, mostly due to deletion of some/all of the components copied during staging operation",
+            "Severity": "Critical"
+        },
+        "CompSecurityVerficationFailed": {
+            "Message": "Signature verification has failed for one or more of the smart components in the mounted SPP.",
+            "NumberOfArgs": 0,
+            "Resolution": "Smart components in the mounted SPP may have been tampered with as the binary signature is not valid. Validate and determine whether executables in the mounted SPP are not tampered. Use an SPP obtained through a reliable source.",
+            "Description": "Signature verification has failed for one or more of the smart components in the mounted SPP.",
+            "Severity": "Critical"
+        },
+        "LssSetPriorityNoneFailed": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the controller has the necessary license present and then retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Unable to set logical drive boot priority to none.",
+            "Severity": "Critical"
+        },
+        "InstallFailedDueToMissingFiles": {
+            "Message": "Deployment failed because of missing components or HP SUM files.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify that the staging directory and all the files in the staging directory are available and accessible.  If the disk is network mounted then ensure it is available during firmware deployment. Retry the deploy operation by applying the baseline settings again.",
+            "Description": "Deployment failed due to one of the following reasons: (1) Staging directory is deleted. (2) Staging directory is not accessible. (3) Staging directory content is changed, mostly due to deletion of some/all of the components copied during staging operation.",
+            "Severity": "Critical"
+        },
+        "Success": {
+            "Message": "The operation has been completed successfully.",
+            "NumberOfArgs": 0,
+            "Resolution": "None",
+            "Description": "The operation has been completed successfully.",
+            "Severity": "OK"
+        },
+        "UnsupportedModeForSchedule": {
+            "Message": "Unable to honor the schedule at this time as current mode is not supported for schedule.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure mode is set to AutoDeployReboot if the scheduled update is requested via One View.",
+            "Description": "HP SUT cannot honor the schedule at this time as current mode is not supported for schedule.",
+            "Severity": "Ok"
+        },
+        "RecoveryStageFailed": {
+            "Message": "Unable to stage the components from the specified baseline.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation by applying the baseline settings again. If the problem persists, collect support logs/dump and contact your authorized support representative and provide them with support logs/dump.",
+            "Description": "An unexpected problem occurred while staging the components from the specified baseline.",
+            "Severity": "Critical"
+        },
+        "StagingTimeOutOccurred": {
+            "Message": "Staging operation is not completed in 2 Hours.",
+            "NumberOfArgs": 0,
+            "Resolution": "Staging operation may be slowed down due to the speed of the system, network connectivity speed to the system update manager or communication to iLO is lower.",
+            "Description": "Staging operation is exceeded the stipulated limit of 2 hours, timing out the operation.",
+            "Severity": "Critical"
+        },
+        "LssMismatchGuid": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation.If the problem persists, contact your authorized support representative and provide them with a support logs/dump ",
+            "Description": "A logical drive tracked by the server profile was not found in the server configuration",
+            "Severity": "Critical"
+        },
+        "VirtualMediaMountingFailed": {
+            "Message": "Unable to mount baseline through iLO Virtual Media.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the specified baseline is accessible, ensure no other media is mounted through iLO Virtual Media. Retry the operation by applying the baseline settings again. If the problem persists, collect support logs/dump and contact your authorized support representative and provide them with support logs/dump.",
+            "Description": "Unable to mount specified baseline through iLO Virtual Media due to one or more of the following reasons. (1). Baseline is not accessible. (2) HTTP server hosting the baseline is busy.",
+            "Severity": "Critical"
+        },
+        "InvalidBaselineUri": {
+            "Message": "BaselineUri provided is invalid.",
+            "NumberOfArgs": 0,
+            "Resolution": "Resubmit the request with a valid accessible URI to a baseline ISO image.",
+            "Description": "Unable to mount the specified baseline because the provided baseline URI link is invalid. Either the URI specified does not have an ISO extension or the protocol is not http or https.",
+            "Severity": "Critical"
+        },
+        "LssLogicalDriveAddFailed": {
+            "Message": "Unable to apply specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify that the Smart Array controller supports the requested RAID level and the requested number of drives of the specified drive technology are present on the server. Additionally, ensure that controller has the necessary license present. Then retry the operation. If the problem persists, contact your authorized support representative.",
+            "Description": "Unable to add logical drive with requested RAID level.",
+            "Severity": "Critical"
+        },
+        "LssFailEstablishInitialState": {
+            "Message": "Unable to read  the local storage settings for server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure that the Smart Array controller is enabled in the BIOS settings. For Dynamic Smart Array Controllers, ensure that the server is configured in UEFI boot mode.  If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Encountered a failure while reading the local storage settings.",
+            "Severity": "Critical"
+        },
+        "SPPDownloadExtractFailed": {
+            "Message": "Unable download, extract or mount baseline.",
+            "NumberOfArgs": 0,
+            "Resolution": "Add HP iLO Advanced license in iLO to mount baseline through iLO Virtual Media. Or ensure that baseline is accessible via data network and there is sufficient disk space to download and extract/mount baseline. Retry the operation by applying the baseline settings again.",
+            "Description": "Unable to download, extract or mount baseline due to one or more of the following reasons. (1) HP iLO Advanced license is not available to mount the baseline via iLO Virtual Media (2) Baseline is not accessible via production network. (3) Insufficient disk space to download and extract/mount the baseline.",
+            "Severity": "Critical"
+        },
+        "StagingDirectoryValidationFailed": {
+            "Message": "Staging directory validation failed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify if the staging directory is still available and accessible.  If the disk is network mounted then ensure it is available during firmware deployment. Retry the operation by applying the baseline settings again.",
+            "Description": "HP SUT is unable to trigger the deployment due to one or more of the following reasons: (1) Staging directory is deleted. (2) Staging directory is not accessible.",
+            "Severity": "Critical"
+        },
+        "StagedInOnDemandMode": {
+            "Message": "Stage occurred via OnDemand mode.",
+            "NumberOfArgs": 0,
+            "Resolution": "None.",
+            "Description": "The stage operation was performed on OnDemand mode.",
+            "Severity": "OK"
+        },
+        "StagingDirectoryCreationFailed": {
+            "Message": "Unable to create staging directory",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure the staging directory path has write and execute permissions, and retry the operation by applying the baseline settings again.",
+            "Description": "While preparing for staging operation, the staging directory could not be created.",
+            "Severity": "Critical"
+        },
+        "LssNoLogicalDriveResent": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "If this profile was originally assigned to a different server, ensure the physical disks were also moved to the target server and then try the operation again. Alternatively retry the operation with the initialize option enabled to overwrite the current configuration.",
+            "Description": "No logical drive was not found in the server configuration.",
+            "Severity": "Critical"
+        },
+        "SUMSecurityVerficationFailed": {
+            "Message": "Signature verification has failed for one or more of the HP SUM binaries in the mounted SPP.",
+            "NumberOfArgs": 0,
+            "Resolution": "HP SUM binaries in the mounted SPP may have been tampered with as the binary signature is not valid. Validate and determine whether executables in the mounted SPP are not tampered. Use an SPP obtained through a reliable source.",
+            "Description": "Signature verification has failed for one or more of the HP SUM binaries in the mounted SPP.",
+            "Severity": "Critical"
+        },
+        "UnableToRunScript": {
+            "Message": "Unable to apply the specified server settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal error occurred while applying server settings",
+            "Severity": "Critical"
+        },
+        "ScheduleMissed": {
+            "Message": "Unable to perform schedule operation.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure that none of the attributes related to schedule are modified when the node is scheduled. Change the mode back to AutoDeployReboot or AutoDeploy and reinitiate the firmware deploy request.",
+            "Description": "HP SUT could not adhere to the schedule due to one of the following reasons. 1) OnDemand stage or deploy operation was performed 2) Deploy Mode was changed after the node was scheduled. 3) SUT service was not running when the schedule time was met and the service was started 15 minutes after the schedule time has elapsed.",
+            "Severity": "Serious"
+        },
+        "HPSUMExecutionError": {
+            "Message": "Unable to execute HP SUM.",
+            "NumberOfArgs": 0,
+            "Resolution": "In case of Offline updates, check the Firmware update inventory report to verify which component failed. In case of Online updates, verify HP SUM binaries are available in the staging directory with execute permissions. Clear %temp%\\HPSUM and %systemdrive%\\Windows\\Temp\\HPSUM (Windows) and /tmp/HPSUM (Linux) directories. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the HP SUM and HP SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "HP SUM binary could not be executed due to one or more of the following reasons: (1) HP SUM binary does not exist in the staging location. (2) HP SUM binary does not have the execute permissions. (3) HP SUM encountered a failure during the execution.",
+            "Severity": "Critical"
+        },
+        "LssInternalErrorDuringExecution": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An internal error occurred while applying local storage settings.",
+            "Severity": "Critical"
+        },
+        "SUMExecutionError": {
+            "Message": "Unable to execute SUM.",
+            "NumberOfArgs": 0,
+            "Resolution": "In case of Offline updates, check the Firmware update inventory report to verify which component failed. In case of Online updates, verify SUM binaries are available in the staging directory with execute permissions. Clear %localappdata%\\sut\\sum and %systemdrive%\\Windows\\Temp\\sut\\sum (Windows) and /var/tmp/sut/sum (Linux) directories. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the SUM and SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "SUM binary could not be executed due to one or more of the following reasons: (1) SUM binary does not exist in the staging location. (2) SUM binary does not have the execute permissions. (3) SUM encountered a failure during the execution.",
+            "Severity": "Critical"
+        },
+        "LegacyAndIloQueuedUpdatesRequested": {
+            "Message": "Deploy failed as ISO URL provided as well as iLOTaskQueue was not empty.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure to request the firmware deploy operation by providing either baseline uri or ilo task queue. If baseline specified using the baseline uri needs to be updated clear the iLO task queue before submitting the firmware update request using baseline uri. If components uploaded to ilo task queue needs to be updated clear the baselineuri using sut -set baselineuri=none command or clear the baseline using OneView appliance.",
+            "Description": "Deploy failed as baseline URI link was provided and iLO task queue was found to be non empty.",
+            "Severity": "Critical"
+        },
+        "RetryStageAtScheduleTime": {
+            "Message": "Unable to perform stage operation right now, will retry staging at schedule time before deploy.",
+            "NumberOfArgs": 0,
+            "Resolution": "None",
+            "Description": "HP SUT encountered failure during staging due to one or more following reasons. (1) Component is not available in the baseline. (2) The baseline location is no longer accessible.",
+            "Severity": "OK"
+        },
+        "LssMismatchConfigurationsNotSupportedEncryption": {
+            "Message": "Unable to apply the local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Disable encryption in the Smart Array controller and then retry the operation ",
+            "Description": "Encryption is enabled in the Smart Array controller.",
+            "Severity": "Critical"
+        },
+        "LssReinitializeControllerFailed": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Re initialization of storage could not be completed",
+            "Severity": "Critical"
+        },
+        "VirtualMediaBusy": {
+            "Message": "Unable to mount baseline through iLO Virtual Media because iLO Virtual Media is busy.",
+            "NumberOfArgs": 0,
+            "Resolution": "Unmount the media that is already mounted through iLO Virtual Media.",
+            "Description": "Indicates that the attempt to mount specified baseline through iLO Virtual Media could not be completed because iLO Virtual Media is busy.",
+            "Severity": "Critical"
+        },
+        "BaselineUriIsNotAnSPP": {
+            "Message": "The baseline provided is not supported or the concurrent download limit of baseline has been reached.",
+            "NumberOfArgs": 0,
+            "Resolution": "If the baseline provided is a SPP (Service Pack For ProLiant) then retry the operation by applying the baseline settings again after sometime. Alternately, resubmit the request with a valid link to a supported baseline image.",
+            "Description": "Indicates that concurrent download limit of baseline has been reached or the baseline provided is not detected as a supported baseline. Failure could be due to one or more of the following reasons. (1) Concurrent download limit of baseline has been reached due to other ongoing firmware updates (2) The directory contents does not match with the SPP (Service Pack for ProLiant) structure.",
+            "Severity": "Critical"
+        },
+        "FileCopyError": {
+            "Message": "Unable to copy the files from specified baseline during staging.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the necessary components are available in the specified baseline and ensure that this baseline is accessible over HTTP for the duration of the stage. Retry the operation by applying the baseline settings again.",
+            "Description": "HP SUT encountered failure during staging due to one or more following reasons. (1) Component is not available in the baseline. (2) The baseline location is no longer accessible.",
+            "Severity": "Critical"
+        },
+        "BiosWriteResultToBlobFailed": {
+            "Message": "Unable to apply the BIOS settings to the server",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal error occurred while trying to write the BIOS settings apply results to the iLO NAND",
+            "Severity": "Critical"
+        },
+        "SumRunningInstanceFound": {
+            "Message": "Deploy can be initiated after stopping/killing the running instance of SUM.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure no instance of SUM is running before initiating a deploy.",
+            "Description": "Deploy cannot be initiated now as another instance of SUM is already running..",
+            "Severity": "Critical"
+        },
+        "BiosSettingFailValidateSettings": {
+            "Message": "Unable to read the BIOS settings from the server after successfully applying the specified settings.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, the current firmware versions of the iLO and ROM may not be compatible. Update the firmware to the latest available, and edit profile to reapply local storage settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Unable to verify if the BIOS settings have been successfully applied to the server.",
+            "Severity": "Critical"
+        },
+        "StateChangedInServerSettings": {
+            "Message": "Operation request was changed unexpectedly while processing another request.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure that there is only one baseline update being processed by HP SUT at any time. If there is another baseline update operation currently in progress then wait for some time for it to complete. Retry the operation by applying the baseline settings again.",
+            "Description": "While HP SUT was processing a request, the baseline settings were modified by an external client before HP SUT could complete.",
+            "Severity": "Critical"
+        },
+        "BiosSettingFailApplySettings": {
+            "Message": "Unable to apply the specified BIOS settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An error was encountered while running  the ROM Configuration Utility",
+            "Severity": "Critical"
+        },
+        "ActivationFailed": {
+            "Message": "Verification of baseline compliance failed because one or more firmware/software version is not matching with applied baseline.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the deploy operation by applying the baseline settings again.",
+            "Description": "Verification procedure detected that some of the firmware or software component versions are not matching with the one which was tried installing during the firmware deployment operation.",
+            "Severity": "Critical"
+        },
+        "HPSUMVersionMismatch": {
+            "Message": "Version of HP Smart Update Manager in the baseline is not supported (any version lower than 7.4.0)",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation by applying the baseline settings again with a baseline which has HP SUM 7.4.0 or greater.",
+            "Description": "Indicates the version of HP Smart Update Manager in the baseline is not supported (any version lower than 7.4.0)",
+            "Severity": "Critical"
+        },
+        "BiosSettingFailLoadSettingsBlob": {
+            "Message": "Unable to read the specified BIOS settings for the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Encountered a failure while reading the BIOS settings from iLO NAND",
+            "Severity": "Critical"
+        },
+        "BiosSettingFailLoadCurrentSettings": {
+            "Message": "Unable to read the specified BIOS settings for the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Try the operation again. Alternatively, update the firmware to the latest available to make sure compatible firmware is installed. Edit profile to reapply BIOS settings. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Encountered failure while reading the BIOS settings from ROM Configuration Utility",
+            "Severity": "Critical"
+        },
+        "InsufficientDiskSpace": {
+            "Message": "Insufficient available disk space to copy the files.",
+            "NumberOfArgs": 0,
+            "Resolution": "Free up disk space on the drive where staging directory is located and retry the operation by applying the baseline settings again.",
+            "Description": "Available disk space is less than the required space to copy the files.",
+            "Severity": "Critical"
+        },
+        "MultipleSystemManagersFound": {
+            "Message": "Staging could not be completed because another manager has previously requested an update. SUT can only process updates from a single manager at a time.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure the server\u2019s firmware update is managed from only one manager, and then retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Detected a baseline update request from another system update manager",
+            "Severity": "Critical"
+        },
+        "ScriptReadFromBlobFailed": {
+            "Message": "Unable to apply the specified server settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "Unable to read from iLO NAND",
+            "Severity": "Critical"
+        },
+        "HPSUMInventoryFailed": {
+            "Message": "Baseline inventory operation could not be completed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Verify the ports required by the HP SUM are available and if they are occupied then configure the HP SUM to run using different ports. Clear %temp%\\HPSUM and %systemdrive%\\Windows\\Temp\\HPSUM (Windows) and /tmp/HPSUM (Linux) directories. Make sure that HP SUM (hpsum_service_x64) is not running. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the HP SUM and HP SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "HP SUM inventory has could not be completed due to one or more of the following reasons: (1) Unable to start HP SUM (2) HP SUM report generation could not be completed (3) Report does not have the data for completing the inventory operation (4) Another HP SUM instance was running (5) Insufficient disk space to run HP SUM.",
+            "Severity": "Critical"
+        },
+        "IloQueuedUpdateCompleted": {
+            "Message": "Components uploaded in iloTaskQueue are deployed by SUT/UEFI/ILO.",
+            "NumberOfArgs": 0,
+            "Resolution": "Components uploaded in iloTaskQueue are deployed by SUT/UEFI/ILO.",
+            "Description": "Components uploaded in iloTaskQueue are deployed by SUT/UEFI/ILO.",
+            "Severity": "Critical"
+        },
+        "InvalidScheduleTime": {
+            "Message": "Unable to perform schedule operation.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure that the DateTime provided in the schedule request is valid and in UTC format.",
+            "Description": "HP SUT could not adhere to the schedule due to Invalid Schedule DateTime provided.",
+            "Severity": "Serious"
+        },
+        "LssInternalError": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump",
+            "Description": "An internal error occurred during the operation",
+            "Severity": "Critical"
+        },
+        "InvalidConfigureScript": {
+            "Message": "Unable to apply the specified server settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Ensure proper network connectivity between OneView and iLO. Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump.",
+            "Description": "An Internal error occurred due to Invalid parameters in server settings. It could also be because the settings not written properly onto iLO NAND.",
+            "Severity": "Critical"
+        },
+        "LssMultipleLogicalDrives": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Retry the operation. If the problem persists, contact your authorized support representative and provide them with a support logs/dump ",
+            "Description": "An internal error occurred during the operation. Multiple Logical drives detected after controller initialization. Possibly more than one controller present",
+            "Severity": "Critical"
+        },
+        "IloQueuedUpdateInProgress": {
+            "Message": "Components uploaded in iloTaskQueue are being deployed by SUT/UEFI/ILO.",
+            "NumberOfArgs": 0,
+            "Resolution": "User need to wait for SUT/UEFI/ILO to deploy the components from iloTaskQueue",
+            "Description": "Components uploaded in iloTaskQueue are being deployed by SUT/UEFI/ILO.",
+            "Severity": "Critical"
+        },
+        "RebootError": {
+            "Message": "Unable to reboot the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Reboot the server using OS commands.",
+            "Description": "Unable to reboot the server during activation.",
+            "Severity": "Critical"
+        },
+        "DeployedInOnDemandMode": {
+            "Message": "Deploy occurred via OnDemand mode.",
+            "NumberOfArgs": 0,
+            "Resolution": "None.",
+            "Description": "The deploy operation was performed on OnDemand mode.",
+            "Severity": "OK"
+        },
+        "HPSUMDeploymentFailed": {
+            "Message": "Deployment operation could not be completed.",
+            "NumberOfArgs": 0,
+            "Resolution": "Check if the ports used for HP SUM are occupied. Configure the HP SUM to run using different ports if the ports are occupied.  Clear %temp%\\HPSUM and %systemdrive%\\Windows\\Temp\\HPSUM (Windows) and /tmp/HPSUM (Linux) directories. Make sure that HP SUM (hpsum_service_x64) is not running. Retry the operation by applying the baseline settings again. If the problem persists, login to the server, open command prompt/shell, change directory to the staging location, execute gatherlogs and collect the HP SUM and HP SUT logs. Contact your authorized support representative with the logs/dump.",
+            "Description": "Firmware/Driver/Software deployment could not be completed due to one or more of the following reasons: (1) Unable to run HP SUM (2) Deployment of one or more smart component update could not be completed (3) Report does not have the data for completing the deploy operation (4) Another HP SUM instance was running (5) Insufficient disk space to run HP SUM.",
+            "Severity": "Critical"
+        },
+        "LssMismatchConfigurationsNotSupported": {
+            "Message": "Unable to apply the specified local storage settings to the server.",
+            "NumberOfArgs": 0,
+            "Resolution": "Disable local storage management and retry the operation. Alternatively retry the operation with the initialize option enabled to overwrite the current server configuration.",
+            "Description": "There are arrays with multiple logical drives on the server. OneView supports only one logical drive per array.",
+            "Severity": "Critical"
+        }
+    },
+    "Version": "0.9.5",
+    "RegistryPrefix": "HPSUTReg.2.2.0",
+    "Type": "MessageRegistry.0.9.5",
+    "OwningEntity": "HPE",
+    "Name": "HP SUT Message Registry"
+}

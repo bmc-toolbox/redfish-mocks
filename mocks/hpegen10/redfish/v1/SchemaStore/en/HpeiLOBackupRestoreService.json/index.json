@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "copyright": "Copyright 2014-2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2014-2016 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "BackupFiles": {
+            "additionalProperties": false,
+            "description": "Link to backup files.",
+            "properties": {
+                "@odata.id": {
+                    "$ref": "Resource.json#/definitions/odataid"
+                }
+            },
+            "readonly": true,
+            "type": "object"
+        },
+        "BackupFileLocation": {
+            "description": "The URI to which a client may POST to create and download a file for a subsequent restore operation.",
+            "format": "uri",
+            "readonly": true,
+            "type": "string"
+        },
+        "HttpPushUri": {
+            "description": "The URI to which a client may POST a file for a subsequent restore operation.",
+            "format": "uri",
+            "readonly": true,
+            "type": "string"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        }
+    },
+    "title": "#HpeiLOBackupRestoreService.v2_2_0.HpeiLOBackupRestoreService",
+    "type": "object"
+}

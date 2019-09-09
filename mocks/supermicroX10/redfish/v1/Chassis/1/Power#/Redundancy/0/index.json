@@ -1,0 +1,522 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#Power.Power",
+    "@odata.type": "#Power.Power",
+    "@odata.id": "/redfish/v1/Chassis/1/Power",
+    "Id": "Power",
+    "Name": "Power",
+    "Voltages": [
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/0",
+            "Name": "12V",
+            "MemberID": "0",
+            "SensorNumber": 48,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 12.189,
+            "UpperThresholdNonCritical": 12.945,
+            "UpperThresholdCritical": 13.26,
+            "UpperThresholdFatal": 13.386,
+            "LowerThresholdNonCritical": 11.37,
+            "LowerThresholdCritical": 11.181,
+            "LowerThresholdFatal": 10.992,
+            "MinReadingRange": 0.156,
+            "MaxReadingRange": 16.221,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/1",
+            "Name": "5VCC",
+            "MemberID": "1",
+            "SensorNumber": 49,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 5.052,
+            "UpperThresholdNonCritical": 5.39,
+            "UpperThresholdCritical": 5.546,
+            "UpperThresholdFatal": 5.598,
+            "LowerThresholdNonCritical": 4.48,
+            "LowerThresholdCritical": 4.298,
+            "LowerThresholdFatal": 4.246,
+            "MinReadingRange": 0.164,
+            "MaxReadingRange": 6.794,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/2",
+            "Name": "3.3VCC",
+            "MemberID": "2",
+            "SensorNumber": 50,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 3.35,
+            "UpperThresholdNonCritical": 3.554,
+            "UpperThresholdCritical": 3.656,
+            "UpperThresholdFatal": 3.69,
+            "LowerThresholdNonCritical": 2.959,
+            "LowerThresholdCritical": 2.823,
+            "LowerThresholdFatal": 2.789,
+            "MinReadingRange": 0.086,
+            "MaxReadingRange": 4.421,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/3",
+            "Name": "VBAT",
+            "MemberID": "3",
+            "SensorNumber": 51,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 3.132,
+            "UpperThresholdNonCritical": 3.509,
+            "UpperThresholdCritical": 3.596,
+            "UpperThresholdFatal": 3.712,
+            "LowerThresholdNonCritical": 2.61,
+            "LowerThresholdCritical": 2.494,
+            "LowerThresholdFatal": 2.407,
+            "MinReadingRange": 0,
+            "MaxReadingRange": 7.395,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/4",
+            "Name": "Vcpu1",
+            "MemberID": "4",
+            "SensorNumber": 52,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.8,
+            "UpperThresholdNonCritical": 1.899,
+            "UpperThresholdCritical": 2.088,
+            "UpperThresholdFatal": 2.106,
+            "LowerThresholdNonCritical": 1.395,
+            "LowerThresholdCritical": 1.26,
+            "LowerThresholdFatal": 1.242,
+            "MinReadingRange": 0.144,
+            "MaxReadingRange": 2.439,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/5",
+            "Name": "Vcpu2",
+            "MemberID": "5",
+            "SensorNumber": 54,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.8,
+            "UpperThresholdNonCritical": 1.899,
+            "UpperThresholdCritical": 2.088,
+            "UpperThresholdFatal": 2.106,
+            "LowerThresholdNonCritical": 1.395,
+            "LowerThresholdCritical": 1.26,
+            "LowerThresholdFatal": 1.242,
+            "MinReadingRange": 0.144,
+            "MaxReadingRange": 2.439,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/6",
+            "Name": "VDIMMAB",
+            "MemberID": "6",
+            "SensorNumber": 53,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.209,
+            "UpperThresholdNonCritical": 1.344,
+            "UpperThresholdCritical": 1.425,
+            "UpperThresholdFatal": 1.443,
+            "LowerThresholdNonCritical": 1.047,
+            "LowerThresholdCritical": 0.975,
+            "LowerThresholdFatal": 0.948,
+            "MinReadingRange": 0.075,
+            "MaxReadingRange": 2.37,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/7",
+            "Name": "VDIMMCD",
+            "MemberID": "7",
+            "SensorNumber": 55,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.209,
+            "UpperThresholdNonCritical": 1.344,
+            "UpperThresholdCritical": 1.425,
+            "UpperThresholdFatal": 1.443,
+            "LowerThresholdNonCritical": 1.047,
+            "LowerThresholdCritical": 0.975,
+            "LowerThresholdFatal": 0.948,
+            "MinReadingRange": 0.075,
+            "MaxReadingRange": 2.37,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/8",
+            "Name": "VDIMMEF",
+            "MemberID": "8",
+            "SensorNumber": 58,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.209,
+            "UpperThresholdNonCritical": 1.344,
+            "UpperThresholdCritical": 1.425,
+            "UpperThresholdFatal": 1.443,
+            "LowerThresholdNonCritical": 1.047,
+            "LowerThresholdCritical": 0.975,
+            "LowerThresholdFatal": 0.948,
+            "MinReadingRange": 0.075,
+            "MaxReadingRange": 2.37,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/9",
+            "Name": "VDIMMGH",
+            "MemberID": "9",
+            "SensorNumber": 59,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.209,
+            "UpperThresholdNonCritical": 1.344,
+            "UpperThresholdCritical": 1.425,
+            "UpperThresholdFatal": 1.443,
+            "LowerThresholdNonCritical": 1.047,
+            "LowerThresholdCritical": 0.975,
+            "LowerThresholdFatal": 0.948,
+            "MinReadingRange": 0.075,
+            "MaxReadingRange": 2.37,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/10",
+            "Name": "5VSB",
+            "MemberID": "10",
+            "SensorNumber": 56,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 5.052,
+            "UpperThresholdNonCritical": 5.39,
+            "UpperThresholdCritical": 5.546,
+            "UpperThresholdFatal": 5.598,
+            "LowerThresholdNonCritical": 4.48,
+            "LowerThresholdCritical": 4.298,
+            "LowerThresholdFatal": 4.246,
+            "MinReadingRange": 0.138,
+            "MaxReadingRange": 6.768,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/11",
+            "Name": "3.3VSB",
+            "MemberID": "11",
+            "SensorNumber": 57,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 3.248,
+            "UpperThresholdNonCritical": 3.554,
+            "UpperThresholdCritical": 3.656,
+            "UpperThresholdFatal": 3.69,
+            "LowerThresholdNonCritical": 2.959,
+            "LowerThresholdCritical": 2.823,
+            "LowerThresholdFatal": 2.789,
+            "MinReadingRange": 0.018,
+            "MaxReadingRange": 4.353,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/12",
+            "Name": "1.5V PCH",
+            "MemberID": "12",
+            "SensorNumber": 60,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.518,
+            "UpperThresholdNonCritical": 1.644,
+            "UpperThresholdCritical": 1.671,
+            "UpperThresholdFatal": 1.698,
+            "LowerThresholdNonCritical": 1.401,
+            "LowerThresholdCritical": 1.347,
+            "LowerThresholdFatal": 1.32,
+            "MinReadingRange": 0.123,
+            "MaxReadingRange": 2.418,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/13",
+            "Name": "1.2V BMC",
+            "MemberID": "13",
+            "SensorNumber": 61,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.218,
+            "UpperThresholdNonCritical": 1.344,
+            "UpperThresholdCritical": 1.371,
+            "UpperThresholdFatal": 1.398,
+            "LowerThresholdNonCritical": 1.092,
+            "LowerThresholdCritical": 1.047,
+            "LowerThresholdFatal": 1.02,
+            "MinReadingRange": 0.048,
+            "MaxReadingRange": 2.343,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/Voltages/14",
+            "Name": "1.05V PCH",
+            "MemberID": "14",
+            "SensorNumber": 62,
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "ReadingVolts": 1.059,
+            "UpperThresholdNonCritical": 1.194,
+            "UpperThresholdCritical": 1.221,
+            "UpperThresholdFatal": 1.248,
+            "LowerThresholdNonCritical": 0.942,
+            "LowerThresholdCritical": 0.897,
+            "LowerThresholdFatal": 0.87,
+            "MinReadingRange": 0.078,
+            "MaxReadingRange": 2.373,
+            "PhysicalContext": "VoltageRegulator",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ]
+        }
+    ],
+    "PowerControl": [
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/PowerControl/0",
+            "Name": "System Power Control",
+            "MemberID": "0",
+            "PowerConsumedWatts": 915,
+            "PowerCapacityWatts": 4000,
+            "PowerMetrics": {
+                "IntervalInMin": 5,
+                "MinConsumedWatts": 203,
+                "MaxConsumedWatts": 205,
+                "AverageConsumedWatts": 204
+            },
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Systems/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Systems/1/Processors/1"
+                },
+                {
+                    "@odata.id": "/redfish/v1/Systems/1/Processors/2"
+                }
+            ],
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "Oem": {}
+        }
+    ],
+    "PowerSupplies": [
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/PowerSupplies/0",
+            "MemberID": "0",
+            "Name": "Power Supply Bay 1",
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "Oem": {},
+            "PowerSupplyType": "AC",
+            "LineInputVoltageType": "ACMidLine",
+            "LineInputVoltage": 231,
+            "PowerCapacityWatts": 2000,
+            "LastPowerOutputWatts": 464,
+            "Model": "PWS-2K04A-1R",
+            "FirmwareVersion": "",
+            "SerialNumber": "P2K4ACH30CT3437",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ],
+            "Redundancy": [
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1/Power#/Redundancy/0"
+                }
+            ]
+        },
+        {
+            "@odata.id": "/redfish/v1/Chassis/1/Power#/PowerSupplies/1",
+            "MemberID": "1",
+            "Name": "Power Supply Bay 2",
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            },
+            "Oem": {},
+            "PowerSupplyType": "AC",
+            "LineInputVoltageType": "ACMidLine",
+            "LineInputVoltage": 230,
+            "PowerCapacityWatts": 2000,
+            "LastPowerOutputWatts": 451,
+            "Model": "PWS-2K04A-1R",
+            "FirmwareVersion": "",
+            "SerialNumber": "P2K4ACH30CT3438",
+            "RelatedItem": [
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1"
+                }
+            ],
+            "Redundancy": [
+                {
+                    "@odata.id": "/redfish/v1/Chassis/1/Power#/Redundancy/0"
+                }
+            ]
+        }
+    ],
+    "Oem": {}
+}

@@ -1,0 +1,138 @@
+{
+    "description": "",
+    "copyright": "(C)Copyright 2017 Hewlett Packard Enterprise Development LP",
+    "title": "#SUT.v2_2_0.SUT",
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "@odata.type": {
+            "readonly": true,
+            "type": "string",
+            "longDescription": "#SUT.v2_2_0.SUT"
+        },
+        "LastOperationTime": {
+            "readonly": true,
+            "etag": true,
+            "type": "string",
+            "description": "This indicates the date and time when the last operation performed."
+        },
+        "LastBootUptime": {
+            "readonly": true,
+            "etag": true,
+            "type": "string",
+            "description": "This indicates the date and time when the server is booted."
+        },
+        "OperationRequestor": {
+            "readonly": true,
+            "type": "string",
+            "description": "This indicates the source of the request being processed by Integrated Smart Update Tools"
+        },
+        "Name": {
+            "$ref": "Name.json#"
+        },
+        "SelfUpdateStatus": {
+            "description": "This indicates the status of SUT self update progress.",
+            "enum": [
+                "Pending",
+                "InProgress",
+                "Completed"
+            ],
+            "enumDescriptions": {
+                "Completed": "SUT self updated completed",
+                "InProgress": "SUT self update is in progress.",
+                "None": "Initial value. SUT self updated is not initiated.",
+                "Pending": "Initial value of the state before SUT is self upgraded"
+            },
+            "readonly": true,
+            "etag": true,
+            "type": "string"
+        },
+        "Modified": {
+            "$ref": "Modified.json#"
+        },
+        "@odata.context": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/$metadata#Systems/Members/1/hpsut/Members/$entity",
+            "type": "string",
+            "format": "uri"
+        },
+        "@odata.id": {
+            "readonly": true,
+            "longDescription": "/redfish/v1/Systems/1/hpsut",
+            "type": "string",
+            "format": "uri"
+        },
+        "ServiceState": {
+            "description": "This indicates the state of the Integrated Smart Update Tools Service.",
+            "enum": [
+                "Disabled",
+                "Running",
+                "Paused",
+                "Stopped"
+            ],
+            "enumDescriptions": {
+                "Paused": "SUT service is enabled and is in paused state",
+                "Disabled": "SUT service is disabled",
+                "Running": "SUT service is enabled and is in running state",
+                "Stopped": "SUT service is enabled and is in stopped state"
+            },
+            "readonly": true,
+            "etag": true,
+            "type": "string"
+        },
+        "ServiceVersion": {
+            "readonly": true,
+            "etag": true,
+            "type": "string",
+            "description": "This indicates the Integrated Smart Update Tools Service Version."
+        },
+        "IsSelfUpdate": {
+            "readonly": true,
+            "etag": true,
+            "type": "boolean",
+            "description": "This indicates whether SUT is performing a self update."
+        },
+        "SUTCompName": {
+            "readonly": true,
+            "etag": true,
+            "type": "string",
+            "description": "This indicates the name of the SUT component that is getting updated."
+        },
+        "PollingIntervalInMinutes": {
+            "readonly": false,
+            "etag": true,
+            "type": "number",
+            "description": "This indicates the frequency at which SUT will read the request from RIS tree."
+        },
+        "SUMPID": {
+            "readonly": true,
+            "etag": true,
+            "type": "number",
+            "description": "This indicates the process id of SUM launched during deploy operation."
+        },
+        "StagingDirectory": {
+            "readonly": true,
+            "type": "string",
+            "description": "This indicates the directory were components will be staged.It is a fully qualified path to the directory. Default value for staging directory is %localappdata%/sut/stagingdirectory in windows and /var/tmp/sut/stagingdirectory in linux"
+        },
+        "Mode": {
+            "description": "This indicates the mode of Integrated Smart Update Tools.",
+            "enum": [
+                "AutoDeploy",
+                "AutoDeployReboot",
+                "AutoStage",
+                "OnDemand"
+            ],
+            "enumDescriptions": {
+                "AutoStage": "In this automatic mode, SUT picks up the pending request and components are staged.",
+                "OnDemand": "In this mode, SUT waits for the user to issue ondemand commands to perform stage or deploy operation",
+                "AutoDeploy": "In this automatic mode, SUT picks up the pending request and components are deployed.",
+                "AutoDeployReboot": "In this automatic mode, SUT picks up the pending request and system is rebooted, if required, after the components are deployed."
+            },
+            "readonly": true,
+            "etag": true,
+            "type": "string"
+        }
+    }
+}

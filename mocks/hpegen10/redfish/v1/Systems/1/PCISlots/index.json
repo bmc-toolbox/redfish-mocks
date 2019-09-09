@@ -1,0 +1,23 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeServerPCISlotCollection.HpeServerPCISlotCollection",
+    "@odata.etag": "W/\"96E00A2C\"",
+    "@odata.id": "/redfish/v1/Systems/1/PCISlots/",
+    "@odata.type": "#HpeServerPCISlotCollection.HpeServerPCISlotCollection",
+    "Description": "PciSlots view",
+    "Name": "PciSlots",
+    "Members": [
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCISlots/1/"
+        },
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCISlots/2/"
+        },
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCISlots/3/"
+        },
+        {
+            "@odata.id": "/redfish/v1/Systems/1/PCISlots/4/"
+        }
+    ],
+    "Members@odata.count": 4
+}

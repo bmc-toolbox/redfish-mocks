@@ -1,0 +1,244 @@
+{
+    "$ref": "#/definitions/DellProcessor",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "DellProcessor": {
+            "additionalProperties": false,
+            "description": "An instance of DellProcessor will have CPU specific data.",
+            "longDescription": "An instance of DellProcessor will have CPU specific data.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "CurrentClockSpeedMhz": {
+                    "description": "The current speed (in MHz) of this Processor.",
+                    "longDescription": "The current speed (in MHz) of this Processor.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "units": "Mhz"
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "HyperThreadingCapable": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/HyperThreadingCapable"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if HyperThreading is Capable.",
+                    "longDescription": "Variable that specifies if HyperThreading is Capable.",
+                    "readonly": true
+                },
+                "HyperThreadingEnabled": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/HyperThreadingEnabled"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if HyperThreading is Enabled.",
+                    "longDescription": "Variable that specifies if HyperThreading is Enabled.",
+                    "readonly": true
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "TurboModeCapable": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/TurboModeCapable"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if TurboMode is Capable.",
+                    "longDescription": "Variable that specifies if TurboMode is Capable.",
+                    "readonly": true
+                },
+                "TurboModeEnabled": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/TurboModeEnabled"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if TurboMode is enabled.",
+                    "longDescription": "Variable that specifies if TurboMode is enabled.",
+                    "readonly": true
+                },
+                "VirtualizationTechnologyCapable": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/VirtualizationTechnologyCapable"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if VirtualizationTechnology is Capable.",
+                    "longDescription": "Variable that specifies if VirtualizationTechnology is Capable.",
+                    "readonly": true
+                },
+                "VirtualizationTechnologyEnabled": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/VirtualizationTechnologyEnabled"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "Variable that specifies if VirtualizationTechnology is enabled.",
+                    "longDescription": "Variable that specifies if VirtualizationTechnology is enabled.",
+                    "readonly": true
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "HyperThreadingCapable": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        },
+        "HyperThreadingEnabled": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        },
+        "TurboModeCapable": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        },
+        "TurboModeEnabled": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        },
+        "VirtualizationTechnologyCapable": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        },
+        "VirtualizationTechnologyEnabled": {
+            "enum": [
+                "No",
+                "Yes"
+            ],
+            "enumDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "enumLongDescriptions": {
+                "No": "No",
+                "Yes": "Yes"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellProcessor.v1_0_0.DellProcessor"
+}

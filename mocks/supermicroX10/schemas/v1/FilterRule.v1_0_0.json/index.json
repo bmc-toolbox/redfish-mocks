@@ -1,0 +1,94 @@
+{
+    "$schema": "http://redfish.dmtf.org/schemas/v1/redfish-schema.1.0.0.json",
+    "title": "#FilterRule.v1_0_0",
+    "definitions": {
+        "FilterRule": {
+            "type": "object",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ],
+                    "description": "This property shall specify a valid odata or Redfish property."
+                }
+            },
+            "additionalProperties": false,
+            "properties": {
+                "@odata.context": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "http://redfish.dmtf.org/schemas/v1/odata.4.0.0.json#/definitions/type"
+                },
+                "Oem": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "Id": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "Description": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Description",
+                    "readonly": true
+                },
+                "Name": {
+                    "$ref": "http://10.193.251.59/schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Address": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "description": "This is the IPv4 Address.",
+                    "longDescription": "The value of this property shall be an IPv4 address assigned to this interface.  If DHCPv4 is enabled on the interface, this property becomes read-only.",
+                    "pattern": "^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$"
+                },
+                "PrefixLength": {
+                    "type": [
+                        "number",
+                        "null"
+                    ],
+                    "description": "The Prefix Length of this IPv4 address.",
+                    "longDescription": "Provides the IPv4 network prefix length in bits for this address.",
+                    "minimum": 1,
+                    "maximum": 32
+                },
+                "Policy": {
+                    "$ref": "#/definitions/Policy",
+                    "description": "The Policy of this IP access rule.",
+                    "longDescription": "Provides the Policy to accept or deny access to this manager."
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "requiredOnCreate": [
+                "Address",
+                "PrefixLength",
+                "Policy"
+            ],
+            "description": "This schema defines a IP access policy resource.",
+            "longDescription": "This resource shall be used to represent IP access policy settings for the manager."
+        },
+        "Policy": {
+            "type": "string",
+            "enum": [
+                "Accept",
+                "Drop"
+            ]
+        }
+    },
+    "copyright": "Copyright 2014-2015 Distributed Management Task Force, Inc. (DMTF). All rights reserved."
+}

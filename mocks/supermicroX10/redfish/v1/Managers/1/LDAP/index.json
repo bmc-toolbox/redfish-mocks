@@ -1,0 +1,14 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#LDAP.LDAP",
+    "@odata.type": "#LDAP.LDAP",
+    "@odata.id": "/redfish/v1/Managers/1/LDAP",
+    "Id": "LDAP",
+    "Name": "LDAP",
+    "LDAPEnabled": true,
+    "LDAPAuthOverSSL": true,
+    "LDAPPortNumber": 636,
+    "LDAPServerIP": "10.252.13.4",
+    "LDAPPassword": "",
+    "LDAPDN": "supermicro",
+    "LDAPSearchbase": "cn=supermicro,cn=bmcUsers"
+}

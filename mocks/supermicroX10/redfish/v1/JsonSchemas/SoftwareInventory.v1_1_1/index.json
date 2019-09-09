@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/SoftwareInventory.v1_1_1",
+    "Id": "SoftwareInventory.v1_1_1",
+    "Name": "SoftwareInventory Schema File",
+    "Description": "SoftwareInventory Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "SoftwareInventory.v1_1_1",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/SoftwareInventory.v1_1_1.json"
+        }
+    ],
+    "Oem": {}
+}

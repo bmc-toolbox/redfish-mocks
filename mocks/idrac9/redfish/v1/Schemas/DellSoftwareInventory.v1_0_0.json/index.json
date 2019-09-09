@@ -1,0 +1,193 @@
+{
+    "$ref": "#/definitions/DellSoftwareInventory",
+    "$schema": "/redfish/v1/Schemas/redfish-schema.v1_1_0.json",
+    "copyright": "Copyright 2016 Dell, Inc. or its subsidiaries.  All Rights Reserved.",
+    "definitions": {
+        "DellSoftwareInventory": {
+            "additionalProperties": false,
+            "description": "The DellSoftwareInventory resource is a representation of an available device firmware in the managed system.",
+            "longDescription": "The DellSoftwareInventory resource is a representation of an available device firmware in the managed system.",
+            "patternProperties": {
+                "^([a-zA-Z_][a-zA-Z0-9_]*)?@(odata|Redfish|Message|Privileges)\\.[a-zA-Z_][a-zA-Z0-9_.]+$": {
+                    "description": "This property shall specify a valid odata or Redfish property.",
+                    "type": [
+                        "array",
+                        "boolean",
+                        "number",
+                        "null",
+                        "object",
+                        "string"
+                    ]
+                }
+            },
+            "properties": {
+                "@odata.context": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/context"
+                },
+                "@odata.id": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/id"
+                },
+                "@odata.type": {
+                    "$ref": "/redfish/v1/Schemas/odata.4.0.0.json#/definitions/type"
+                },
+                "ComponentID": {
+                    "description": "The property value, together with the ComponentType property value, uniquely identifies the system component the software is for.",
+                    "longDescription": "The property value, together with the ComponentType property value, uniquely identifies the system component the software is for.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ComponentType": {
+                    "description": "This property has one of the following values: FRMW, BIOS, APAC.",
+                    "longDescription": "This property has one of the following values: FRMW, BIOS, APAC.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Description": {
+                    "anyOf": [
+                        {
+                            "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Description"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "readonly": true
+                },
+                "DeviceID": {
+                    "description": "This property represents an address or other identifying information to uniquely name the LogicalDevice.",
+                    "longDescription": "This property represents an address or other identifying information to uniquely name the LogicalDevice.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "ElementName": {
+                    "description": "ElementName is the user-friendly name for the instance.",
+                    "longDescription": "ElementName is the user-friendly name for the instance.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "HashValue": {
+                    "description": "The property represents the SHA256 hash value of the component firmware.",
+                    "longDescription": "The property represents the SHA256 hash value of the component firmware.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "Id": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Id",
+                    "readonly": true
+                },
+                "InstallationDate": {
+                    "description": "This property represents the installation date, in string format. Note: For CPLD firmware on modular servers, the property is always set to Jan 1, 2000 regardless of the actual update date.",
+                    "longDescription": "This property represents the installation date, in string format. Note: For CPLD firmware on modular servers, the property is always set to Jan 1, 2000 regardless of the actual update date.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "IsEntity": {
+                    "description": "The IsEntity property is used for indicating whether the SoftwareIdentity corresponds to a discrete copy of the software component or is being used to convey descriptive and identifying information about software that is not present in the management domain.",
+                    "longDescription": "The IsEntity property is used for indicating whether the SoftwareIdentity corresponds to a discrete copy of the software component or is being used to convey descriptive and identifying information about software that is not present in the management domain.",
+                    "readonly": true,
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
+                },
+                "Name": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Name",
+                    "readonly": true
+                },
+                "Oem": {
+                    "$ref": "/redfish/v1/Schemas/Resource.json#/definitions/Oem",
+                    "description": "This is the manufacturer/provider specific extension moniker used to divide the Oem object into sections.",
+                    "longDescription": "The value of this string shall be of the format for the reserved word *Oem*."
+                },
+                "RevisionNumber": {
+                    "description": "This property represents the revision number component of the software version.",
+                    "longDescription": "This property represents the revision number component of the software version.",
+                    "readonly": true,
+                    "type": [
+                        "number",
+                        "null"
+                    ]
+                },
+                "Status": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/definitions/Status"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "description": "This property indicates whether the software is installed or is available for installation.",
+                    "longDescription": "This property indicates whether the software is installed or is available for installation.",
+                    "readonly": true
+                },
+                "SubDeviceID": {
+                    "description": "This property is populated for the PCI Device software. This property represents the SubDeviceID from the PCI device.",
+                    "longDescription": "This property is populated for the PCI Device software. This property represents the SubDeviceID from the PCI device.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "SubVendorID": {
+                    "description": "This property is populated for the PCI Device software. The property represents the SubVendorID from the PCI device.",
+                    "longDescription": "This property is populated for the PCI Device software. The property represents the SubVendorID from the PCI device.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                },
+                "VendorID": {
+                    "description": "This property is populated for the PCI Device software. This property represents the VendorID from the PCI device.",
+                    "longDescription": "This property is populated for the PCI Device software. This property represents the VendorID from the PCI device.",
+                    "readonly": true,
+                    "type": [
+                        "string",
+                        "null"
+                    ]
+                }
+            },
+            "required": [
+                "Id",
+                "Name"
+            ],
+            "type": "object"
+        },
+        "Status": {
+            "enum": [
+                "AvailableForInstallation",
+                "Installed"
+            ],
+            "enumDescriptions": {
+                "AvailableForInstallation": "Available for Installation",
+                "Installed": "Installed"
+            },
+            "enumLongDescriptions": {
+                "AvailableForInstallation": "Available for Installation",
+                "Installed": "Installed"
+            },
+            "type": "string"
+        }
+    },
+    "title": "#DellSoftwareInventory.v1_0_0.DellSoftwareInventory"
+}

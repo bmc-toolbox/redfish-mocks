@@ -1,0 +1,245 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "actions": {
+        "description": "POST custom actions defined for this type. (The implemented actions may be a subset of these.)",
+        "actions": {
+            "HpeServerAccHddZone.ConfigureZone": {
+                "additionalProperties": false,
+                "description": "Execute Apollo Chassis Controller Hdd zone configuration.",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "readonly": true,
+                        "enum": [
+                            "HpeServerAccHddZone.ConfigureZone"
+                        ]
+                    },
+                    "HostPort": {
+                        "items": {
+                            "readonly": true,
+                            "type": "object",
+                            "properties": {
+                                "PortNumber": {
+                                    "type": [
+                                        "integer",
+                                        "null"
+                                    ],
+                                    "readonly": false
+                                },
+                                "BayNumber": {
+                                    "items": {
+                                        "readonly": true,
+                                        "type": "integer",
+                                        "etag": true
+                                    },
+                                    "readonly": false,
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "readonly": false,
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "Action",
+                    "HostPort"
+                ],
+                "type": "object"
+            },
+            "HpeServerAccHddZone.LoadDefault": {
+                "additionalProperties": false,
+                "description": "Load Apollo Chassis Controller default Hdd zone configuration.",
+                "properties": {
+                    "Action": {
+                        "type": "string",
+                        "readonly": true,
+                        "enum": [
+                            "HpeServerAccHddZone.LoadDefault"
+                        ]
+                    }
+                },
+                "required": [
+                    "Action"
+                ],
+                "type": "object"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "copyright": "Copyright 2017 Hewlett Packard Enterprise Development, LP.  Portions Copyright 2017 Distributed Management Task Force. All rights reserved.",
+    "properties": {
+        "@odata.context": {
+            "$ref": "Resource.json#/definitions/odatacontext"
+        },
+        "@odata.etag": {
+            "$ref": "Resource.json#/definitions/odataetag"
+        },
+        "@odata.id": {
+            "$ref": "Resource.json#/definitions/odataid"
+        },
+        "@odata.type": {
+            "$ref": "Resource.json#/definitions/odatatype"
+        },
+        "Id": {
+            "$ref": "Resource.json#/definitions/Id"
+        },
+        "Name": {
+            "$ref": "Resource.json#/definitions/Name"
+        },
+        "TypeID": {
+            "type": "integer",
+            "description": "Indicates the Backplane type ID for the identifier for backplane type.",
+            "readonly": true,
+            "etag": true
+        },
+        "SEPNodeId": {
+            "type": "integer",
+            "description": "The node ID represent the node ID where the storage enclosure processor is residing.",
+            "readonly": true,
+            "etag": true
+        },
+        "Actions": {
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+                "#HpeServerAccHddZone.ConfigureZone": {
+                    "additionalProperties": false,
+                    "type": "object",
+                    "properties": {
+                        "HostPort@Redfish.AllowableValues": {
+                            "uniqueItems": true,
+                            "items": {
+                                "type": "object",
+                                "items": {
+                                    "readonly": true,
+                                    "type": "object",
+                                    "properties": {
+                                        "PortNumber": {
+                                            "type": [
+                                                "integer",
+                                                "null"
+                                            ],
+                                            "readonly": false
+                                        },
+                                        "BayNumber": {
+                                            "items": {
+                                                "readonly": true,
+                                                "type": "integer",
+                                                "etag": true
+                                            },
+                                            "readonly": true,
+                                            "type": "array"
+                                        }
+                                    }
+                                },
+                                "readonly": false
+                            },
+                            "type": "array",
+                            "description": "Fill HostPort array to depoly Hdd Zone configuration or fill empty HostPort to remove Hdd Zone configuration."
+                        },
+                        "target": {
+                            "type": "string",
+                            "description": "Link to invoke action"
+                        },
+                        "title": {
+                            "type": "string",
+                            "description": "Friendly action name"
+                        }
+                    }
+                },
+                "#HpeServerAccHddZone.LoadDefault": {
+                    "additionalProperties": false,
+                    "properties": {
+                        "target": {
+                            "description": "Link to invoke action",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "Friendly action name",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            }
+        },
+        "CurrentZoneConfiguration": {
+            "type": "object",
+            "additionalProperties": false,
+            "readonly": false,
+            "properties": {
+                "HostPort": {
+                    "description": "Contains the bay configuration for each HostPort.",
+                    "items": {
+                        "properties": {
+                            "PortNumber": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Represents the number of physical host ports in SEP, null represents unassigned bay group.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "BayNumber": {
+                                "description": "Indicates the physical bay number.",
+                                "items": {
+                                    "readonly": true,
+                                    "type": "integer",
+                                    "etag": true
+                                },
+                                "readonly": false,
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readonly": true,
+                    "type": "array"
+                }
+            },
+            "deprecated": "This indicates current Hdd Zone configurations."
+        },
+        "PendingZoneConfiguration": {
+            "type": "object",
+            "additionalProperties": false,
+            "readonly": false,
+            "properties": {
+                "HostPort": {
+                    "description": "Contains the bay configuration for each HostPort.",
+                    "items": {
+                        "properties": {
+                            "PortNumber": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ],
+                                "description": "Represents the number of physical host ports in SEP, null represents unassigned bay group.",
+                                "readonly": true,
+                                "etag": true
+                            },
+                            "BayNumber": {
+                                "description": "Indicates the physical bay number.",
+                                "items": {
+                                    "readonly": true,
+                                    "type": "integer",
+                                    "etag": true
+                                },
+                                "readonly": false,
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "readonly": true,
+                    "type": "array"
+                }
+            },
+            "deprecated": "This indicates pending Hdd Zone configurations, this configuration only takes affect after all server nodes in the chassis have been powered down for at least 5 seconds."
+        }
+    },
+    "readonly": true,
+    "title": "#HpeServerAccHddZone.v1_0_0.HpeServerAccHddZone",
+    "type": "object"
+}

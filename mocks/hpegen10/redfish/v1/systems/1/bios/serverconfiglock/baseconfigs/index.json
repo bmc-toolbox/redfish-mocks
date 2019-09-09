@@ -1,0 +1,31 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#HpeBaseConfigs.HpeBaseConfigs",
+    "@odata.etag": "W/\"6C7E928BFC9F0C0C0C9C399F570183A4\"",
+    "@odata.id": "/redfish/v1/systems/1/bios/serverconfiglock/baseconfigs/",
+    "@odata.type": "#HpeBaseConfigs.v2_0_0.HpeBaseConfigs",
+    "BaseConfigs": [
+        {
+            "default": {
+                "NewServerConfigLockPassword": null,
+                "ServerConfigLockChallenge": null,
+                "ServerConfigLockDisable": null,
+                "ServerConfigLockExcludeCpus": null,
+                "ServerConfigLockExcludeDimms": null,
+                "ServerConfigLockExcludeFwRevs": null,
+                "ServerConfigLockExcludePciSlots": null,
+                "ServerConfigLockExcludeSecurity": null,
+                "ServerConfigLockLogStored": "False",
+                "ServerConfigLockPassword": null,
+                "ServerConfigLockState": "Disabled",
+                "ServerConfigLockTamperHalt": null,
+                "ServerConfigLockTransport": null
+            }
+        }
+    ],
+    "Capabilities": {
+        "BaseConfig": true,
+        "BaseConfigs": false
+    },
+    "Id": "baseconfigs",
+    "Name": "Server Configuration Lock Default Settings"
+}

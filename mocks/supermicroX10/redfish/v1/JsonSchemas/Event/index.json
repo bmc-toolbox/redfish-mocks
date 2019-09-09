@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/Event",
+    "Id": "Event",
+    "Name": "Event Schema File",
+    "Description": "Event Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "Event",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/Event.json"
+        }
+    ],
+    "Oem": {}
+}

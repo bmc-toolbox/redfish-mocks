@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/DataStorageLineOfService",
+    "Id": "DataStorageLineOfService",
+    "Name": "DataStorageLineOfService Schema File",
+    "Description": "DataStorageLineOfService Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "DataStorageLineOfService",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/DataStorageLineOfService.json"
+        }
+    ],
+    "Oem": {}
+}

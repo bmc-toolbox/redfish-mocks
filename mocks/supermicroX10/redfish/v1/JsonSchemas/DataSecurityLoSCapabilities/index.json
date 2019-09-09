@@ -1,0 +1,19 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#JsonSchemaFile.JsonSchemaFile",
+    "@odata.type": "#JsonSchemaFile.JsonSchemaFile",
+    "@odata.id": "/redfish/v1/JsonSchemas/DataSecurityLoSCapabilities",
+    "Id": "DataSecurityLoSCapabilities",
+    "Name": "DataSecurityLoSCapabilities Schema File",
+    "Description": "DataSecurityLoSCapabilities Schema File Location",
+    "Languages": [
+        "en"
+    ],
+    "Schema": "DataSecurityLoSCapabilities",
+    "Location": [
+        {
+            "Language": "en",
+            "Uri": "/schemas/v1/DataSecurityLoSCapabilities.json"
+        }
+    ],
+    "Oem": {}
+}

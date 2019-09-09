@@ -1,0 +1,14 @@
+#### About
+
+redfish mocks dumped with https://github.com/DMTF/Redfish-Mockup-Creator
+for use with https://github.com/DMTF/Redfish-Interface-Emulator
+
+# To create a mockup
+
+python3.7 ./redfishMockupCreate.py  -u <user> -p <pass> -r  10.10.10.1  -D mocks/<hardware version> -vvvv -S --Auth Basic
+
+# This generates a static clone/mock up of the redfish service, the static mockups support 'GET's
+
+
+# Run in docker
+docker run -it --mount type=bind,source="$(pwd)"mock/hpegen10/redfish/v1,target=/usr/src/app/api_emulator/redfish/static --rm redfish-interface-emulator

@@ -1,0 +1,83 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#UpdateService.UpdateService",
+    "@odata.etag": "W/\"8D9F3F5D\"",
+    "@odata.id": "/redfish/v1/UpdateService/",
+    "@odata.type": "#UpdateService.v1_1_0.UpdateService",
+    "Id": "UpdateService",
+    "Actions": {
+        "#UpdateService.SimpleUpdate": {
+            "target": "/redfish/v1/UpdateService/Actions/UpdateService.SimpleUpdate/"
+        }
+    },
+    "Description": "iLO Update Service",
+    "FirmwareInventory": {
+        "@odata.id": "/redfish/v1/UpdateService/FirmwareInventory/"
+    },
+    "HttpPushUri": "/cgi-bin/uploadFile",
+    "Name": "Update Service",
+    "Oem": {
+        "Hpe": {
+            "@odata.context": "/redfish/v1/$metadata#HpeiLOUpdateServiceExt.HpeiLOUpdateServiceExt",
+            "@odata.type": "#HpeiLOUpdateServiceExt.v2_1_4.HpeiLOUpdateServiceExt",
+            "Actions": {
+                "#HpeiLOUpdateServiceExt.AddFromUri": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.AddFromUri/"
+                },
+                "#HpeiLOUpdateServiceExt.DeleteInstallSets": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.DeleteInstallSets/"
+                },
+                "#HpeiLOUpdateServiceExt.DeleteMaintenanceWindows": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.DeleteMaintenanceWindows/"
+                },
+                "#HpeiLOUpdateServiceExt.DeleteUnlockedComponents": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.DeleteUnlockedComponents/"
+                },
+                "#HpeiLOUpdateServiceExt.DeleteUpdateTaskQueueItems": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.DeleteUpdateTaskQueueItems/"
+                },
+                "#HpeiLOUpdateServiceExt.RemoveLanguagePack": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.RemoveLanguagePack/"
+                },
+                "#HpeiLOUpdateServiceExt.SetDefaultLanguage": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.SetDefaultLanguage/"
+                },
+                "#HpeiLOUpdateServiceExt.StartFirmwareIntegrityCheck": {
+                    "target": "/redfish/v1/UpdateService/Actions/Oem/Hpe/HpeiLOUpdateServiceExt.StartFirmwareIntegrityCheck/"
+                }
+            },
+            "ComponentRepository": {
+                "@odata.id": "/redfish/v1/UpdateService/ComponentRepository/"
+            },
+            "CurrentTime": "2019-09-05T13:13:24Z",
+            "DowngradePolicy": "AllowDowngrade",
+            "FirmwareIntegrity": {
+                "EnableBackgroundScan": false,
+                "LastScanResult": "OK",
+                "LastScanTime": "2019-07-10T09:40:08Z",
+                "OnIntegrityFailure": "LogOnly",
+                "ScanEveryDays": 7
+            },
+            "FlashProgressPercent": 100,
+            "InstallSets": {
+                "@odata.id": "/redfish/v1/UpdateService/InstallSets/"
+            },
+            "InvalidImageRepository": {
+                "@odata.id": "/redfish/v1/UpdateService/InvalidImageRepository/"
+            },
+            "MaintenanceWindows": {
+                "@odata.id": "/redfish/v1/UpdateService/MaintenanceWindows/"
+            },
+            "Result": {
+                "MessageId": "Base.1.0.Success"
+            },
+            "State": "Complete",
+            "UpdateTaskQueue": {
+                "@odata.id": "/redfish/v1/UpdateService/UpdateTaskQueue/"
+            }
+        }
+    },
+    "ServiceEnabled": true,
+    "SoftwareInventory": {
+        "@odata.id": "/redfish/v1/UpdateService/SoftwareInventory/"
+    }
+}
