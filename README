@@ -11,4 +11,4 @@ python3.7 ./redfishMockupCreate.py  -u <user> -p <pass> -r  10.10.10.1  -D mocks
 
 
 # Run in docker
-docker run -it --mount type=bind,source="$(pwd)"mock/hpegen10/redfish/v1,target=/usr/src/app/api_emulator/redfish/static --rm redfish-interface-emulator
+docker run -it --mount type=bind,source="$(pwd)"/mocks/hpegen10/redfish/v1,target=/usr/src/app/api_emulator/redfish/static --rm bmctoolbox/redfish-interface-emulator
